@@ -121,7 +121,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_partner_promote
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Branded_content_partner_promoteRequestBuilderGetQueryParameters
+        public partial class Branded_content_partner_promoteRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

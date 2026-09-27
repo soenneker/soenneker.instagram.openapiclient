@@ -80,7 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Collaborative_media
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Collaborative_mediaRequestBuilderGetQueryParameters
+        public partial class Collaborative_mediaRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

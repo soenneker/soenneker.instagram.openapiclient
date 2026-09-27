@@ -157,7 +157,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Welcome_message_flows
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Welcome_message_flowsRequestBuilderDeleteQueryParameters
+        public partial class Welcome_message_flowsRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Welcome_message_flows
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Welcome_message_flowsRequestBuilderGetQueryParameters
+        public partial class Welcome_message_flowsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

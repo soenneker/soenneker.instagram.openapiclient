@@ -80,7 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Boost_ads_list
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Boost_ads_listRequestBuilderGetQueryParameters
+        public partial class Boost_ads_listRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

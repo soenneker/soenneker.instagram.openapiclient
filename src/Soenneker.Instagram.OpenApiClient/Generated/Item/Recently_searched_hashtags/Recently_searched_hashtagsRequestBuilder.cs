@@ -80,7 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Recently_searched_hashtags
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Recently_searched_hashtagsRequestBuilderGetQueryParameters
+        public partial class Recently_searched_hashtagsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

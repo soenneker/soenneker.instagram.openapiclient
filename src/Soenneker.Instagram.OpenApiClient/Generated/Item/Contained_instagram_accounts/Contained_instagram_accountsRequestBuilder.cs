@@ -157,7 +157,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Contained_instagram_accounts
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Contained_instagram_accountsRequestBuilderDeleteQueryParameters
+        public partial class Contained_instagram_accountsRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Contained_instagram_accounts
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Contained_instagram_accountsRequestBuilderGetQueryParameters
+        public partial class Contained_instagram_accountsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

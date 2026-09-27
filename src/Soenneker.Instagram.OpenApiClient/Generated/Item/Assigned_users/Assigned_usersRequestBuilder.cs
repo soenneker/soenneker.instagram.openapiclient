@@ -157,7 +157,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Assigned_users
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Assigned_usersRequestBuilderDeleteQueryParameters
+        public partial class Assigned_usersRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
             #pragma warning disable CS1591
@@ -167,7 +167,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Assigned_users
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
-        public partial class Assigned_usersRequestBuilderGetQueryParameters
+        public partial class Assigned_usersRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
