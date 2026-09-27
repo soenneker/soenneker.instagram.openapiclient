@@ -1,0 +1,1616 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+  "info": {
+    "title": "Instagram Publishing API",
+    "version": "v26.0"
+  },
+  "servers": [
+    {
+      "url": "https://graph.facebook.com/v26.0"
+    }
+  ],
+  "paths": {
+    "/{node-id}": {
+      "delete": {
+        "operationId": "delete_id",
+        "tags": [
+          "IGComment",
+          "IGMedia"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ad_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGComment",
+            "name": "#delete",
+            "returnType": "Object",
+            "parameters": [
+              {
+                "name": "ad_id",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "IGMedia",
+            "name": "#delete",
+            "returnType": "Object",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_id",
+        "tags": [
+          "IGComment",
+          "IGContainer",
+          "IGMedia",
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "name": "ad_account_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "boostable_media_callsite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "$ref": "#/components/schemas/shadowigmedia_boostable_media_callsite"
+            }
+          },
+          {
+            "name": "business_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "primary_fb_page_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "primary_ig_user_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "secondary_fb_page_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "secondary_ig_user_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "adgroup_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGComment",
+            "name": "#get",
+            "returnType": "IGComment",
+            "parameters": []
+          },
+          {
+            "node": "IGContainer",
+            "name": "#get",
+            "returnType": "IGContainer",
+            "parameters": []
+          },
+          {
+            "node": "IGMedia",
+            "name": "#get",
+            "returnType": "IGMedia",
+            "parameters": [
+              {
+                "name": "ad_account_id",
+                "required": false,
+                "type": "unsigned int"
+              },
+              {
+                "name": "boostable_media_callsite",
+                "required": false,
+                "type": "shadowigmedia_boostable_media_callsite"
+              },
+              {
+                "name": "business_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "primary_fb_page_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "primary_ig_user_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "secondary_fb_page_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "secondary_ig_user_id",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "node": "IGUser",
+            "name": "#get",
+            "returnType": "IGUser",
+            "parameters": [
+              {
+                "name": "adgroup_id",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id",
+        "tags": [
+          "IGMedia"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGMedia",
+            "name": "#update",
+            "returnType": "IGMedia",
+            "parameters": [
+              {
+                "name": "comment_enabled",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "status",
+                "required": false,
+                "type": "shadowigmedia_status"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "comment_enabled": {
+                    "type": "boolean"
+                  },
+                  "status": {
+                    "$ref": "#/components/schemas/shadowigmedia_status"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/children": {
+      "get": {
+        "operationId": "get_id_children",
+        "tags": [
+          "IGMedia"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGMedia",
+            "name": null,
+            "returnType": "IGMedia",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/IGMedia"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/comments": {
+      "get": {
+        "operationId": "get_id_comments",
+        "tags": [
+          "IGMedia"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGMedia",
+            "name": null,
+            "returnType": "IGComment",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/IGComment"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id_comments",
+        "tags": [
+          "IGMedia"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGMedia",
+            "name": null,
+            "returnType": "IGComment",
+            "parameters": [
+              {
+                "name": "ad_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "message",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ad_id": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/content_publishing_limit": {
+      "get": {
+        "operationId": "get_id_content_publishing_limit",
+        "tags": [
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGUser",
+            "name": null,
+            "returnType": "ContentPublishingLimitResponse",
+            "parameters": [
+              {
+                "name": "since",
+                "required": false,
+                "type": "datetime"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ContentPublishingLimitResponse"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/media": {
+      "get": {
+        "operationId": "get_id_media",
+        "tags": [
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGUser",
+            "name": null,
+            "returnType": "IGMedia",
+            "parameters": [
+              {
+                "name": "since",
+                "required": false,
+                "type": "datetime"
+              },
+              {
+                "name": "until",
+                "required": false,
+                "type": "datetime"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/IGMedia"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_id_media",
+        "tags": [
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGUser",
+            "name": null,
+            "returnType": "IGMedia",
+            "parameters": [
+              {
+                "name": "alt_text",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "audio_configuration",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "audio_name",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "branded_content_sponsor_ids",
+                "required": false,
+                "type": "list\u003Cunsigned int\u003E"
+              },
+              {
+                "name": "caption",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "children",
+                "required": false,
+                "type": "list\u003Cstring\u003E"
+              },
+              {
+                "name": "collaborators",
+                "required": false,
+                "type": "list\u003Cstring\u003E"
+              },
+              {
+                "name": "cover_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "image_url",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "is_ai_generated",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_carousel_item",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_comment_prompt_used",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_paid_partnership",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "is_poll_duration_extended",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "location_id",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "media_type",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "poll_attachment",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "product_tags",
+                "required": false,
+                "type": "list\u003Cmap\u003E"
+              },
+              {
+                "name": "share_to_feed",
+                "required": false,
+                "type": "bool"
+              },
+              {
+                "name": "thumb_offset",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "trial_params",
+                "required": false,
+                "type": "map"
+              },
+              {
+                "name": "upload_type",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "user_tags",
+                "required": false,
+                "type": "list\u003Cmap\u003E"
+              },
+              {
+                "name": "video_url",
+                "required": false,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "alt_text": {
+                    "type": "string"
+                  },
+                  "audio_configuration": {
+                    "type": "string"
+                  },
+                  "audio_name": {
+                    "type": "string"
+                  },
+                  "branded_content_sponsor_ids": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "format": "int64",
+                        "minimum": 0
+                      }
+                    }
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "children": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "collaborators": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "cover_url": {
+                    "type": "string"
+                  },
+                  "image_url": {
+                    "type": "string"
+                  },
+                  "is_ai_generated": {
+                    "type": "boolean"
+                  },
+                  "is_carousel_item": {
+                    "type": "boolean"
+                  },
+                  "is_comment_prompt_used": {
+                    "type": "boolean"
+                  },
+                  "is_paid_partnership": {
+                    "type": "boolean"
+                  },
+                  "is_poll_duration_extended": {
+                    "type": "boolean"
+                  },
+                  "location_id": {
+                    "type": "string"
+                  },
+                  "media_type": {
+                    "type": "string"
+                  },
+                  "poll_attachment": {
+                    "type": "string"
+                  },
+                  "product_tags": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  },
+                  "share_to_feed": {
+                    "type": "boolean"
+                  },
+                  "thumb_offset": {
+                    "type": "string"
+                  },
+                  "trial_params": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "upload_type": {
+                    "type": "string"
+                  },
+                  "user_tags": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  },
+                  "video_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/media_publish": {
+      "post": {
+        "operationId": "post_id_media_publish",
+        "tags": [
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGUser",
+            "name": null,
+            "returnType": "IGMedia",
+            "parameters": [
+              {
+                "name": "creation_id",
+                "required": true,
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishingResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "creation_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "creation_id"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/stories": {
+      "get": {
+        "operationId": "get_id_stories",
+        "tags": [
+          "IGUser"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "IGUser",
+            "name": null,
+            "returnType": "IGMedia",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/IGMedia"
+                      }
+                    },
+                    "paging": {
+                      "type": "object",
+                      "additionalProperties": true
+                    },
+                    "summary": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "shadowigmedia_boostable_media_callsite": {
+        "enum": [
+          "ADS_MANAGER_L1_EDITOR_DYNAMIC_ADS_WITH_EXISTING_POST",
+          "PA_HUB_CATALOG_INGESTION_CREATOR_ASSET"
+        ],
+        "type": "string"
+      },
+      "shadowigmedia_status": {
+        "enum": [
+          "ENDED",
+          "STARTED"
+        ],
+        "type": "string"
+      },
+      "ContentPublishingLimitResponse": {
+        "type": "object",
+        "properties": {
+          "config": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "quota_usage": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "IGComment": {
+        "type": "object",
+        "properties": {
+          "hidden": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "like_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "parent_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "IGMedia": {
+        "type": "object",
+        "properties": {
+          "caption": {
+            "type": "string"
+          },
+          "comments_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "string"
+          },
+          "is_comment_enabled": {
+            "type": "boolean"
+          },
+          "like_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "media_product_type": {
+            "type": "string"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "media_url": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/IGUser"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "thumbnail_url": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "IGUser": {
+        "type": "object",
+        "properties": {
+          "biography": {
+            "type": "string"
+          },
+          "followers_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "follows_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "string"
+          },
+          "media_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "profile_picture_url": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          }
+        }
+      },
+      "PublishingNode": {
+        "type": "object",
+        "properties": {
+          "biography": {
+            "type": "string"
+          },
+          "followers_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "follows_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "string"
+          },
+          "media_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "profile_picture_url": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "website": {
+            "type": "string"
+          },
+          "caption": {
+            "type": "string"
+          },
+          "comments_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "is_comment_enabled": {
+            "type": "boolean"
+          },
+          "like_count": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "media_product_type": {
+            "type": "string"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "media_url": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/IGUser"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "thumbnail_url": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "hidden": {
+            "type": "boolean"
+          },
+          "parent_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "PublishingResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "post_id": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "metaAccessToken": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "metaAccessToken": []
+    }
+  ],
+  "x-meta-source": {
+    "repository": "https://github.com/facebook/facebook-business-sdk-codegen",
+    "revision": "8420be6d5752c568a4f01dd608fa3cce6b2db960",
+    "profile": "Instagram publishing"
+  }
+}

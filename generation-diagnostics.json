@@ -1,0 +1,12 @@
+[
+  "GET edge responses are inferred as data arrays with optional paging and summary; use ResponseSchemaOverrides for exceptions.",
+  "Map key type \u0027Object\u0027 is represented as JSON string keys.",
+  "Map key type \u0027datetime\u0027 is represented as JSON string keys.",
+  "Map key type \u0027int\u0027 is represented as JSON string keys.",
+  "Map key type \u0027mixed\u0027 is represented as JSON string keys.",
+  "Map key type \u0027unsigned int\u0027 is represented as JSON string keys.",
+  "Merged node-specific operations for DELETE /{id}; requirements may vary by node type.",
+  "Merged node-specific operations for GET /{id}; requirements may vary by node type.",
+  "Scopes, permissions and SDKCodegen.json patches are not supplied by the node specifications; review endpoint requirements.",
+  "Unresolved Meta type \u0027list\u0027 uses an unconstrained schema."
+]
