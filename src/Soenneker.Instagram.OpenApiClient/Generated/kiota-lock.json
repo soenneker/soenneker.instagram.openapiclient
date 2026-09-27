@@ -1,6 +1,6 @@
 {
   "descriptionHash": "558D78FB029F0A190BC2C6F194D33344D95C3431A43026FE5A355B5582BE6090BC7A51E7D40D577CA2E3635E603B329163B117CC26C33304E27775F720AC0B01",
-  "descriptionLocation": "../../../../../../../git/Soenneker/Instagram/soenneker.instagram.openapiclient/openapi.json",
+  "descriptionLocation": "../../../../../../../../git/Soenneker/Instagram/soenneker.instagram.openapiclient/openapi.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.35.0",
   "clientClassName": "InstagramOpenApiClient",
