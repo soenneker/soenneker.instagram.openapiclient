@@ -9,11 +9,35 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class IGMedia : IAdditionalDataHolder, IParsable
+    public partial class IgMedia : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The alt_text property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltText { get; set; }
+#nullable restore
+#else
+        public string AltText { get; set; }
+#endif
+        /// <summary>The audio_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AudioId { get; set; }
+#nullable restore
+#else
+        public string AudioId { get; set; }
+#endif
+        /// <summary>The boost_eligibility_info property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo? BoostEligibilityInfo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo BoostEligibilityInfo { get; set; }
+#endif
         /// <summary>The caption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +48,20 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #endif
         /// <summary>The comments_count property</summary>
         public long? CommentsCount { get; set; }
+        /// <summary>The copyright_check_information property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformation? CopyrightCheckInformation { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformation CopyrightCheckInformation { get; set; }
+#endif
+        /// <summary>The current_live_viewer_count property</summary>
+        public long? CurrentLiveViewerCount { get; set; }
+        /// <summary>The has_poll property</summary>
+        public bool? HasPoll { get; set; }
+        /// <summary>The has_slider property</summary>
+        public bool? HasSlider { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,10 +70,80 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The ig_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IgId { get; set; }
+#nullable restore
+#else
+        public string IgId { get; set; }
+#endif
+        /// <summary>The ingest_first_video_received_time property</summary>
+        public long? IngestFirstVideoReceivedTime { get; set; }
+        /// <summary>The ingest_is_ready_to_start property</summary>
+        public bool? IngestIsReadyToStart { get; set; }
+        /// <summary>The ingest_key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IngestKey { get; set; }
+#nullable restore
+#else
+        public string IngestKey { get; set; }
+#endif
+        /// <summary>The ingest_last_heartbeat_time property</summary>
+        public long? IngestLastHeartbeatTime { get; set; }
+        /// <summary>The ingest_state property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IngestState { get; set; }
+#nullable restore
+#else
+        public string IngestState { get; set; }
+#endif
+        /// <summary>The ingest_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IngestUrl { get; set; }
+#nullable restore
+#else
+        public string IngestUrl { get; set; }
+#endif
+        /// <summary>The ingest_video_height property</summary>
+        public long? IngestVideoHeight { get; set; }
+        /// <summary>The ingest_video_width property</summary>
+        public long? IngestVideoWidth { get; set; }
+        /// <summary>The is_ai_generated property</summary>
+        public bool? IsAiGenerated { get; set; }
         /// <summary>The is_comment_enabled property</summary>
         public bool? IsCommentEnabled { get; set; }
+        /// <summary>The is_shared_to_feed property</summary>
+        public bool? IsSharedToFeed { get; set; }
+        /// <summary>The legacy_instagram_media_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LegacyInstagramMediaId { get; set; }
+#nullable restore
+#else
+        public string LegacyInstagramMediaId { get; set; }
+#endif
         /// <summary>The like_count property</summary>
         public long? LikeCount { get; set; }
+        /// <summary>The live_status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LiveStatus { get; set; }
+#nullable restore
+#else
+        public string LiveStatus { get; set; }
+#endif
+        /// <summary>The media_audio_type property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MediaAudioType { get; set; }
+#nullable restore
+#else
+        public string MediaAudioType { get; set; }
+#endif
         /// <summary>The media_product_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,10 +171,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IGUser? Owner { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IGUser Owner { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser Owner { get; set; }
 #endif
         /// <summary>The permalink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,6 +183,20 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #nullable restore
 #else
         public string Permalink { get; set; }
+#endif
+        /// <summary>The reposts_count property</summary>
+        public long? RepostsCount { get; set; }
+        /// <summary>The saved_count property</summary>
+        public long? SavedCount { get; set; }
+        /// <summary>The shares_count property</summary>
+        public long? SharesCount { get; set; }
+        /// <summary>The shortcode property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Shortcode { get; set; }
+#nullable restore
+#else
+        public string Shortcode { get; set; }
 #endif
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,6 +208,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #endif
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get; set; }
+        /// <summary>The total_comments_count property</summary>
+        public long? TotalCommentsCount { get; set; }
+        /// <summary>The total_like_count property</summary>
+        public long? TotalLikeCount { get; set; }
+        /// <summary>The total_views_count property</summary>
+        public long? TotalViewsCount { get; set; }
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,22 +222,32 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Username { get; set; }
 #endif
+        /// <summary>The video_title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VideoTitle { get; set; }
+#nullable restore
+#else
+        public string VideoTitle { get; set; }
+#endif
+        /// <summary>The view_count property</summary>
+        public long? ViewCount { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGMedia"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgMedia"/> and sets the default values.
         /// </summary>
-        public IGMedia()
+        public IgMedia()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGMedia"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgMedia"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Instagram.OpenApiClient.Models.IGMedia CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Instagram.OpenApiClient.Models.IgMedia CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.IGMedia();
+            return new global::Soenneker.Instagram.OpenApiClient.Models.IgMedia();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,19 +257,49 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "alt_text", n => { AltText = n.GetStringValue(); } },
+                { "audio_id", n => { AudioId = n.GetStringValue(); } },
+                { "boost_eligibility_info", n => { BoostEligibilityInfo = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo>(global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo.CreateFromDiscriminatorValue); } },
                 { "caption", n => { Caption = n.GetStringValue(); } },
                 { "comments_count", n => { CommentsCount = n.GetLongValue(); } },
+                { "copyright_check_information", n => { CopyrightCheckInformation = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformation>(global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformation.CreateFromDiscriminatorValue); } },
+                { "current_live_viewer_count", n => { CurrentLiveViewerCount = n.GetLongValue(); } },
+                { "has_poll", n => { HasPoll = n.GetBoolValue(); } },
+                { "has_slider", n => { HasSlider = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "ig_id", n => { IgId = n.GetStringValue(); } },
+                { "ingest_first_video_received_time", n => { IngestFirstVideoReceivedTime = n.GetLongValue(); } },
+                { "ingest_is_ready_to_start", n => { IngestIsReadyToStart = n.GetBoolValue(); } },
+                { "ingest_key", n => { IngestKey = n.GetStringValue(); } },
+                { "ingest_last_heartbeat_time", n => { IngestLastHeartbeatTime = n.GetLongValue(); } },
+                { "ingest_state", n => { IngestState = n.GetStringValue(); } },
+                { "ingest_url", n => { IngestUrl = n.GetStringValue(); } },
+                { "ingest_video_height", n => { IngestVideoHeight = n.GetLongValue(); } },
+                { "ingest_video_width", n => { IngestVideoWidth = n.GetLongValue(); } },
+                { "is_ai_generated", n => { IsAiGenerated = n.GetBoolValue(); } },
                 { "is_comment_enabled", n => { IsCommentEnabled = n.GetBoolValue(); } },
+                { "is_shared_to_feed", n => { IsSharedToFeed = n.GetBoolValue(); } },
+                { "legacy_instagram_media_id", n => { LegacyInstagramMediaId = n.GetStringValue(); } },
                 { "like_count", n => { LikeCount = n.GetLongValue(); } },
+                { "live_status", n => { LiveStatus = n.GetStringValue(); } },
+                { "media_audio_type", n => { MediaAudioType = n.GetStringValue(); } },
                 { "media_product_type", n => { MediaProductType = n.GetStringValue(); } },
                 { "media_type", n => { MediaType = n.GetStringValue(); } },
                 { "media_url", n => { MediaUrl = n.GetStringValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IGUser>(global::Soenneker.Instagram.OpenApiClient.Models.IGUser.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>(global::Soenneker.Instagram.OpenApiClient.Models.IgUser.CreateFromDiscriminatorValue); } },
                 { "permalink", n => { Permalink = n.GetStringValue(); } },
+                { "reposts_count", n => { RepostsCount = n.GetLongValue(); } },
+                { "saved_count", n => { SavedCount = n.GetLongValue(); } },
+                { "shares_count", n => { SharesCount = n.GetLongValue(); } },
+                { "shortcode", n => { Shortcode = n.GetStringValue(); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
+                { "total_comments_count", n => { TotalCommentsCount = n.GetLongValue(); } },
+                { "total_like_count", n => { TotalLikeCount = n.GetLongValue(); } },
+                { "total_views_count", n => { TotalViewsCount = n.GetLongValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
+                { "video_title", n => { VideoTitle = n.GetStringValue(); } },
+                { "view_count", n => { ViewCount = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -141,19 +309,49 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("alt_text", AltText);
+            writer.WriteStringValue("audio_id", AudioId);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo>("boost_eligibility_info", BoostEligibilityInfo);
             writer.WriteStringValue("caption", Caption);
             writer.WriteLongValue("comments_count", CommentsCount);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformation>("copyright_check_information", CopyrightCheckInformation);
+            writer.WriteLongValue("current_live_viewer_count", CurrentLiveViewerCount);
+            writer.WriteBoolValue("has_poll", HasPoll);
+            writer.WriteBoolValue("has_slider", HasSlider);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("ig_id", IgId);
+            writer.WriteLongValue("ingest_first_video_received_time", IngestFirstVideoReceivedTime);
+            writer.WriteBoolValue("ingest_is_ready_to_start", IngestIsReadyToStart);
+            writer.WriteStringValue("ingest_key", IngestKey);
+            writer.WriteLongValue("ingest_last_heartbeat_time", IngestLastHeartbeatTime);
+            writer.WriteStringValue("ingest_state", IngestState);
+            writer.WriteStringValue("ingest_url", IngestUrl);
+            writer.WriteLongValue("ingest_video_height", IngestVideoHeight);
+            writer.WriteLongValue("ingest_video_width", IngestVideoWidth);
+            writer.WriteBoolValue("is_ai_generated", IsAiGenerated);
             writer.WriteBoolValue("is_comment_enabled", IsCommentEnabled);
+            writer.WriteBoolValue("is_shared_to_feed", IsSharedToFeed);
+            writer.WriteStringValue("legacy_instagram_media_id", LegacyInstagramMediaId);
             writer.WriteLongValue("like_count", LikeCount);
+            writer.WriteStringValue("live_status", LiveStatus);
+            writer.WriteStringValue("media_audio_type", MediaAudioType);
             writer.WriteStringValue("media_product_type", MediaProductType);
             writer.WriteStringValue("media_type", MediaType);
             writer.WriteStringValue("media_url", MediaUrl);
-            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IGUser>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>("owner", Owner);
             writer.WriteStringValue("permalink", Permalink);
+            writer.WriteLongValue("reposts_count", RepostsCount);
+            writer.WriteLongValue("saved_count", SavedCount);
+            writer.WriteLongValue("shares_count", SharesCount);
+            writer.WriteStringValue("shortcode", Shortcode);
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
+            writer.WriteLongValue("total_comments_count", TotalCommentsCount);
+            writer.WriteLongValue("total_like_count", TotalLikeCount);
+            writer.WriteLongValue("total_views_count", TotalViewsCount);
             writer.WriteStringValue("username", Username);
+            writer.WriteStringValue("video_title", VideoTitle);
+            writer.WriteLongValue("view_count", ViewCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

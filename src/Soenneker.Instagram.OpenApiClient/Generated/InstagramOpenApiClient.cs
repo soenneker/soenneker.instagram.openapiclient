@@ -21,14 +21,14 @@ namespace Soenneker.Instagram.OpenApiClient
     {
         /// <summary>Gets an item from the Soenneker.Instagram.OpenApiClient.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Item.NodeItemRequestBuilder"/></returns>
-        public global::Soenneker.Instagram.OpenApiClient.Item.NodeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Item.WithNodeItemRequestBuilder"/></returns>
+        public global::Soenneker.Instagram.OpenApiClient.Item.WithNodeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("node%2Did", position);
-                return new global::Soenneker.Instagram.OpenApiClient.Item.NodeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("nodeId", position);
+                return new global::Soenneker.Instagram.OpenApiClient.Item.WithNodeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Instagram.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System;
 namespace Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\content_publishing_limit
+    /// Builds and executes requests for operations under \{nodeId}\content_publishing_limit
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Content_publishing_limitRequestBuilder : BaseRequestBuilder
@@ -21,7 +22,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Content_publishing_limitRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/content_publishing_limit{?after*,before*,fields*,limit*,since*}", pathParameters)
+        public Content_publishing_limitRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/content_publishing_limit{?after*,before*,fields*,limit*,since*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,30 +30,28 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Content_publishing_limitRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/content_publishing_limit{?after*,before*,fields*,limit*,since*}", rawUrl)
+        public Content_publishing_limitRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/content_publishing_limit{?after*,before*,fields*,limit*,since*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimit200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limit4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limit5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimitDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitRequestBuilder.Content_publishing_limitRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimit200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitRequestBuilder.Content_publishing_limitRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitRequestBuilder.Content_publishing_limitRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimit200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitRequestBuilder.Content_publishing_limitRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limit4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limit5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimitDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitGetResponse>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit.Content_publishing_limitGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimit200Response>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Models.GetIdContentPublishingLimit200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

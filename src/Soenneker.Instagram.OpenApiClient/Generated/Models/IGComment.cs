@@ -9,11 +9,19 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class IGComment : IAdditionalDataHolder, IParsable
+    public partial class IgComment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The from property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgCommentFromUser? From { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgCommentFromUser From { get; set; }
+#endif
         /// <summary>The hidden property</summary>
         public bool? Hidden { get; set; }
         /// <summary>The id property</summary>
@@ -24,8 +32,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The legacy_instagram_comment_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LegacyInstagramCommentId { get; set; }
+#nullable restore
+#else
+        public string LegacyInstagramCommentId { get; set; }
+#endif
         /// <summary>The like_count property</summary>
         public long? LikeCount { get; set; }
+        /// <summary>The media property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMedia? Media { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMedia Media { get; set; }
+#endif
         /// <summary>The parent_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,6 +68,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #endif
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get; set; }
+        /// <summary>The user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser? User { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser User { get; set; }
+#endif
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,21 +85,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public string Username { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGComment"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgComment"/> and sets the default values.
         /// </summary>
-        public IGComment()
+        public IgComment()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGComment"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgComment"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Instagram.OpenApiClient.Models.IGComment CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Instagram.OpenApiClient.Models.IgComment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.IGComment();
+            return new global::Soenneker.Instagram.OpenApiClient.Models.IgComment();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,12 +109,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "from", n => { From = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgCommentFromUser>(global::Soenneker.Instagram.OpenApiClient.Models.IgCommentFromUser.CreateFromDiscriminatorValue); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "legacy_instagram_comment_id", n => { LegacyInstagramCommentId = n.GetStringValue(); } },
                 { "like_count", n => { LikeCount = n.GetLongValue(); } },
+                { "media", n => { Media = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>(global::Soenneker.Instagram.OpenApiClient.Models.IgMedia.CreateFromDiscriminatorValue); } },
                 { "parent_id", n => { ParentId = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>(global::Soenneker.Instagram.OpenApiClient.Models.IgUser.CreateFromDiscriminatorValue); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -93,12 +129,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgCommentFromUser>("from", From);
             writer.WriteBoolValue("hidden", Hidden);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("legacy_instagram_comment_id", LegacyInstagramCommentId);
             writer.WriteLongValue("like_count", LikeCount);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>("media", Media);
             writer.WriteStringValue("parent_id", ParentId);
             writer.WriteStringValue("text", Text);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>("user", User);
             writer.WriteStringValue("username", Username);
             writer.WriteAdditionalData(AdditionalData);
         }

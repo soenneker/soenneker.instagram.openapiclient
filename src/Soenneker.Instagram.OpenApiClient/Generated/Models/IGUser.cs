@@ -9,7 +9,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class IGUser : IAdditionalDataHolder, IParsable
+    public partial class IgUser : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -22,10 +22,28 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Biography { get; set; }
 #endif
+        /// <summary>The business_discovery property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser? BusinessDiscovery { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgUser BusinessDiscovery { get; set; }
+#endif
+        /// <summary>The collaborative_media_search property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.ShadowIgUserCollaborativeMedia? CollaborativeMediaSearch { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.ShadowIgUserCollaborativeMedia CollaborativeMediaSearch { get; set; }
+#endif
         /// <summary>The followers_count property</summary>
         public long? FollowersCount { get; set; }
         /// <summary>The follows_count property</summary>
         public long? FollowsCount { get; set; }
+        /// <summary>The has_profile_pic property</summary>
+        public bool? HasProfilePic { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,8 +52,60 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The ig_id property</summary>
+        public long? IgId { get; set; }
+        /// <summary>The is_published property</summary>
+        public bool? IsPublished { get; set; }
+        /// <summary>The legacy_instagram_user_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LegacyInstagramUserId { get; set; }
+#nullable restore
+#else
+        public string LegacyInstagramUserId { get; set; }
+#endif
         /// <summary>The media_count property</summary>
         public long? MediaCount { get; set; }
+        /// <summary>The mentioned_comment property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgComment? MentionedComment { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgComment MentionedComment { get; set; }
+#endif
+        /// <summary>The mentioned_media property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMedia? MentionedMedia { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgMedia MentionedMedia { get; set; }
+#endif
+        /// <summary>The mini_shop_storefront property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.Shop? MiniShopStorefront { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.Shop MiniShopStorefront { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The owner_business property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business? OwnerBusiness { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business OwnerBusiness { get; set; }
+#endif
         /// <summary>The profile_picture_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,6 +113,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #nullable restore
 #else
         public string ProfilePictureUrl { get; set; }
+#endif
+        /// <summary>The shopping_product_tag_eligibility property</summary>
+        public bool? ShoppingProductTagEligibility { get; set; }
+        /// <summary>The shopping_review_status property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ShoppingReviewStatus { get; set; }
+#nullable restore
+#else
+        public string ShoppingReviewStatus { get; set; }
 #endif
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -61,21 +141,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public string Website { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGUser"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgUser"/> and sets the default values.
         /// </summary>
-        public IGUser()
+        public IgUser()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IGUser"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgUser"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Instagram.OpenApiClient.Models.IGUser CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Instagram.OpenApiClient.Models.IgUser CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.IGUser();
+            return new global::Soenneker.Instagram.OpenApiClient.Models.IgUser();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,11 +166,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "biography", n => { Biography = n.GetStringValue(); } },
+                { "business_discovery", n => { BusinessDiscovery = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>(global::Soenneker.Instagram.OpenApiClient.Models.IgUser.CreateFromDiscriminatorValue); } },
+                { "collaborative_media_search", n => { CollaborativeMediaSearch = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ShadowIgUserCollaborativeMedia>(global::Soenneker.Instagram.OpenApiClient.Models.ShadowIgUserCollaborativeMedia.CreateFromDiscriminatorValue); } },
                 { "followers_count", n => { FollowersCount = n.GetLongValue(); } },
                 { "follows_count", n => { FollowsCount = n.GetLongValue(); } },
+                { "has_profile_pic", n => { HasProfilePic = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "ig_id", n => { IgId = n.GetLongValue(); } },
+                { "is_published", n => { IsPublished = n.GetBoolValue(); } },
+                { "legacy_instagram_user_id", n => { LegacyInstagramUserId = n.GetStringValue(); } },
                 { "media_count", n => { MediaCount = n.GetLongValue(); } },
+                { "mentioned_comment", n => { MentionedComment = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgComment>(global::Soenneker.Instagram.OpenApiClient.Models.IgComment.CreateFromDiscriminatorValue); } },
+                { "mentioned_media", n => { MentionedMedia = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>(global::Soenneker.Instagram.OpenApiClient.Models.IgMedia.CreateFromDiscriminatorValue); } },
+                { "mini_shop_storefront", n => { MiniShopStorefront = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Shop>(global::Soenneker.Instagram.OpenApiClient.Models.Shop.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "owner_business", n => { OwnerBusiness = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Business>(global::Soenneker.Instagram.OpenApiClient.Models.Business.CreateFromDiscriminatorValue); } },
                 { "profile_picture_url", n => { ProfilePictureUrl = n.GetStringValue(); } },
+                { "shopping_product_tag_eligibility", n => { ShoppingProductTagEligibility = n.GetBoolValue(); } },
+                { "shopping_review_status", n => { ShoppingReviewStatus = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
                 { "website", n => { Website = n.GetStringValue(); } },
             };
@@ -103,11 +196,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("biography", Biography);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgUser>("business_discovery", BusinessDiscovery);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ShadowIgUserCollaborativeMedia>("collaborative_media_search", CollaborativeMediaSearch);
             writer.WriteLongValue("followers_count", FollowersCount);
             writer.WriteLongValue("follows_count", FollowsCount);
+            writer.WriteBoolValue("has_profile_pic", HasProfilePic);
             writer.WriteStringValue("id", Id);
+            writer.WriteLongValue("ig_id", IgId);
+            writer.WriteBoolValue("is_published", IsPublished);
+            writer.WriteStringValue("legacy_instagram_user_id", LegacyInstagramUserId);
             writer.WriteLongValue("media_count", MediaCount);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgComment>("mentioned_comment", MentionedComment);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>("mentioned_media", MentionedMedia);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Shop>("mini_shop_storefront", MiniShopStorefront);
+            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Business>("owner_business", OwnerBusiness);
             writer.WriteStringValue("profile_picture_url", ProfilePictureUrl);
+            writer.WriteBoolValue("shopping_product_tag_eligibility", ShoppingProductTagEligibility);
+            writer.WriteStringValue("shopping_review_status", ShoppingReviewStatus);
             writer.WriteStringValue("username", Username);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);

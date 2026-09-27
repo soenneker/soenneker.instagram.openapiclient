@@ -17,10 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponse_config? Config { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponseConfigProperty? Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponse_config Config { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponseConfigProperty Config { get; set; }
 #endif
         /// <summary>The quota_usage property</summary>
         public long? QuotaUsage { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponse_config>(global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponse_config.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponseConfigProperty>(global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponseConfigProperty.CreateFromDiscriminatorValue); } },
                 { "quota_usage", n => { QuotaUsage = n.GetLongValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponse_config>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ContentPublishingLimitResponseConfigProperty>("config", Config);
             writer.WriteLongValue("quota_usage", QuotaUsage);
             writer.WriteAdditionalData(AdditionalData);
         }

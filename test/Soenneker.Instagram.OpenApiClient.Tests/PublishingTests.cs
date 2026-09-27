@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Http.HttpClientLibrary;
-using Soenneker.Instagram.OpenApiClient.Item.Media;
+using Soenneker.Instagram.OpenApiClient.Models;
 using Soenneker.Instagram.OpenApiClient.Item.Media_publish;
 
 namespace Soenneker.Instagram.OpenApiClient.Tests;
@@ -35,8 +35,8 @@ public sealed class PublishingTests
             return Json("""{"id":"18000000000000001"}""");
         }));
         var client = Create(http);
-        var container = await client["123"].Media.PostAsync(new MediaPostRequestBody { ImageUrl = "https://example.com/image.jpg?a=1&b=2", Caption = "Hello & café" });
-        var published = await client["123"].Media_publish.PostAsync(new Media_publishPostRequestBody { CreationId = container!.Id });
+        var container = await client["123"].Media.PostAsync(new PostIdMediaXWwwFormUrlencodedRequest { ImageUrl = "https://example.com/image.jpg?a=1&b=2", Caption = "Hello & café" });
+        var published = await client["123"].Media_publish.PostAsync(new PostIdMediaPublishXWwwFormUrlencodedRequest { CreationId = container!.Id });
         Check(published?.Id == "18000000000000001" && count == 2, "Published media ID");
     }
 
@@ -56,7 +56,7 @@ public sealed class PublishingTests
             return Json("""{"id":"container"}""");
         }));
         var client = Create(http);
-        await client["123"].Media.PostAsync(new MediaPostRequestBody { MediaType = "CAROUSEL", Children = """["child1","child2"]""" });
+        await client["123"].Media.PostAsync(new PostIdMediaXWwwFormUrlencodedRequest { MediaType = "CAROUSEL", Children = """["child1","child2"]""" });
         var status = await client["container"].GetAsync(config => config.QueryParameters.Fields = "status_code,status");
         Check(status?.StatusCode == "FINISHED", "Container status must be typed");
     }
@@ -71,12 +71,23 @@ public sealed class PublishingTests
         }));
         var client = Create(http);
         bool failed = false;
-        try { await client["123"].Media_publish.PostAsync(new Media_publishPostRequestBody { CreationId = "container" }); }
+        try { await client["123"].Media_publish.PostAsync(new PostIdMediaPublishXWwwFormUrlencodedRequest { CreationId = "container" }); }
         catch (ApiException error) { Check(error.ResponseStatusCode == 401, "HTTP error status"); failed = true; }
         Check(failed, "API error was swallowed");
         try { await client["123"].Media.GetAsync(cancellationToken: new CancellationToken(true)); }
         catch (OperationCanceledException) { return; }
         throw new InvalidOperationException("Cancellation was swallowed");
+    }
+    [Test]
+    public async Task ReadsInsightsOutsidePublishingSubset()
+    {
+        using var http = new HttpClient(new Handler((request, _) =>
+        {
+            Check(request.RequestUri!.AbsolutePath == "/v26.0/123/insights", "Insights endpoint");
+            return Task.FromResult(Json("""{"data":[{"name":"reach","period":"day","values":[{"value":42}]}]}"""));
+        }));
+        var result = await Create(http)["123"].Insights.GetAsync();
+        Check(result is not null, "Insights response deserialized");
     }
     private static InstagramOpenApiClient Create(HttpClient http)
     {

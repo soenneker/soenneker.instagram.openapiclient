@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Instagram.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System;
 namespace Soenneker.Instagram.OpenApiClient.Item.Stories
 {
     /// <summary>
-    /// Builds and executes requests for operations under \{node-id}\stories
+    /// Builds and executes requests for operations under \{nodeId}\stories
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StoriesRequestBuilder : BaseRequestBuilder
@@ -21,7 +22,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Stories
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/stories{?after*,before*,fields*,limit*}", pathParameters)
+        public StoriesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/stories{?after*,before*,fields*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -29,30 +30,28 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Stories
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{node%2Did}/stories{?after*,before*,fields*,limit*}", rawUrl)
+        public StoriesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/stories{?after*,before*,fields*,limit*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdStories200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Item.Stories.Stories4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Item.Stories.Stories5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdStoriesDefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesRequestBuilder.StoriesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.GetIdStories200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesRequestBuilder.StoriesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesRequestBuilder.StoriesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.GetIdStories200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesRequestBuilder.StoriesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Soenneker.Instagram.OpenApiClient.Item.Stories.Stories4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Soenneker.Instagram.OpenApiClient.Item.Stories.Stories5XXError.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Instagram.OpenApiClient.Models.GetIdStoriesDefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesGetResponse>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Item.Stories.StoriesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Models.GetIdStories200Response>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Models.GetIdStories200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
