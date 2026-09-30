@@ -17,7 +17,7 @@ namespace Soenneker.Instagram.OpenApiClient.Tests;
 public sealed class PublishingTests
 {
     [Test]
-    public async Task CreatesAndPublishesMediaUsingReturnedContainerId()
+    public async ValueTask CreatesAndPublishesMediaUsingReturnedContainerId()
     {
         int count = 0;
         using var http = new HttpClient(new Handler(async (request, _) =>
@@ -41,7 +41,7 @@ public sealed class PublishingTests
     }
 
     [Test]
-    public async Task SendsCarouselChildrenAsJsonAndReadsContainerStatus()
+    public async ValueTask SendsCarouselChildrenAsJsonAndReadsContainerStatus()
     {
         using var http = new HttpClient(new Handler(async (request, _) =>
         {
@@ -62,7 +62,7 @@ public sealed class PublishingTests
     }
 
     [Test]
-    public async Task PropagatesApiErrorsAndCancellation()
+    public async ValueTask PropagatesApiErrorsAndCancellation()
     {
         using var http = new HttpClient(new Handler((_, token) =>
         {
@@ -79,7 +79,7 @@ public sealed class PublishingTests
         throw new InvalidOperationException("Cancellation was swallowed");
     }
     [Test]
-    public async Task ReadsInsightsOutsidePublishingSubset()
+    public async ValueTask ReadsInsightsOutsidePublishingSubset()
     {
         using var http = new HttpClient(new Handler((request, _) =>
         {
