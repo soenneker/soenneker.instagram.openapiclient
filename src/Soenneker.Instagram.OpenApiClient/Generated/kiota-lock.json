@@ -1,6 +1,6 @@
 {
   "descriptionHash": "5C5C2478CF797F2C7ACEB095FC00F9ACECF33666014D4BD8B543712D5A14F5F681460500502E58A4DB4577174BA88A18EC9DED15FBF5B06C694641174D5C00A3",
-  "descriptionLocation": "../../../temp_4b53881742b6470790a66f79880536dc/openapi.fixed.json",
+  "descriptionLocation": "../../../temp_eb6990d252ca4fc795b96ec0d74ebfd5/openapi.fixed.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.36.1",
   "clientClassName": "InstagramOpenApiClient",
