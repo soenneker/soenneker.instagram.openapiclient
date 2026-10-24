@@ -130,13 +130,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_media
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("platform")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcambrandedContentMediaPlatformEnumParam[]? Platform { get; set; }
+            public string? Platform { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("platform")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcambrandedContentMediaPlatformEnumParam[] Platform { get; set; }
+            public string Platform { get; set; }
             #pragma warning restore CS1591
 #endif
         }

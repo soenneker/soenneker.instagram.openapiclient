@@ -156,13 +156,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Insights
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("metrics")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcaminsightsMetricsEnumParam[]? Metrics { get; set; }
+            public string? Metrics { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("metrics")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcaminsightsMetricsEnumParam[] Metrics { get; set; }
+            public string Metrics { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -195,13 +195,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Insights
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("platform")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcaminsightsPlatformEnumParam[]? Platform { get; set; }
+            public string? Platform { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("platform")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcaminsightsPlatformEnumParam[] Platform { get; set; }
+            public string Platform { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

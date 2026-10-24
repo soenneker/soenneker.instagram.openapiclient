@@ -106,7 +106,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval.Branded_content_tag_approvalRequestBuilder.Branded_content_tag_approvalRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/branded_content_tag_approval{?user_ids*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/{nodeId}/branded_content_tag_approval?user_ids={user_ids}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -122,7 +122,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval.Branded_content_tag_approvalRequestBuilder.Branded_content_tag_approvalRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/{nodeId}/branded_content_tag_approval{?after*,before*,fields*,limit*,user_ids*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/{nodeId}/branded_content_tag_approval?user_ids={user_ids}{&after*,before*,fields*,limit*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -143,7 +143,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -164,13 +164,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[]? UserIds { get; set; }
+            public string? UserIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[] UserIds { get; set; }
+            public string UserIds { get; set; }
             #pragma warning restore CS1591
 #endif
         }
@@ -226,13 +226,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[]? UserIds { get; set; }
+            public string? UserIds { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("user_ids")]
-            public long?[] UserIds { get; set; }
+            public string UserIds { get; set; }
             #pragma warning restore CS1591
 #endif
         }

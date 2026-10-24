@@ -147,13 +147,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Threads
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("tags")]
-            public string[]? Tags { get; set; }
+            public string? Tags { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("tags")]
-            public string[] Tags { get; set; }
+            public string Tags { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

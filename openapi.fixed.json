@@ -5232,103 +5232,115 @@
           {
             "name": "breakdown",
             "in": "query",
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowigmediainsightsBreakdownEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MediainsightsBreakdownEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowiguserinsightsBreakdownEnumParam"
-                  }
-                },
-                {
-                  "$ref": "#/components/schemas/IguserexportforcaminsightsBreakdownEnumParam"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserinsightsBreakdownEnumParam"
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowigmediainsightsBreakdownEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MediainsightsBreakdownEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowiguserinsightsBreakdownEnumParam"
+                      }
+                    },
+                    {
+                      "$ref": "#/components/schemas/IguserexportforcaminsightsBreakdownEnumParam"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UserinsightsBreakdownEnumParam"
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
           },
           {
             "name": "metric",
             "in": "query",
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowigmediainsightsMetricEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MediainsightsMetricEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowiguserinsightsMetricEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserinsightsMetricEnumParam"
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowigmediainsightsMetricEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MediainsightsMetricEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowiguserinsightsMetricEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UserinsightsMetricEnumParam"
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
           },
           {
             "name": "period",
             "in": "query",
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowigmediainsightsPeriodEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MediainsightsPeriodEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShadowiguserinsightsPeriodEnumParam"
-                  }
-                },
-                {
-                  "$ref": "#/components/schemas/IguserexportforcaminsightsPeriodEnumParam"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserinsightsPeriodEnumParam"
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowigmediainsightsPeriodEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/MediainsightsPeriodEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ShadowiguserinsightsPeriodEnumParam"
+                      }
+                    },
+                    {
+                      "$ref": "#/components/schemas/IguserexportforcaminsightsPeriodEnumParam"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UserinsightsPeriodEnumParam"
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
           },
           {
@@ -5409,20 +5421,28 @@
           {
             "name": "metrics",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/IguserexportforcaminsightsMetricsEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IguserexportforcaminsightsMetricsEnumParam"
+                  }
+                }
               }
             }
           },
           {
             "name": "platform",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/IguserexportforcaminsightsPlatformEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IguserexportforcaminsightsPlatformEnumParam"
+                  }
+                }
               }
             }
           },
@@ -6560,10 +6580,14 @@
           {
             "name": "media_relationship",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShadowiguserbrandedContentAdvertisableMediasMediaRelationshipEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShadowiguserbrandedContentAdvertisableMediasMediaRelationshipEnumParam"
+                  }
+                }
               }
             }
           },
@@ -6584,10 +6608,14 @@
           {
             "name": "permalinks",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -6706,12 +6734,16 @@
             "name": "user_ids",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "minimum": 0,
-                "type": "integer",
-                "format": "int64"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
               }
             }
           }
@@ -6774,12 +6806,16 @@
             "name": "user_ids",
             "in": "query",
             "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "minimum": 0,
-                "type": "integer",
-                "format": "int64"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
               }
             }
           },
@@ -7622,55 +7658,79 @@
           {
             "name": "creator_age_bucket",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
               }
             }
           },
           {
             "name": "creator_countries",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsCreatorCountriesEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsCreatorCountriesEnumParam"
+                  }
+                }
               }
             }
           },
           {
             "name": "creator_follower_growth",
             "in": "query",
-            "schema": {
-              "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           },
           {
             "name": "creator_gender",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsCreatorGenderEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsCreatorGenderEnumParam"
+                  }
+                }
               }
             }
           },
           {
             "name": "creator_interests",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
               }
             }
           },
           {
             "name": "creator_latest_post_activity",
             "in": "query",
-            "schema": {
-              "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           },
           {
@@ -7712,10 +7772,14 @@
           {
             "name": "creator_states",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -7743,50 +7807,70 @@
           {
             "name": "major_audience_age_bucket",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
               }
             }
           },
           {
             "name": "major_audience_countries",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsMajorAudienceCountriesEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsMajorAudienceCountriesEnumParam"
+                  }
+                }
               }
             }
           },
           {
             "name": "major_audience_device_type",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
               }
             }
           },
           {
             "name": "major_audience_gender",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsMajorAudienceGenderEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShadowigusercreatorMarketplaceCreatorsMajorAudienceGenderEnumParam"
+                  }
+                }
               }
             }
           },
           {
             "name": "major_audience_states",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -7821,8 +7905,12 @@
           {
             "name": "reels_interaction_rate",
             "in": "query",
-            "schema": {
-              "type": "object"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
             }
           },
           {
@@ -7835,10 +7923,14 @@
           {
             "name": "similar_to_creators",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -7852,10 +7944,14 @@
           {
             "name": "usernames",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -10211,10 +10307,14 @@
           {
             "name": "platform",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/IguserexportforcambrandedContentMediaPlatformEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IguserexportforcambrandedContentMediaPlatformEnumParam"
+                  }
+                }
               }
             }
           },
@@ -10307,10 +10407,14 @@
           {
             "name": "platform",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/IguserexportforcampastPartnershipAdsMediaPlatformEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IguserexportforcampastPartnershipAdsMediaPlatformEnumParam"
+                  }
+                }
               }
             }
           },
@@ -10404,10 +10508,14 @@
           {
             "name": "platform",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/IguserexportforcamrecentMediaPlatformEnumParam"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IguserexportforcamrecentMediaPlatformEnumParam"
+                  }
+                }
               }
             }
           },
@@ -10546,10 +10654,14 @@
           {
             "name": "tags",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -11128,21 +11240,25 @@
             "name": "fields",
             "in": "query",
             "required": true,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/IggraphusermessengerProfileFieldsEnumParam"
-                  }
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PagemessengerProfileFieldsEnumParam"
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/IggraphusermessengerProfileFieldsEnumParam"
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PagemessengerProfileFieldsEnumParam"
+                      }
+                    }
+                  ]
                 }
-              ]
+              }
             }
           },
           {
@@ -12311,10 +12427,14 @@
           {
             "name": "tags",
             "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           },
@@ -12871,7 +12991,6 @@
           "WOODHENGE_SUPPORT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataCallToActionType",
           "modelAsString": false,
@@ -13294,7 +13413,6 @@
           "normal"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecBlendingMode",
           "modelAsString": false,
@@ -13319,7 +13437,6 @@
           "custom"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecFrameSource",
           "modelAsString": false,
@@ -13336,7 +13453,6 @@
           "catalog"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecImageSource",
           "modelAsString": false,
@@ -13355,7 +13471,6 @@
           "text_overlay"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecLayerType",
           "modelAsString": false,
@@ -13388,7 +13503,6 @@
           "top_right"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecOverlayPosition",
           "modelAsString": false,
@@ -13441,7 +13555,6 @@
           "triangle"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecOverlayShape",
           "modelAsString": false,
@@ -13482,7 +13595,6 @@
           "roboto_medium"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageLayerSpecTextFont",
           "modelAsString": false,
@@ -13533,7 +13645,6 @@
           "sale"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecCustomTextType",
           "modelAsString": false,
@@ -13560,7 +13671,6 @@
           "triangle_with_text"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecOverlayTemplate",
           "modelAsString": false,
@@ -13588,7 +13698,6 @@
           "top_right"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecPosition",
           "modelAsString": false,
@@ -13626,7 +13735,6 @@
           "roboto_medium"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecTextFont",
           "modelAsString": false,
@@ -13688,7 +13796,6 @@
           "sustainable"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecTextType",
           "modelAsString": false,
@@ -13756,7 +13863,6 @@
           "background_ffffff_text_f78400"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataImageOverlaySpecThemeColor",
           "modelAsString": false,
@@ -13838,7 +13944,6 @@
           "single_image"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdCreativeLinkDataFormatOption",
           "modelAsString": false,
@@ -13903,7 +14008,6 @@
           "TUTORIAL_COMPLETION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdPromotedObjectCustomEventType",
           "modelAsString": false,
@@ -14052,7 +14156,6 @@
           "WEBSITE_CONVERSIONS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdPromotedObjectFullFunnelObjective",
           "modelAsString": false,
@@ -14177,7 +14280,6 @@
           "TUTORIAL_COMPLETION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdPromotedObjectLeadAdsCustomEventType",
           "modelAsString": false,
@@ -14308,7 +14410,6 @@
           "MEDIUM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdRecommendationConfidence",
           "modelAsString": false,
@@ -14335,7 +14436,6 @@
           "MEDIUM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdRecommendationImportance",
           "modelAsString": false,
@@ -14363,7 +14463,6 @@
           "LOWEST_COST_WITH_MIN_ROAS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetBidStrategy",
           "modelAsString": false,
@@ -14402,7 +14501,6 @@
           "THRUPLAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetBillingEvent",
           "modelAsString": false,
@@ -14462,7 +14560,6 @@
           "PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetConfiguredStatus",
           "modelAsString": false,
@@ -14497,7 +14594,6 @@
           "WITH_ISSUES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetEffectiveStatus",
           "modelAsString": false,
@@ -14570,7 +14666,6 @@
           "VISIT_INSTAGRAM_PROFILE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetOptimizationGoal",
           "modelAsString": false,
@@ -14718,7 +14813,6 @@
           "PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdSetStatus",
           "modelAsString": false,
@@ -14760,7 +14854,6 @@
           "XIAOMI"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApplicationSupportedPlatforms",
           "modelAsString": false,
@@ -14838,7 +14931,6 @@
           "verified"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessVerificationStatus",
           "modelAsString": false,
@@ -14897,7 +14989,6 @@
           "UNTIERED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessWhatsappBusinessManagerMessagingLimit",
           "modelAsString": false,
@@ -14941,7 +15032,6 @@
           "LOWEST_COST_WITH_MIN_ROAS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CampaignBidStrategy",
           "modelAsString": false,
@@ -14973,7 +15063,6 @@
           "PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CampaignConfiguredStatus",
           "modelAsString": false,
@@ -15007,7 +15096,6 @@
           "WITH_ISSUES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CampaignEffectiveStatus",
           "modelAsString": false,
@@ -15047,7 +15135,6 @@
           "PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CampaignStatus",
           "modelAsString": false,
@@ -15080,7 +15167,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EntityAtTextRangeType",
           "modelAsString": false,
@@ -15134,7 +15220,6 @@
           "VISUAL_ARTS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EventCategory",
           "modelAsString": false,
@@ -15240,7 +15325,6 @@
           "third_party"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EventOnlineEventFormat",
           "modelAsString": false,
@@ -15283,7 +15367,6 @@
           "work_company"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "EventType",
           "modelAsString": false,
@@ -15327,7 +15410,6 @@
           "WEEKLY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductFeedScheduleInterval",
           "modelAsString": false,
@@ -15360,7 +15442,6 @@
           "User initiated server fetch"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductFeedUploadInputMethod",
           "modelAsString": false,
@@ -15398,7 +15479,6 @@
           "TILDE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductFeedDelimiter",
           "modelAsString": false,
@@ -15436,7 +15516,6 @@
           "supplementary_feed"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductFeedIngestionSourceType",
           "modelAsString": false,
@@ -15459,7 +15538,6 @@
           "ON"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductFeedQuotedFieldsMode",
           "modelAsString": false,
@@ -15490,7 +15568,6 @@
           "toddler"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemAgeGroup",
           "modelAsString": false,
@@ -15538,7 +15615,6 @@
           "preorder"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemAvailability",
           "modelAsString": false,
@@ -15587,7 +15663,6 @@
           "REJECTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemCapabilityToReviewStatus",
           "modelAsString": false,
@@ -15627,7 +15702,6 @@
           "used_like_new"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemCondition",
           "modelAsString": false,
@@ -15674,7 +15748,6 @@
           "unisex"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemGender",
           "modelAsString": false,
@@ -15704,7 +15777,6 @@
           "PARTIAL_FETCH"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemImageFetchStatus",
           "modelAsString": false,
@@ -15745,7 +15817,6 @@
           "rejected"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemReviewStatus",
           "modelAsString": false,
@@ -15777,7 +15848,6 @@
           "oz"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemShippingWeightUnit",
           "modelAsString": false,
@@ -15807,7 +15877,6 @@
           "STAGING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemStatus",
           "modelAsString": false,
@@ -15833,7 +15902,6 @@
           "PARTIAL_FETCH"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemVideoFetchStatus",
           "modelAsString": false,
@@ -15871,7 +15939,6 @@
           "staging"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductItemVisibility",
           "modelAsString": false,
@@ -15896,7 +15963,6 @@
           "user"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProfileProfileType",
           "modelAsString": false,
@@ -15931,7 +15997,6 @@
           "mobile"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TargetingDevicePlatforms",
           "modelAsString": false,
@@ -15958,7 +16023,6 @@
           "mobile"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TargetingEffectiveDevicePlatforms",
           "modelAsString": false,
@@ -16037,7 +16101,6 @@
           "ZAR"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountCurrency",
           "modelAsString": false,
@@ -16273,7 +16336,6 @@
           "web_only"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesApplinkTreatmentEnumParam",
           "modelAsString": false,
@@ -16304,7 +16366,6 @@
           "POLITICAL_WITH_DIGITALLY_CREATED_MEDIA"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesAuthorizationCategoryEnumParam",
           "modelAsString": false,
@@ -16331,7 +16392,6 @@
           "product_type"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesCategorizationCriteriaEnumParam",
           "modelAsString": false,
@@ -16359,7 +16419,6 @@
           "PRODUCTS_SLIDESHOW"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesCategoryMediaSourceEnumParam",
           "modelAsString": false,
@@ -16389,7 +16448,6 @@
           "STORY_OWNER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesDynamicAdVoiceEnumParam",
           "modelAsString": false,
@@ -16410,7 +16468,6 @@
           "validate_only"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadcreativesExecutionOptionsEnumParam",
           "modelAsString": false,
@@ -16577,7 +16634,6 @@
           "YOUR_DAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosContainerTypeEnumParam",
           "modelAsString": false,
@@ -17211,7 +17267,6 @@
           "VIDEO_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosContentCategoryEnumParam",
           "modelAsString": false,
@@ -17297,7 +17352,6 @@
           "PLAINTEXT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosFormattingEnumParam",
           "modelAsString": false,
@@ -17320,7 +17374,6 @@
           "half_equirectangular"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosOriginalProjectionTypeEnumParam",
           "modelAsString": false,
@@ -17345,7 +17398,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosSwapModeEnumParam",
           "modelAsString": false,
@@ -17369,7 +17421,6 @@
           "SCHEDULED_RECURRING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosUnpublishedContentTypeEnumParam",
           "modelAsString": false,
@@ -17417,7 +17468,6 @@
           "transfer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountadvideosUploadPhaseEnumParam",
           "modelAsString": false,
@@ -17466,7 +17516,6 @@
           "VIDEO_VIEWS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountcampaignsObjectiveEnumParam",
           "modelAsString": false,
@@ -17564,7 +17613,6 @@
           "SMART_APP_PROMOTION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdaccountcampaignsSmartPromotionTypeEnumParam",
           "modelAsString": false,
@@ -17587,7 +17635,6 @@
           "UNSET"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignAutomaticManualState",
           "modelAsString": false,
@@ -17613,7 +17660,6 @@
           "LAST_AD"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignCreativeSequenceRepetitionPattern",
           "modelAsString": false,
@@ -17656,7 +17702,6 @@
           "WHATSAPP"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignDestinationType",
           "modelAsString": false,
@@ -17763,7 +17808,6 @@
           "NONE_EXPLORATION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignFullFunnelExplorationMode",
           "modelAsString": false,
@@ -17791,7 +17835,6 @@
           "UNDEFINED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignMultiOptimizationGoalWeight",
           "modelAsString": false,
@@ -17830,7 +17873,6 @@
           "VIDEO_SOUND_ON"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaignOptimizationSubEvent",
           "modelAsString": false,
@@ -17893,7 +17935,6 @@
           "ONLINE_GAMBLING_AND_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdcampaigngroupSpecialAdCategory",
           "modelAsString": false,
@@ -17941,7 +17982,6 @@
           "VERSION_CONTROL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AdstudyType",
           "modelAsString": false,
@@ -17988,7 +18028,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessTwoFactorType",
           "modelAsString": false,
@@ -18035,7 +18074,6 @@
           "TRAVEL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessVertical",
           "modelAsString": false,
@@ -18155,7 +18193,6 @@
           "vehicles"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessownedProductCatalogsVerticalEnumParam",
           "modelAsString": false,
@@ -18382,7 +18419,6 @@
           "YOUR_DAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosContainerTypeEnumParam",
           "modelAsString": false,
@@ -19016,7 +19052,6 @@
           "VIDEO_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosContentCategoryEnumParam",
           "modelAsString": false,
@@ -19102,7 +19137,6 @@
           "PLAINTEXT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosFormattingEnumParam",
           "modelAsString": false,
@@ -19125,7 +19159,6 @@
           "half_equirectangular"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosOriginalProjectionTypeEnumParam",
           "modelAsString": false,
@@ -19150,7 +19183,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosSwapModeEnumParam",
           "modelAsString": false,
@@ -19174,7 +19206,6 @@
           "SCHEDULED_RECURRING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosUnpublishedContentTypeEnumParam",
           "modelAsString": false,
@@ -19222,7 +19253,6 @@
           "transfer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosUploadPhaseEnumParam",
           "modelAsString": false,
@@ -19273,7 +19303,6 @@
           "SUGGESTED_VIDEO_MOBILE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BusinessvideosValidationAdPlacementsEnumParam",
           "modelAsString": false,
@@ -19379,7 +19408,6 @@
           "EXTERNALLY_DISABLED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommercemerchantsettingsMerchantStatus",
           "modelAsString": false,
@@ -19403,7 +19431,6 @@
           "Sequential"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam",
           "modelAsString": false,
@@ -19422,7 +19449,6 @@
           "FIXED_WITHOUT_PARTITION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ExtendedcreditowningCreditAllocationConfigsPartitionTypeEnumParam",
           "modelAsString": false,
@@ -19448,8 +19474,7 @@
           "Advertiser",
           "Agency"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "GroupPurpose": {
         "enum": [
@@ -19484,7 +19509,6 @@
           "WORK_TEAMWORK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupPurpose",
           "modelAsString": false,
@@ -19763,7 +19787,6 @@
           "YOUR_DAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosContainerTypeEnumParam",
           "modelAsString": false,
@@ -20397,7 +20420,6 @@
           "VIDEO_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosContentCategoryEnumParam",
           "modelAsString": false,
@@ -20483,7 +20505,6 @@
           "PLAINTEXT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosFormattingEnumParam",
           "modelAsString": false,
@@ -20506,7 +20527,6 @@
           "half_equirectangular"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosOriginalProjectionTypeEnumParam",
           "modelAsString": false,
@@ -20531,7 +20551,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosSwapModeEnumParam",
           "modelAsString": false,
@@ -20555,7 +20574,6 @@
           "SCHEDULED_RECURRING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosUnpublishedContentTypeEnumParam",
           "modelAsString": false,
@@ -20603,7 +20621,6 @@
           "transfer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GroupvideosUploadPhaseEnumParam",
           "modelAsString": false,
@@ -20632,7 +20649,6 @@
           "PARTNERSHIP"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphusermessagesFolderEnumParam",
           "modelAsString": false,
@@ -20652,7 +20668,6 @@
           "UTILITY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphusermessagesMessagingTypeEnumParam",
           "modelAsString": false,
@@ -20685,7 +20700,6 @@
           "UNREACT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphusermessagesSenderActionEnumParam",
           "modelAsString": false,
@@ -20728,7 +20742,6 @@
           "WHITELISTED_DOMAINS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphusermessengerProfileFieldsEnumParam",
           "modelAsString": false,
@@ -20807,7 +20820,6 @@
           "story_reactions"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphusersubscribedAppsSubscribedFieldsEnumParam",
           "modelAsString": false,
@@ -20914,7 +20926,6 @@
           "WHATSAPP"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IggraphuserwelcomeMessageFlowsEligiblePlatformsEnumParam",
           "modelAsString": false,
@@ -20951,7 +20962,6 @@
           "RESCHEDULED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IgupcomingeventNotificationSubtypes",
           "modelAsString": false,
@@ -21017,7 +21027,6 @@
           "EVENT_START"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IgupcomingeventNotificationTargetTime",
           "modelAsString": false,
@@ -21041,7 +21050,6 @@
           "INSTAGRAM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcambrandedContentMediaPlatformEnumParam",
           "modelAsString": false,
@@ -21075,7 +21083,6 @@
           "TOP_COUNTRIES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcaminsightsBreakdownEnumParam",
           "modelAsString": false,
@@ -21118,7 +21125,6 @@
           "TOTAL_VIEWS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcaminsightsMetricsEnumParam",
           "modelAsString": false,
@@ -21160,7 +21166,6 @@
           "OVERALL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcaminsightsPeriodEnumParam",
           "modelAsString": false,
@@ -21184,7 +21189,6 @@
           "INSTAGRAM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcaminsightsPlatformEnumParam",
           "modelAsString": false,
@@ -21217,7 +21221,6 @@
           "THIS_WEEK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcaminsightsTimeRangeEnumParam",
           "modelAsString": false,
@@ -21253,7 +21256,6 @@
           "INSTAGRAM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcampastPartnershipAdsMediaPlatformEnumParam",
           "modelAsString": false,
@@ -21285,7 +21287,6 @@
           "INSTAGRAM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "IguserexportforcamrecentMediaPlatformEnumParam",
           "modelAsString": false,
@@ -21318,7 +21319,6 @@
           "MESSAGES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "InstagrambusinessassetagenciesPermittedTasksEnumParam",
           "modelAsString": false,
@@ -21355,7 +21355,6 @@
           "MESSAGES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "InstagrambusinessassetassignedUsersTasksEnumParam",
           "modelAsString": false,
@@ -21391,7 +21390,6 @@
           "surface_type"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediainsightsBreakdownEnumParam",
           "modelAsString": false,
@@ -21448,7 +21446,6 @@
           "views"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediainsightsMetricEnumParam",
           "modelAsString": false,
@@ -21582,7 +21579,6 @@
           "week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediainsightsPeriodEnumParam",
           "modelAsString": false,
@@ -21620,8 +21616,7 @@
           "Dressy",
           "Unspecified"
         ],
-        "type": "string",
-        "additionalProperties": false
+        "type": "string"
       },
       "PageFoodStyles": {
         "enum": [
@@ -21684,7 +21679,6 @@
           "Vietnamese"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PageFoodStyles",
           "modelAsString": false,
@@ -21791,7 +21785,6 @@
           "PAIGM_CLASSIFIER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PageGenAiProvenanceType",
           "modelAsString": false,
@@ -21914,7 +21907,6 @@
           "OTHER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagePickupOptions",
           "modelAsString": false,
@@ -21942,7 +21934,6 @@
           "TEMPORARILY_CLOSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PageTemporaryStatus",
           "modelAsString": false,
@@ -21972,7 +21963,6 @@
           "MESSENGER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PageconversationsPlatformEnumParam",
           "modelAsString": false,
@@ -21993,7 +21983,6 @@
           "UTILITY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessageTemplatesCategoryEnumParam",
           "modelAsString": false,
@@ -22010,7 +21999,6 @@
           "PARTNERSHIP"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessagesFolderEnumParam",
           "modelAsString": false,
@@ -22030,7 +22018,6 @@
           "UTILITY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessagesMessagingTypeEnumParam",
           "modelAsString": false,
@@ -22061,7 +22048,6 @@
           "SILENT_PUSH"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessagesNotificationTypeEnumParam",
           "modelAsString": false,
@@ -22090,7 +22076,6 @@
           "UNREACT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessagesSenderActionEnumParam",
           "modelAsString": false,
@@ -22125,7 +22110,6 @@
           "IMPRESSION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessagesSuggestionActionEnumParam",
           "modelAsString": false,
@@ -22160,7 +22144,6 @@
           "WHITELISTED_DOMAINS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessengerProfileFieldsEnumParam",
           "modelAsString": false,
@@ -22218,7 +22201,6 @@
           "MESSENGER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagemessengerProfilePlatformEnumParam",
           "modelAsString": false,
@@ -22344,7 +22326,6 @@
           "website"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagesubscribedAppsSubscribedFieldsEnumParam",
           "modelAsString": false,
@@ -22782,7 +22763,6 @@
           "MESSENGER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagethreadsPlatformEnumParam",
           "modelAsString": false,
@@ -22805,7 +22785,6 @@
           "web"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideoCopyrightsContentCategoryEnumParam",
           "modelAsString": false,
@@ -22832,7 +22811,6 @@
           "VIDEO_ONLY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideoCopyrightsMonitoringTypeEnumParam",
           "modelAsString": false,
@@ -23007,7 +22985,6 @@
           "YOUR_DAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosContainerTypeEnumParam",
           "modelAsString": false,
@@ -23641,7 +23618,6 @@
           "VIDEO_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosContentCategoryEnumParam",
           "modelAsString": false,
@@ -23727,7 +23703,6 @@
           "PLAINTEXT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosFormattingEnumParam",
           "modelAsString": false,
@@ -23750,7 +23725,6 @@
           "half_equirectangular"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosOriginalProjectionTypeEnumParam",
           "modelAsString": false,
@@ -23775,7 +23749,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosSwapModeEnumParam",
           "modelAsString": false,
@@ -23799,7 +23772,6 @@
           "SCHEDULED_RECURRING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosUnpublishedContentTypeEnumParam",
           "modelAsString": false,
@@ -23847,7 +23819,6 @@
           "transfer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PagevideosUploadPhaseEnumParam",
           "modelAsString": false,
@@ -23882,7 +23853,6 @@
           "UTF8"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductFeedsEncodingEnumParam",
           "modelAsString": false,
@@ -23948,7 +23918,6 @@
           "WATCHES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductFeedsItemSubTypeEnumParam",
           "modelAsString": false,
@@ -24072,7 +24041,6 @@
           "VERSION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductFeedsOverrideTypeEnumParam",
           "modelAsString": false,
@@ -24119,7 +24087,6 @@
           "not_marked"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductsMarkedForProductLaunchEnumParam",
           "modelAsString": false,
@@ -24395,7 +24362,6 @@
           "ZW"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductsOriginCountryEnumParam",
           "modelAsString": false,
@@ -25417,7 +25383,6 @@
           "DEFAULT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProductcatalogproductsWaComplianceCategoryEnumParam",
           "modelAsString": false,
@@ -25439,7 +25404,6 @@
           "PA_HUB_CATALOG_INGESTION_CREATOR_ASSET"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigmediaBoostableMediaCallsite",
           "modelAsString": false,
@@ -25461,7 +25425,6 @@
           "STARTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigmediaStatus",
           "modelAsString": false,
@@ -25485,7 +25448,6 @@
           "surface_type"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigmediainsightsBreakdownEnumParam",
           "modelAsString": false,
@@ -25536,7 +25498,6 @@
           "views"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigmediainsightsMetricEnumParam",
           "modelAsString": false,
@@ -25646,7 +25607,6 @@
           "week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigmediainsightsPeriodEnumParam",
           "modelAsString": false,
@@ -25684,7 +25644,6 @@
           "OWNED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserbrandedContentAdvertisableMediasMediaRelationshipEnumParam",
           "modelAsString": false,
@@ -25956,7 +25915,6 @@
           "ZW"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsCreatorCountriesEnumParam",
           "modelAsString": false,
@@ -26980,7 +26938,6 @@
           "unknown"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsCreatorGenderEnumParam",
           "modelAsString": false,
@@ -27260,7 +27217,6 @@
           "ZW"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsMajorAudienceCountriesEnumParam",
           "modelAsString": false,
@@ -28284,7 +28240,6 @@
           "unknown"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsMajorAudienceGenderEnumParam",
           "modelAsString": false,
@@ -28316,7 +28271,6 @@
           "instagram"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsPlatformEnumParam",
           "modelAsString": false,
@@ -28350,7 +28304,6 @@
           "similar_brands"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusercreatorMarketplaceCreatorsRecommendationTypeEnumParam",
           "modelAsString": false,
@@ -28393,7 +28346,6 @@
           "media_product_type"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserinsightsBreakdownEnumParam",
           "modelAsString": false,
@@ -28461,7 +28413,6 @@
           "website_clicks"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserinsightsMetricEnumParam",
           "modelAsString": false,
@@ -28588,7 +28539,6 @@
           "total_value"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserinsightsMetricTypeEnumParam",
           "modelAsString": false,
@@ -28618,7 +28568,6 @@
           "week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserinsightsPeriodEnumParam",
           "modelAsString": false,
@@ -28660,7 +28609,6 @@
           "this_week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserinsightsTimeframeEnumParam",
           "modelAsString": false,
@@ -28699,7 +28647,6 @@
           "UNBLOCK_USER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowigusermoderateConversationsActionsEnumParam",
           "modelAsString": false,
@@ -28736,7 +28683,6 @@
           "RESCHEDULED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ShadowiguserupcomingEventsNotificationSubtypesEnumParam",
           "modelAsString": false,
@@ -28802,7 +28748,6 @@
           "PARTICIPANTS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UnifiedthreadmessagesSourceEnumParam",
           "modelAsString": false,
@@ -28824,7 +28769,6 @@
           "YES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserLocalNewsMegaphoneDismissStatus",
           "modelAsString": false,
@@ -28846,7 +28790,6 @@
           "STATUS_ON"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserLocalNewsSubscriptionStatus",
           "modelAsString": false,
@@ -28868,7 +28811,6 @@
           "MESSENGER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserconversationsPlatformEnumParam",
           "modelAsString": false,
@@ -28895,7 +28837,6 @@
           "media_product_type"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserinsightsBreakdownEnumParam",
           "modelAsString": false,
@@ -28963,7 +28904,6 @@
           "website_clicks"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserinsightsMetricEnumParam",
           "modelAsString": false,
@@ -29090,7 +29030,6 @@
           "total_value"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserinsightsMetricTypeEnumParam",
           "modelAsString": false,
@@ -29120,7 +29059,6 @@
           "week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserinsightsPeriodEnumParam",
           "modelAsString": false,
@@ -29162,7 +29100,6 @@
           "this_week"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UserinsightsTimeframeEnumParam",
           "modelAsString": false,
@@ -29349,7 +29286,6 @@
           "YOUR_DAY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosContainerTypeEnumParam",
           "modelAsString": false,
@@ -29983,7 +29919,6 @@
           "VIDEO_GAMING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosContentCategoryEnumParam",
           "modelAsString": false,
@@ -30069,7 +30004,6 @@
           "PLAINTEXT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosFormattingEnumParam",
           "modelAsString": false,
@@ -30092,7 +30026,6 @@
           "half_equirectangular"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosOriginalProjectionTypeEnumParam",
           "modelAsString": false,
@@ -30117,7 +30050,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosSwapModeEnumParam",
           "modelAsString": false,
@@ -30141,7 +30073,6 @@
           "SCHEDULED_RECURRING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosUnpublishedContentTypeEnumParam",
           "modelAsString": false,
@@ -30189,7 +30120,6 @@
           "transfer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UservideosUploadPhaseEnumParam",
           "modelAsString": false,
@@ -30223,7 +30153,6 @@
           "year"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "VideoBackdatedTimeGranularity",
           "modelAsString": false,
@@ -32295,49 +32224,49 @@
           "100x100": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops100X100Item"
+              "x-meta-type": "list"
             }
           },
           "100x72": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops100X72Item"
+              "x-meta-type": "list"
             }
           },
           "191x100": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops191X100Item"
+              "x-meta-type": "list"
             }
           },
           "300x400": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops300X400Item"
+              "x-meta-type": "list"
             }
           },
           "400x150": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops400X150Item"
+              "x-meta-type": "list"
             }
           },
           "400x500": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops400X500Item"
+              "x-meta-type": "list"
             }
           },
           "600x360": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops600X360Item"
+              "x-meta-type": "list"
             }
           },
           "90x160": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdsImageCrops90X160Item"
+              "x-meta-type": "list"
             }
           }
         }
@@ -40423,7 +40352,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/adaccountadcreatives_execution_options_enum_param"
+                "$ref": "#/components/schemas/AdaccountadcreativesExecutionOptionsEnumParam"
               }
             },
             "type": "string",
@@ -41418,10 +41347,10 @@
             "format": "int64"
           },
           "ad_breaks": {
-            "$ref": "#/components/schemas/PostIdVideosFormDataRequestAdBreaks"
+            "x-meta-type": "list"
           },
           "backdated_post": {
-            "$ref": "#/components/schemas/PostIdVideosFormDataRequestBackdatedPost"
+            "x-meta-type": "list"
           },
           "call_to_action": {
             "$ref": "#/components/schemas/PostIdVideosFormDataRequestCallToAction"
@@ -42797,7 +42726,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/igupcomingevent_notification_subtypes"
+                "$ref": "#/components/schemas/IgupcomingeventNotificationSubtypes"
               }
             },
             "type": "string",
@@ -42930,7 +42859,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/page_food_styles"
+                "$ref": "#/components/schemas/PageFoodStyles"
               }
             },
             "type": "string",
@@ -43023,7 +42952,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/page_pickup_options"
+                "$ref": "#/components/schemas/PagePickupOptions"
               }
             },
             "type": "string",
@@ -43723,9 +43652,7 @@
           "has_slider": {
             "type": "boolean"
           },
-          "ig_id": {
-            "$ref": "#/components/schemas/GetId200ResponseIgId"
-          },
+          "ig_id": {},
           "ingest_first_video_received_time": {
             "type": "integer",
             "format": "int64"
@@ -44137,9 +44064,7 @@
           "has_whatsapp_number": {
             "type": "boolean"
           },
-          "hometown": {
-            "$ref": "#/components/schemas/GetId200ResponseHometown"
-          },
+          "hometown": {},
           "hours": {
             "$ref": "#/components/schemas/GetId200ResponseHours"
           },
@@ -44892,9 +44817,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdChildren200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdChildren200ResponsePaging"
@@ -45113,9 +45036,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdInsights200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdInsights200ResponsePaging"
@@ -45376,7 +45297,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/instagrambusinessassetagencies_permitted_tasks_enum_param"
+                "$ref": "#/components/schemas/InstagrambusinessassetagenciesPermittedTasksEnumParam"
               }
             },
             "type": "string",
@@ -45722,7 +45643,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetIdBusinessMessagingFeatureStatus200ResponseDataItem"
+              "x-meta-type": "BusinessMessagingFeatureStatus"
             }
           },
           "paging": {
@@ -46041,9 +45962,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdLiveMedia200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdLiveMedia200ResponsePaging"
@@ -46106,9 +46025,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdMedia200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdMedia200ResponsePaging"
@@ -46642,7 +46559,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/shadowigusermoderate_conversations_actions_enum_param"
+                "$ref": "#/components/schemas/ShadowigusermoderateConversationsActionsEnumParam"
               }
             },
             "type": "string",
@@ -46827,9 +46744,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdStories200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdStories200ResponsePaging"
@@ -46892,9 +46807,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdTags200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdTags200ResponsePaging"
@@ -46993,7 +46906,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/shadowiguserupcoming_events_notification_subtypes_enum_param"
+                "$ref": "#/components/schemas/ShadowiguserupcomingEventsNotificationSubtypesEnumParam"
               }
             },
             "type": "string",
@@ -47127,7 +47040,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/iggraphuserwelcome_message_flows_eligible_platforms_enum_param"
+                "$ref": "#/components/schemas/IggraphuserwelcomeMessageFlowsEligiblePlatformsEnumParam"
               }
             },
             "type": "string",
@@ -47181,7 +47094,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetIdBrandedContentMedia200ResponseDataItem"
+              "x-meta-type": "IGMediaExportForCAM"
             }
           },
           "paging": {
@@ -47206,7 +47119,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetIdPastPartnershipAdsMedia200ResponseDataItem"
+              "x-meta-type": "IGMediaExportForCAM"
             }
           },
           "paging": {
@@ -47230,9 +47143,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdRecentMedia200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdRecentMedia200ResponsePaging"
@@ -47632,7 +47543,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetIdMessages200ResponseDataItem"
+              "x-meta-type": "UnifiedMessage"
             }
           },
           "paging": {
@@ -47679,9 +47590,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdMessengerProfile200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdMessengerProfile200ResponsePaging"
@@ -48063,9 +47972,7 @@
         "properties": {
           "data": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetIdSubscribedApps200ResponseDataItem"
-            }
+            "items": {}
           },
           "paging": {
             "$ref": "#/components/schemas/GetIdSubscribedApps200ResponsePaging"
@@ -48267,7 +48174,7 @@
             "contentSchema": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/instagrambusinessassetassigned_users_tasks_enum_param"
+                "$ref": "#/components/schemas/InstagrambusinessassetassignedUsersTasksEnumParam"
               }
             },
             "type": "string",
@@ -48705,38 +48612,6 @@
       },
       "AdVideoSelectedAudioSpecProperty": {
         "type": "object"
-      },
-      "AdsImageCrops100X100Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops100X72Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops191X100Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops300X400Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops400X150Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops400X500Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops600X360Item": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "AdsImageCrops90X160Item": {
-        "type": "object",
-        "x-meta-type": "list"
       },
       "ApplicationAndroidSdkErrorCategoriesItemProperty": {
         "type": "object"
@@ -49245,14 +49120,6 @@
       "PostIdVideosFormDataRequestSlideshowSpec": {
         "type": "object"
       },
-      "PostIdVideosFormDataRequestAdBreaks": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
-      "PostIdVideosFormDataRequestBackdatedPost": {
-        "type": "object",
-        "x-meta-type": "list"
-      },
       "PostIdVideosFormDataRequestCallToAction": {
         "type": "object"
       },
@@ -49287,9 +49154,6 @@
         "type": "object"
       },
       "PostIdDefaultResponseError": {
-        "type": "object"
-      },
-      "GetId200ResponseIgId": {
         "type": "object"
       },
       "GetId200ResponseOwner": {
@@ -49571,9 +49435,6 @@
         "additionalProperties": {
           "type": "boolean"
         }
-      },
-      "GetId200ResponseHometown": {
-        "type": "object"
       },
       "GetId200ResponseHours": {
         "type": "object",
@@ -50216,9 +50077,6 @@
       "PostIdBrandedContentPartnerPromoteDefaultResponseError": {
         "type": "object"
       },
-      "GetIdChildren200ResponseDataItem": {
-        "type": "object"
-      },
       "GetIdChildren200ResponsePaging": {
         "type": "object"
       },
@@ -50356,9 +50214,6 @@
       "PostIdCommentsDefaultResponseError": {
         "type": "object"
       },
-      "GetIdInsights200ResponseDataItem": {
-        "type": "object"
-      },
       "GetIdInsights200ResponsePaging": {
         "type": "object"
       },
@@ -50461,10 +50316,6 @@
       "PostIdBusinessMessagingFeatureStatusDefaultResponseError": {
         "type": "object"
       },
-      "GetIdBusinessMessagingFeatureStatus200ResponseDataItem": {
-        "type": "object",
-        "x-meta-type": "BusinessMessagingFeatureStatus"
-      },
       "GetIdBusinessMessagingFeatureStatus200ResponsePaging": {
         "type": "object"
       },
@@ -50555,9 +50406,6 @@
       "PostIdInstagramBackedThreadsUserDefaultResponseError": {
         "type": "object"
       },
-      "GetIdLiveMedia200ResponseDataItem": {
-        "type": "object"
-      },
       "GetIdLiveMedia200ResponsePaging": {
         "type": "object"
       },
@@ -50565,9 +50413,6 @@
         "type": "object"
       },
       "GetIdLiveMediaDefaultResponseError": {
-        "type": "object"
-      },
-      "GetIdMedia200ResponseDataItem": {
         "type": "object"
       },
       "GetIdMedia200ResponsePaging": {
@@ -50630,9 +50475,6 @@
       "GetIdScheduledMediaDefaultResponseError": {
         "type": "object"
       },
-      "GetIdStories200ResponseDataItem": {
-        "type": "object"
-      },
       "GetIdStories200ResponsePaging": {
         "type": "object"
       },
@@ -50640,9 +50482,6 @@
         "type": "object"
       },
       "GetIdStoriesDefaultResponseError": {
-        "type": "object"
-      },
-      "GetIdTags200ResponseDataItem": {
         "type": "object"
       },
       "GetIdTags200ResponsePaging": {
@@ -50720,10 +50559,6 @@
       "PostIdWelcomeMessageFlowsDefaultResponseError": {
         "type": "object"
       },
-      "GetIdBrandedContentMedia200ResponseDataItem": {
-        "type": "object",
-        "x-meta-type": "IGMediaExportForCAM"
-      },
       "GetIdBrandedContentMedia200ResponsePaging": {
         "type": "object"
       },
@@ -50733,10 +50568,6 @@
       "GetIdBrandedContentMediaDefaultResponseError": {
         "type": "object"
       },
-      "GetIdPastPartnershipAdsMedia200ResponseDataItem": {
-        "type": "object",
-        "x-meta-type": "IGMediaExportForCAM"
-      },
       "GetIdPastPartnershipAdsMedia200ResponsePaging": {
         "type": "object"
       },
@@ -50744,9 +50575,6 @@
         "type": "object"
       },
       "GetIdPastPartnershipAdsMediaDefaultResponseError": {
-        "type": "object"
-      },
-      "GetIdRecentMedia200ResponseDataItem": {
         "type": "object"
       },
       "GetIdRecentMedia200ResponsePaging": {
@@ -50776,10 +50604,6 @@
       "PostIdMessagesDefaultResponseError": {
         "type": "object"
       },
-      "GetIdMessages200ResponseDataItem": {
-        "type": "object",
-        "x-meta-type": "UnifiedMessage"
-      },
       "GetIdMessages200ResponsePaging": {
         "type": "object"
       },
@@ -50790,9 +50614,6 @@
         "type": "object"
       },
       "DeleteIdMessengerProfileDefaultResponseError": {
-        "type": "object"
-      },
-      "GetIdMessengerProfile200ResponseDataItem": {
         "type": "object"
       },
       "GetIdMessengerProfile200ResponsePaging": {
@@ -50814,9 +50635,6 @@
         "type": "object"
       },
       "DeleteIdSubscribedAppsDefaultResponseError": {
-        "type": "object"
-      },
-      "GetIdSubscribedApps200ResponseDataItem": {
         "type": "object"
       },
       "GetIdSubscribedApps200ResponsePaging": {

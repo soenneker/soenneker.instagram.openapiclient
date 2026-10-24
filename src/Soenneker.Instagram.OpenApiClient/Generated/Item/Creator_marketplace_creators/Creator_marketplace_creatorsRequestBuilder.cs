@@ -113,26 +113,26 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("creator_age_bucket")]
-            public string[]? CreatorAgeBucket { get; set; }
+            public string? CreatorAgeBucket { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("creator_age_bucket")]
-            public string[] CreatorAgeBucket { get; set; }
+            public string CreatorAgeBucket { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("creator_countries")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsCreatorCountriesEnumParam[]? CreatorCountries { get; set; }
+            public string? CreatorCountries { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("creator_countries")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsCreatorCountriesEnumParam[] CreatorCountries { get; set; }
+            public string CreatorCountries { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,26 +152,26 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("creator_gender")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsCreatorGenderEnumParam[]? CreatorGender { get; set; }
+            public string? CreatorGender { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("creator_gender")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsCreatorGenderEnumParam[] CreatorGender { get; set; }
+            public string CreatorGender { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("creator_interests")]
-            public string[]? CreatorInterests { get; set; }
+            public string? CreatorInterests { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("creator_interests")]
-            public string[] CreatorInterests { get; set; }
+            public string CreatorInterests { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -207,13 +207,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("creator_states")]
-            public string[]? CreatorStates { get; set; }
+            public string? CreatorStates { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("creator_states")]
-            public string[] CreatorStates { get; set; }
+            public string CreatorStates { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -258,65 +258,65 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("major_audience_age_bucket")]
-            public string[]? MajorAudienceAgeBucket { get; set; }
+            public string? MajorAudienceAgeBucket { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("major_audience_age_bucket")]
-            public string[] MajorAudienceAgeBucket { get; set; }
+            public string MajorAudienceAgeBucket { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("major_audience_countries")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsMajorAudienceCountriesEnumParam[]? MajorAudienceCountries { get; set; }
+            public string? MajorAudienceCountries { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("major_audience_countries")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsMajorAudienceCountriesEnumParam[] MajorAudienceCountries { get; set; }
+            public string MajorAudienceCountries { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("major_audience_device_type")]
-            public string[]? MajorAudienceDeviceType { get; set; }
+            public string? MajorAudienceDeviceType { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("major_audience_device_type")]
-            public string[] MajorAudienceDeviceType { get; set; }
+            public string MajorAudienceDeviceType { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("major_audience_gender")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsMajorAudienceGenderEnumParam[]? MajorAudienceGender { get; set; }
+            public string? MajorAudienceGender { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("major_audience_gender")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.ShadowigusercreatorMarketplaceCreatorsMajorAudienceGenderEnumParam[] MajorAudienceGender { get; set; }
+            public string MajorAudienceGender { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("major_audience_states")]
-            public string[]? MajorAudienceStates { get; set; }
+            public string? MajorAudienceStates { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("major_audience_states")]
-            public string[] MajorAudienceStates { get; set; }
+            public string MajorAudienceStates { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -374,13 +374,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("similar_to_creators")]
-            public string[]? SimilarToCreators { get; set; }
+            public string? SimilarToCreators { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("similar_to_creators")]
-            public string[] SimilarToCreators { get; set; }
+            public string SimilarToCreators { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -400,13 +400,13 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("usernames")]
-            public string[]? Usernames { get; set; }
+            public string? Usernames { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("usernames")]
-            public string[] Usernames { get; set; }
+            public string Usernames { get; set; }
             #pragma warning restore CS1591
 #endif
         }

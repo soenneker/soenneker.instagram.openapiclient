@@ -647,10 +647,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The hometown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHometown? Hometown { get; set; }
+        public UntypedNode? Hometown { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHometown Hometown { get; set; }
+        public UntypedNode Hometown { get; set; }
 #endif
         /// <summary>The hours property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -671,10 +671,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The ig_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseIgId? IgId { get; set; }
+        public UntypedNode? IgId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseIgId IgId { get; set; }
+        public UntypedNode IgId { get; set; }
 #endif
         /// <summary>The ig_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1910,10 +1910,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "has_whatsapp_business_number", n => { HasWhatsappBusinessNumber = n.GetBoolValue(); } },
                 { "has_whatsapp_number", n => { HasWhatsappNumber = n.GetBoolValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
-                { "hometown", n => { Hometown = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHometown>(global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHometown.CreateFromDiscriminatorValue); } },
+                { "hometown", n => { Hometown = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "hours", n => { Hours = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHours>(global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHours.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "ig_id", n => { IgId = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseIgId>(global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseIgId.CreateFromDiscriminatorValue); } },
+                { "ig_id", n => { IgId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "ig_user_id", n => { IgUserId = n.GetStringValue(); } },
                 { "ig_username", n => { IgUsername = n.GetStringValue(); } },
                 { "impressum", n => { Impressum = n.GetStringValue(); } },
@@ -2211,10 +2211,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("has_whatsapp_business_number", HasWhatsappBusinessNumber);
             writer.WriteBoolValue("has_whatsapp_number", HasWhatsappNumber);
             writer.WriteBoolValue("hidden", Hidden);
-            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHometown>("hometown", Hometown);
+            writer.WriteObjectValue<UntypedNode>("hometown", Hometown);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseHours>("hours", Hours);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetId200ResponseIgId>("ig_id", IgId);
+            writer.WriteObjectValue<UntypedNode>("ig_id", IgId);
             writer.WriteStringValue("ig_user_id", IgUserId);
             writer.WriteStringValue("ig_username", IgUsername);
             writer.WriteStringValue("impressum", Impressum);
