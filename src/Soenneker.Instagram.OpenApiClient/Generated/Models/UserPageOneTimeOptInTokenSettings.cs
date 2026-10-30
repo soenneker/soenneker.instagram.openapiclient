@@ -11,80 +11,119 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UserPageOneTimeOptInTokenSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("creation_timestamp") is { } nullNodeCreationTimestamp && nullNodeCreationTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationTimestamp = null;
+            if (parseNode.GetChildNode("custom_audience_ids") is { } nullNodeCustomAudienceIds && nullNodeCustomAudienceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudienceIds = null;
+            if (parseNode.GetChildNode("next_eligible_time") is { } nullNodeNextEligibleTime && nullNodeNextEligibleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextEligibleTime = null;
+            if (parseNode.GetChildNode("next_eligible_time_for_paid_messaging") is { } nullNodeNextEligibleTimeForPaidMessaging && nullNodeNextEligibleTimeForPaidMessaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextEligibleTimeForPaidMessaging = null;
+            if (parseNode.GetChildNode("notification_messages_frequency") is { } nullNodeNotificationMessagesFrequency && nullNodeNotificationMessagesFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMessagesFrequency = null;
+            if (parseNode.GetChildNode("notification_messages_reoptin") is { } nullNodeNotificationMessagesReoptin && nullNodeNotificationMessagesReoptin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMessagesReoptin = null;
+            if (parseNode.GetChildNode("notification_messages_timezone") is { } nullNodeNotificationMessagesTimezone && nullNodeNotificationMessagesTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMessagesTimezone = null;
+            if (parseNode.GetChildNode("notification_messages_token") is { } nullNodeNotificationMessagesToken && nullNodeNotificationMessagesToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationMessagesToken = null;
+            if (parseNode.GetChildNode("recipient_id") is { } nullNodeRecipientId && nullNodeRecipientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientId = null;
+            if (parseNode.GetChildNode("token_expiry_timestamp") is { } nullNodeTokenExpiryTimestamp && nullNodeTokenExpiryTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenExpiryTimestamp = null;
+            if (parseNode.GetChildNode("topic_title") is { } nullNodeTopicTitle && nullNodeTopicTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopicTitle = null;
+            if (parseNode.GetChildNode("user_token_status") is { } nullNodeUserTokenStatus && nullNodeUserTokenStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserTokenStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The creation_timestamp property</summary>
-        public long? CreationTimestamp { get; set; }
+        public long? CreationTimestamp { get => _explicitNullValueCreationTimestamp; set { _explicitNullValueCreationTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_timestamp"); else _explicitNullProperties?.Remove("creation_timestamp"); } }
+        private long? _explicitNullValueCreationTimestamp = default!;
         /// <summary>The custom_audience_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CustomAudienceIds { get; set; }
+        public List<string>? CustomAudienceIds { get => _explicitNullValueCustomAudienceIds; set { _explicitNullValueCustomAudienceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_ids"); else _explicitNullProperties?.Remove("custom_audience_ids"); } }
+        private List<string>? _explicitNullValueCustomAudienceIds = default!;
 #nullable restore
 #else
-        public List<string> CustomAudienceIds { get; set; }
+        public List<string> CustomAudienceIds { get => _explicitNullValueCustomAudienceIds; set { _explicitNullValueCustomAudienceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience_ids"); else _explicitNullProperties?.Remove("custom_audience_ids"); } }
+        private List<string> _explicitNullValueCustomAudienceIds = default!;
 #endif
         /// <summary>The next_eligible_time property</summary>
-        public long? NextEligibleTime { get; set; }
+        public long? NextEligibleTime { get => _explicitNullValueNextEligibleTime; set { _explicitNullValueNextEligibleTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_eligible_time"); else _explicitNullProperties?.Remove("next_eligible_time"); } }
+        private long? _explicitNullValueNextEligibleTime = default!;
         /// <summary>The next_eligible_time_for_paid_messaging property</summary>
-        public long? NextEligibleTimeForPaidMessaging { get; set; }
+        public long? NextEligibleTimeForPaidMessaging { get => _explicitNullValueNextEligibleTimeForPaidMessaging; set { _explicitNullValueNextEligibleTimeForPaidMessaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_eligible_time_for_paid_messaging"); else _explicitNullProperties?.Remove("next_eligible_time_for_paid_messaging"); } }
+        private long? _explicitNullValueNextEligibleTimeForPaidMessaging = default!;
         /// <summary>The notification_messages_frequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationMessagesFrequency { get; set; }
+        public string? NotificationMessagesFrequency { get => _explicitNullValueNotificationMessagesFrequency; set { _explicitNullValueNotificationMessagesFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_frequency"); else _explicitNullProperties?.Remove("notification_messages_frequency"); } }
+        private string? _explicitNullValueNotificationMessagesFrequency = default!;
 #nullable restore
 #else
-        public string NotificationMessagesFrequency { get; set; }
+        public string NotificationMessagesFrequency { get => _explicitNullValueNotificationMessagesFrequency; set { _explicitNullValueNotificationMessagesFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_frequency"); else _explicitNullProperties?.Remove("notification_messages_frequency"); } }
+        private string _explicitNullValueNotificationMessagesFrequency = default!;
 #endif
         /// <summary>The notification_messages_reoptin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationMessagesReoptin { get; set; }
+        public string? NotificationMessagesReoptin { get => _explicitNullValueNotificationMessagesReoptin; set { _explicitNullValueNotificationMessagesReoptin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_reoptin"); else _explicitNullProperties?.Remove("notification_messages_reoptin"); } }
+        private string? _explicitNullValueNotificationMessagesReoptin = default!;
 #nullable restore
 #else
-        public string NotificationMessagesReoptin { get; set; }
+        public string NotificationMessagesReoptin { get => _explicitNullValueNotificationMessagesReoptin; set { _explicitNullValueNotificationMessagesReoptin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_reoptin"); else _explicitNullProperties?.Remove("notification_messages_reoptin"); } }
+        private string _explicitNullValueNotificationMessagesReoptin = default!;
 #endif
         /// <summary>The notification_messages_timezone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationMessagesTimezone { get; set; }
+        public string? NotificationMessagesTimezone { get => _explicitNullValueNotificationMessagesTimezone; set { _explicitNullValueNotificationMessagesTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_timezone"); else _explicitNullProperties?.Remove("notification_messages_timezone"); } }
+        private string? _explicitNullValueNotificationMessagesTimezone = default!;
 #nullable restore
 #else
-        public string NotificationMessagesTimezone { get; set; }
+        public string NotificationMessagesTimezone { get => _explicitNullValueNotificationMessagesTimezone; set { _explicitNullValueNotificationMessagesTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_timezone"); else _explicitNullProperties?.Remove("notification_messages_timezone"); } }
+        private string _explicitNullValueNotificationMessagesTimezone = default!;
 #endif
         /// <summary>The notification_messages_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NotificationMessagesToken { get; set; }
+        public string? NotificationMessagesToken { get => _explicitNullValueNotificationMessagesToken; set { _explicitNullValueNotificationMessagesToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_token"); else _explicitNullProperties?.Remove("notification_messages_token"); } }
+        private string? _explicitNullValueNotificationMessagesToken = default!;
 #nullable restore
 #else
-        public string NotificationMessagesToken { get; set; }
+        public string NotificationMessagesToken { get => _explicitNullValueNotificationMessagesToken; set { _explicitNullValueNotificationMessagesToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_messages_token"); else _explicitNullProperties?.Remove("notification_messages_token"); } }
+        private string _explicitNullValueNotificationMessagesToken = default!;
 #endif
         /// <summary>The recipient_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientId { get; set; }
+        public string? RecipientId { get => _explicitNullValueRecipientId; set { _explicitNullValueRecipientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_id"); else _explicitNullProperties?.Remove("recipient_id"); } }
+        private string? _explicitNullValueRecipientId = default!;
 #nullable restore
 #else
-        public string RecipientId { get; set; }
+        public string RecipientId { get => _explicitNullValueRecipientId; set { _explicitNullValueRecipientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient_id"); else _explicitNullProperties?.Remove("recipient_id"); } }
+        private string _explicitNullValueRecipientId = default!;
 #endif
         /// <summary>The token_expiry_timestamp property</summary>
-        public long? TokenExpiryTimestamp { get; set; }
+        public long? TokenExpiryTimestamp { get => _explicitNullValueTokenExpiryTimestamp; set { _explicitNullValueTokenExpiryTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expiry_timestamp"); else _explicitNullProperties?.Remove("token_expiry_timestamp"); } }
+        private long? _explicitNullValueTokenExpiryTimestamp = default!;
         /// <summary>The topic_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TopicTitle { get; set; }
+        public string? TopicTitle { get => _explicitNullValueTopicTitle; set { _explicitNullValueTopicTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic_title"); else _explicitNullProperties?.Remove("topic_title"); } }
+        private string? _explicitNullValueTopicTitle = default!;
 #nullable restore
 #else
-        public string TopicTitle { get; set; }
+        public string TopicTitle { get => _explicitNullValueTopicTitle; set { _explicitNullValueTopicTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topic_title"); else _explicitNullProperties?.Remove("topic_title"); } }
+        private string _explicitNullValueTopicTitle = default!;
 #endif
         /// <summary>The user_token_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserTokenStatus { get; set; }
+        public string? UserTokenStatus { get => _explicitNullValueUserTokenStatus; set { _explicitNullValueUserTokenStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_token_status"); else _explicitNullProperties?.Remove("user_token_status"); } }
+        private string? _explicitNullValueUserTokenStatus = default!;
 #nullable restore
 #else
-        public string UserTokenStatus { get; set; }
+        public string UserTokenStatus { get => _explicitNullValueUserTokenStatus; set { _explicitNullValueUserTokenStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_token_status"); else _explicitNullProperties?.Remove("user_token_status"); } }
+        private string _explicitNullValueUserTokenStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.UserPageOneTimeOptInTokenSettings"/> and sets the default values.
@@ -101,7 +140,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.UserPageOneTimeOptInTokenSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.UserPageOneTimeOptInTokenSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.UserPageOneTimeOptInTokenSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -144,6 +183,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("token_expiry_timestamp", TokenExpiryTimestamp);
             writer.WriteStringValue("topic_title", TopicTitle);
             writer.WriteStringValue("user_token_status", UserTokenStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

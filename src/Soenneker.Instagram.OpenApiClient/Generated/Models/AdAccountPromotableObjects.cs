@@ -11,32 +11,48 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdAccountPromotableObjects : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("promotable_app_ids") is { } nullNodePromotableAppIds && nullNodePromotableAppIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableAppIds = null;
+            if (parseNode.GetChildNode("promotable_page_ids") is { } nullNodePromotablePageIds && nullNodePromotablePageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotablePageIds = null;
+            if (parseNode.GetChildNode("promotable_urls") is { } nullNodePromotableUrls && nullNodePromotableUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableUrls = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The promotable_app_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotableAppIds { get; set; }
+        public List<string>? PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
+        private List<string>? _explicitNullValuePromotableAppIds = default!;
 #nullable restore
 #else
-        public List<string> PromotableAppIds { get; set; }
+        public List<string> PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
+        private List<string> _explicitNullValuePromotableAppIds = default!;
 #endif
         /// <summary>The promotable_page_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotablePageIds { get; set; }
+        public List<string>? PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
+        private List<string>? _explicitNullValuePromotablePageIds = default!;
 #nullable restore
 #else
-        public List<string> PromotablePageIds { get; set; }
+        public List<string> PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
+        private List<string> _explicitNullValuePromotablePageIds = default!;
 #endif
         /// <summary>The promotable_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotableUrls { get; set; }
+        public List<string>? PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
+        private List<string>? _explicitNullValuePromotableUrls = default!;
 #nullable restore
 #else
-        public List<string> PromotableUrls { get; set; }
+        public List<string> PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
+        private List<string> _explicitNullValuePromotableUrls = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdAccountPromotableObjects"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.AdAccountPromotableObjects CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.AdAccountPromotableObjects();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.AdAccountPromotableObjects(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("promotable_app_ids", PromotableAppIds);
             writer.WriteCollectionOfPrimitiveValues<string>("promotable_page_ids", PromotablePageIds);
             writer.WriteCollectionOfPrimitiveValues<string>("promotable_urls", PromotableUrls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

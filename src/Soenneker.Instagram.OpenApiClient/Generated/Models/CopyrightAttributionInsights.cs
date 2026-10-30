@@ -11,24 +11,42 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CopyrightAttributionInsights : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("l7_attribution_page_view") is { } nullNodeL7AttributionPageView && nullNodeL7AttributionPageView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) L7AttributionPageView = null;
+            if (parseNode.GetChildNode("l7_attribution_page_view_delta") is { } nullNodeL7AttributionPageViewDelta && nullNodeL7AttributionPageViewDelta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) L7AttributionPageViewDelta = null;
+            if (parseNode.GetChildNode("l7_attribution_video_view") is { } nullNodeL7AttributionVideoView && nullNodeL7AttributionVideoView.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) L7AttributionVideoView = null;
+            if (parseNode.GetChildNode("l7_attribution_video_view_delta") is { } nullNodeL7AttributionVideoViewDelta && nullNodeL7AttributionVideoViewDelta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) L7AttributionVideoViewDelta = null;
+            if (parseNode.GetChildNode("metrics_ending_date") is { } nullNodeMetricsEndingDate && nullNodeMetricsEndingDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetricsEndingDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The l7_attribution_page_view property</summary>
-        public long? L7AttributionPageView { get; set; }
+        public long? L7AttributionPageView { get => _explicitNullValueL7AttributionPageView; set { _explicitNullValueL7AttributionPageView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("l7_attribution_page_view"); else _explicitNullProperties?.Remove("l7_attribution_page_view"); } }
+        private long? _explicitNullValueL7AttributionPageView = default!;
         /// <summary>The l7_attribution_page_view_delta property</summary>
-        public float? L7AttributionPageViewDelta { get; set; }
+        public float? L7AttributionPageViewDelta { get => _explicitNullValueL7AttributionPageViewDelta; set { _explicitNullValueL7AttributionPageViewDelta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("l7_attribution_page_view_delta"); else _explicitNullProperties?.Remove("l7_attribution_page_view_delta"); } }
+        private float? _explicitNullValueL7AttributionPageViewDelta = default!;
         /// <summary>The l7_attribution_video_view property</summary>
-        public long? L7AttributionVideoView { get; set; }
+        public long? L7AttributionVideoView { get => _explicitNullValueL7AttributionVideoView; set { _explicitNullValueL7AttributionVideoView = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("l7_attribution_video_view"); else _explicitNullProperties?.Remove("l7_attribution_video_view"); } }
+        private long? _explicitNullValueL7AttributionVideoView = default!;
         /// <summary>The l7_attribution_video_view_delta property</summary>
-        public float? L7AttributionVideoViewDelta { get; set; }
+        public float? L7AttributionVideoViewDelta { get => _explicitNullValueL7AttributionVideoViewDelta; set { _explicitNullValueL7AttributionVideoViewDelta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("l7_attribution_video_view_delta"); else _explicitNullProperties?.Remove("l7_attribution_video_view_delta"); } }
+        private float? _explicitNullValueL7AttributionVideoViewDelta = default!;
         /// <summary>The metrics_ending_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MetricsEndingDate { get; set; }
+        public string? MetricsEndingDate { get => _explicitNullValueMetricsEndingDate; set { _explicitNullValueMetricsEndingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics_ending_date"); else _explicitNullProperties?.Remove("metrics_ending_date"); } }
+        private string? _explicitNullValueMetricsEndingDate = default!;
 #nullable restore
 #else
-        public string MetricsEndingDate { get; set; }
+        public string MetricsEndingDate { get => _explicitNullValueMetricsEndingDate; set { _explicitNullValueMetricsEndingDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics_ending_date"); else _explicitNullProperties?.Remove("metrics_ending_date"); } }
+        private string _explicitNullValueMetricsEndingDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.CopyrightAttributionInsights"/> and sets the default values.
@@ -45,7 +63,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.CopyrightAttributionInsights CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.CopyrightAttributionInsights();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.CopyrightAttributionInsights(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("l7_attribution_video_view", L7AttributionVideoView);
             writer.WriteFloatValue("l7_attribution_video_view_delta", L7AttributionVideoViewDelta);
             writer.WriteStringValue("metrics_ending_date", MetricsEndingDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

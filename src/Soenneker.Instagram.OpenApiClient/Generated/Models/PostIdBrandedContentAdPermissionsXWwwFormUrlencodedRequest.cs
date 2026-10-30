@@ -11,27 +11,42 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostIdBrandedContentAdPermissionsXWwwFormUrlencodedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("creator_instagram_account") is { } nullNodeCreatorInstagramAccount && nullNodeCreatorInstagramAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatorInstagramAccount = null;
+            if (parseNode.GetChildNode("creator_instagram_username") is { } nullNodeCreatorInstagramUsername && nullNodeCreatorInstagramUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatorInstagramUsername = null;
+            if (parseNode.GetChildNode("revoke") is { } nullNodeRevoke && nullNodeRevoke.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Revoke = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The creator_instagram_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatorInstagramAccount { get; set; }
+        public string? CreatorInstagramAccount { get => _explicitNullValueCreatorInstagramAccount; set { _explicitNullValueCreatorInstagramAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_instagram_account"); else _explicitNullProperties?.Remove("creator_instagram_account"); } }
+        private string? _explicitNullValueCreatorInstagramAccount = default!;
 #nullable restore
 #else
-        public string CreatorInstagramAccount { get; set; }
+        public string CreatorInstagramAccount { get => _explicitNullValueCreatorInstagramAccount; set { _explicitNullValueCreatorInstagramAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_instagram_account"); else _explicitNullProperties?.Remove("creator_instagram_account"); } }
+        private string _explicitNullValueCreatorInstagramAccount = default!;
 #endif
         /// <summary>The creator_instagram_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatorInstagramUsername { get; set; }
+        public string? CreatorInstagramUsername { get => _explicitNullValueCreatorInstagramUsername; set { _explicitNullValueCreatorInstagramUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_instagram_username"); else _explicitNullProperties?.Remove("creator_instagram_username"); } }
+        private string? _explicitNullValueCreatorInstagramUsername = default!;
 #nullable restore
 #else
-        public string CreatorInstagramUsername { get; set; }
+        public string CreatorInstagramUsername { get => _explicitNullValueCreatorInstagramUsername; set { _explicitNullValueCreatorInstagramUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_instagram_username"); else _explicitNullProperties?.Remove("creator_instagram_username"); } }
+        private string _explicitNullValueCreatorInstagramUsername = default!;
 #endif
         /// <summary>The revoke property</summary>
-        public bool? Revoke { get; set; }
+        public bool? Revoke { get => _explicitNullValueRevoke; set { _explicitNullValueRevoke = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revoke"); else _explicitNullProperties?.Remove("revoke"); } }
+        private bool? _explicitNullValueRevoke = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PostIdBrandedContentAdPermissionsXWwwFormUrlencodedRequest"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.PostIdBrandedContentAdPermissionsXWwwFormUrlencodedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.PostIdBrandedContentAdPermissionsXWwwFormUrlencodedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.PostIdBrandedContentAdPermissionsXWwwFormUrlencodedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("creator_instagram_account", CreatorInstagramAccount);
             writer.WriteStringValue("creator_instagram_username", CreatorInstagramUsername);
             writer.WriteBoolValue("revoke", Revoke);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

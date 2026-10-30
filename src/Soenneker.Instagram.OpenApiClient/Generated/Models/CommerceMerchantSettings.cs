@@ -11,114 +11,162 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CommerceMerchantSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checkout_config") is { } nullNodeCheckoutConfig && nullNodeCheckoutConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckoutConfig = null;
+            if (parseNode.GetChildNode("contact_email") is { } nullNodeContactEmail && nullNodeContactEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactEmail = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("facebook_channel") is { } nullNodeFacebookChannel && nullNodeFacebookChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookChannel = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("instagram_channel") is { } nullNodeInstagramChannel && nullNodeInstagramChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramChannel = null;
+            if (parseNode.GetChildNode("korea_ftc_listing") is { } nullNodeKoreaFtcListing && nullNodeKoreaFtcListing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KoreaFtcListing = null;
+            if (parseNode.GetChildNode("merchant_page") is { } nullNodeMerchantPage && nullNodeMerchantPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantPage = null;
+            if (parseNode.GetChildNode("merchant_status") is { } nullNodeMerchantStatus && nullNodeMerchantStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MerchantStatus = null;
+            if (parseNode.GetChildNode("offsite_iab_checkout_enabled_countries") is { } nullNodeOffsiteIabCheckoutEnabledCountries && nullNodeOffsiteIabCheckoutEnabledCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsiteIabCheckoutEnabledCountries = null;
+            if (parseNode.GetChildNode("payment_provider") is { } nullNodePaymentProvider && nullNodePaymentProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentProvider = null;
+            if (parseNode.GetChildNode("privacy_policy_localized") is { } nullNodePrivacyPolicyLocalized && nullNodePrivacyPolicyLocalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyLocalized = null;
+            if (parseNode.GetChildNode("shops_ads_setup") is { } nullNodeShopsAdsSetup && nullNodeShopsAdsSetup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShopsAdsSetup = null;
+            if (parseNode.GetChildNode("terms") is { } nullNodeTerms && nullNodeTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Terms = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkout_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckoutConfig { get; set; }
+        public string? CheckoutConfig { get => _explicitNullValueCheckoutConfig; set { _explicitNullValueCheckoutConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_config"); else _explicitNullProperties?.Remove("checkout_config"); } }
+        private string? _explicitNullValueCheckoutConfig = default!;
 #nullable restore
 #else
-        public string CheckoutConfig { get; set; }
+        public string CheckoutConfig { get => _explicitNullValueCheckoutConfig; set { _explicitNullValueCheckoutConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkout_config"); else _explicitNullProperties?.Remove("checkout_config"); } }
+        private string _explicitNullValueCheckoutConfig = default!;
 #endif
         /// <summary>The contact_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactEmail { get; set; }
+        public string? ContactEmail { get => _explicitNullValueContactEmail; set { _explicitNullValueContactEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_email"); else _explicitNullProperties?.Remove("contact_email"); } }
+        private string? _explicitNullValueContactEmail = default!;
 #nullable restore
 #else
-        public string ContactEmail { get; set; }
+        public string ContactEmail { get => _explicitNullValueContactEmail; set { _explicitNullValueContactEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contact_email"); else _explicitNullProperties?.Remove("contact_email"); } }
+        private string _explicitNullValueContactEmail = default!;
 #endif
         /// <summary>The display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The facebook_channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty? FacebookChannel { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty? FacebookChannel { get => _explicitNullValueFacebookChannel; set { _explicitNullValueFacebookChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_channel"); else _explicitNullProperties?.Remove("facebook_channel"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty? _explicitNullValueFacebookChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty FacebookChannel { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty FacebookChannel { get => _explicitNullValueFacebookChannel; set { _explicitNullValueFacebookChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_channel"); else _explicitNullProperties?.Remove("facebook_channel"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsFacebookChannelProperty _explicitNullValueFacebookChannel = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The instagram_channel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty? InstagramChannel { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty? InstagramChannel { get => _explicitNullValueInstagramChannel; set { _explicitNullValueInstagramChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_channel"); else _explicitNullProperties?.Remove("instagram_channel"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty? _explicitNullValueInstagramChannel = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty InstagramChannel { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty InstagramChannel { get => _explicitNullValueInstagramChannel; set { _explicitNullValueInstagramChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_channel"); else _explicitNullProperties?.Remove("instagram_channel"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsInstagramChannelProperty _explicitNullValueInstagramChannel = default!;
 #endif
         /// <summary>The korea_ftc_listing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KoreaFtcListing { get; set; }
+        public string? KoreaFtcListing { get => _explicitNullValueKoreaFtcListing; set { _explicitNullValueKoreaFtcListing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("korea_ftc_listing"); else _explicitNullProperties?.Remove("korea_ftc_listing"); } }
+        private string? _explicitNullValueKoreaFtcListing = default!;
 #nullable restore
 #else
-        public string KoreaFtcListing { get; set; }
+        public string KoreaFtcListing { get => _explicitNullValueKoreaFtcListing; set { _explicitNullValueKoreaFtcListing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("korea_ftc_listing"); else _explicitNullProperties?.Remove("korea_ftc_listing"); } }
+        private string _explicitNullValueKoreaFtcListing = default!;
 #endif
         /// <summary>The merchant_page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.Profile? MerchantPage { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Profile? MerchantPage { get => _explicitNullValueMerchantPage; set { _explicitNullValueMerchantPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_page"); else _explicitNullProperties?.Remove("merchant_page"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Profile? _explicitNullValueMerchantPage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.Profile MerchantPage { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Profile MerchantPage { get => _explicitNullValueMerchantPage; set { _explicitNullValueMerchantPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_page"); else _explicitNullProperties?.Remove("merchant_page"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Profile _explicitNullValueMerchantPage = default!;
 #endif
         /// <summary>The merchant_status property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommercemerchantsettingsMerchantStatus? MerchantStatus { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommercemerchantsettingsMerchantStatus? MerchantStatus { get => _explicitNullValueMerchantStatus; set { _explicitNullValueMerchantStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merchant_status"); else _explicitNullProperties?.Remove("merchant_status"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommercemerchantsettingsMerchantStatus? _explicitNullValueMerchantStatus = default!;
         /// <summary>The offsite_iab_checkout_enabled_countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? OffsiteIabCheckoutEnabledCountries { get; set; }
+        public List<string>? OffsiteIabCheckoutEnabledCountries { get => _explicitNullValueOffsiteIabCheckoutEnabledCountries; set { _explicitNullValueOffsiteIabCheckoutEnabledCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsite_iab_checkout_enabled_countries"); else _explicitNullProperties?.Remove("offsite_iab_checkout_enabled_countries"); } }
+        private List<string>? _explicitNullValueOffsiteIabCheckoutEnabledCountries = default!;
 #nullable restore
 #else
-        public List<string> OffsiteIabCheckoutEnabledCountries { get; set; }
+        public List<string> OffsiteIabCheckoutEnabledCountries { get => _explicitNullValueOffsiteIabCheckoutEnabledCountries; set { _explicitNullValueOffsiteIabCheckoutEnabledCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsite_iab_checkout_enabled_countries"); else _explicitNullProperties?.Remove("offsite_iab_checkout_enabled_countries"); } }
+        private List<string> _explicitNullValueOffsiteIabCheckoutEnabledCountries = default!;
 #endif
         /// <summary>The payment_provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentProvider { get; set; }
+        public string? PaymentProvider { get => _explicitNullValuePaymentProvider; set { _explicitNullValuePaymentProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_provider"); else _explicitNullProperties?.Remove("payment_provider"); } }
+        private string? _explicitNullValuePaymentProvider = default!;
 #nullable restore
 #else
-        public string PaymentProvider { get; set; }
+        public string PaymentProvider { get => _explicitNullValuePaymentProvider; set { _explicitNullValuePaymentProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_provider"); else _explicitNullProperties?.Remove("payment_provider"); } }
+        private string _explicitNullValuePaymentProvider = default!;
 #endif
         /// <summary>The privacy_policy_localized property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyLocalized { get; set; }
+        public string? PrivacyPolicyLocalized { get => _explicitNullValuePrivacyPolicyLocalized; set { _explicitNullValuePrivacyPolicyLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_localized"); else _explicitNullProperties?.Remove("privacy_policy_localized"); } }
+        private string? _explicitNullValuePrivacyPolicyLocalized = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyLocalized { get; set; }
+        public string PrivacyPolicyLocalized { get => _explicitNullValuePrivacyPolicyLocalized; set { _explicitNullValuePrivacyPolicyLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacy_policy_localized"); else _explicitNullProperties?.Remove("privacy_policy_localized"); } }
+        private string _explicitNullValuePrivacyPolicyLocalized = default!;
 #endif
         /// <summary>The shops_ads_setup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty? ShopsAdsSetup { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty? ShopsAdsSetup { get => _explicitNullValueShopsAdsSetup; set { _explicitNullValueShopsAdsSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shops_ads_setup"); else _explicitNullProperties?.Remove("shops_ads_setup"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty? _explicitNullValueShopsAdsSetup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty ShopsAdsSetup { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty ShopsAdsSetup { get => _explicitNullValueShopsAdsSetup; set { _explicitNullValueShopsAdsSetup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shops_ads_setup"); else _explicitNullProperties?.Remove("shops_ads_setup"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty _explicitNullValueShopsAdsSetup = default!;
 #endif
         /// <summary>The terms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Terms { get; set; }
+        public string? Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        private string? _explicitNullValueTerms = default!;
 #nullable restore
 #else
-        public string Terms { get; set; }
+        public string Terms { get => _explicitNullValueTerms; set { _explicitNullValueTerms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terms"); else _explicitNullProperties?.Remove("terms"); } }
+        private string _explicitNullValueTerms = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings"/> and sets the default values.
@@ -135,7 +183,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -182,6 +230,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("privacy_policy_localized", PrivacyPolicyLocalized);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettingsShopsAdsSetupProperty>("shops_ads_setup", ShopsAdsSetup);
             writer.WriteStringValue("terms", Terms);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

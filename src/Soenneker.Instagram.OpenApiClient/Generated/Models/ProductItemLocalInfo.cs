@@ -11,69 +11,101 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductItemLocalInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availability_circle_origin") is { } nullNodeAvailabilityCircleOrigin && nullNodeAvailabilityCircleOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilityCircleOrigin = null;
+            if (parseNode.GetChildNode("availability_circle_radius") is { } nullNodeAvailabilityCircleRadius && nullNodeAvailabilityCircleRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilityCircleRadius = null;
+            if (parseNode.GetChildNode("availability_circle_radius_unit") is { } nullNodeAvailabilityCircleRadiusUnit && nullNodeAvailabilityCircleRadiusUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilityCircleRadiusUnit = null;
+            if (parseNode.GetChildNode("availability_polygon_coordinates") is { } nullNodeAvailabilityPolygonCoordinates && nullNodeAvailabilityPolygonCoordinates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilityPolygonCoordinates = null;
+            if (parseNode.GetChildNode("availability_postal_codes") is { } nullNodeAvailabilityPostalCodes && nullNodeAvailabilityPostalCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilityPostalCodes = null;
+            if (parseNode.GetChildNode("availability_source") is { } nullNodeAvailabilitySource && nullNodeAvailabilitySource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailabilitySource = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inferred_circle_origin") is { } nullNodeInferredCircleOrigin && nullNodeInferredCircleOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InferredCircleOrigin = null;
+            if (parseNode.GetChildNode("inferred_circle_radius") is { } nullNodeInferredCircleRadius && nullNodeInferredCircleRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InferredCircleRadius = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The availability_circle_origin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? AvailabilityCircleOrigin { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? AvailabilityCircleOrigin { get => _explicitNullValueAvailabilityCircleOrigin; set { _explicitNullValueAvailabilityCircleOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_circle_origin"); else _explicitNullProperties?.Remove("availability_circle_origin"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? _explicitNullValueAvailabilityCircleOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape AvailabilityCircleOrigin { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape AvailabilityCircleOrigin { get => _explicitNullValueAvailabilityCircleOrigin; set { _explicitNullValueAvailabilityCircleOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_circle_origin"); else _explicitNullProperties?.Remove("availability_circle_origin"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape _explicitNullValueAvailabilityCircleOrigin = default!;
 #endif
         /// <summary>The availability_circle_radius property</summary>
-        public float? AvailabilityCircleRadius { get; set; }
+        public float? AvailabilityCircleRadius { get => _explicitNullValueAvailabilityCircleRadius; set { _explicitNullValueAvailabilityCircleRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_circle_radius"); else _explicitNullProperties?.Remove("availability_circle_radius"); } }
+        private float? _explicitNullValueAvailabilityCircleRadius = default!;
         /// <summary>The availability_circle_radius_unit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvailabilityCircleRadiusUnit { get; set; }
+        public string? AvailabilityCircleRadiusUnit { get => _explicitNullValueAvailabilityCircleRadiusUnit; set { _explicitNullValueAvailabilityCircleRadiusUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_circle_radius_unit"); else _explicitNullProperties?.Remove("availability_circle_radius_unit"); } }
+        private string? _explicitNullValueAvailabilityCircleRadiusUnit = default!;
 #nullable restore
 #else
-        public string AvailabilityCircleRadiusUnit { get; set; }
+        public string AvailabilityCircleRadiusUnit { get => _explicitNullValueAvailabilityCircleRadiusUnit; set { _explicitNullValueAvailabilityCircleRadiusUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_circle_radius_unit"); else _explicitNullProperties?.Remove("availability_circle_radius_unit"); } }
+        private string _explicitNullValueAvailabilityCircleRadiusUnit = default!;
 #endif
         /// <summary>The availability_polygon_coordinates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape>? AvailabilityPolygonCoordinates { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape>? AvailabilityPolygonCoordinates { get => _explicitNullValueAvailabilityPolygonCoordinates; set { _explicitNullValueAvailabilityPolygonCoordinates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_polygon_coordinates"); else _explicitNullProperties?.Remove("availability_polygon_coordinates"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape>? _explicitNullValueAvailabilityPolygonCoordinates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape> AvailabilityPolygonCoordinates { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape> AvailabilityPolygonCoordinates { get => _explicitNullValueAvailabilityPolygonCoordinates; set { _explicitNullValueAvailabilityPolygonCoordinates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_polygon_coordinates"); else _explicitNullProperties?.Remove("availability_polygon_coordinates"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape> _explicitNullValueAvailabilityPolygonCoordinates = default!;
 #endif
         /// <summary>The availability_postal_codes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AvailabilityPostalCodes { get; set; }
+        public List<string>? AvailabilityPostalCodes { get => _explicitNullValueAvailabilityPostalCodes; set { _explicitNullValueAvailabilityPostalCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_postal_codes"); else _explicitNullProperties?.Remove("availability_postal_codes"); } }
+        private List<string>? _explicitNullValueAvailabilityPostalCodes = default!;
 #nullable restore
 #else
-        public List<string> AvailabilityPostalCodes { get; set; }
+        public List<string> AvailabilityPostalCodes { get => _explicitNullValueAvailabilityPostalCodes; set { _explicitNullValueAvailabilityPostalCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_postal_codes"); else _explicitNullProperties?.Remove("availability_postal_codes"); } }
+        private List<string> _explicitNullValueAvailabilityPostalCodes = default!;
 #endif
         /// <summary>The availability_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvailabilitySource { get; set; }
+        public string? AvailabilitySource { get => _explicitNullValueAvailabilitySource; set { _explicitNullValueAvailabilitySource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_source"); else _explicitNullProperties?.Remove("availability_source"); } }
+        private string? _explicitNullValueAvailabilitySource = default!;
 #nullable restore
 #else
-        public string AvailabilitySource { get; set; }
+        public string AvailabilitySource { get => _explicitNullValueAvailabilitySource; set { _explicitNullValueAvailabilitySource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability_source"); else _explicitNullProperties?.Remove("availability_source"); } }
+        private string _explicitNullValueAvailabilitySource = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The inferred_circle_origin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? InferredCircleOrigin { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? InferredCircleOrigin { get => _explicitNullValueInferredCircleOrigin; set { _explicitNullValueInferredCircleOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferred_circle_origin"); else _explicitNullProperties?.Remove("inferred_circle_origin"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape? _explicitNullValueInferredCircleOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape InferredCircleOrigin { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape InferredCircleOrigin { get => _explicitNullValueInferredCircleOrigin; set { _explicitNullValueInferredCircleOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferred_circle_origin"); else _explicitNullProperties?.Remove("inferred_circle_origin"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape _explicitNullValueInferredCircleOrigin = default!;
 #endif
         /// <summary>The inferred_circle_radius property</summary>
-        public float? InferredCircleRadius { get; set; }
+        public float? InferredCircleRadius { get => _explicitNullValueInferredCircleRadius; set { _explicitNullValueInferredCircleRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferred_circle_radius"); else _explicitNullProperties?.Remove("inferred_circle_radius"); } }
+        private float? _explicitNullValueInferredCircleRadius = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfo"/> and sets the default values.
         /// </summary>
@@ -89,7 +121,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,6 +158,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ProductItemLocalInfoLatLongShape>("inferred_circle_origin", InferredCircleOrigin);
             writer.WriteFloatValue("inferred_circle_radius", InferredCircleRadius);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

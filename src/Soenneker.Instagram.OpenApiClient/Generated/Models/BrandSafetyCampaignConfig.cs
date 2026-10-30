@@ -11,40 +11,59 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BrandSafetyCampaignConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comment_moderation_filter") is { } nullNodeCommentModerationFilter && nullNodeCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentModerationFilter = null;
+            if (parseNode.GetChildNode("fb_comment_moderation_filter") is { } nullNodeFbCommentModerationFilter && nullNodeFbCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbCommentModerationFilter = null;
+            if (parseNode.GetChildNode("ig_comment_moderation_filter") is { } nullNodeIgCommentModerationFilter && nullNodeIgCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgCommentModerationFilter = null;
+            if (parseNode.GetChildNode("threads_comment_moderation_filter") is { } nullNodeThreadsCommentModerationFilter && nullNodeThreadsCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsCommentModerationFilter = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentModerationFilter { get; set; }
+        public string? CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
+        private string? _explicitNullValueCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string CommentModerationFilter { get; set; }
+        public string CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
+        private string _explicitNullValueCommentModerationFilter = default!;
 #endif
         /// <summary>The fb_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FbCommentModerationFilter { get; set; }
+        public string? FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
+        private string? _explicitNullValueFbCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string FbCommentModerationFilter { get; set; }
+        public string FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
+        private string _explicitNullValueFbCommentModerationFilter = default!;
 #endif
         /// <summary>The ig_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgCommentModerationFilter { get; set; }
+        public string? IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
+        private string? _explicitNullValueIgCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string IgCommentModerationFilter { get; set; }
+        public string IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
+        private string _explicitNullValueIgCommentModerationFilter = default!;
 #endif
         /// <summary>The threads_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsCommentModerationFilter { get; set; }
+        public string? ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
+        private string? _explicitNullValueThreadsCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string ThreadsCommentModerationFilter { get; set; }
+        public string ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
+        private string _explicitNullValueThreadsCommentModerationFilter = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.BrandSafetyCampaignConfig"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.BrandSafetyCampaignConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.BrandSafetyCampaignConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.BrandSafetyCampaignConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("fb_comment_moderation_filter", FbCommentModerationFilter);
             writer.WriteStringValue("ig_comment_moderation_filter", IgCommentModerationFilter);
             writer.WriteStringValue("threads_comment_moderation_filter", ThreadsCommentModerationFilter);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

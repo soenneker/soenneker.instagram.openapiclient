@@ -11,68 +11,105 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCampaignLearningStageInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attribution_windows") is { } nullNodeAttributionWindows && nullNodeAttributionWindows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionWindows = null;
+            if (parseNode.GetChildNode("cas_segment") is { } nullNodeCasSegment && nullNodeCasSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CasSegment = null;
+            if (parseNode.GetChildNode("conversions") is { } nullNodeConversions && nullNodeConversions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conversions = null;
+            if (parseNode.GetChildNode("current_budget_prediction") is { } nullNodeCurrentBudgetPrediction && nullNodeCurrentBudgetPrediction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentBudgetPrediction = null;
+            if (parseNode.GetChildNode("dynamic_lp_conversions_threshold") is { } nullNodeDynamicLpConversionsThreshold && nullNodeDynamicLpConversionsThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicLpConversionsThreshold = null;
+            if (parseNode.GetChildNode("dynamic_lp_days_threshold") is { } nullNodeDynamicLpDaysThreshold && nullNodeDynamicLpDaysThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicLpDaysThreshold = null;
+            if (parseNode.GetChildNode("dynamic_lp_status") is { } nullNodeDynamicLpStatus && nullNodeDynamicLpStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicLpStatus = null;
+            if (parseNode.GetChildNode("is_one_to_one_cbo_budget") is { } nullNodeIsOneToOneCboBudget && nullNodeIsOneToOneCboBudget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOneToOneCboBudget = null;
+            if (parseNode.GetChildNode("last_sig_edit_ts") is { } nullNodeLastSigEditTs && nullNodeLastSigEditTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSigEditTs = null;
+            if (parseNode.GetChildNode("recommended_budget_prediction") is { } nullNodeRecommendedBudgetPrediction && nullNodeRecommendedBudgetPrediction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendedBudgetPrediction = null;
+            if (parseNode.GetChildNode("sigedit_removal") is { } nullNodeSigeditRemoval && nullNodeSigeditRemoval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigeditRemoval = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attribution_windows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AttributionWindows { get; set; }
+        public List<string>? AttributionWindows { get => _explicitNullValueAttributionWindows; set { _explicitNullValueAttributionWindows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_windows"); else _explicitNullProperties?.Remove("attribution_windows"); } }
+        private List<string>? _explicitNullValueAttributionWindows = default!;
 #nullable restore
 #else
-        public List<string> AttributionWindows { get; set; }
+        public List<string> AttributionWindows { get => _explicitNullValueAttributionWindows; set { _explicitNullValueAttributionWindows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_windows"); else _explicitNullProperties?.Remove("attribution_windows"); } }
+        private List<string> _explicitNullValueAttributionWindows = default!;
 #endif
         /// <summary>The cas_segment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CasSegment { get; set; }
+        public string? CasSegment { get => _explicitNullValueCasSegment; set { _explicitNullValueCasSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cas_segment"); else _explicitNullProperties?.Remove("cas_segment"); } }
+        private string? _explicitNullValueCasSegment = default!;
 #nullable restore
 #else
-        public string CasSegment { get; set; }
+        public string CasSegment { get => _explicitNullValueCasSegment; set { _explicitNullValueCasSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cas_segment"); else _explicitNullProperties?.Remove("cas_segment"); } }
+        private string _explicitNullValueCasSegment = default!;
 #endif
         /// <summary>The conversions property</summary>
-        public long? Conversions { get; set; }
+        public long? Conversions { get => _explicitNullValueConversions; set { _explicitNullValueConversions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversions"); else _explicitNullProperties?.Remove("conversions"); } }
+        private long? _explicitNullValueConversions = default!;
         /// <summary>The current_budget_prediction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty? CurrentBudgetPrediction { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty? CurrentBudgetPrediction { get => _explicitNullValueCurrentBudgetPrediction; set { _explicitNullValueCurrentBudgetPrediction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_budget_prediction"); else _explicitNullProperties?.Remove("current_budget_prediction"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty? _explicitNullValueCurrentBudgetPrediction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty CurrentBudgetPrediction { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty CurrentBudgetPrediction { get => _explicitNullValueCurrentBudgetPrediction; set { _explicitNullValueCurrentBudgetPrediction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_budget_prediction"); else _explicitNullProperties?.Remove("current_budget_prediction"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty _explicitNullValueCurrentBudgetPrediction = default!;
 #endif
         /// <summary>The dynamic_lp_conversions_threshold property</summary>
-        public long? DynamicLpConversionsThreshold { get; set; }
+        public long? DynamicLpConversionsThreshold { get => _explicitNullValueDynamicLpConversionsThreshold; set { _explicitNullValueDynamicLpConversionsThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_lp_conversions_threshold"); else _explicitNullProperties?.Remove("dynamic_lp_conversions_threshold"); } }
+        private long? _explicitNullValueDynamicLpConversionsThreshold = default!;
         /// <summary>The dynamic_lp_days_threshold property</summary>
-        public long? DynamicLpDaysThreshold { get; set; }
+        public long? DynamicLpDaysThreshold { get => _explicitNullValueDynamicLpDaysThreshold; set { _explicitNullValueDynamicLpDaysThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_lp_days_threshold"); else _explicitNullProperties?.Remove("dynamic_lp_days_threshold"); } }
+        private long? _explicitNullValueDynamicLpDaysThreshold = default!;
         /// <summary>The dynamic_lp_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DynamicLpStatus { get; set; }
+        public string? DynamicLpStatus { get => _explicitNullValueDynamicLpStatus; set { _explicitNullValueDynamicLpStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_lp_status"); else _explicitNullProperties?.Remove("dynamic_lp_status"); } }
+        private string? _explicitNullValueDynamicLpStatus = default!;
 #nullable restore
 #else
-        public string DynamicLpStatus { get; set; }
+        public string DynamicLpStatus { get => _explicitNullValueDynamicLpStatus; set { _explicitNullValueDynamicLpStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_lp_status"); else _explicitNullProperties?.Remove("dynamic_lp_status"); } }
+        private string _explicitNullValueDynamicLpStatus = default!;
 #endif
         /// <summary>The is_one_to_one_cbo_budget property</summary>
-        public bool? IsOneToOneCboBudget { get; set; }
+        public bool? IsOneToOneCboBudget { get => _explicitNullValueIsOneToOneCboBudget; set { _explicitNullValueIsOneToOneCboBudget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_one_to_one_cbo_budget"); else _explicitNullProperties?.Remove("is_one_to_one_cbo_budget"); } }
+        private bool? _explicitNullValueIsOneToOneCboBudget = default!;
         /// <summary>The last_sig_edit_ts property</summary>
-        public long? LastSigEditTs { get; set; }
+        public long? LastSigEditTs { get => _explicitNullValueLastSigEditTs; set { _explicitNullValueLastSigEditTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_sig_edit_ts"); else _explicitNullProperties?.Remove("last_sig_edit_ts"); } }
+        private long? _explicitNullValueLastSigEditTs = default!;
         /// <summary>The recommended_budget_prediction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty? RecommendedBudgetPrediction { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty? RecommendedBudgetPrediction { get => _explicitNullValueRecommendedBudgetPrediction; set { _explicitNullValueRecommendedBudgetPrediction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended_budget_prediction"); else _explicitNullProperties?.Remove("recommended_budget_prediction"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty? _explicitNullValueRecommendedBudgetPrediction = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty RecommendedBudgetPrediction { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty RecommendedBudgetPrediction { get => _explicitNullValueRecommendedBudgetPrediction; set { _explicitNullValueRecommendedBudgetPrediction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended_budget_prediction"); else _explicitNullProperties?.Remove("recommended_budget_prediction"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty _explicitNullValueRecommendedBudgetPrediction = default!;
 #endif
         /// <summary>The sigedit_removal property</summary>
-        public bool? SigeditRemoval { get; set; }
+        public bool? SigeditRemoval { get => _explicitNullValueSigeditRemoval; set { _explicitNullValueSigeditRemoval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sigedit_removal"); else _explicitNullProperties?.Remove("sigedit_removal"); } }
+        private bool? _explicitNullValueSigeditRemoval = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfo"/> and sets the default values.
@@ -89,7 +126,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +169,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoRecommendedBudgetPredictionProperty>("recommended_budget_prediction", RecommendedBudgetPrediction);
             writer.WriteBoolValue("sigedit_removal", SigeditRemoval);
             writer.WriteStringValue("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

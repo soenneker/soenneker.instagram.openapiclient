@@ -11,64 +11,92 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ManagedPartnerBusiness : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_account") is { } nullNodeAdAccount && nullNodeAdAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccount = null;
+            if (parseNode.GetChildNode("catalog_segment") is { } nullNodeCatalogSegment && nullNodeCatalogSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogSegment = null;
+            if (parseNode.GetChildNode("extended_credit") is { } nullNodeExtendedCredit && nullNodeExtendedCredit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendedCredit = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("seller_business_info") is { } nullNodeSellerBusinessInfo && nullNodeSellerBusinessInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerBusinessInfo = null;
+            if (parseNode.GetChildNode("seller_business_status") is { } nullNodeSellerBusinessStatus && nullNodeSellerBusinessStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SellerBusinessStatus = null;
+            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+        }
+
         /// <summary>The ad_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdAccount? AdAccount { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdAccount? AdAccount { get => _explicitNullValueAdAccount; set { _explicitNullValueAdAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account"); else _explicitNullProperties?.Remove("ad_account"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdAccount? _explicitNullValueAdAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdAccount AdAccount { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdAccount AdAccount { get => _explicitNullValueAdAccount; set { _explicitNullValueAdAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account"); else _explicitNullProperties?.Remove("ad_account"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.AdAccount _explicitNullValueAdAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The catalog_segment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog? CatalogSegment { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog? CatalogSegment { get => _explicitNullValueCatalogSegment; set { _explicitNullValueCatalogSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment"); else _explicitNullProperties?.Remove("catalog_segment"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog? _explicitNullValueCatalogSegment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog CatalogSegment { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog CatalogSegment { get => _explicitNullValueCatalogSegment; set { _explicitNullValueCatalogSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_segment"); else _explicitNullProperties?.Remove("catalog_segment"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog _explicitNullValueCatalogSegment = default!;
 #endif
         /// <summary>The extended_credit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit? ExtendedCredit { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit? ExtendedCredit { get => _explicitNullValueExtendedCredit; set { _explicitNullValueExtendedCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_credit"); else _explicitNullProperties?.Remove("extended_credit"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit? _explicitNullValueExtendedCredit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit ExtendedCredit { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit ExtendedCredit { get => _explicitNullValueExtendedCredit; set { _explicitNullValueExtendedCredit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_credit"); else _explicitNullProperties?.Remove("extended_credit"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerExtendedCredit _explicitNullValueExtendedCredit = default!;
 #endif
         /// <summary>The page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.Page? Page { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Page? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Page? _explicitNullValuePage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.Page Page { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Page Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Page _explicitNullValuePage = default!;
 #endif
         /// <summary>The seller_business_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty? SellerBusinessInfo { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty? SellerBusinessInfo { get => _explicitNullValueSellerBusinessInfo; set { _explicitNullValueSellerBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_business_info"); else _explicitNullProperties?.Remove("seller_business_info"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty? _explicitNullValueSellerBusinessInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty SellerBusinessInfo { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty SellerBusinessInfo { get => _explicitNullValueSellerBusinessInfo; set { _explicitNullValueSellerBusinessInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_business_info"); else _explicitNullProperties?.Remove("seller_business_info"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty _explicitNullValueSellerBusinessInfo = default!;
 #endif
         /// <summary>The seller_business_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SellerBusinessStatus { get; set; }
+        public string? SellerBusinessStatus { get => _explicitNullValueSellerBusinessStatus; set { _explicitNullValueSellerBusinessStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_business_status"); else _explicitNullProperties?.Remove("seller_business_status"); } }
+        private string? _explicitNullValueSellerBusinessStatus = default!;
 #nullable restore
 #else
-        public string SellerBusinessStatus { get; set; }
+        public string SellerBusinessStatus { get => _explicitNullValueSellerBusinessStatus; set { _explicitNullValueSellerBusinessStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seller_business_status"); else _explicitNullProperties?.Remove("seller_business_status"); } }
+        private string _explicitNullValueSellerBusinessStatus = default!;
 #endif
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty>? Template { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty>? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty>? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty> Template { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty> Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty> _explicitNullValueTemplate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusiness"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusiness CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusiness();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusiness(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessSellerBusinessInfoProperty>("seller_business_info", SellerBusinessInfo);
             writer.WriteStringValue("seller_business_status", SellerBusinessStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.ManagedPartnerBusinessTemplateItemProperty>("template", Template);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

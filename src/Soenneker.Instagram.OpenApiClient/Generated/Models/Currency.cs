@@ -11,22 +11,38 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Currency : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currency_offset") is { } nullNodeCurrencyOffset && nullNodeCurrencyOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOffset = null;
+            if (parseNode.GetChildNode("usd_exchange") is { } nullNodeUsdExchange && nullNodeUsdExchange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchange = null;
+            if (parseNode.GetChildNode("usd_exchange_inverse") is { } nullNodeUsdExchangeInverse && nullNodeUsdExchangeInverse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchangeInverse = null;
+            if (parseNode.GetChildNode("user_currency") is { } nullNodeUserCurrency && nullNodeUserCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCurrency = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency_offset property</summary>
-        public long? CurrencyOffset { get; set; }
+        public long? CurrencyOffset { get => _explicitNullValueCurrencyOffset; set { _explicitNullValueCurrencyOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_offset"); else _explicitNullProperties?.Remove("currency_offset"); } }
+        private long? _explicitNullValueCurrencyOffset = default!;
         /// <summary>The usd_exchange property</summary>
-        public float? UsdExchange { get; set; }
+        public float? UsdExchange { get => _explicitNullValueUsdExchange; set { _explicitNullValueUsdExchange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange"); else _explicitNullProperties?.Remove("usd_exchange"); } }
+        private float? _explicitNullValueUsdExchange = default!;
         /// <summary>The usd_exchange_inverse property</summary>
-        public float? UsdExchangeInverse { get; set; }
+        public float? UsdExchangeInverse { get => _explicitNullValueUsdExchangeInverse; set { _explicitNullValueUsdExchangeInverse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange_inverse"); else _explicitNullProperties?.Remove("usd_exchange_inverse"); } }
+        private float? _explicitNullValueUsdExchangeInverse = default!;
         /// <summary>The user_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCurrency { get; set; }
+        public string? UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
+        private string? _explicitNullValueUserCurrency = default!;
 #nullable restore
 #else
-        public string UserCurrency { get; set; }
+        public string UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
+        private string _explicitNullValueUserCurrency = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.Currency"/> and sets the default values.
@@ -43,7 +59,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.Currency CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.Currency();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.Currency(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteFloatValue("usd_exchange", UsdExchange);
             writer.WriteFloatValue("usd_exchange_inverse", UsdExchangeInverse);
             writer.WriteStringValue("user_currency", UserCurrency);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

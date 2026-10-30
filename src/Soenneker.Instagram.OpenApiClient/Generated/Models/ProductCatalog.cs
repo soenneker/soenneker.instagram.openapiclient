@@ -11,127 +11,187 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductCatalog : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ad_account_to_collaborative_ads_share_settings") is { } nullNodeAdAccountToCollaborativeAdsShareSettings && nullNodeAdAccountToCollaborativeAdsShareSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountToCollaborativeAdsShareSettings = null;
+            if (parseNode.GetChildNode("agency_collaborative_ads_share_settings") is { } nullNodeAgencyCollaborativeAdsShareSettings && nullNodeAgencyCollaborativeAdsShareSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgencyCollaborativeAdsShareSettings = null;
+            if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
+            if (parseNode.GetChildNode("catalog_store") is { } nullNodeCatalogStore && nullNodeCatalogStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatalogStore = null;
+            if (parseNode.GetChildNode("commerce_merchant_settings") is { } nullNodeCommerceMerchantSettings && nullNodeCommerceMerchantSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommerceMerchantSettings = null;
+            if (parseNode.GetChildNode("creator_user") is { } nullNodeCreatorUser && nullNodeCreatorUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatorUser = null;
+            if (parseNode.GetChildNode("da_display_settings") is { } nullNodeDaDisplaySettings && nullNodeDaDisplaySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaDisplaySettings = null;
+            if (parseNode.GetChildNode("default_image_url") is { } nullNodeDefaultImageUrl && nullNodeDefaultImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultImageUrl = null;
+            if (parseNode.GetChildNode("fallback_image_url") is { } nullNodeFallbackImageUrl && nullNodeFallbackImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackImageUrl = null;
+            if (parseNode.GetChildNode("feed_count") is { } nullNodeFeedCount && nullNodeFeedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeedCount = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_catalog_segment") is { } nullNodeIsCatalogSegment && nullNodeIsCatalogSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCatalogSegment = null;
+            if (parseNode.GetChildNode("is_local_catalog") is { } nullNodeIsLocalCatalog && nullNodeIsLocalCatalog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocalCatalog = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("owner_business") is { } nullNodeOwnerBusiness && nullNodeOwnerBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerBusiness = null;
+            if (parseNode.GetChildNode("product_count") is { } nullNodeProductCount && nullNodeProductCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductCount = null;
+            if (parseNode.GetChildNode("show_assign_permissions") is { } nullNodeShowAssignPermissions && nullNodeShowAssignPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowAssignPermissions = null;
+            if (parseNode.GetChildNode("store_catalog_settings") is { } nullNodeStoreCatalogSettings && nullNodeStoreCatalogSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreCatalogSettings = null;
+            if (parseNode.GetChildNode("user_access_expire_time") is { } nullNodeUserAccessExpireTime && nullNodeUserAccessExpireTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAccessExpireTime = null;
+            if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
+        }
+
         /// <summary>The ad_account_to_collaborative_ads_share_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? AdAccountToCollaborativeAdsShareSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? AdAccountToCollaborativeAdsShareSettings { get => _explicitNullValueAdAccountToCollaborativeAdsShareSettings; set { _explicitNullValueAdAccountToCollaborativeAdsShareSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_to_collaborative_ads_share_settings"); else _explicitNullProperties?.Remove("ad_account_to_collaborative_ads_share_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? _explicitNullValueAdAccountToCollaborativeAdsShareSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings AdAccountToCollaborativeAdsShareSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings AdAccountToCollaborativeAdsShareSettings { get => _explicitNullValueAdAccountToCollaborativeAdsShareSettings; set { _explicitNullValueAdAccountToCollaborativeAdsShareSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_account_to_collaborative_ads_share_settings"); else _explicitNullProperties?.Remove("ad_account_to_collaborative_ads_share_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings _explicitNullValueAdAccountToCollaborativeAdsShareSettings = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The agency_collaborative_ads_share_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? AgencyCollaborativeAdsShareSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? AgencyCollaborativeAdsShareSettings { get => _explicitNullValueAgencyCollaborativeAdsShareSettings; set { _explicitNullValueAgencyCollaborativeAdsShareSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agency_collaborative_ads_share_settings"); else _explicitNullProperties?.Remove("agency_collaborative_ads_share_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings? _explicitNullValueAgencyCollaborativeAdsShareSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings AgencyCollaborativeAdsShareSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings AgencyCollaborativeAdsShareSettings { get => _explicitNullValueAgencyCollaborativeAdsShareSettings; set { _explicitNullValueAgencyCollaborativeAdsShareSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agency_collaborative_ads_share_settings"); else _explicitNullProperties?.Remove("agency_collaborative_ads_share_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings _explicitNullValueAgencyCollaborativeAdsShareSettings = default!;
 #endif
         /// <summary>The business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.Business? Business { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Business? _explicitNullValueBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.Business Business { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Business _explicitNullValueBusiness = default!;
 #endif
         /// <summary>The catalog_store property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? CatalogStore { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? CatalogStore { get => _explicitNullValueCatalogStore; set { _explicitNullValueCatalogStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_store"); else _explicitNullProperties?.Remove("catalog_store"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? _explicitNullValueCatalogStore = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings CatalogStore { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings CatalogStore { get => _explicitNullValueCatalogStore; set { _explicitNullValueCatalogStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catalog_store"); else _explicitNullProperties?.Remove("catalog_store"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings _explicitNullValueCatalogStore = default!;
 #endif
         /// <summary>The commerce_merchant_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings? CommerceMerchantSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings? CommerceMerchantSettings { get => _explicitNullValueCommerceMerchantSettings; set { _explicitNullValueCommerceMerchantSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commerce_merchant_settings"); else _explicitNullProperties?.Remove("commerce_merchant_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings? _explicitNullValueCommerceMerchantSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings CommerceMerchantSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings CommerceMerchantSettings { get => _explicitNullValueCommerceMerchantSettings; set { _explicitNullValueCommerceMerchantSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commerce_merchant_settings"); else _explicitNullProperties?.Remove("commerce_merchant_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings _explicitNullValueCommerceMerchantSettings = default!;
 #endif
         /// <summary>The creator_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.User? CreatorUser { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.User? CreatorUser { get => _explicitNullValueCreatorUser; set { _explicitNullValueCreatorUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_user"); else _explicitNullProperties?.Remove("creator_user"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.User? _explicitNullValueCreatorUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.User CreatorUser { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.User CreatorUser { get => _explicitNullValueCreatorUser; set { _explicitNullValueCreatorUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator_user"); else _explicitNullProperties?.Remove("creator_user"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.User _explicitNullValueCreatorUser = default!;
 #endif
         /// <summary>The da_display_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings? DaDisplaySettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings? DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings? _explicitNullValueDaDisplaySettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings DaDisplaySettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings DaDisplaySettings { get => _explicitNullValueDaDisplaySettings; set { _explicitNullValueDaDisplaySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("da_display_settings"); else _explicitNullProperties?.Remove("da_display_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalogImageSettings _explicitNullValueDaDisplaySettings = default!;
 #endif
         /// <summary>The default_image_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultImageUrl { get; set; }
+        public string? DefaultImageUrl { get => _explicitNullValueDefaultImageUrl; set { _explicitNullValueDefaultImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_image_url"); else _explicitNullProperties?.Remove("default_image_url"); } }
+        private string? _explicitNullValueDefaultImageUrl = default!;
 #nullable restore
 #else
-        public string DefaultImageUrl { get; set; }
+        public string DefaultImageUrl { get => _explicitNullValueDefaultImageUrl; set { _explicitNullValueDefaultImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_image_url"); else _explicitNullProperties?.Remove("default_image_url"); } }
+        private string _explicitNullValueDefaultImageUrl = default!;
 #endif
         /// <summary>The fallback_image_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FallbackImageUrl { get; set; }
+        public List<string>? FallbackImageUrl { get => _explicitNullValueFallbackImageUrl; set { _explicitNullValueFallbackImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_image_url"); else _explicitNullProperties?.Remove("fallback_image_url"); } }
+        private List<string>? _explicitNullValueFallbackImageUrl = default!;
 #nullable restore
 #else
-        public List<string> FallbackImageUrl { get; set; }
+        public List<string> FallbackImageUrl { get => _explicitNullValueFallbackImageUrl; set { _explicitNullValueFallbackImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_image_url"); else _explicitNullProperties?.Remove("fallback_image_url"); } }
+        private List<string> _explicitNullValueFallbackImageUrl = default!;
 #endif
         /// <summary>The feed_count property</summary>
-        public long? FeedCount { get; set; }
+        public long? FeedCount { get => _explicitNullValueFeedCount; set { _explicitNullValueFeedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feed_count"); else _explicitNullProperties?.Remove("feed_count"); } }
+        private long? _explicitNullValueFeedCount = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_catalog_segment property</summary>
-        public bool? IsCatalogSegment { get; set; }
+        public bool? IsCatalogSegment { get => _explicitNullValueIsCatalogSegment; set { _explicitNullValueIsCatalogSegment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_catalog_segment"); else _explicitNullProperties?.Remove("is_catalog_segment"); } }
+        private bool? _explicitNullValueIsCatalogSegment = default!;
         /// <summary>The is_local_catalog property</summary>
-        public bool? IsLocalCatalog { get; set; }
+        public bool? IsLocalCatalog { get => _explicitNullValueIsLocalCatalog; set { _explicitNullValueIsLocalCatalog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_local_catalog"); else _explicitNullProperties?.Remove("is_local_catalog"); } }
+        private bool? _explicitNullValueIsLocalCatalog = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The owner_business property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.Business? OwnerBusiness { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business? OwnerBusiness { get => _explicitNullValueOwnerBusiness; set { _explicitNullValueOwnerBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business"); else _explicitNullProperties?.Remove("owner_business"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Business? _explicitNullValueOwnerBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.Business OwnerBusiness { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.Business OwnerBusiness { get => _explicitNullValueOwnerBusiness; set { _explicitNullValueOwnerBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_business"); else _explicitNullProperties?.Remove("owner_business"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.Business _explicitNullValueOwnerBusiness = default!;
 #endif
         /// <summary>The product_count property</summary>
-        public long? ProductCount { get; set; }
+        public long? ProductCount { get => _explicitNullValueProductCount; set { _explicitNullValueProductCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_count"); else _explicitNullProperties?.Remove("product_count"); } }
+        private long? _explicitNullValueProductCount = default!;
         /// <summary>The show_assign_permissions property</summary>
-        public bool? ShowAssignPermissions { get; set; }
+        public bool? ShowAssignPermissions { get => _explicitNullValueShowAssignPermissions; set { _explicitNullValueShowAssignPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_assign_permissions"); else _explicitNullProperties?.Remove("show_assign_permissions"); } }
+        private bool? _explicitNullValueShowAssignPermissions = default!;
         /// <summary>The store_catalog_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? StoreCatalogSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings? _explicitNullValueStoreCatalogSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings StoreCatalogSettings { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings StoreCatalogSettings { get => _explicitNullValueStoreCatalogSettings; set { _explicitNullValueStoreCatalogSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("store_catalog_settings"); else _explicitNullProperties?.Remove("store_catalog_settings"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings _explicitNullValueStoreCatalogSettings = default!;
 #endif
         /// <summary>The user_access_expire_time property</summary>
-        public DateTimeOffset? UserAccessExpireTime { get; set; }
+        public DateTimeOffset? UserAccessExpireTime { get => _explicitNullValueUserAccessExpireTime; set { _explicitNullValueUserAccessExpireTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_access_expire_time"); else _explicitNullProperties?.Remove("user_access_expire_time"); } }
+        private DateTimeOffset? _explicitNullValueUserAccessExpireTime = default!;
         /// <summary>The vertical property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? Vertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam? _explicitNullValueVertical = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog"/> and sets the default values.
         /// </summary>
@@ -147,7 +207,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ProductCatalog(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -206,6 +266,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.StoreCatalogSettings>("store_catalog_settings", StoreCatalogSettings);
             writer.WriteDateTimeOffsetValue("user_access_expire_time", UserAccessExpireTime);
             writer.WriteEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.BusinessownedProductCatalogsVerticalEnumParam>("vertical", Vertical);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

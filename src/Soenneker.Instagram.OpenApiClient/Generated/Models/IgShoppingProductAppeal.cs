@@ -11,36 +11,56 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IgShoppingProductAppeal : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eligible_for_appeal") is { } nullNodeEligibleForAppeal && nullNodeEligibleForAppeal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleForAppeal = null;
+            if (parseNode.GetChildNode("product_appeal_status") is { } nullNodeProductAppealStatus && nullNodeProductAppealStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductAppealStatus = null;
+            if (parseNode.GetChildNode("product_id") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("rejection_reasons") is { } nullNodeRejectionReasons && nullNodeRejectionReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectionReasons = null;
+            if (parseNode.GetChildNode("review_status") is { } nullNodeReviewStatus && nullNodeReviewStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewStatus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eligible_for_appeal property</summary>
-        public bool? EligibleForAppeal { get; set; }
+        public bool? EligibleForAppeal { get => _explicitNullValueEligibleForAppeal; set { _explicitNullValueEligibleForAppeal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_for_appeal"); else _explicitNullProperties?.Remove("eligible_for_appeal"); } }
+        private bool? _explicitNullValueEligibleForAppeal = default!;
         /// <summary>The product_appeal_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductAppealStatus { get; set; }
+        public string? ProductAppealStatus { get => _explicitNullValueProductAppealStatus; set { _explicitNullValueProductAppealStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_appeal_status"); else _explicitNullProperties?.Remove("product_appeal_status"); } }
+        private string? _explicitNullValueProductAppealStatus = default!;
 #nullable restore
 #else
-        public string ProductAppealStatus { get; set; }
+        public string ProductAppealStatus { get => _explicitNullValueProductAppealStatus; set { _explicitNullValueProductAppealStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_appeal_status"); else _explicitNullProperties?.Remove("product_appeal_status"); } }
+        private string _explicitNullValueProductAppealStatus = default!;
 #endif
         /// <summary>The product_id property</summary>
-        public long? ProductId { get; set; }
+        public long? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_id"); else _explicitNullProperties?.Remove("product_id"); } }
+        private long? _explicitNullValueProductId = default!;
         /// <summary>The rejection_reasons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RejectionReasons { get; set; }
+        public List<string>? RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
+        private List<string>? _explicitNullValueRejectionReasons = default!;
 #nullable restore
 #else
-        public List<string> RejectionReasons { get; set; }
+        public List<string> RejectionReasons { get => _explicitNullValueRejectionReasons; set { _explicitNullValueRejectionReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejection_reasons"); else _explicitNullProperties?.Remove("rejection_reasons"); } }
+        private List<string> _explicitNullValueRejectionReasons = default!;
 #endif
         /// <summary>The review_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReviewStatus { get; set; }
+        public string? ReviewStatus { get => _explicitNullValueReviewStatus; set { _explicitNullValueReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_status"); else _explicitNullProperties?.Remove("review_status"); } }
+        private string? _explicitNullValueReviewStatus = default!;
 #nullable restore
 #else
-        public string ReviewStatus { get; set; }
+        public string ReviewStatus { get => _explicitNullValueReviewStatus; set { _explicitNullValueReviewStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_status"); else _explicitNullProperties?.Remove("review_status"); } }
+        private string _explicitNullValueReviewStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgShoppingProductAppeal"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.IgShoppingProductAppeal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.IgShoppingProductAppeal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.IgShoppingProductAppeal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("product_id", ProductId);
             writer.WriteCollectionOfPrimitiveValues<string>("rejection_reasons", RejectionReasons);
             writer.WriteStringValue("review_status", ReviewStatus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

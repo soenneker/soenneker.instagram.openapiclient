@@ -11,91 +11,135 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCampaignGoal : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("engaged_audiences_audience_label_exclusions") is { } nullNodeEngagedAudiencesAudienceLabelExclusions && nullNodeEngagedAudiencesAudienceLabelExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagedAudiencesAudienceLabelExclusions = null;
+            if (parseNode.GetChildNode("engaged_audiences_audience_label_inclusions") is { } nullNodeEngagedAudiencesAudienceLabelInclusions && nullNodeEngagedAudiencesAudienceLabelInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagedAudiencesAudienceLabelInclusions = null;
+            if (parseNode.GetChildNode("engaged_audiences_exclusions") is { } nullNodeEngagedAudiencesExclusions && nullNodeEngagedAudiencesExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagedAudiencesExclusions = null;
+            if (parseNode.GetChildNode("engaged_audiences_inclusions") is { } nullNodeEngagedAudiencesInclusions && nullNodeEngagedAudiencesInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EngagedAudiencesInclusions = null;
+            if (parseNode.GetChildNode("existing_customers_audience_label_exclusions") is { } nullNodeExistingCustomersAudienceLabelExclusions && nullNodeExistingCustomersAudienceLabelExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersAudienceLabelExclusions = null;
+            if (parseNode.GetChildNode("existing_customers_audience_label_inclusions") is { } nullNodeExistingCustomersAudienceLabelInclusions && nullNodeExistingCustomersAudienceLabelInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersAudienceLabelInclusions = null;
+            if (parseNode.GetChildNode("existing_customers_auto_exclusion_retention_days") is { } nullNodeExistingCustomersAutoExclusionRetentionDays && nullNodeExistingCustomersAutoExclusionRetentionDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersAutoExclusionRetentionDays = null;
+            if (parseNode.GetChildNode("existing_customers_exclusion_auto_selection_state") is { } nullNodeExistingCustomersExclusionAutoSelectionState && nullNodeExistingCustomersExclusionAutoSelectionState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersExclusionAutoSelectionState = null;
+            if (parseNode.GetChildNode("existing_customers_exclusions") is { } nullNodeExistingCustomersExclusions && nullNodeExistingCustomersExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersExclusions = null;
+            if (parseNode.GetChildNode("existing_customers_inclusions") is { } nullNodeExistingCustomersInclusions && nullNodeExistingCustomersInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomersInclusions = null;
+            if (parseNode.GetChildNode("is_ca_expansion_enabled") is { } nullNodeIsCaExpansionEnabled && nullNodeIsCaExpansionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCaExpansionEnabled = null;
+            if (parseNode.GetChildNode("is_lookalike_inclusion_enabled") is { } nullNodeIsLookalikeInclusionEnabled && nullNodeIsLookalikeInclusionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLookalikeInclusionEnabled = null;
+            if (parseNode.GetChildNode("lookalike_inclusions") is { } nullNodeLookalikeInclusions && nullNodeLookalikeInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookalikeInclusions = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The engaged_audiences_audience_label_exclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EngagedAudiencesAudienceLabelExclusions { get; set; }
+        public List<string>? EngagedAudiencesAudienceLabelExclusions { get => _explicitNullValueEngagedAudiencesAudienceLabelExclusions; set { _explicitNullValueEngagedAudiencesAudienceLabelExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_audience_label_exclusions"); else _explicitNullProperties?.Remove("engaged_audiences_audience_label_exclusions"); } }
+        private List<string>? _explicitNullValueEngagedAudiencesAudienceLabelExclusions = default!;
 #nullable restore
 #else
-        public List<string> EngagedAudiencesAudienceLabelExclusions { get; set; }
+        public List<string> EngagedAudiencesAudienceLabelExclusions { get => _explicitNullValueEngagedAudiencesAudienceLabelExclusions; set { _explicitNullValueEngagedAudiencesAudienceLabelExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_audience_label_exclusions"); else _explicitNullProperties?.Remove("engaged_audiences_audience_label_exclusions"); } }
+        private List<string> _explicitNullValueEngagedAudiencesAudienceLabelExclusions = default!;
 #endif
         /// <summary>The engaged_audiences_audience_label_inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EngagedAudiencesAudienceLabelInclusions { get; set; }
+        public List<string>? EngagedAudiencesAudienceLabelInclusions { get => _explicitNullValueEngagedAudiencesAudienceLabelInclusions; set { _explicitNullValueEngagedAudiencesAudienceLabelInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_audience_label_inclusions"); else _explicitNullProperties?.Remove("engaged_audiences_audience_label_inclusions"); } }
+        private List<string>? _explicitNullValueEngagedAudiencesAudienceLabelInclusions = default!;
 #nullable restore
 #else
-        public List<string> EngagedAudiencesAudienceLabelInclusions { get; set; }
+        public List<string> EngagedAudiencesAudienceLabelInclusions { get => _explicitNullValueEngagedAudiencesAudienceLabelInclusions; set { _explicitNullValueEngagedAudiencesAudienceLabelInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_audience_label_inclusions"); else _explicitNullProperties?.Remove("engaged_audiences_audience_label_inclusions"); } }
+        private List<string> _explicitNullValueEngagedAudiencesAudienceLabelInclusions = default!;
 #endif
         /// <summary>The engaged_audiences_exclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EngagedAudiencesExclusions { get; set; }
+        public List<string>? EngagedAudiencesExclusions { get => _explicitNullValueEngagedAudiencesExclusions; set { _explicitNullValueEngagedAudiencesExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_exclusions"); else _explicitNullProperties?.Remove("engaged_audiences_exclusions"); } }
+        private List<string>? _explicitNullValueEngagedAudiencesExclusions = default!;
 #nullable restore
 #else
-        public List<string> EngagedAudiencesExclusions { get; set; }
+        public List<string> EngagedAudiencesExclusions { get => _explicitNullValueEngagedAudiencesExclusions; set { _explicitNullValueEngagedAudiencesExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_exclusions"); else _explicitNullProperties?.Remove("engaged_audiences_exclusions"); } }
+        private List<string> _explicitNullValueEngagedAudiencesExclusions = default!;
 #endif
         /// <summary>The engaged_audiences_inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EngagedAudiencesInclusions { get; set; }
+        public List<string>? EngagedAudiencesInclusions { get => _explicitNullValueEngagedAudiencesInclusions; set { _explicitNullValueEngagedAudiencesInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_inclusions"); else _explicitNullProperties?.Remove("engaged_audiences_inclusions"); } }
+        private List<string>? _explicitNullValueEngagedAudiencesInclusions = default!;
 #nullable restore
 #else
-        public List<string> EngagedAudiencesInclusions { get; set; }
+        public List<string> EngagedAudiencesInclusions { get => _explicitNullValueEngagedAudiencesInclusions; set { _explicitNullValueEngagedAudiencesInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engaged_audiences_inclusions"); else _explicitNullProperties?.Remove("engaged_audiences_inclusions"); } }
+        private List<string> _explicitNullValueEngagedAudiencesInclusions = default!;
 #endif
         /// <summary>The existing_customers_audience_label_exclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExistingCustomersAudienceLabelExclusions { get; set; }
+        public List<string>? ExistingCustomersAudienceLabelExclusions { get => _explicitNullValueExistingCustomersAudienceLabelExclusions; set { _explicitNullValueExistingCustomersAudienceLabelExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_audience_label_exclusions"); else _explicitNullProperties?.Remove("existing_customers_audience_label_exclusions"); } }
+        private List<string>? _explicitNullValueExistingCustomersAudienceLabelExclusions = default!;
 #nullable restore
 #else
-        public List<string> ExistingCustomersAudienceLabelExclusions { get; set; }
+        public List<string> ExistingCustomersAudienceLabelExclusions { get => _explicitNullValueExistingCustomersAudienceLabelExclusions; set { _explicitNullValueExistingCustomersAudienceLabelExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_audience_label_exclusions"); else _explicitNullProperties?.Remove("existing_customers_audience_label_exclusions"); } }
+        private List<string> _explicitNullValueExistingCustomersAudienceLabelExclusions = default!;
 #endif
         /// <summary>The existing_customers_audience_label_inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExistingCustomersAudienceLabelInclusions { get; set; }
+        public List<string>? ExistingCustomersAudienceLabelInclusions { get => _explicitNullValueExistingCustomersAudienceLabelInclusions; set { _explicitNullValueExistingCustomersAudienceLabelInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_audience_label_inclusions"); else _explicitNullProperties?.Remove("existing_customers_audience_label_inclusions"); } }
+        private List<string>? _explicitNullValueExistingCustomersAudienceLabelInclusions = default!;
 #nullable restore
 #else
-        public List<string> ExistingCustomersAudienceLabelInclusions { get; set; }
+        public List<string> ExistingCustomersAudienceLabelInclusions { get => _explicitNullValueExistingCustomersAudienceLabelInclusions; set { _explicitNullValueExistingCustomersAudienceLabelInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_audience_label_inclusions"); else _explicitNullProperties?.Remove("existing_customers_audience_label_inclusions"); } }
+        private List<string> _explicitNullValueExistingCustomersAudienceLabelInclusions = default!;
 #endif
         /// <summary>The existing_customers_auto_exclusion_retention_days property</summary>
-        public long? ExistingCustomersAutoExclusionRetentionDays { get; set; }
+        public long? ExistingCustomersAutoExclusionRetentionDays { get => _explicitNullValueExistingCustomersAutoExclusionRetentionDays; set { _explicitNullValueExistingCustomersAutoExclusionRetentionDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_auto_exclusion_retention_days"); else _explicitNullProperties?.Remove("existing_customers_auto_exclusion_retention_days"); } }
+        private long? _explicitNullValueExistingCustomersAutoExclusionRetentionDays = default!;
         /// <summary>The existing_customers_exclusion_auto_selection_state property</summary>
-        public long? ExistingCustomersExclusionAutoSelectionState { get; set; }
+        public long? ExistingCustomersExclusionAutoSelectionState { get => _explicitNullValueExistingCustomersExclusionAutoSelectionState; set { _explicitNullValueExistingCustomersExclusionAutoSelectionState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_exclusion_auto_selection_state"); else _explicitNullProperties?.Remove("existing_customers_exclusion_auto_selection_state"); } }
+        private long? _explicitNullValueExistingCustomersExclusionAutoSelectionState = default!;
         /// <summary>The existing_customers_exclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExistingCustomersExclusions { get; set; }
+        public List<string>? ExistingCustomersExclusions { get => _explicitNullValueExistingCustomersExclusions; set { _explicitNullValueExistingCustomersExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_exclusions"); else _explicitNullProperties?.Remove("existing_customers_exclusions"); } }
+        private List<string>? _explicitNullValueExistingCustomersExclusions = default!;
 #nullable restore
 #else
-        public List<string> ExistingCustomersExclusions { get; set; }
+        public List<string> ExistingCustomersExclusions { get => _explicitNullValueExistingCustomersExclusions; set { _explicitNullValueExistingCustomersExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_exclusions"); else _explicitNullProperties?.Remove("existing_customers_exclusions"); } }
+        private List<string> _explicitNullValueExistingCustomersExclusions = default!;
 #endif
         /// <summary>The existing_customers_inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExistingCustomersInclusions { get; set; }
+        public List<string>? ExistingCustomersInclusions { get => _explicitNullValueExistingCustomersInclusions; set { _explicitNullValueExistingCustomersInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_inclusions"); else _explicitNullProperties?.Remove("existing_customers_inclusions"); } }
+        private List<string>? _explicitNullValueExistingCustomersInclusions = default!;
 #nullable restore
 #else
-        public List<string> ExistingCustomersInclusions { get; set; }
+        public List<string> ExistingCustomersInclusions { get => _explicitNullValueExistingCustomersInclusions; set { _explicitNullValueExistingCustomersInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customers_inclusions"); else _explicitNullProperties?.Remove("existing_customers_inclusions"); } }
+        private List<string> _explicitNullValueExistingCustomersInclusions = default!;
 #endif
         /// <summary>The is_ca_expansion_enabled property</summary>
-        public bool? IsCaExpansionEnabled { get; set; }
+        public bool? IsCaExpansionEnabled { get => _explicitNullValueIsCaExpansionEnabled; set { _explicitNullValueIsCaExpansionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ca_expansion_enabled"); else _explicitNullProperties?.Remove("is_ca_expansion_enabled"); } }
+        private bool? _explicitNullValueIsCaExpansionEnabled = default!;
         /// <summary>The is_lookalike_inclusion_enabled property</summary>
-        public bool? IsLookalikeInclusionEnabled { get; set; }
+        public bool? IsLookalikeInclusionEnabled { get => _explicitNullValueIsLookalikeInclusionEnabled; set { _explicitNullValueIsLookalikeInclusionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_lookalike_inclusion_enabled"); else _explicitNullProperties?.Remove("is_lookalike_inclusion_enabled"); } }
+        private bool? _explicitNullValueIsLookalikeInclusionEnabled = default!;
         /// <summary>The lookalike_inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LookalikeInclusions { get; set; }
+        public List<string>? LookalikeInclusions { get => _explicitNullValueLookalikeInclusions; set { _explicitNullValueLookalikeInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike_inclusions"); else _explicitNullProperties?.Remove("lookalike_inclusions"); } }
+        private List<string>? _explicitNullValueLookalikeInclusions = default!;
 #nullable restore
 #else
-        public List<string> LookalikeInclusions { get; set; }
+        public List<string> LookalikeInclusions { get => _explicitNullValueLookalikeInclusions; set { _explicitNullValueLookalikeInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike_inclusions"); else _explicitNullProperties?.Remove("lookalike_inclusions"); } }
+        private List<string> _explicitNullValueLookalikeInclusions = default!;
 #endif
         /// <summary>The type property</summary>
-        public long? Type { get; set; }
+        public long? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private long? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal"/> and sets the default values.
         /// </summary>
@@ -111,7 +155,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,6 +202,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("is_lookalike_inclusion_enabled", IsLookalikeInclusionEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("lookalike_inclusions", LookalikeInclusions);
             writer.WriteLongValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

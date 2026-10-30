@@ -11,32 +11,48 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TargetingProductAudienceSubSpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("min_retention_seconds") is { } nullNodeMinRetentionSeconds && nullNodeMinRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRetentionSeconds = null;
+            if (parseNode.GetChildNode("retention_seconds") is { } nullNodeRetentionSeconds && nullNodeRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionSeconds = null;
+            if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The min_retention_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinRetentionSeconds { get; set; }
+        public string? MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
+        private string? _explicitNullValueMinRetentionSeconds = default!;
 #nullable restore
 #else
-        public string MinRetentionSeconds { get; set; }
+        public string MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
+        private string _explicitNullValueMinRetentionSeconds = default!;
 #endif
         /// <summary>The retention_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RetentionSeconds { get; set; }
+        public string? RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
+        private string? _explicitNullValueRetentionSeconds = default!;
 #nullable restore
 #else
-        public string RetentionSeconds { get; set; }
+        public string RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
+        private string _explicitNullValueRetentionSeconds = default!;
 #endif
         /// <summary>The rule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rule { get; set; }
+        public string? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private string? _explicitNullValueRule = default!;
 #nullable restore
 #else
-        public string Rule { get; set; }
+        public string Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private string _explicitNullValueRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("min_retention_seconds", MinRetentionSeconds);
             writer.WriteStringValue("retention_seconds", RetentionSeconds);
             writer.WriteStringValue("rule", Rule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

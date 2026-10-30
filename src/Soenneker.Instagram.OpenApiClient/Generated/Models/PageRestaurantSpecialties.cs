@@ -11,19 +11,36 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PageRestaurantSpecialties : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("breakfast") is { } nullNodeBreakfast && nullNodeBreakfast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakfast = null;
+            if (parseNode.GetChildNode("coffee") is { } nullNodeCoffee && nullNodeCoffee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coffee = null;
+            if (parseNode.GetChildNode("dinner") is { } nullNodeDinner && nullNodeDinner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dinner = null;
+            if (parseNode.GetChildNode("drinks") is { } nullNodeDrinks && nullNodeDrinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Drinks = null;
+            if (parseNode.GetChildNode("lunch") is { } nullNodeLunch && nullNodeLunch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lunch = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breakfast property</summary>
-        public long? Breakfast { get; set; }
+        public long? Breakfast { get => _explicitNullValueBreakfast; set { _explicitNullValueBreakfast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakfast"); else _explicitNullProperties?.Remove("breakfast"); } }
+        private long? _explicitNullValueBreakfast = default!;
         /// <summary>The coffee property</summary>
-        public long? Coffee { get; set; }
+        public long? Coffee { get => _explicitNullValueCoffee; set { _explicitNullValueCoffee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coffee"); else _explicitNullProperties?.Remove("coffee"); } }
+        private long? _explicitNullValueCoffee = default!;
         /// <summary>The dinner property</summary>
-        public long? Dinner { get; set; }
+        public long? Dinner { get => _explicitNullValueDinner; set { _explicitNullValueDinner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dinner"); else _explicitNullProperties?.Remove("dinner"); } }
+        private long? _explicitNullValueDinner = default!;
         /// <summary>The drinks property</summary>
-        public long? Drinks { get; set; }
+        public long? Drinks { get => _explicitNullValueDrinks; set { _explicitNullValueDrinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drinks"); else _explicitNullProperties?.Remove("drinks"); } }
+        private long? _explicitNullValueDrinks = default!;
         /// <summary>The lunch property</summary>
-        public long? Lunch { get; set; }
+        public long? Lunch { get => _explicitNullValueLunch; set { _explicitNullValueLunch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lunch"); else _explicitNullProperties?.Remove("lunch"); } }
+        private long? _explicitNullValueLunch = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantSpecialties"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantSpecialties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantSpecialties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantSpecialties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("dinner", Dinner);
             writer.WriteLongValue("drinks", Drinks);
             writer.WriteLongValue("lunch", Lunch);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

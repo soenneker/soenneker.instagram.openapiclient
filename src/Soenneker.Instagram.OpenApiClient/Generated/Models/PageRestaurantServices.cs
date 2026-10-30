@@ -11,29 +11,56 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PageRestaurantServices : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("catering") is { } nullNodeCatering && nullNodeCatering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Catering = null;
+            if (parseNode.GetChildNode("delivery") is { } nullNodeDelivery && nullNodeDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delivery = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("kids") is { } nullNodeKids && nullNodeKids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kids = null;
+            if (parseNode.GetChildNode("outdoor") is { } nullNodeOutdoor && nullNodeOutdoor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outdoor = null;
+            if (parseNode.GetChildNode("pickup") is { } nullNodePickup && nullNodePickup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pickup = null;
+            if (parseNode.GetChildNode("reserve") is { } nullNodeReserve && nullNodeReserve.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reserve = null;
+            if (parseNode.GetChildNode("takeout") is { } nullNodeTakeout && nullNodeTakeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Takeout = null;
+            if (parseNode.GetChildNode("waiter") is { } nullNodeWaiter && nullNodeWaiter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Waiter = null;
+            if (parseNode.GetChildNode("walkins") is { } nullNodeWalkins && nullNodeWalkins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Walkins = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The catering property</summary>
-        public bool? Catering { get; set; }
+        public bool? Catering { get => _explicitNullValueCatering; set { _explicitNullValueCatering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catering"); else _explicitNullProperties?.Remove("catering"); } }
+        private bool? _explicitNullValueCatering = default!;
         /// <summary>The delivery property</summary>
-        public bool? Delivery { get; set; }
+        public bool? Delivery { get => _explicitNullValueDelivery; set { _explicitNullValueDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery"); else _explicitNullProperties?.Remove("delivery"); } }
+        private bool? _explicitNullValueDelivery = default!;
         /// <summary>The groups property</summary>
-        public bool? Groups { get; set; }
+        public bool? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private bool? _explicitNullValueGroups = default!;
         /// <summary>The kids property</summary>
-        public bool? Kids { get; set; }
+        public bool? Kids { get => _explicitNullValueKids; set { _explicitNullValueKids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kids"); else _explicitNullProperties?.Remove("kids"); } }
+        private bool? _explicitNullValueKids = default!;
         /// <summary>The outdoor property</summary>
-        public bool? Outdoor { get; set; }
+        public bool? Outdoor { get => _explicitNullValueOutdoor; set { _explicitNullValueOutdoor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outdoor"); else _explicitNullProperties?.Remove("outdoor"); } }
+        private bool? _explicitNullValueOutdoor = default!;
         /// <summary>The pickup property</summary>
-        public bool? Pickup { get; set; }
+        public bool? Pickup { get => _explicitNullValuePickup; set { _explicitNullValuePickup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickup"); else _explicitNullProperties?.Remove("pickup"); } }
+        private bool? _explicitNullValuePickup = default!;
         /// <summary>The reserve property</summary>
-        public bool? Reserve { get; set; }
+        public bool? Reserve { get => _explicitNullValueReserve; set { _explicitNullValueReserve = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reserve"); else _explicitNullProperties?.Remove("reserve"); } }
+        private bool? _explicitNullValueReserve = default!;
         /// <summary>The takeout property</summary>
-        public bool? Takeout { get; set; }
+        public bool? Takeout { get => _explicitNullValueTakeout; set { _explicitNullValueTakeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("takeout"); else _explicitNullProperties?.Remove("takeout"); } }
+        private bool? _explicitNullValueTakeout = default!;
         /// <summary>The waiter property</summary>
-        public bool? Waiter { get; set; }
+        public bool? Waiter { get => _explicitNullValueWaiter; set { _explicitNullValueWaiter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waiter"); else _explicitNullProperties?.Remove("waiter"); } }
+        private bool? _explicitNullValueWaiter = default!;
         /// <summary>The walkins property</summary>
-        public bool? Walkins { get; set; }
+        public bool? Walkins { get => _explicitNullValueWalkins; set { _explicitNullValueWalkins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("walkins"); else _explicitNullProperties?.Remove("walkins"); } }
+        private bool? _explicitNullValueWalkins = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantServices"/> and sets the default values.
         /// </summary>
@@ -49,7 +76,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantServices CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantServices();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantServices(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +115,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("takeout", Takeout);
             writer.WriteBoolValue("waiter", Waiter);
             writer.WriteBoolValue("walkins", Walkins);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

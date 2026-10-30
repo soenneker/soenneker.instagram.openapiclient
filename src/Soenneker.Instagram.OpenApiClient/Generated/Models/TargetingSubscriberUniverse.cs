@@ -11,40 +11,59 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TargetingSubscriberUniverse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("messaging_customer_base_for_whatsapp") is { } nullNodeMessagingCustomerBaseForWhatsapp && nullNodeMessagingCustomerBaseForWhatsapp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingCustomerBaseForWhatsapp = null;
+            if (parseNode.GetChildNode("messenger_subscriber_pool") is { } nullNodeMessengerSubscriberPool && nullNodeMessengerSubscriberPool.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessengerSubscriberPool = null;
+            if (parseNode.GetChildNode("messenger_subscriber_source") is { } nullNodeMessengerSubscriberSource && nullNodeMessengerSubscriberSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessengerSubscriberSource = null;
+            if (parseNode.GetChildNode("whatsapp_subscriber_source") is { } nullNodeWhatsappSubscriberSource && nullNodeWhatsappSubscriberSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappSubscriberSource = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The messaging_customer_base_for_whatsapp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessagingCustomerBaseForWhatsapp { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessagingCustomerBaseForWhatsapp { get => _explicitNullValueMessagingCustomerBaseForWhatsapp; set { _explicitNullValueMessagingCustomerBaseForWhatsapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_customer_base_for_whatsapp"); else _explicitNullProperties?.Remove("messaging_customer_base_for_whatsapp"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName? _explicitNullValueMessagingCustomerBaseForWhatsapp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessagingCustomerBaseForWhatsapp { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessagingCustomerBaseForWhatsapp { get => _explicitNullValueMessagingCustomerBaseForWhatsapp; set { _explicitNullValueMessagingCustomerBaseForWhatsapp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_customer_base_for_whatsapp"); else _explicitNullProperties?.Remove("messaging_customer_base_for_whatsapp"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName _explicitNullValueMessagingCustomerBaseForWhatsapp = default!;
 #endif
         /// <summary>The messenger_subscriber_pool property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessengerSubscriberPool { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessengerSubscriberPool { get => _explicitNullValueMessengerSubscriberPool; set { _explicitNullValueMessengerSubscriberPool = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_subscriber_pool"); else _explicitNullProperties?.Remove("messenger_subscriber_pool"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName? _explicitNullValueMessengerSubscriberPool = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessengerSubscriberPool { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessengerSubscriberPool { get => _explicitNullValueMessengerSubscriberPool; set { _explicitNullValueMessengerSubscriberPool = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_subscriber_pool"); else _explicitNullProperties?.Remove("messenger_subscriber_pool"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName _explicitNullValueMessengerSubscriberPool = default!;
 #endif
         /// <summary>The messenger_subscriber_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessengerSubscriberSource { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? MessengerSubscriberSource { get => _explicitNullValueMessengerSubscriberSource; set { _explicitNullValueMessengerSubscriberSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_subscriber_source"); else _explicitNullProperties?.Remove("messenger_subscriber_source"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName? _explicitNullValueMessengerSubscriberSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessengerSubscriberSource { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName MessengerSubscriberSource { get => _explicitNullValueMessengerSubscriberSource; set { _explicitNullValueMessengerSubscriberSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger_subscriber_source"); else _explicitNullProperties?.Remove("messenger_subscriber_source"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName _explicitNullValueMessengerSubscriberSource = default!;
 #endif
         /// <summary>The whatsapp_subscriber_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? WhatsappSubscriberSource { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName? WhatsappSubscriberSource { get => _explicitNullValueWhatsappSubscriberSource; set { _explicitNullValueWhatsappSubscriberSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_subscriber_source"); else _explicitNullProperties?.Remove("whatsapp_subscriber_source"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName? _explicitNullValueWhatsappSubscriberSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IdName WhatsappSubscriberSource { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IdName WhatsappSubscriberSource { get => _explicitNullValueWhatsappSubscriberSource; set { _explicitNullValueWhatsappSubscriberSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_subscriber_source"); else _explicitNullProperties?.Remove("whatsapp_subscriber_source"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IdName _explicitNullValueWhatsappSubscriberSource = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.TargetingSubscriberUniverse"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.TargetingSubscriberUniverse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.TargetingSubscriberUniverse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.TargetingSubscriberUniverse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IdName>("messenger_subscriber_pool", MessengerSubscriberPool);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IdName>("messenger_subscriber_source", MessengerSubscriberSource);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IdName>("whatsapp_subscriber_source", WhatsappSubscriberSource);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

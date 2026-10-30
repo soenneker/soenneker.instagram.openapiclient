@@ -11,25 +11,43 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TargetingAutomation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("advantage_audience") is { } nullNodeAdvantageAudience && nullNodeAdvantageAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageAudience = null;
+            if (parseNode.GetChildNode("creative_audience_pairing") is { } nullNodeCreativeAudiencePairing && nullNodeCreativeAudiencePairing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreativeAudiencePairing = null;
+            if (parseNode.GetChildNode("individual_setting") is { } nullNodeIndividualSetting && nullNodeIndividualSetting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualSetting = null;
+            if (parseNode.GetChildNode("shared_audiences") is { } nullNodeSharedAudiences && nullNodeSharedAudiences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedAudiences = null;
+            if (parseNode.GetChildNode("value_expression") is { } nullNodeValueExpression && nullNodeValueExpression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueExpression = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The advantage_audience property</summary>
-        public long? AdvantageAudience { get; set; }
+        public long? AdvantageAudience { get => _explicitNullValueAdvantageAudience; set { _explicitNullValueAdvantageAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_audience"); else _explicitNullProperties?.Remove("advantage_audience"); } }
+        private long? _explicitNullValueAdvantageAudience = default!;
         /// <summary>The creative_audience_pairing property</summary>
-        public long? CreativeAudiencePairing { get; set; }
+        public long? CreativeAudiencePairing { get => _explicitNullValueCreativeAudiencePairing; set { _explicitNullValueCreativeAudiencePairing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creative_audience_pairing"); else _explicitNullProperties?.Remove("creative_audience_pairing"); } }
+        private long? _explicitNullValueCreativeAudiencePairing = default!;
         /// <summary>The individual_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty? IndividualSetting { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty? IndividualSetting { get => _explicitNullValueIndividualSetting; set { _explicitNullValueIndividualSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_setting"); else _explicitNullProperties?.Remove("individual_setting"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty? _explicitNullValueIndividualSetting = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty IndividualSetting { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty IndividualSetting { get => _explicitNullValueIndividualSetting; set { _explicitNullValueIndividualSetting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individual_setting"); else _explicitNullProperties?.Remove("individual_setting"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty _explicitNullValueIndividualSetting = default!;
 #endif
         /// <summary>The shared_audiences property</summary>
-        public long? SharedAudiences { get; set; }
+        public long? SharedAudiences { get => _explicitNullValueSharedAudiences; set { _explicitNullValueSharedAudiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_audiences"); else _explicitNullProperties?.Remove("shared_audiences"); } }
+        private long? _explicitNullValueSharedAudiences = default!;
         /// <summary>The value_expression property</summary>
-        public long? ValueExpression { get; set; }
+        public long? ValueExpression { get => _explicitNullValueValueExpression; set { _explicitNullValueValueExpression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value_expression"); else _explicitNullProperties?.Remove("value_expression"); } }
+        private long? _explicitNullValueValueExpression = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomation"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.TargetingAutomationIndividualSettingProperty>("individual_setting", IndividualSetting);
             writer.WriteLongValue("shared_audiences", SharedAudiences);
             writer.WriteLongValue("value_expression", ValueExpression);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

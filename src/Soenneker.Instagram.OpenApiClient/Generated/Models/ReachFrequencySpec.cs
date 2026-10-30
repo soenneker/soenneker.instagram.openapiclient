@@ -11,66 +11,96 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ReachFrequencySpec : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("default_creation_data") is { } nullNodeDefaultCreationData && nullNodeDefaultCreationData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCreationData = null;
+            if (parseNode.GetChildNode("global_io_max_campaign_duration") is { } nullNodeGlobalIoMaxCampaignDuration && nullNodeGlobalIoMaxCampaignDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalIoMaxCampaignDuration = null;
+            if (parseNode.GetChildNode("max_campaign_duration") is { } nullNodeMaxCampaignDuration && nullNodeMaxCampaignDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxCampaignDuration = null;
+            if (parseNode.GetChildNode("max_days_to_finish") is { } nullNodeMaxDaysToFinish && nullNodeMaxDaysToFinish.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxDaysToFinish = null;
+            if (parseNode.GetChildNode("max_pause_without_prediction_rerun") is { } nullNodeMaxPauseWithoutPredictionRerun && nullNodeMaxPauseWithoutPredictionRerun.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPauseWithoutPredictionRerun = null;
+            if (parseNode.GetChildNode("min_campaign_duration") is { } nullNodeMinCampaignDuration && nullNodeMinCampaignDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinCampaignDuration = null;
+            if (parseNode.GetChildNode("min_reach_limits") is { } nullNodeMinReachLimits && nullNodeMinReachLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinReachLimits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Countries { get; set; }
+        public List<string>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private List<string>? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public List<string> Countries { get; set; }
+        public List<string> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        private List<string> _explicitNullValueCountries = default!;
 #endif
         /// <summary>The default_creation_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty? DefaultCreationData { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty? DefaultCreationData { get => _explicitNullValueDefaultCreationData; set { _explicitNullValueDefaultCreationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_creation_data"); else _explicitNullProperties?.Remove("default_creation_data"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty? _explicitNullValueDefaultCreationData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty DefaultCreationData { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty DefaultCreationData { get => _explicitNullValueDefaultCreationData; set { _explicitNullValueDefaultCreationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_creation_data"); else _explicitNullProperties?.Remove("default_creation_data"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty _explicitNullValueDefaultCreationData = default!;
 #endif
         /// <summary>The global_io_max_campaign_duration property</summary>
-        public long? GlobalIoMaxCampaignDuration { get; set; }
+        public long? GlobalIoMaxCampaignDuration { get => _explicitNullValueGlobalIoMaxCampaignDuration; set { _explicitNullValueGlobalIoMaxCampaignDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global_io_max_campaign_duration"); else _explicitNullProperties?.Remove("global_io_max_campaign_duration"); } }
+        private long? _explicitNullValueGlobalIoMaxCampaignDuration = default!;
         /// <summary>The max_campaign_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty? MaxCampaignDuration { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty? MaxCampaignDuration { get => _explicitNullValueMaxCampaignDuration; set { _explicitNullValueMaxCampaignDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_campaign_duration"); else _explicitNullProperties?.Remove("max_campaign_duration"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty? _explicitNullValueMaxCampaignDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty MaxCampaignDuration { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty MaxCampaignDuration { get => _explicitNullValueMaxCampaignDuration; set { _explicitNullValueMaxCampaignDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_campaign_duration"); else _explicitNullProperties?.Remove("max_campaign_duration"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxCampaignDurationProperty _explicitNullValueMaxCampaignDuration = default!;
 #endif
         /// <summary>The max_days_to_finish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty? MaxDaysToFinish { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty? MaxDaysToFinish { get => _explicitNullValueMaxDaysToFinish; set { _explicitNullValueMaxDaysToFinish = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_days_to_finish"); else _explicitNullProperties?.Remove("max_days_to_finish"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty? _explicitNullValueMaxDaysToFinish = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty MaxDaysToFinish { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty MaxDaysToFinish { get => _explicitNullValueMaxDaysToFinish; set { _explicitNullValueMaxDaysToFinish = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_days_to_finish"); else _explicitNullProperties?.Remove("max_days_to_finish"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxDaysToFinishProperty _explicitNullValueMaxDaysToFinish = default!;
 #endif
         /// <summary>The max_pause_without_prediction_rerun property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty? MaxPauseWithoutPredictionRerun { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty? MaxPauseWithoutPredictionRerun { get => _explicitNullValueMaxPauseWithoutPredictionRerun; set { _explicitNullValueMaxPauseWithoutPredictionRerun = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_pause_without_prediction_rerun"); else _explicitNullProperties?.Remove("max_pause_without_prediction_rerun"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty? _explicitNullValueMaxPauseWithoutPredictionRerun = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty MaxPauseWithoutPredictionRerun { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty MaxPauseWithoutPredictionRerun { get => _explicitNullValueMaxPauseWithoutPredictionRerun; set { _explicitNullValueMaxPauseWithoutPredictionRerun = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_pause_without_prediction_rerun"); else _explicitNullProperties?.Remove("max_pause_without_prediction_rerun"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty _explicitNullValueMaxPauseWithoutPredictionRerun = default!;
 #endif
         /// <summary>The min_campaign_duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty? MinCampaignDuration { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty? MinCampaignDuration { get => _explicitNullValueMinCampaignDuration; set { _explicitNullValueMinCampaignDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_campaign_duration"); else _explicitNullProperties?.Remove("min_campaign_duration"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty? _explicitNullValueMinCampaignDuration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty MinCampaignDuration { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty MinCampaignDuration { get => _explicitNullValueMinCampaignDuration; set { _explicitNullValueMinCampaignDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_campaign_duration"); else _explicitNullProperties?.Remove("min_campaign_duration"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty _explicitNullValueMinCampaignDuration = default!;
 #endif
         /// <summary>The min_reach_limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty? MinReachLimits { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty? MinReachLimits { get => _explicitNullValueMinReachLimits; set { _explicitNullValueMinReachLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_reach_limits"); else _explicitNullProperties?.Remove("min_reach_limits"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty? _explicitNullValueMinReachLimits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty MinReachLimits { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty MinReachLimits { get => _explicitNullValueMinReachLimits; set { _explicitNullValueMinReachLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_reach_limits"); else _explicitNullProperties?.Remove("min_reach_limits"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty _explicitNullValueMinReachLimits = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpec"/> and sets the default values.
@@ -87,7 +117,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpec();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpec(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMaxPauseWithoutPredictionRerunProperty>("max_pause_without_prediction_rerun", MaxPauseWithoutPredictionRerun);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinCampaignDurationProperty>("min_campaign_duration", MinCampaignDuration);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecMinReachLimitsProperty>("min_reach_limits", MinReachLimits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,13 +11,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdCampaignGroupBidConstraints : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cpa_average_target") is { } nullNodeCpaAverageTarget && nullNodeCpaAverageTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpaAverageTarget = null;
+            if (parseNode.GetChildNode("roas_average_floor") is { } nullNodeRoasAverageFloor && nullNodeRoasAverageFloor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoasAverageFloor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpa_average_target property</summary>
-        public long? CpaAverageTarget { get; set; }
+        public long? CpaAverageTarget { get => _explicitNullValueCpaAverageTarget; set { _explicitNullValueCpaAverageTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpa_average_target"); else _explicitNullProperties?.Remove("cpa_average_target"); } }
+        private long? _explicitNullValueCpaAverageTarget = default!;
         /// <summary>The roas_average_floor property</summary>
-        public long? RoasAverageFloor { get; set; }
+        public long? RoasAverageFloor { get => _explicitNullValueRoasAverageFloor; set { _explicitNullValueRoasAverageFloor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roas_average_floor"); else _explicitNullProperties?.Remove("roas_average_floor"); } }
+        private long? _explicitNullValueRoasAverageFloor = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGroupBidConstraints"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGroupBidConstraints CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGroupBidConstraints();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGroupBidConstraints(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("cpa_average_target", CpaAverageTarget);
             writer.WriteLongValue("roas_average_floor", RoasAverageFloor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

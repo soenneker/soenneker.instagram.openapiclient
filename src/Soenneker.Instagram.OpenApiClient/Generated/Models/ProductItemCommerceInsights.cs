@@ -11,15 +11,28 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProductItemCommerceInsights : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("message_sends") is { } nullNodeMessageSends && nullNodeMessageSends.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageSends = null;
+            if (parseNode.GetChildNode("organic_impressions") is { } nullNodeOrganicImpressions && nullNodeOrganicImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganicImpressions = null;
+            if (parseNode.GetChildNode("paid_impressions") is { } nullNodePaidImpressions && nullNodePaidImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidImpressions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The message_sends property</summary>
-        public long? MessageSends { get; set; }
+        public long? MessageSends { get => _explicitNullValueMessageSends; set { _explicitNullValueMessageSends = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_sends"); else _explicitNullProperties?.Remove("message_sends"); } }
+        private long? _explicitNullValueMessageSends = default!;
         /// <summary>The organic_impressions property</summary>
-        public long? OrganicImpressions { get; set; }
+        public long? OrganicImpressions { get => _explicitNullValueOrganicImpressions; set { _explicitNullValueOrganicImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organic_impressions"); else _explicitNullProperties?.Remove("organic_impressions"); } }
+        private long? _explicitNullValueOrganicImpressions = default!;
         /// <summary>The paid_impressions property</summary>
-        public long? PaidImpressions { get; set; }
+        public long? PaidImpressions { get => _explicitNullValuePaidImpressions; set { _explicitNullValuePaidImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_impressions"); else _explicitNullProperties?.Remove("paid_impressions"); } }
+        private long? _explicitNullValuePaidImpressions = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ProductItemCommerceInsights"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ProductItemCommerceInsights CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ProductItemCommerceInsights();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ProductItemCommerceInsights(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("message_sends", MessageSends);
             writer.WriteLongValue("organic_impressions", OrganicImpressions);
             writer.WriteLongValue("paid_impressions", PaidImpressions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

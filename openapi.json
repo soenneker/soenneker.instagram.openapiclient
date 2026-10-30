@@ -35758,7 +35758,7 @@
   ],
   "x-meta-source": {
     "repository": "https://github.com/facebook/facebook-business-sdk-codegen",
-    "revision": "8420be6d5752c568a4f01dd608fa3cce6b2db960",
+    "revision": "39395f63cfd63ee30ba896717d5e94da11abcbb5",
     "profile": "Instagram",
     "sourceOperationCount": 1503,
     "includedOperationCount": 159,

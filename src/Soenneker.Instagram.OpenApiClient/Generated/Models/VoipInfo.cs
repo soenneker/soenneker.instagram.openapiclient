@@ -11,28 +11,50 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VoipInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("has_mobile_app") is { } nullNodeHasMobileApp && nullNodeHasMobileApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMobileApp = null;
+            if (parseNode.GetChildNode("has_permission") is { } nullNodeHasPermission && nullNodeHasPermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasPermission = null;
+            if (parseNode.GetChildNode("is_callable") is { } nullNodeIsCallable && nullNodeIsCallable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCallable = null;
+            if (parseNode.GetChildNode("is_callable_webrtc") is { } nullNodeIsCallableWebrtc && nullNodeIsCallableWebrtc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCallableWebrtc = null;
+            if (parseNode.GetChildNode("is_pushable") is { } nullNodeIsPushable && nullNodeIsPushable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPushable = null;
+            if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
+            if (parseNode.GetChildNode("reason_description") is { } nullNodeReasonDescription && nullNodeReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonDescription = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The has_mobile_app property</summary>
-        public bool? HasMobileApp { get; set; }
+        public bool? HasMobileApp { get => _explicitNullValueHasMobileApp; set { _explicitNullValueHasMobileApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_mobile_app"); else _explicitNullProperties?.Remove("has_mobile_app"); } }
+        private bool? _explicitNullValueHasMobileApp = default!;
         /// <summary>The has_permission property</summary>
-        public bool? HasPermission { get; set; }
+        public bool? HasPermission { get => _explicitNullValueHasPermission; set { _explicitNullValueHasPermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_permission"); else _explicitNullProperties?.Remove("has_permission"); } }
+        private bool? _explicitNullValueHasPermission = default!;
         /// <summary>The is_callable property</summary>
-        public bool? IsCallable { get; set; }
+        public bool? IsCallable { get => _explicitNullValueIsCallable; set { _explicitNullValueIsCallable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_callable"); else _explicitNullProperties?.Remove("is_callable"); } }
+        private bool? _explicitNullValueIsCallable = default!;
         /// <summary>The is_callable_webrtc property</summary>
-        public bool? IsCallableWebrtc { get; set; }
+        public bool? IsCallableWebrtc { get => _explicitNullValueIsCallableWebrtc; set { _explicitNullValueIsCallableWebrtc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_callable_webrtc"); else _explicitNullProperties?.Remove("is_callable_webrtc"); } }
+        private bool? _explicitNullValueIsCallableWebrtc = default!;
         /// <summary>The is_pushable property</summary>
-        public bool? IsPushable { get; set; }
+        public bool? IsPushable { get => _explicitNullValueIsPushable; set { _explicitNullValueIsPushable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pushable"); else _explicitNullProperties?.Remove("is_pushable"); } }
+        private bool? _explicitNullValueIsPushable = default!;
         /// <summary>The reason_code property</summary>
-        public long? ReasonCode { get; set; }
+        public long? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        private long? _explicitNullValueReasonCode = default!;
         /// <summary>The reason_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonDescription { get; set; }
+        public string? ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
+        private string? _explicitNullValueReasonDescription = default!;
 #nullable restore
 #else
-        public string ReasonDescription { get; set; }
+        public string ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
+        private string _explicitNullValueReasonDescription = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.VoipInfo"/> and sets the default values.
@@ -49,7 +71,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.VoipInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.VoipInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.VoipInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("is_pushable", IsPushable);
             writer.WriteLongValue("reason_code", ReasonCode);
             writer.WriteStringValue("reason_description", ReasonDescription);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

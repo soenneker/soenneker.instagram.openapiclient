@@ -11,416 +11,576 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CatalogSubVerticalList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appliances") is { } nullNodeAppliances && nullNodeAppliances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appliances = null;
+            if (parseNode.GetChildNode("baby_feeding") is { } nullNodeBabyFeeding && nullNodeBabyFeeding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BabyFeeding = null;
+            if (parseNode.GetChildNode("baby_transport") is { } nullNodeBabyTransport && nullNodeBabyTransport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BabyTransport = null;
+            if (parseNode.GetChildNode("beauty") is { } nullNodeBeauty && nullNodeBeauty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Beauty = null;
+            if (parseNode.GetChildNode("bedding") is { } nullNodeBedding && nullNodeBedding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bedding = null;
+            if (parseNode.GetChildNode("cameras") is { } nullNodeCameras && nullNodeCameras.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cameras = null;
+            if (parseNode.GetChildNode("cameras_and_photos") is { } nullNodeCamerasAndPhotos && nullNodeCamerasAndPhotos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CamerasAndPhotos = null;
+            if (parseNode.GetChildNode("cell_phones_and_smart_watches") is { } nullNodeCellPhonesAndSmartWatches && nullNodeCellPhonesAndSmartWatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CellPhonesAndSmartWatches = null;
+            if (parseNode.GetChildNode("cleaning_supplies") is { } nullNodeCleaningSupplies && nullNodeCleaningSupplies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CleaningSupplies = null;
+            if (parseNode.GetChildNode("clo_offer") is { } nullNodeCloOffer && nullNodeCloOffer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloOffer = null;
+            if (parseNode.GetChildNode("clothing") is { } nullNodeClothing && nullNodeClothing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clothing = null;
+            if (parseNode.GetChildNode("clothing_accessories") is { } nullNodeClothingAccessories && nullNodeClothingAccessories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClothingAccessories = null;
+            if (parseNode.GetChildNode("computer_components") is { } nullNodeComputerComponents && nullNodeComputerComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputerComponents = null;
+            if (parseNode.GetChildNode("computers_and_tablets") is { } nullNodeComputersAndTablets && nullNodeComputersAndTablets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputersAndTablets = null;
+            if (parseNode.GetChildNode("computers_laptops_and_tablets") is { } nullNodeComputersLaptopsAndTablets && nullNodeComputersLaptopsAndTablets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputersLaptopsAndTablets = null;
+            if (parseNode.GetChildNode("diapering_and_potty_training") is { } nullNodeDiaperingAndPottyTraining && nullNodeDiaperingAndPottyTraining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiaperingAndPottyTraining = null;
+            if (parseNode.GetChildNode("electronic_accessories_and_cables") is { } nullNodeElectronicAccessoriesAndCables && nullNodeElectronicAccessoriesAndCables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectronicAccessoriesAndCables = null;
+            if (parseNode.GetChildNode("electronics_accessories") is { } nullNodeElectronicsAccessories && nullNodeElectronicsAccessories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectronicsAccessories = null;
+            if (parseNode.GetChildNode("furniture") is { } nullNodeFurniture && nullNodeFurniture.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Furniture = null;
+            if (parseNode.GetChildNode("health") is { } nullNodeHealth && nullNodeHealth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Health = null;
+            if (parseNode.GetChildNode("home") is { } nullNodeHome && nullNodeHome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Home = null;
+            if (parseNode.GetChildNode("home_goods") is { } nullNodeHomeGoods && nullNodeHomeGoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HomeGoods = null;
+            if (parseNode.GetChildNode("household_and_cleaning_supplies") is { } nullNodeHouseholdAndCleaningSupplies && nullNodeHouseholdAndCleaningSupplies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HouseholdAndCleaningSupplies = null;
+            if (parseNode.GetChildNode("jewelry") is { } nullNodeJewelry && nullNodeJewelry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jewelry = null;
+            if (parseNode.GetChildNode("large_appliances") is { } nullNodeLargeAppliances && nullNodeLargeAppliances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LargeAppliances = null;
+            if (parseNode.GetChildNode("local_service_business_item") is { } nullNodeLocalServiceBusinessItem && nullNodeLocalServiceBusinessItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalServiceBusinessItem = null;
+            if (parseNode.GetChildNode("local_service_business_restaurant") is { } nullNodeLocalServiceBusinessRestaurant && nullNodeLocalServiceBusinessRestaurant.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalServiceBusinessRestaurant = null;
+            if (parseNode.GetChildNode("nursery") is { } nullNodeNursery && nullNodeNursery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nursery = null;
+            if (parseNode.GetChildNode("printers_and_scanners") is { } nullNodePrintersAndScanners && nullNodePrintersAndScanners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintersAndScanners = null;
+            if (parseNode.GetChildNode("printers_scanners_and_fax_machines") is { } nullNodePrintersScannersAndFaxMachines && nullNodePrintersScannersAndFaxMachines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintersScannersAndFaxMachines = null;
+            if (parseNode.GetChildNode("product_discount") is { } nullNodeProductDiscount && nullNodeProductDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductDiscount = null;
+            if (parseNode.GetChildNode("projectors") is { } nullNodeProjectors && nullNodeProjectors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projectors = null;
+            if (parseNode.GetChildNode("shoes") is { } nullNodeShoes && nullNodeShoes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shoes = null;
+            if (parseNode.GetChildNode("shoes_and_footwear") is { } nullNodeShoesAndFootwear && nullNodeShoesAndFootwear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShoesAndFootwear = null;
+            if (parseNode.GetChildNode("software") is { } nullNodeSoftware && nullNodeSoftware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Software = null;
+            if (parseNode.GetChildNode("televisions_and_monitors") is { } nullNodeTelevisionsAndMonitors && nullNodeTelevisionsAndMonitors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelevisionsAndMonitors = null;
+            if (parseNode.GetChildNode("test_child_sub_vertical") is { } nullNodeTestChildSubVertical && nullNodeTestChildSubVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestChildSubVertical = null;
+            if (parseNode.GetChildNode("test_grand_child_sub_vertical") is { } nullNodeTestGrandChildSubVertical && nullNodeTestGrandChildSubVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestGrandChildSubVertical = null;
+            if (parseNode.GetChildNode("test_sub_vertical") is { } nullNodeTestSubVertical && nullNodeTestSubVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSubVertical = null;
+            if (parseNode.GetChildNode("test_sub_vertical_alias") is { } nullNodeTestSubVerticalAlias && nullNodeTestSubVerticalAlias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSubVerticalAlias = null;
+            if (parseNode.GetChildNode("test_sub_vertical_data_object") is { } nullNodeTestSubVerticalDataObject && nullNodeTestSubVerticalDataObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSubVerticalDataObject = null;
+            if (parseNode.GetChildNode("third_party_electronics") is { } nullNodeThirdPartyElectronics && nullNodeThirdPartyElectronics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyElectronics = null;
+            if (parseNode.GetChildNode("third_party_toys_and_games") is { } nullNodeThirdPartyToysAndGames && nullNodeThirdPartyToysAndGames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyToysAndGames = null;
+            if (parseNode.GetChildNode("toys") is { } nullNodeToys && nullNodeToys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Toys = null;
+            if (parseNode.GetChildNode("toys_and_games") is { } nullNodeToysAndGames && nullNodeToysAndGames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToysAndGames = null;
+            if (parseNode.GetChildNode("tvs_and_monitors") is { } nullNodeTvsAndMonitors && nullNodeTvsAndMonitors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TvsAndMonitors = null;
+            if (parseNode.GetChildNode("vehicle_manufacturer") is { } nullNodeVehicleManufacturer && nullNodeVehicleManufacturer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VehicleManufacturer = null;
+            if (parseNode.GetChildNode("video_game_consoles_and_video_games") is { } nullNodeVideoGameConsolesAndVideoGames && nullNodeVideoGameConsolesAndVideoGames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoGameConsolesAndVideoGames = null;
+            if (parseNode.GetChildNode("video_games_and_consoles") is { } nullNodeVideoGamesAndConsoles && nullNodeVideoGamesAndConsoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoGamesAndConsoles = null;
+            if (parseNode.GetChildNode("video_projectors") is { } nullNodeVideoProjectors && nullNodeVideoProjectors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoProjectors = null;
+            if (parseNode.GetChildNode("watches") is { } nullNodeWatches && nullNodeWatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Watches = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The appliances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty? Appliances { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty? Appliances { get => _explicitNullValueAppliances; set { _explicitNullValueAppliances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appliances"); else _explicitNullProperties?.Remove("appliances"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty? _explicitNullValueAppliances = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty Appliances { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty Appliances { get => _explicitNullValueAppliances; set { _explicitNullValueAppliances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appliances"); else _explicitNullProperties?.Remove("appliances"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty _explicitNullValueAppliances = default!;
 #endif
         /// <summary>The baby_feeding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty? BabyFeeding { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty? BabyFeeding { get => _explicitNullValueBabyFeeding; set { _explicitNullValueBabyFeeding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baby_feeding"); else _explicitNullProperties?.Remove("baby_feeding"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty? _explicitNullValueBabyFeeding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty BabyFeeding { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty BabyFeeding { get => _explicitNullValueBabyFeeding; set { _explicitNullValueBabyFeeding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baby_feeding"); else _explicitNullProperties?.Remove("baby_feeding"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty _explicitNullValueBabyFeeding = default!;
 #endif
         /// <summary>The baby_transport property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty? BabyTransport { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty? BabyTransport { get => _explicitNullValueBabyTransport; set { _explicitNullValueBabyTransport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baby_transport"); else _explicitNullProperties?.Remove("baby_transport"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty? _explicitNullValueBabyTransport = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty BabyTransport { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty BabyTransport { get => _explicitNullValueBabyTransport; set { _explicitNullValueBabyTransport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baby_transport"); else _explicitNullProperties?.Remove("baby_transport"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyTransportProperty _explicitNullValueBabyTransport = default!;
 #endif
         /// <summary>The beauty property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty? Beauty { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty? Beauty { get => _explicitNullValueBeauty; set { _explicitNullValueBeauty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("beauty"); else _explicitNullProperties?.Remove("beauty"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty? _explicitNullValueBeauty = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty Beauty { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty Beauty { get => _explicitNullValueBeauty; set { _explicitNullValueBeauty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("beauty"); else _explicitNullProperties?.Remove("beauty"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeautyProperty _explicitNullValueBeauty = default!;
 #endif
         /// <summary>The bedding property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty? Bedding { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty? Bedding { get => _explicitNullValueBedding; set { _explicitNullValueBedding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bedding"); else _explicitNullProperties?.Remove("bedding"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty? _explicitNullValueBedding = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty Bedding { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty Bedding { get => _explicitNullValueBedding; set { _explicitNullValueBedding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bedding"); else _explicitNullProperties?.Remove("bedding"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBeddingProperty _explicitNullValueBedding = default!;
 #endif
         /// <summary>The cameras property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty? Cameras { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty? Cameras { get => _explicitNullValueCameras; set { _explicitNullValueCameras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cameras"); else _explicitNullProperties?.Remove("cameras"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty? _explicitNullValueCameras = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty Cameras { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty Cameras { get => _explicitNullValueCameras; set { _explicitNullValueCameras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cameras"); else _explicitNullProperties?.Remove("cameras"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasProperty _explicitNullValueCameras = default!;
 #endif
         /// <summary>The cameras_and_photos property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty? CamerasAndPhotos { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty? CamerasAndPhotos { get => _explicitNullValueCamerasAndPhotos; set { _explicitNullValueCamerasAndPhotos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cameras_and_photos"); else _explicitNullProperties?.Remove("cameras_and_photos"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty? _explicitNullValueCamerasAndPhotos = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty CamerasAndPhotos { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty CamerasAndPhotos { get => _explicitNullValueCamerasAndPhotos; set { _explicitNullValueCamerasAndPhotos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cameras_and_photos"); else _explicitNullProperties?.Remove("cameras_and_photos"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCamerasAndPhotosProperty _explicitNullValueCamerasAndPhotos = default!;
 #endif
         /// <summary>The cell_phones_and_smart_watches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty? CellPhonesAndSmartWatches { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty? CellPhonesAndSmartWatches { get => _explicitNullValueCellPhonesAndSmartWatches; set { _explicitNullValueCellPhonesAndSmartWatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_phones_and_smart_watches"); else _explicitNullProperties?.Remove("cell_phones_and_smart_watches"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty? _explicitNullValueCellPhonesAndSmartWatches = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty CellPhonesAndSmartWatches { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty CellPhonesAndSmartWatches { get => _explicitNullValueCellPhonesAndSmartWatches; set { _explicitNullValueCellPhonesAndSmartWatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cell_phones_and_smart_watches"); else _explicitNullProperties?.Remove("cell_phones_and_smart_watches"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCellPhonesAndSmartWatchesProperty _explicitNullValueCellPhonesAndSmartWatches = default!;
 #endif
         /// <summary>The cleaning_supplies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty? CleaningSupplies { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty? CleaningSupplies { get => _explicitNullValueCleaningSupplies; set { _explicitNullValueCleaningSupplies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cleaning_supplies"); else _explicitNullProperties?.Remove("cleaning_supplies"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty? _explicitNullValueCleaningSupplies = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty CleaningSupplies { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty CleaningSupplies { get => _explicitNullValueCleaningSupplies; set { _explicitNullValueCleaningSupplies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cleaning_supplies"); else _explicitNullProperties?.Remove("cleaning_supplies"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCleaningSuppliesProperty _explicitNullValueCleaningSupplies = default!;
 #endif
         /// <summary>The clo_offer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty? CloOffer { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty? CloOffer { get => _explicitNullValueCloOffer; set { _explicitNullValueCloOffer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clo_offer"); else _explicitNullProperties?.Remove("clo_offer"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty? _explicitNullValueCloOffer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty CloOffer { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty CloOffer { get => _explicitNullValueCloOffer; set { _explicitNullValueCloOffer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clo_offer"); else _explicitNullProperties?.Remove("clo_offer"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListCloOfferProperty _explicitNullValueCloOffer = default!;
 #endif
         /// <summary>The clothing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty? Clothing { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty? Clothing { get => _explicitNullValueClothing; set { _explicitNullValueClothing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clothing"); else _explicitNullProperties?.Remove("clothing"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty? _explicitNullValueClothing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty Clothing { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty Clothing { get => _explicitNullValueClothing; set { _explicitNullValueClothing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clothing"); else _explicitNullProperties?.Remove("clothing"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingProperty _explicitNullValueClothing = default!;
 #endif
         /// <summary>The clothing_accessories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty? ClothingAccessories { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty? ClothingAccessories { get => _explicitNullValueClothingAccessories; set { _explicitNullValueClothingAccessories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clothing_accessories"); else _explicitNullProperties?.Remove("clothing_accessories"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty? _explicitNullValueClothingAccessories = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty ClothingAccessories { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty ClothingAccessories { get => _explicitNullValueClothingAccessories; set { _explicitNullValueClothingAccessories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clothing_accessories"); else _explicitNullProperties?.Remove("clothing_accessories"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListClothingAccessoriesProperty _explicitNullValueClothingAccessories = default!;
 #endif
         /// <summary>The computer_components property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty? ComputerComponents { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty? ComputerComponents { get => _explicitNullValueComputerComponents; set { _explicitNullValueComputerComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computer_components"); else _explicitNullProperties?.Remove("computer_components"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty? _explicitNullValueComputerComponents = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty ComputerComponents { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty ComputerComponents { get => _explicitNullValueComputerComponents; set { _explicitNullValueComputerComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computer_components"); else _explicitNullProperties?.Remove("computer_components"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputerComponentsProperty _explicitNullValueComputerComponents = default!;
 #endif
         /// <summary>The computers_and_tablets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty? ComputersAndTablets { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty? ComputersAndTablets { get => _explicitNullValueComputersAndTablets; set { _explicitNullValueComputersAndTablets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computers_and_tablets"); else _explicitNullProperties?.Remove("computers_and_tablets"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty? _explicitNullValueComputersAndTablets = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty ComputersAndTablets { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty ComputersAndTablets { get => _explicitNullValueComputersAndTablets; set { _explicitNullValueComputersAndTablets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computers_and_tablets"); else _explicitNullProperties?.Remove("computers_and_tablets"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersAndTabletsProperty _explicitNullValueComputersAndTablets = default!;
 #endif
         /// <summary>The computers_laptops_and_tablets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty? ComputersLaptopsAndTablets { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty? ComputersLaptopsAndTablets { get => _explicitNullValueComputersLaptopsAndTablets; set { _explicitNullValueComputersLaptopsAndTablets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computers_laptops_and_tablets"); else _explicitNullProperties?.Remove("computers_laptops_and_tablets"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty? _explicitNullValueComputersLaptopsAndTablets = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty ComputersLaptopsAndTablets { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty ComputersLaptopsAndTablets { get => _explicitNullValueComputersLaptopsAndTablets; set { _explicitNullValueComputersLaptopsAndTablets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computers_laptops_and_tablets"); else _explicitNullProperties?.Remove("computers_laptops_and_tablets"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListComputersLaptopsAndTabletsProperty _explicitNullValueComputersLaptopsAndTablets = default!;
 #endif
         /// <summary>The diapering_and_potty_training property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty? DiaperingAndPottyTraining { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty? DiaperingAndPottyTraining { get => _explicitNullValueDiaperingAndPottyTraining; set { _explicitNullValueDiaperingAndPottyTraining = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diapering_and_potty_training"); else _explicitNullProperties?.Remove("diapering_and_potty_training"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty? _explicitNullValueDiaperingAndPottyTraining = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty DiaperingAndPottyTraining { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty DiaperingAndPottyTraining { get => _explicitNullValueDiaperingAndPottyTraining; set { _explicitNullValueDiaperingAndPottyTraining = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diapering_and_potty_training"); else _explicitNullProperties?.Remove("diapering_and_potty_training"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListDiaperingAndPottyTrainingProperty _explicitNullValueDiaperingAndPottyTraining = default!;
 #endif
         /// <summary>The electronic_accessories_and_cables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty? ElectronicAccessoriesAndCables { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty? ElectronicAccessoriesAndCables { get => _explicitNullValueElectronicAccessoriesAndCables; set { _explicitNullValueElectronicAccessoriesAndCables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronic_accessories_and_cables"); else _explicitNullProperties?.Remove("electronic_accessories_and_cables"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty? _explicitNullValueElectronicAccessoriesAndCables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty ElectronicAccessoriesAndCables { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty ElectronicAccessoriesAndCables { get => _explicitNullValueElectronicAccessoriesAndCables; set { _explicitNullValueElectronicAccessoriesAndCables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronic_accessories_and_cables"); else _explicitNullProperties?.Remove("electronic_accessories_and_cables"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicAccessoriesAndCablesProperty _explicitNullValueElectronicAccessoriesAndCables = default!;
 #endif
         /// <summary>The electronics_accessories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty? ElectronicsAccessories { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty? ElectronicsAccessories { get => _explicitNullValueElectronicsAccessories; set { _explicitNullValueElectronicsAccessories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronics_accessories"); else _explicitNullProperties?.Remove("electronics_accessories"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty? _explicitNullValueElectronicsAccessories = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty ElectronicsAccessories { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty ElectronicsAccessories { get => _explicitNullValueElectronicsAccessories; set { _explicitNullValueElectronicsAccessories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electronics_accessories"); else _explicitNullProperties?.Remove("electronics_accessories"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListElectronicsAccessoriesProperty _explicitNullValueElectronicsAccessories = default!;
 #endif
         /// <summary>The furniture property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty? Furniture { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty? Furniture { get => _explicitNullValueFurniture; set { _explicitNullValueFurniture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("furniture"); else _explicitNullProperties?.Remove("furniture"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty? _explicitNullValueFurniture = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty Furniture { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty Furniture { get => _explicitNullValueFurniture; set { _explicitNullValueFurniture = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("furniture"); else _explicitNullProperties?.Remove("furniture"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListFurnitureProperty _explicitNullValueFurniture = default!;
 #endif
         /// <summary>The health property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty? Health { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty? Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty? _explicitNullValueHealth = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty Health { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty Health { get => _explicitNullValueHealth; set { _explicitNullValueHealth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("health"); else _explicitNullProperties?.Remove("health"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHealthProperty _explicitNullValueHealth = default!;
 #endif
         /// <summary>The home property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty? Home { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty? Home { get => _explicitNullValueHome; set { _explicitNullValueHome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home"); else _explicitNullProperties?.Remove("home"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty? _explicitNullValueHome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty Home { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty Home { get => _explicitNullValueHome; set { _explicitNullValueHome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home"); else _explicitNullProperties?.Remove("home"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeProperty _explicitNullValueHome = default!;
 #endif
         /// <summary>The home_goods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty? HomeGoods { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty? HomeGoods { get => _explicitNullValueHomeGoods; set { _explicitNullValueHomeGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_goods"); else _explicitNullProperties?.Remove("home_goods"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty? _explicitNullValueHomeGoods = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty HomeGoods { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty HomeGoods { get => _explicitNullValueHomeGoods; set { _explicitNullValueHomeGoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_goods"); else _explicitNullProperties?.Remove("home_goods"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHomeGoodsProperty _explicitNullValueHomeGoods = default!;
 #endif
         /// <summary>The household_and_cleaning_supplies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty? HouseholdAndCleaningSupplies { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty? HouseholdAndCleaningSupplies { get => _explicitNullValueHouseholdAndCleaningSupplies; set { _explicitNullValueHouseholdAndCleaningSupplies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("household_and_cleaning_supplies"); else _explicitNullProperties?.Remove("household_and_cleaning_supplies"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty? _explicitNullValueHouseholdAndCleaningSupplies = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty HouseholdAndCleaningSupplies { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty HouseholdAndCleaningSupplies { get => _explicitNullValueHouseholdAndCleaningSupplies; set { _explicitNullValueHouseholdAndCleaningSupplies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("household_and_cleaning_supplies"); else _explicitNullProperties?.Remove("household_and_cleaning_supplies"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListHouseholdAndCleaningSuppliesProperty _explicitNullValueHouseholdAndCleaningSupplies = default!;
 #endif
         /// <summary>The jewelry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty? Jewelry { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty? Jewelry { get => _explicitNullValueJewelry; set { _explicitNullValueJewelry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jewelry"); else _explicitNullProperties?.Remove("jewelry"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty? _explicitNullValueJewelry = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty Jewelry { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty Jewelry { get => _explicitNullValueJewelry; set { _explicitNullValueJewelry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jewelry"); else _explicitNullProperties?.Remove("jewelry"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListJewelryProperty _explicitNullValueJewelry = default!;
 #endif
         /// <summary>The large_appliances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty? LargeAppliances { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty? LargeAppliances { get => _explicitNullValueLargeAppliances; set { _explicitNullValueLargeAppliances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_appliances"); else _explicitNullProperties?.Remove("large_appliances"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty? _explicitNullValueLargeAppliances = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty LargeAppliances { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty LargeAppliances { get => _explicitNullValueLargeAppliances; set { _explicitNullValueLargeAppliances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_appliances"); else _explicitNullProperties?.Remove("large_appliances"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLargeAppliancesProperty _explicitNullValueLargeAppliances = default!;
 #endif
         /// <summary>The local_service_business_item property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty? LocalServiceBusinessItem { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty? LocalServiceBusinessItem { get => _explicitNullValueLocalServiceBusinessItem; set { _explicitNullValueLocalServiceBusinessItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_service_business_item"); else _explicitNullProperties?.Remove("local_service_business_item"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty? _explicitNullValueLocalServiceBusinessItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty LocalServiceBusinessItem { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty LocalServiceBusinessItem { get => _explicitNullValueLocalServiceBusinessItem; set { _explicitNullValueLocalServiceBusinessItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_service_business_item"); else _explicitNullProperties?.Remove("local_service_business_item"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessItemProperty _explicitNullValueLocalServiceBusinessItem = default!;
 #endif
         /// <summary>The local_service_business_restaurant property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty? LocalServiceBusinessRestaurant { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty? LocalServiceBusinessRestaurant { get => _explicitNullValueLocalServiceBusinessRestaurant; set { _explicitNullValueLocalServiceBusinessRestaurant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_service_business_restaurant"); else _explicitNullProperties?.Remove("local_service_business_restaurant"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty? _explicitNullValueLocalServiceBusinessRestaurant = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty LocalServiceBusinessRestaurant { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty LocalServiceBusinessRestaurant { get => _explicitNullValueLocalServiceBusinessRestaurant; set { _explicitNullValueLocalServiceBusinessRestaurant = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("local_service_business_restaurant"); else _explicitNullProperties?.Remove("local_service_business_restaurant"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListLocalServiceBusinessRestaurantProperty _explicitNullValueLocalServiceBusinessRestaurant = default!;
 #endif
         /// <summary>The nursery property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty? Nursery { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty? Nursery { get => _explicitNullValueNursery; set { _explicitNullValueNursery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nursery"); else _explicitNullProperties?.Remove("nursery"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty? _explicitNullValueNursery = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty Nursery { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty Nursery { get => _explicitNullValueNursery; set { _explicitNullValueNursery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nursery"); else _explicitNullProperties?.Remove("nursery"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListNurseryProperty _explicitNullValueNursery = default!;
 #endif
         /// <summary>The printers_and_scanners property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty? PrintersAndScanners { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty? PrintersAndScanners { get => _explicitNullValuePrintersAndScanners; set { _explicitNullValuePrintersAndScanners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printers_and_scanners"); else _explicitNullProperties?.Remove("printers_and_scanners"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty? _explicitNullValuePrintersAndScanners = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty PrintersAndScanners { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty PrintersAndScanners { get => _explicitNullValuePrintersAndScanners; set { _explicitNullValuePrintersAndScanners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printers_and_scanners"); else _explicitNullProperties?.Remove("printers_and_scanners"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersAndScannersProperty _explicitNullValuePrintersAndScanners = default!;
 #endif
         /// <summary>The printers_scanners_and_fax_machines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty? PrintersScannersAndFaxMachines { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty? PrintersScannersAndFaxMachines { get => _explicitNullValuePrintersScannersAndFaxMachines; set { _explicitNullValuePrintersScannersAndFaxMachines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printers_scanners_and_fax_machines"); else _explicitNullProperties?.Remove("printers_scanners_and_fax_machines"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty? _explicitNullValuePrintersScannersAndFaxMachines = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty PrintersScannersAndFaxMachines { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty PrintersScannersAndFaxMachines { get => _explicitNullValuePrintersScannersAndFaxMachines; set { _explicitNullValuePrintersScannersAndFaxMachines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printers_scanners_and_fax_machines"); else _explicitNullProperties?.Remove("printers_scanners_and_fax_machines"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListPrintersScannersAndFaxMachinesProperty _explicitNullValuePrintersScannersAndFaxMachines = default!;
 #endif
         /// <summary>The product_discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty? ProductDiscount { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty? ProductDiscount { get => _explicitNullValueProductDiscount; set { _explicitNullValueProductDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_discount"); else _explicitNullProperties?.Remove("product_discount"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty? _explicitNullValueProductDiscount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty ProductDiscount { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty ProductDiscount { get => _explicitNullValueProductDiscount; set { _explicitNullValueProductDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_discount"); else _explicitNullProperties?.Remove("product_discount"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProductDiscountProperty _explicitNullValueProductDiscount = default!;
 #endif
         /// <summary>The projectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty? Projectors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty? Projectors { get => _explicitNullValueProjectors; set { _explicitNullValueProjectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectors"); else _explicitNullProperties?.Remove("projectors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty? _explicitNullValueProjectors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty Projectors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty Projectors { get => _explicitNullValueProjectors; set { _explicitNullValueProjectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectors"); else _explicitNullProperties?.Remove("projectors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListProjectorsProperty _explicitNullValueProjectors = default!;
 #endif
         /// <summary>The shoes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty? Shoes { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty? Shoes { get => _explicitNullValueShoes; set { _explicitNullValueShoes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shoes"); else _explicitNullProperties?.Remove("shoes"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty? _explicitNullValueShoes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty Shoes { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty Shoes { get => _explicitNullValueShoes; set { _explicitNullValueShoes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shoes"); else _explicitNullProperties?.Remove("shoes"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesProperty _explicitNullValueShoes = default!;
 #endif
         /// <summary>The shoes_and_footwear property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty? ShoesAndFootwear { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty? ShoesAndFootwear { get => _explicitNullValueShoesAndFootwear; set { _explicitNullValueShoesAndFootwear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shoes_and_footwear"); else _explicitNullProperties?.Remove("shoes_and_footwear"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty? _explicitNullValueShoesAndFootwear = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty ShoesAndFootwear { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty ShoesAndFootwear { get => _explicitNullValueShoesAndFootwear; set { _explicitNullValueShoesAndFootwear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shoes_and_footwear"); else _explicitNullProperties?.Remove("shoes_and_footwear"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListShoesAndFootwearProperty _explicitNullValueShoesAndFootwear = default!;
 #endif
         /// <summary>The software property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty? Software { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty? Software { get => _explicitNullValueSoftware; set { _explicitNullValueSoftware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("software"); else _explicitNullProperties?.Remove("software"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty? _explicitNullValueSoftware = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty Software { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty Software { get => _explicitNullValueSoftware; set { _explicitNullValueSoftware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("software"); else _explicitNullProperties?.Remove("software"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListSoftwareProperty _explicitNullValueSoftware = default!;
 #endif
         /// <summary>The televisions_and_monitors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty? TelevisionsAndMonitors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty? TelevisionsAndMonitors { get => _explicitNullValueTelevisionsAndMonitors; set { _explicitNullValueTelevisionsAndMonitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("televisions_and_monitors"); else _explicitNullProperties?.Remove("televisions_and_monitors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty? _explicitNullValueTelevisionsAndMonitors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty TelevisionsAndMonitors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty TelevisionsAndMonitors { get => _explicitNullValueTelevisionsAndMonitors; set { _explicitNullValueTelevisionsAndMonitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("televisions_and_monitors"); else _explicitNullProperties?.Remove("televisions_and_monitors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTelevisionsAndMonitorsProperty _explicitNullValueTelevisionsAndMonitors = default!;
 #endif
         /// <summary>The test_child_sub_vertical property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty? TestChildSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty? TestChildSubVertical { get => _explicitNullValueTestChildSubVertical; set { _explicitNullValueTestChildSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_child_sub_vertical"); else _explicitNullProperties?.Remove("test_child_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty? _explicitNullValueTestChildSubVertical = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty TestChildSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty TestChildSubVertical { get => _explicitNullValueTestChildSubVertical; set { _explicitNullValueTestChildSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_child_sub_vertical"); else _explicitNullProperties?.Remove("test_child_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestChildSubVerticalProperty _explicitNullValueTestChildSubVertical = default!;
 #endif
         /// <summary>The test_grand_child_sub_vertical property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty? TestGrandChildSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty? TestGrandChildSubVertical { get => _explicitNullValueTestGrandChildSubVertical; set { _explicitNullValueTestGrandChildSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_grand_child_sub_vertical"); else _explicitNullProperties?.Remove("test_grand_child_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty? _explicitNullValueTestGrandChildSubVertical = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty TestGrandChildSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty TestGrandChildSubVertical { get => _explicitNullValueTestGrandChildSubVertical; set { _explicitNullValueTestGrandChildSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_grand_child_sub_vertical"); else _explicitNullProperties?.Remove("test_grand_child_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestGrandChildSubVerticalProperty _explicitNullValueTestGrandChildSubVertical = default!;
 #endif
         /// <summary>The test_sub_vertical property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty? TestSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty? TestSubVertical { get => _explicitNullValueTestSubVertical; set { _explicitNullValueTestSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical"); else _explicitNullProperties?.Remove("test_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty? _explicitNullValueTestSubVertical = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty TestSubVertical { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty TestSubVertical { get => _explicitNullValueTestSubVertical; set { _explicitNullValueTestSubVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical"); else _explicitNullProperties?.Remove("test_sub_vertical"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalProperty _explicitNullValueTestSubVertical = default!;
 #endif
         /// <summary>The test_sub_vertical_alias property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty? TestSubVerticalAlias { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty? TestSubVerticalAlias { get => _explicitNullValueTestSubVerticalAlias; set { _explicitNullValueTestSubVerticalAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical_alias"); else _explicitNullProperties?.Remove("test_sub_vertical_alias"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty? _explicitNullValueTestSubVerticalAlias = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty TestSubVerticalAlias { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty TestSubVerticalAlias { get => _explicitNullValueTestSubVerticalAlias; set { _explicitNullValueTestSubVerticalAlias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical_alias"); else _explicitNullProperties?.Remove("test_sub_vertical_alias"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalAliasProperty _explicitNullValueTestSubVerticalAlias = default!;
 #endif
         /// <summary>The test_sub_vertical_data_object property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty? TestSubVerticalDataObject { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty? TestSubVerticalDataObject { get => _explicitNullValueTestSubVerticalDataObject; set { _explicitNullValueTestSubVerticalDataObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical_data_object"); else _explicitNullProperties?.Remove("test_sub_vertical_data_object"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty? _explicitNullValueTestSubVerticalDataObject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty TestSubVerticalDataObject { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty TestSubVerticalDataObject { get => _explicitNullValueTestSubVerticalDataObject; set { _explicitNullValueTestSubVerticalDataObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_sub_vertical_data_object"); else _explicitNullProperties?.Remove("test_sub_vertical_data_object"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTestSubVerticalDataObjectProperty _explicitNullValueTestSubVerticalDataObject = default!;
 #endif
         /// <summary>The third_party_electronics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty? ThirdPartyElectronics { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty? ThirdPartyElectronics { get => _explicitNullValueThirdPartyElectronics; set { _explicitNullValueThirdPartyElectronics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_electronics"); else _explicitNullProperties?.Remove("third_party_electronics"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty? _explicitNullValueThirdPartyElectronics = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty ThirdPartyElectronics { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty ThirdPartyElectronics { get => _explicitNullValueThirdPartyElectronics; set { _explicitNullValueThirdPartyElectronics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_electronics"); else _explicitNullProperties?.Remove("third_party_electronics"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyElectronicsProperty _explicitNullValueThirdPartyElectronics = default!;
 #endif
         /// <summary>The third_party_toys_and_games property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty? ThirdPartyToysAndGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty? ThirdPartyToysAndGames { get => _explicitNullValueThirdPartyToysAndGames; set { _explicitNullValueThirdPartyToysAndGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_toys_and_games"); else _explicitNullProperties?.Remove("third_party_toys_and_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty? _explicitNullValueThirdPartyToysAndGames = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty ThirdPartyToysAndGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty ThirdPartyToysAndGames { get => _explicitNullValueThirdPartyToysAndGames; set { _explicitNullValueThirdPartyToysAndGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_toys_and_games"); else _explicitNullProperties?.Remove("third_party_toys_and_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListThirdPartyToysAndGamesProperty _explicitNullValueThirdPartyToysAndGames = default!;
 #endif
         /// <summary>The toys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty? Toys { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty? Toys { get => _explicitNullValueToys; set { _explicitNullValueToys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toys"); else _explicitNullProperties?.Remove("toys"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty? _explicitNullValueToys = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty Toys { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty Toys { get => _explicitNullValueToys; set { _explicitNullValueToys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toys"); else _explicitNullProperties?.Remove("toys"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysProperty _explicitNullValueToys = default!;
 #endif
         /// <summary>The toys_and_games property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty? ToysAndGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty? ToysAndGames { get => _explicitNullValueToysAndGames; set { _explicitNullValueToysAndGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toys_and_games"); else _explicitNullProperties?.Remove("toys_and_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty? _explicitNullValueToysAndGames = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty ToysAndGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty ToysAndGames { get => _explicitNullValueToysAndGames; set { _explicitNullValueToysAndGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toys_and_games"); else _explicitNullProperties?.Remove("toys_and_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListToysAndGamesProperty _explicitNullValueToysAndGames = default!;
 #endif
         /// <summary>The tvs_and_monitors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty? TvsAndMonitors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty? TvsAndMonitors { get => _explicitNullValueTvsAndMonitors; set { _explicitNullValueTvsAndMonitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tvs_and_monitors"); else _explicitNullProperties?.Remove("tvs_and_monitors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty? _explicitNullValueTvsAndMonitors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty TvsAndMonitors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty TvsAndMonitors { get => _explicitNullValueTvsAndMonitors; set { _explicitNullValueTvsAndMonitors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tvs_and_monitors"); else _explicitNullProperties?.Remove("tvs_and_monitors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListTvsAndMonitorsProperty _explicitNullValueTvsAndMonitors = default!;
 #endif
         /// <summary>The vehicle_manufacturer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty? VehicleManufacturer { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty? VehicleManufacturer { get => _explicitNullValueVehicleManufacturer; set { _explicitNullValueVehicleManufacturer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_manufacturer"); else _explicitNullProperties?.Remove("vehicle_manufacturer"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty? _explicitNullValueVehicleManufacturer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty VehicleManufacturer { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty VehicleManufacturer { get => _explicitNullValueVehicleManufacturer; set { _explicitNullValueVehicleManufacturer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vehicle_manufacturer"); else _explicitNullProperties?.Remove("vehicle_manufacturer"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVehicleManufacturerProperty _explicitNullValueVehicleManufacturer = default!;
 #endif
         /// <summary>The video_game_consoles_and_video_games property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty? VideoGameConsolesAndVideoGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty? VideoGameConsolesAndVideoGames { get => _explicitNullValueVideoGameConsolesAndVideoGames; set { _explicitNullValueVideoGameConsolesAndVideoGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_game_consoles_and_video_games"); else _explicitNullProperties?.Remove("video_game_consoles_and_video_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty? _explicitNullValueVideoGameConsolesAndVideoGames = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty VideoGameConsolesAndVideoGames { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty VideoGameConsolesAndVideoGames { get => _explicitNullValueVideoGameConsolesAndVideoGames; set { _explicitNullValueVideoGameConsolesAndVideoGames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_game_consoles_and_video_games"); else _explicitNullProperties?.Remove("video_game_consoles_and_video_games"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGameConsolesAndVideoGamesProperty _explicitNullValueVideoGameConsolesAndVideoGames = default!;
 #endif
         /// <summary>The video_games_and_consoles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty? VideoGamesAndConsoles { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty? VideoGamesAndConsoles { get => _explicitNullValueVideoGamesAndConsoles; set { _explicitNullValueVideoGamesAndConsoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_games_and_consoles"); else _explicitNullProperties?.Remove("video_games_and_consoles"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty? _explicitNullValueVideoGamesAndConsoles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty VideoGamesAndConsoles { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty VideoGamesAndConsoles { get => _explicitNullValueVideoGamesAndConsoles; set { _explicitNullValueVideoGamesAndConsoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_games_and_consoles"); else _explicitNullProperties?.Remove("video_games_and_consoles"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty _explicitNullValueVideoGamesAndConsoles = default!;
 #endif
         /// <summary>The video_projectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty? VideoProjectors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty? VideoProjectors { get => _explicitNullValueVideoProjectors; set { _explicitNullValueVideoProjectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_projectors"); else _explicitNullProperties?.Remove("video_projectors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty? _explicitNullValueVideoProjectors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty VideoProjectors { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty VideoProjectors { get => _explicitNullValueVideoProjectors; set { _explicitNullValueVideoProjectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video_projectors"); else _explicitNullProperties?.Remove("video_projectors"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty _explicitNullValueVideoProjectors = default!;
 #endif
         /// <summary>The watches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty? Watches { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty? Watches { get => _explicitNullValueWatches; set { _explicitNullValueWatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watches"); else _explicitNullProperties?.Remove("watches"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty? _explicitNullValueWatches = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty Watches { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty Watches { get => _explicitNullValueWatches; set { _explicitNullValueWatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watches"); else _explicitNullProperties?.Remove("watches"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty _explicitNullValueWatches = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalList"/> and sets the default values.
@@ -437,7 +597,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -558,6 +718,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoGamesAndConsolesProperty>("video_games_and_consoles", VideoGamesAndConsoles);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListVideoProjectorsProperty>("video_projectors", VideoProjectors);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListWatchesProperty>("watches", Watches);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

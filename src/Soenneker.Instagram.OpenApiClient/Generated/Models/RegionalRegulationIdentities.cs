@@ -11,104 +11,147 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RegionalRegulationIdentities : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("australia_finserv_beneficiary") is { } nullNodeAustraliaFinservBeneficiary && nullNodeAustraliaFinservBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AustraliaFinservBeneficiary = null;
+            if (parseNode.GetChildNode("australia_finserv_payer") is { } nullNodeAustraliaFinservPayer && nullNodeAustraliaFinservPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AustraliaFinservPayer = null;
+            if (parseNode.GetChildNode("india_finserv_beneficiary") is { } nullNodeIndiaFinservBeneficiary && nullNodeIndiaFinservBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndiaFinservBeneficiary = null;
+            if (parseNode.GetChildNode("india_finserv_payer") is { } nullNodeIndiaFinservPayer && nullNodeIndiaFinservPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndiaFinservPayer = null;
+            if (parseNode.GetChildNode("singapore_universal_beneficiary") is { } nullNodeSingaporeUniversalBeneficiary && nullNodeSingaporeUniversalBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingaporeUniversalBeneficiary = null;
+            if (parseNode.GetChildNode("singapore_universal_payer") is { } nullNodeSingaporeUniversalPayer && nullNodeSingaporeUniversalPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingaporeUniversalPayer = null;
+            if (parseNode.GetChildNode("taiwan_finserv_beneficiary") is { } nullNodeTaiwanFinservBeneficiary && nullNodeTaiwanFinservBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanFinservBeneficiary = null;
+            if (parseNode.GetChildNode("taiwan_finserv_payer") is { } nullNodeTaiwanFinservPayer && nullNodeTaiwanFinservPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanFinservPayer = null;
+            if (parseNode.GetChildNode("taiwan_universal_beneficiary") is { } nullNodeTaiwanUniversalBeneficiary && nullNodeTaiwanUniversalBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanUniversalBeneficiary = null;
+            if (parseNode.GetChildNode("taiwan_universal_payer") is { } nullNodeTaiwanUniversalPayer && nullNodeTaiwanUniversalPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaiwanUniversalPayer = null;
+            if (parseNode.GetChildNode("universal_beneficiary") is { } nullNodeUniversalBeneficiary && nullNodeUniversalBeneficiary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniversalBeneficiary = null;
+            if (parseNode.GetChildNode("universal_payer") is { } nullNodeUniversalPayer && nullNodeUniversalPayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UniversalPayer = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The australia_finserv_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AustraliaFinservBeneficiary { get; set; }
+        public string? AustraliaFinservBeneficiary { get => _explicitNullValueAustraliaFinservBeneficiary; set { _explicitNullValueAustraliaFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv_beneficiary"); else _explicitNullProperties?.Remove("australia_finserv_beneficiary"); } }
+        private string? _explicitNullValueAustraliaFinservBeneficiary = default!;
 #nullable restore
 #else
-        public string AustraliaFinservBeneficiary { get; set; }
+        public string AustraliaFinservBeneficiary { get => _explicitNullValueAustraliaFinservBeneficiary; set { _explicitNullValueAustraliaFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv_beneficiary"); else _explicitNullProperties?.Remove("australia_finserv_beneficiary"); } }
+        private string _explicitNullValueAustraliaFinservBeneficiary = default!;
 #endif
         /// <summary>The australia_finserv_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AustraliaFinservPayer { get; set; }
+        public string? AustraliaFinservPayer { get => _explicitNullValueAustraliaFinservPayer; set { _explicitNullValueAustraliaFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv_payer"); else _explicitNullProperties?.Remove("australia_finserv_payer"); } }
+        private string? _explicitNullValueAustraliaFinservPayer = default!;
 #nullable restore
 #else
-        public string AustraliaFinservPayer { get; set; }
+        public string AustraliaFinservPayer { get => _explicitNullValueAustraliaFinservPayer; set { _explicitNullValueAustraliaFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("australia_finserv_payer"); else _explicitNullProperties?.Remove("australia_finserv_payer"); } }
+        private string _explicitNullValueAustraliaFinservPayer = default!;
 #endif
         /// <summary>The india_finserv_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IndiaFinservBeneficiary { get; set; }
+        public string? IndiaFinservBeneficiary { get => _explicitNullValueIndiaFinservBeneficiary; set { _explicitNullValueIndiaFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv_beneficiary"); else _explicitNullProperties?.Remove("india_finserv_beneficiary"); } }
+        private string? _explicitNullValueIndiaFinservBeneficiary = default!;
 #nullable restore
 #else
-        public string IndiaFinservBeneficiary { get; set; }
+        public string IndiaFinservBeneficiary { get => _explicitNullValueIndiaFinservBeneficiary; set { _explicitNullValueIndiaFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv_beneficiary"); else _explicitNullProperties?.Remove("india_finserv_beneficiary"); } }
+        private string _explicitNullValueIndiaFinservBeneficiary = default!;
 #endif
         /// <summary>The india_finserv_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IndiaFinservPayer { get; set; }
+        public string? IndiaFinservPayer { get => _explicitNullValueIndiaFinservPayer; set { _explicitNullValueIndiaFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv_payer"); else _explicitNullProperties?.Remove("india_finserv_payer"); } }
+        private string? _explicitNullValueIndiaFinservPayer = default!;
 #nullable restore
 #else
-        public string IndiaFinservPayer { get; set; }
+        public string IndiaFinservPayer { get => _explicitNullValueIndiaFinservPayer; set { _explicitNullValueIndiaFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("india_finserv_payer"); else _explicitNullProperties?.Remove("india_finserv_payer"); } }
+        private string _explicitNullValueIndiaFinservPayer = default!;
 #endif
         /// <summary>The singapore_universal_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SingaporeUniversalBeneficiary { get; set; }
+        public string? SingaporeUniversalBeneficiary { get => _explicitNullValueSingaporeUniversalBeneficiary; set { _explicitNullValueSingaporeUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal_beneficiary"); else _explicitNullProperties?.Remove("singapore_universal_beneficiary"); } }
+        private string? _explicitNullValueSingaporeUniversalBeneficiary = default!;
 #nullable restore
 #else
-        public string SingaporeUniversalBeneficiary { get; set; }
+        public string SingaporeUniversalBeneficiary { get => _explicitNullValueSingaporeUniversalBeneficiary; set { _explicitNullValueSingaporeUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal_beneficiary"); else _explicitNullProperties?.Remove("singapore_universal_beneficiary"); } }
+        private string _explicitNullValueSingaporeUniversalBeneficiary = default!;
 #endif
         /// <summary>The singapore_universal_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SingaporeUniversalPayer { get; set; }
+        public string? SingaporeUniversalPayer { get => _explicitNullValueSingaporeUniversalPayer; set { _explicitNullValueSingaporeUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal_payer"); else _explicitNullProperties?.Remove("singapore_universal_payer"); } }
+        private string? _explicitNullValueSingaporeUniversalPayer = default!;
 #nullable restore
 #else
-        public string SingaporeUniversalPayer { get; set; }
+        public string SingaporeUniversalPayer { get => _explicitNullValueSingaporeUniversalPayer; set { _explicitNullValueSingaporeUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singapore_universal_payer"); else _explicitNullProperties?.Remove("singapore_universal_payer"); } }
+        private string _explicitNullValueSingaporeUniversalPayer = default!;
 #endif
         /// <summary>The taiwan_finserv_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaiwanFinservBeneficiary { get; set; }
+        public string? TaiwanFinservBeneficiary { get => _explicitNullValueTaiwanFinservBeneficiary; set { _explicitNullValueTaiwanFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv_beneficiary"); else _explicitNullProperties?.Remove("taiwan_finserv_beneficiary"); } }
+        private string? _explicitNullValueTaiwanFinservBeneficiary = default!;
 #nullable restore
 #else
-        public string TaiwanFinservBeneficiary { get; set; }
+        public string TaiwanFinservBeneficiary { get => _explicitNullValueTaiwanFinservBeneficiary; set { _explicitNullValueTaiwanFinservBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv_beneficiary"); else _explicitNullProperties?.Remove("taiwan_finserv_beneficiary"); } }
+        private string _explicitNullValueTaiwanFinservBeneficiary = default!;
 #endif
         /// <summary>The taiwan_finserv_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaiwanFinservPayer { get; set; }
+        public string? TaiwanFinservPayer { get => _explicitNullValueTaiwanFinservPayer; set { _explicitNullValueTaiwanFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv_payer"); else _explicitNullProperties?.Remove("taiwan_finserv_payer"); } }
+        private string? _explicitNullValueTaiwanFinservPayer = default!;
 #nullable restore
 #else
-        public string TaiwanFinservPayer { get; set; }
+        public string TaiwanFinservPayer { get => _explicitNullValueTaiwanFinservPayer; set { _explicitNullValueTaiwanFinservPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_finserv_payer"); else _explicitNullProperties?.Remove("taiwan_finserv_payer"); } }
+        private string _explicitNullValueTaiwanFinservPayer = default!;
 #endif
         /// <summary>The taiwan_universal_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaiwanUniversalBeneficiary { get; set; }
+        public string? TaiwanUniversalBeneficiary { get => _explicitNullValueTaiwanUniversalBeneficiary; set { _explicitNullValueTaiwanUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal_beneficiary"); else _explicitNullProperties?.Remove("taiwan_universal_beneficiary"); } }
+        private string? _explicitNullValueTaiwanUniversalBeneficiary = default!;
 #nullable restore
 #else
-        public string TaiwanUniversalBeneficiary { get; set; }
+        public string TaiwanUniversalBeneficiary { get => _explicitNullValueTaiwanUniversalBeneficiary; set { _explicitNullValueTaiwanUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal_beneficiary"); else _explicitNullProperties?.Remove("taiwan_universal_beneficiary"); } }
+        private string _explicitNullValueTaiwanUniversalBeneficiary = default!;
 #endif
         /// <summary>The taiwan_universal_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaiwanUniversalPayer { get; set; }
+        public string? TaiwanUniversalPayer { get => _explicitNullValueTaiwanUniversalPayer; set { _explicitNullValueTaiwanUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal_payer"); else _explicitNullProperties?.Remove("taiwan_universal_payer"); } }
+        private string? _explicitNullValueTaiwanUniversalPayer = default!;
 #nullable restore
 #else
-        public string TaiwanUniversalPayer { get; set; }
+        public string TaiwanUniversalPayer { get => _explicitNullValueTaiwanUniversalPayer; set { _explicitNullValueTaiwanUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taiwan_universal_payer"); else _explicitNullProperties?.Remove("taiwan_universal_payer"); } }
+        private string _explicitNullValueTaiwanUniversalPayer = default!;
 #endif
         /// <summary>The universal_beneficiary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniversalBeneficiary { get; set; }
+        public string? UniversalBeneficiary { get => _explicitNullValueUniversalBeneficiary; set { _explicitNullValueUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_beneficiary"); else _explicitNullProperties?.Remove("universal_beneficiary"); } }
+        private string? _explicitNullValueUniversalBeneficiary = default!;
 #nullable restore
 #else
-        public string UniversalBeneficiary { get; set; }
+        public string UniversalBeneficiary { get => _explicitNullValueUniversalBeneficiary; set { _explicitNullValueUniversalBeneficiary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_beneficiary"); else _explicitNullProperties?.Remove("universal_beneficiary"); } }
+        private string _explicitNullValueUniversalBeneficiary = default!;
 #endif
         /// <summary>The universal_payer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniversalPayer { get; set; }
+        public string? UniversalPayer { get => _explicitNullValueUniversalPayer; set { _explicitNullValueUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_payer"); else _explicitNullProperties?.Remove("universal_payer"); } }
+        private string? _explicitNullValueUniversalPayer = default!;
 #nullable restore
 #else
-        public string UniversalPayer { get; set; }
+        public string UniversalPayer { get => _explicitNullValueUniversalPayer; set { _explicitNullValueUniversalPayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("universal_payer"); else _explicitNullProperties?.Remove("universal_payer"); } }
+        private string _explicitNullValueUniversalPayer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.RegionalRegulationIdentities"/> and sets the default values.
@@ -125,7 +168,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.RegionalRegulationIdentities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.RegionalRegulationIdentities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.RegionalRegulationIdentities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -168,6 +211,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("taiwan_universal_payer", TaiwanUniversalPayer);
             writer.WriteStringValue("universal_beneficiary", UniversalBeneficiary);
             writer.WriteStringValue("universal_payer", UniversalPayer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

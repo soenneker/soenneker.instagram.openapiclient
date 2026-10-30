@@ -11,20 +11,34 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BusinessPartnerPremiumOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enable_basket_insight") is { } nullNodeEnableBasketInsight && nullNodeEnableBasketInsight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableBasketInsight = null;
+            if (parseNode.GetChildNode("enable_extended_audience_retargeting") is { } nullNodeEnableExtendedAudienceRetargeting && nullNodeEnableExtendedAudienceRetargeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableExtendedAudienceRetargeting = null;
+            if (parseNode.GetChildNode("retailer_custom_audience_config") is { } nullNodeRetailerCustomAudienceConfig && nullNodeRetailerCustomAudienceConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetailerCustomAudienceConfig = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enable_basket_insight property</summary>
-        public bool? EnableBasketInsight { get; set; }
+        public bool? EnableBasketInsight { get => _explicitNullValueEnableBasketInsight; set { _explicitNullValueEnableBasketInsight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_basket_insight"); else _explicitNullProperties?.Remove("enable_basket_insight"); } }
+        private bool? _explicitNullValueEnableBasketInsight = default!;
         /// <summary>The enable_extended_audience_retargeting property</summary>
-        public bool? EnableExtendedAudienceRetargeting { get; set; }
+        public bool? EnableExtendedAudienceRetargeting { get => _explicitNullValueEnableExtendedAudienceRetargeting; set { _explicitNullValueEnableExtendedAudienceRetargeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_extended_audience_retargeting"); else _explicitNullProperties?.Remove("enable_extended_audience_retargeting"); } }
+        private bool? _explicitNullValueEnableExtendedAudienceRetargeting = default!;
         /// <summary>The retailer_custom_audience_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty? RetailerCustomAudienceConfig { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty? RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty? _explicitNullValueRetailerCustomAudienceConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty RetailerCustomAudienceConfig { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty RetailerCustomAudienceConfig { get => _explicitNullValueRetailerCustomAudienceConfig; set { _explicitNullValueRetailerCustomAudienceConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retailer_custom_audience_config"); else _explicitNullProperties?.Remove("retailer_custom_audience_config"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty _explicitNullValueRetailerCustomAudienceConfig = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptions"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("enable_basket_insight", EnableBasketInsight);
             writer.WriteBoolValue("enable_extended_audience_retargeting", EnableExtendedAudienceRetargeting);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.BusinessPartnerPremiumOptionsRetailerCustomAudienceConfigProperty>("retailer_custom_audience_config", RetailerCustomAudienceConfig);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

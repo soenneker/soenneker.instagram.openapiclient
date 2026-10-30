@@ -11,19 +11,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IgMediaBoostEligibilityInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("boost_ineligible_reason") is { } nullNodeBoostIneligibleReason && nullNodeBoostIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoostIneligibleReason = null;
+            if (parseNode.GetChildNode("eligible_to_boost") is { } nullNodeEligibleToBoost && nullNodeEligibleToBoost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleToBoost = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The boost_ineligible_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoostIneligibleReason { get; set; }
+        public string? BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
+        private string? _explicitNullValueBoostIneligibleReason = default!;
 #nullable restore
 #else
-        public string BoostIneligibleReason { get; set; }
+        public string BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
+        private string _explicitNullValueBoostIneligibleReason = default!;
 #endif
         /// <summary>The eligible_to_boost property</summary>
-        public bool? EligibleToBoost { get; set; }
+        public bool? EligibleToBoost { get => _explicitNullValueEligibleToBoost; set { _explicitNullValueEligibleToBoost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_to_boost"); else _explicitNullProperties?.Remove("eligible_to_boost"); } }
+        private bool? _explicitNullValueEligibleToBoost = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("boost_ineligible_reason", BoostIneligibleReason);
             writer.WriteBoolValue("eligible_to_boost", EligibleToBoost);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

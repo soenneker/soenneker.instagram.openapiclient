@@ -11,72 +11,103 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CatalogItemAppLinks : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("android") is { } nullNodeAndroid && nullNodeAndroid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Android = null;
+            if (parseNode.GetChildNode("ios") is { } nullNodeIos && nullNodeIos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ios = null;
+            if (parseNode.GetChildNode("ipad") is { } nullNodeIpad && nullNodeIpad.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipad = null;
+            if (parseNode.GetChildNode("iphone") is { } nullNodeIphone && nullNodeIphone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Iphone = null;
+            if (parseNode.GetChildNode("web") is { } nullNodeWeb && nullNodeWeb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Web = null;
+            if (parseNode.GetChildNode("windows") is { } nullNodeWindows && nullNodeWindows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Windows = null;
+            if (parseNode.GetChildNode("windows_phone") is { } nullNodeWindowsPhone && nullNodeWindowsPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindowsPhone = null;
+            if (parseNode.GetChildNode("windows_universal") is { } nullNodeWindowsUniversal && nullNodeWindowsUniversal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindowsUniversal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The android property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink>? Android { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink>? Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink>? _explicitNullValueAndroid = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink> Android { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink> Android { get => _explicitNullValueAndroid; set { _explicitNullValueAndroid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("android"); else _explicitNullProperties?.Remove("android"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.AndroidAppLink> _explicitNullValueAndroid = default!;
 #endif
         /// <summary>The ios property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Ios { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? _explicitNullValueIos = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Ios { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Ios { get => _explicitNullValueIos; set { _explicitNullValueIos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ios"); else _explicitNullProperties?.Remove("ios"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> _explicitNullValueIos = default!;
 #endif
         /// <summary>The ipad property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Ipad { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? _explicitNullValueIpad = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Ipad { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Ipad { get => _explicitNullValueIpad; set { _explicitNullValueIpad = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipad"); else _explicitNullProperties?.Remove("ipad"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> _explicitNullValueIpad = default!;
 #endif
         /// <summary>The iphone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Iphone { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink>? _explicitNullValueIphone = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Iphone { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> Iphone { get => _explicitNullValueIphone; set { _explicitNullValueIphone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iphone"); else _explicitNullProperties?.Remove("iphone"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IosAppLink> _explicitNullValueIphone = default!;
 #endif
         /// <summary>The web property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink? Web { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink? Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink? _explicitNullValueWeb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink Web { get; set; }
+        public global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink Web { get => _explicitNullValueWeb; set { _explicitNullValueWeb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web"); else _explicitNullProperties?.Remove("web"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.WebAppLink _explicitNullValueWeb = default!;
 #endif
         /// <summary>The windows property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? Windows { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? Windows { get => _explicitNullValueWindows; set { _explicitNullValueWindows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows"); else _explicitNullProperties?.Remove("windows"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? _explicitNullValueWindows = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> Windows { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> Windows { get => _explicitNullValueWindows; set { _explicitNullValueWindows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows"); else _explicitNullProperties?.Remove("windows"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> _explicitNullValueWindows = default!;
 #endif
         /// <summary>The windows_phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink>? WindowsPhone { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink>? WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink>? _explicitNullValueWindowsPhone = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink> WindowsPhone { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink> WindowsPhone { get => _explicitNullValueWindowsPhone; set { _explicitNullValueWindowsPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_phone"); else _explicitNullProperties?.Remove("windows_phone"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink> _explicitNullValueWindowsPhone = default!;
 #endif
         /// <summary>The windows_universal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? WindowsUniversal { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? WindowsUniversal { get => _explicitNullValueWindowsUniversal; set { _explicitNullValueWindowsUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_universal"); else _explicitNullProperties?.Remove("windows_universal"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>? _explicitNullValueWindowsUniversal = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> WindowsUniversal { get; set; }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> WindowsUniversal { get => _explicitNullValueWindowsUniversal; set { _explicitNullValueWindowsUniversal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windows_universal"); else _explicitNullProperties?.Remove("windows_universal"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink> _explicitNullValueWindowsUniversal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.CatalogItemAppLinks"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.CatalogItemAppLinks CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.CatalogItemAppLinks();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.CatalogItemAppLinks(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>("windows", Windows);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.WindowsPhoneAppLink>("windows_phone", WindowsPhone);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.WindowsAppLink>("windows_universal", WindowsUniversal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

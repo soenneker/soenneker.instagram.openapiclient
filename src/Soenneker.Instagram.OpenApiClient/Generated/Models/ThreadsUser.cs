@@ -11,24 +11,37 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ThreadsUser : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("threads_user_id") is { } nullNodeThreadsUserId && nullNodeThreadsUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserId = null;
+            if (parseNode.GetChildNode("threads_user_profile_pic") is { } nullNodeThreadsUserProfilePic && nullNodeThreadsUserProfilePic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserProfilePic = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The threads_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsUserId { get; set; }
+        public string? ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
+        private string? _explicitNullValueThreadsUserId = default!;
 #nullable restore
 #else
-        public string ThreadsUserId { get; set; }
+        public string ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
+        private string _explicitNullValueThreadsUserId = default!;
 #endif
         /// <summary>The threads_user_profile_pic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsUserProfilePic { get; set; }
+        public string? ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
+        private string? _explicitNullValueThreadsUserProfilePic = default!;
 #nullable restore
 #else
-        public string ThreadsUserProfilePic { get; set; }
+        public string ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
+        private string _explicitNullValueThreadsUserProfilePic = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ThreadsUser"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.ThreadsUser CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.ThreadsUser();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.ThreadsUser(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("threads_user_id", ThreadsUserId);
             writer.WriteStringValue("threads_user_profile_pic", ThreadsUserProfilePic);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

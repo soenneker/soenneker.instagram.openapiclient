@@ -11,15 +11,28 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessagingFeatureStatus : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hop_v2") is { } nullNodeHopV2 && nullNodeHopV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HopV2 = null;
+            if (parseNode.GetChildNode("ig_multi_app") is { } nullNodeIgMultiApp && nullNodeIgMultiApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgMultiApp = null;
+            if (parseNode.GetChildNode("msgr_multi_app") is { } nullNodeMsgrMultiApp && nullNodeMsgrMultiApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MsgrMultiApp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The hop_v2 property</summary>
-        public bool? HopV2 { get; set; }
+        public bool? HopV2 { get => _explicitNullValueHopV2; set { _explicitNullValueHopV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hop_v2"); else _explicitNullProperties?.Remove("hop_v2"); } }
+        private bool? _explicitNullValueHopV2 = default!;
         /// <summary>The ig_multi_app property</summary>
-        public bool? IgMultiApp { get; set; }
+        public bool? IgMultiApp { get => _explicitNullValueIgMultiApp; set { _explicitNullValueIgMultiApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_multi_app"); else _explicitNullProperties?.Remove("ig_multi_app"); } }
+        private bool? _explicitNullValueIgMultiApp = default!;
         /// <summary>The msgr_multi_app property</summary>
-        public bool? MsgrMultiApp { get; set; }
+        public bool? MsgrMultiApp { get => _explicitNullValueMsgrMultiApp; set { _explicitNullValueMsgrMultiApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msgr_multi_app"); else _explicitNullProperties?.Remove("msgr_multi_app"); } }
+        private bool? _explicitNullValueMsgrMultiApp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.MessagingFeatureStatus"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public static global::Soenneker.Instagram.OpenApiClient.Models.MessagingFeatureStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Instagram.OpenApiClient.Models.MessagingFeatureStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Instagram.OpenApiClient.Models.MessagingFeatureStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("hop_v2", HopV2);
             writer.WriteBoolValue("ig_multi_app", IgMultiApp);
             writer.WriteBoolValue("msgr_multi_app", MsgrMultiApp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
