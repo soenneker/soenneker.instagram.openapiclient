@@ -8,7 +8,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     public enum ExtendedcreditowningCreditAllocationConfigsLiabilityTypeEnumParam
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "MSA")]
