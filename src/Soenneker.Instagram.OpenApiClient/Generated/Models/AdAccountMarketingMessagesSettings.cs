@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("whatsapp_activation_status") is { } nullNodeWhatsappActivationStatus && nullNodeWhatsappActivationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappActivationStatus = null;
+            if (parseNode.GetChildNode("whatsapp_activation_status") is null) { _explicitNullValueWhatsappActivationStatus = default!; _explicitNullProperties?.Remove("whatsapp_activation_status"); }
+            else if (parseNode.GetChildNode("whatsapp_activation_status") is { } nullNodeWhatsappActivationStatus && nullNodeWhatsappActivationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsappActivationStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The whatsapp_activation_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhatsappActivationStatus { get => _explicitNullValueWhatsappActivationStatus; set { _explicitNullValueWhatsappActivationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_activation_status"); else _explicitNullProperties?.Remove("whatsapp_activation_status"); } }
+        public string? WhatsappActivationStatus { get => _explicitNullValueWhatsappActivationStatus; set { _explicitNullValueWhatsappActivationStatus = value; AdditionalData?.Remove("whatsapp_activation_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_activation_status"); else _explicitNullProperties?.Remove("whatsapp_activation_status"); } }
         private string? _explicitNullValueWhatsappActivationStatus = default!;
 #nullable restore
 #else
-        public string WhatsappActivationStatus { get => _explicitNullValueWhatsappActivationStatus; set { _explicitNullValueWhatsappActivationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_activation_status"); else _explicitNullProperties?.Remove("whatsapp_activation_status"); } }
+        public string WhatsappActivationStatus { get => _explicitNullValueWhatsappActivationStatus; set { _explicitNullValueWhatsappActivationStatus = value; AdditionalData?.Remove("whatsapp_activation_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whatsapp_activation_status"); else _explicitNullProperties?.Remove("whatsapp_activation_status"); } }
         private string _explicitNullValueWhatsappActivationStatus = default!;
 #endif
         /// <summary>

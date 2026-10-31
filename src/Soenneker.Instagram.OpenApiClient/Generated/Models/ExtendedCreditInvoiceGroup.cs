@@ -17,100 +17,109 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("auto_enroll") is { } nullNodeAutoEnroll && nullNodeAutoEnroll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoEnroll = null;
-            if (parseNode.GetChildNode("bill_to_address") is { } nullNodeBillToAddress && nullNodeBillToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillToAddress = null;
-            if (parseNode.GetChildNode("customer_po_number") is { } nullNodeCustomerPoNumber && nullNodeCustomerPoNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPoNumber = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("liable_address") is { } nullNodeLiableAddress && nullNodeLiableAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiableAddress = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("sold_to_address") is { } nullNodeSoldToAddress && nullNodeSoldToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoldToAddress = null;
+            if (parseNode.GetChildNode("auto_enroll") is null) { _explicitNullValueAutoEnroll = default!; _explicitNullProperties?.Remove("auto_enroll"); }
+            else if (parseNode.GetChildNode("auto_enroll") is { } nullNodeAutoEnroll && nullNodeAutoEnroll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoEnroll = null;
+            if (parseNode.GetChildNode("bill_to_address") is null) { _explicitNullValueBillToAddress = default!; _explicitNullProperties?.Remove("bill_to_address"); }
+            else if (parseNode.GetChildNode("bill_to_address") is { } nullNodeBillToAddress && nullNodeBillToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillToAddress = null;
+            if (parseNode.GetChildNode("customer_po_number") is null) { _explicitNullValueCustomerPoNumber = default!; _explicitNullProperties?.Remove("customer_po_number"); }
+            else if (parseNode.GetChildNode("customer_po_number") is { } nullNodeCustomerPoNumber && nullNodeCustomerPoNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPoNumber = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("emails") is null) { _explicitNullValueEmails = default!; _explicitNullProperties?.Remove("emails"); }
+            else if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("liable_address") is null) { _explicitNullValueLiableAddress = default!; _explicitNullProperties?.Remove("liable_address"); }
+            else if (parseNode.GetChildNode("liable_address") is { } nullNodeLiableAddress && nullNodeLiableAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiableAddress = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("sold_to_address") is null) { _explicitNullValueSoldToAddress = default!; _explicitNullProperties?.Remove("sold_to_address"); }
+            else if (parseNode.GetChildNode("sold_to_address") is { } nullNodeSoldToAddress && nullNodeSoldToAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoldToAddress = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The auto_enroll property</summary>
-        public bool? AutoEnroll { get => _explicitNullValueAutoEnroll; set { _explicitNullValueAutoEnroll = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_enroll"); else _explicitNullProperties?.Remove("auto_enroll"); } }
+        public bool? AutoEnroll { get => _explicitNullValueAutoEnroll; set { _explicitNullValueAutoEnroll = value; AdditionalData?.Remove("auto_enroll"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_enroll"); else _explicitNullProperties?.Remove("auto_enroll"); } }
         private bool? _explicitNullValueAutoEnroll = default!;
         /// <summary>The bill_to_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? BillToAddress { get => _explicitNullValueBillToAddress; set { _explicitNullValueBillToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_to_address"); else _explicitNullProperties?.Remove("bill_to_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? BillToAddress { get => _explicitNullValueBillToAddress; set { _explicitNullValueBillToAddress = value; AdditionalData?.Remove("bill_to_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_to_address"); else _explicitNullProperties?.Remove("bill_to_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? _explicitNullValueBillToAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress BillToAddress { get => _explicitNullValueBillToAddress; set { _explicitNullValueBillToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_to_address"); else _explicitNullProperties?.Remove("bill_to_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress BillToAddress { get => _explicitNullValueBillToAddress; set { _explicitNullValueBillToAddress = value; AdditionalData?.Remove("bill_to_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bill_to_address"); else _explicitNullProperties?.Remove("bill_to_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress _explicitNullValueBillToAddress = default!;
 #endif
         /// <summary>The customer_po_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerPoNumber { get => _explicitNullValueCustomerPoNumber; set { _explicitNullValueCustomerPoNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_po_number"); else _explicitNullProperties?.Remove("customer_po_number"); } }
+        public string? CustomerPoNumber { get => _explicitNullValueCustomerPoNumber; set { _explicitNullValueCustomerPoNumber = value; AdditionalData?.Remove("customer_po_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_po_number"); else _explicitNullProperties?.Remove("customer_po_number"); } }
         private string? _explicitNullValueCustomerPoNumber = default!;
 #nullable restore
 #else
-        public string CustomerPoNumber { get => _explicitNullValueCustomerPoNumber; set { _explicitNullValueCustomerPoNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_po_number"); else _explicitNullProperties?.Remove("customer_po_number"); } }
+        public string CustomerPoNumber { get => _explicitNullValueCustomerPoNumber; set { _explicitNullValueCustomerPoNumber = value; AdditionalData?.Remove("customer_po_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customer_po_number"); else _explicitNullProperties?.Remove("customer_po_number"); } }
         private string _explicitNullValueCustomerPoNumber = default!;
 #endif
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditEmail _explicitNullValueEmail = default!;
 #endif
         /// <summary>The emails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public List<string>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private List<string>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<string> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public List<string> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private List<string> _explicitNullValueEmails = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The liable_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? LiableAddress { get => _explicitNullValueLiableAddress; set { _explicitNullValueLiableAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liable_address"); else _explicitNullProperties?.Remove("liable_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? LiableAddress { get => _explicitNullValueLiableAddress; set { _explicitNullValueLiableAddress = value; AdditionalData?.Remove("liable_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liable_address"); else _explicitNullProperties?.Remove("liable_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? _explicitNullValueLiableAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress LiableAddress { get => _explicitNullValueLiableAddress; set { _explicitNullValueLiableAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liable_address"); else _explicitNullProperties?.Remove("liable_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress LiableAddress { get => _explicitNullValueLiableAddress; set { _explicitNullValueLiableAddress = value; AdditionalData?.Remove("liable_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liable_address"); else _explicitNullProperties?.Remove("liable_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress _explicitNullValueLiableAddress = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The sold_to_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? SoldToAddress { get => _explicitNullValueSoldToAddress; set { _explicitNullValueSoldToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sold_to_address"); else _explicitNullProperties?.Remove("sold_to_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? SoldToAddress { get => _explicitNullValueSoldToAddress; set { _explicitNullValueSoldToAddress = value; AdditionalData?.Remove("sold_to_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sold_to_address"); else _explicitNullProperties?.Remove("sold_to_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress? _explicitNullValueSoldToAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress SoldToAddress { get => _explicitNullValueSoldToAddress; set { _explicitNullValueSoldToAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sold_to_address"); else _explicitNullProperties?.Remove("sold_to_address"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress SoldToAddress { get => _explicitNullValueSoldToAddress; set { _explicitNullValueSoldToAddress = value; AdditionalData?.Remove("sold_to_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sold_to_address"); else _explicitNullProperties?.Remove("sold_to_address"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CrmAddress _explicitNullValueSoldToAddress = default!;
 #endif
         /// <summary>

@@ -17,34 +17,37 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_eligible") is { } nullNodeIsEligible && nullNodeIsEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligible = null;
-            if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
-            if (parseNode.GetChildNode("reason_description") is { } nullNodeReasonDescription && nullNodeReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonDescription = null;
+            if (parseNode.GetChildNode("is_eligible") is null) { _explicitNullValueIsEligible = default!; _explicitNullProperties?.Remove("is_eligible"); }
+            else if (parseNode.GetChildNode("is_eligible") is { } nullNodeIsEligible && nullNodeIsEligible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEligible = null;
+            if (parseNode.GetChildNode("reason_code") is null) { _explicitNullValueReasonCode = default!; _explicitNullProperties?.Remove("reason_code"); }
+            else if (parseNode.GetChildNode("reason_code") is { } nullNodeReasonCode && nullNodeReasonCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonCode = null;
+            if (parseNode.GetChildNode("reason_description") is null) { _explicitNullValueReasonDescription = default!; _explicitNullProperties?.Remove("reason_description"); }
+            else if (parseNode.GetChildNode("reason_description") is { } nullNodeReasonDescription && nullNodeReasonDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReasonDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_eligible property</summary>
-        public bool? IsEligible { get => _explicitNullValueIsEligible; set { _explicitNullValueIsEligible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible"); else _explicitNullProperties?.Remove("is_eligible"); } }
+        public bool? IsEligible { get => _explicitNullValueIsEligible; set { _explicitNullValueIsEligible = value; AdditionalData?.Remove("is_eligible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eligible"); else _explicitNullProperties?.Remove("is_eligible"); } }
         private bool? _explicitNullValueIsEligible = default!;
         /// <summary>The reason_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        public string? ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
         private string? _explicitNullValueReasonCode = default!;
 #nullable restore
 #else
-        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
+        public string ReasonCode { get => _explicitNullValueReasonCode; set { _explicitNullValueReasonCode = value; AdditionalData?.Remove("reason_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_code"); else _explicitNullProperties?.Remove("reason_code"); } }
         private string _explicitNullValueReasonCode = default!;
 #endif
         /// <summary>The reason_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
+        public string? ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; AdditionalData?.Remove("reason_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
         private string? _explicitNullValueReasonDescription = default!;
 #nullable restore
 #else
-        public string ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
+        public string ReasonDescription { get => _explicitNullValueReasonDescription; set { _explicitNullValueReasonDescription = value; AdditionalData?.Remove("reason_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason_description"); else _explicitNullProperties?.Remove("reason_description"); } }
         private string _explicitNullValueReasonDescription = default!;
 #endif
         /// <summary>

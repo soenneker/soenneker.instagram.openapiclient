@@ -17,17 +17,19 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_audience") is { } nullNodeCustomAudience && nullNodeCustomAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudience = null;
-            if (parseNode.GetChildNode("lookalike") is { } nullNodeLookalike && nullNodeLookalike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lookalike = null;
+            if (parseNode.GetChildNode("custom_audience") is null) { _explicitNullValueCustomAudience = default!; _explicitNullProperties?.Remove("custom_audience"); }
+            else if (parseNode.GetChildNode("custom_audience") is { } nullNodeCustomAudience && nullNodeCustomAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudience = null;
+            if (parseNode.GetChildNode("lookalike") is null) { _explicitNullValueLookalike = default!; _explicitNullProperties?.Remove("lookalike"); }
+            else if (parseNode.GetChildNode("lookalike") is { } nullNodeLookalike && nullNodeLookalike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lookalike = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_audience property</summary>
-        public long? CustomAudience { get => _explicitNullValueCustomAudience; set { _explicitNullValueCustomAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience"); else _explicitNullProperties?.Remove("custom_audience"); } }
+        public long? CustomAudience { get => _explicitNullValueCustomAudience; set { _explicitNullValueCustomAudience = value; AdditionalData?.Remove("custom_audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_audience"); else _explicitNullProperties?.Remove("custom_audience"); } }
         private long? _explicitNullValueCustomAudience = default!;
         /// <summary>The lookalike property</summary>
-        public long? Lookalike { get => _explicitNullValueLookalike; set { _explicitNullValueLookalike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike"); else _explicitNullProperties?.Remove("lookalike"); } }
+        public long? Lookalike { get => _explicitNullValueLookalike; set { _explicitNullValueLookalike = value; AdditionalData?.Remove("lookalike"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike"); else _explicitNullProperties?.Remove("lookalike"); } }
         private long? _explicitNullValueLookalike = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.TargetingRelaxation"/> and sets the default values.

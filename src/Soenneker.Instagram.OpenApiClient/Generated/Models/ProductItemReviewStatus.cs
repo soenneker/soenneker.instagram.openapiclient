@@ -8,6 +8,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     public enum ProductItemReviewStatus
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "approved")]
         #pragma warning disable CS1591
         Approved,

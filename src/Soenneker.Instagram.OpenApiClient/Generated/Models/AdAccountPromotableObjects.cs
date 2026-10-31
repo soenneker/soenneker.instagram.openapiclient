@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("promotable_app_ids") is { } nullNodePromotableAppIds && nullNodePromotableAppIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableAppIds = null;
-            if (parseNode.GetChildNode("promotable_page_ids") is { } nullNodePromotablePageIds && nullNodePromotablePageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotablePageIds = null;
-            if (parseNode.GetChildNode("promotable_urls") is { } nullNodePromotableUrls && nullNodePromotableUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableUrls = null;
+            if (parseNode.GetChildNode("promotable_app_ids") is null) { _explicitNullValuePromotableAppIds = default!; _explicitNullProperties?.Remove("promotable_app_ids"); }
+            else if (parseNode.GetChildNode("promotable_app_ids") is { } nullNodePromotableAppIds && nullNodePromotableAppIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableAppIds = null;
+            if (parseNode.GetChildNode("promotable_page_ids") is null) { _explicitNullValuePromotablePageIds = default!; _explicitNullProperties?.Remove("promotable_page_ids"); }
+            else if (parseNode.GetChildNode("promotable_page_ids") is { } nullNodePromotablePageIds && nullNodePromotablePageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotablePageIds = null;
+            if (parseNode.GetChildNode("promotable_urls") is null) { _explicitNullValuePromotableUrls = default!; _explicitNullProperties?.Remove("promotable_urls"); }
+            else if (parseNode.GetChildNode("promotable_urls") is { } nullNodePromotableUrls && nullNodePromotableUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromotableUrls = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The promotable_app_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
+        public List<string>? PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; AdditionalData?.Remove("promotable_app_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
         private List<string>? _explicitNullValuePromotableAppIds = default!;
 #nullable restore
 #else
-        public List<string> PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
+        public List<string> PromotableAppIds { get => _explicitNullValuePromotableAppIds; set { _explicitNullValuePromotableAppIds = value; AdditionalData?.Remove("promotable_app_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_app_ids"); else _explicitNullProperties?.Remove("promotable_app_ids"); } }
         private List<string> _explicitNullValuePromotableAppIds = default!;
 #endif
         /// <summary>The promotable_page_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
+        public List<string>? PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; AdditionalData?.Remove("promotable_page_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
         private List<string>? _explicitNullValuePromotablePageIds = default!;
 #nullable restore
 #else
-        public List<string> PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
+        public List<string> PromotablePageIds { get => _explicitNullValuePromotablePageIds; set { _explicitNullValuePromotablePageIds = value; AdditionalData?.Remove("promotable_page_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_page_ids"); else _explicitNullProperties?.Remove("promotable_page_ids"); } }
         private List<string> _explicitNullValuePromotablePageIds = default!;
 #endif
         /// <summary>The promotable_urls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
+        public List<string>? PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; AdditionalData?.Remove("promotable_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
         private List<string>? _explicitNullValuePromotableUrls = default!;
 #nullable restore
 #else
-        public List<string> PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
+        public List<string> PromotableUrls { get => _explicitNullValuePromotableUrls; set { _explicitNullValuePromotableUrls = value; AdditionalData?.Remove("promotable_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promotable_urls"); else _explicitNullProperties?.Remove("promotable_urls"); } }
         private List<string> _explicitNullValuePromotableUrls = default!;
 #endif
         /// <summary>

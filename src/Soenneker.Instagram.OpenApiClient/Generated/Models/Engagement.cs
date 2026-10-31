@@ -17,78 +17,85 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("count_string") is { } nullNodeCountString && nullNodeCountString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountString = null;
-            if (parseNode.GetChildNode("count_string_with_like") is { } nullNodeCountStringWithLike && nullNodeCountStringWithLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountStringWithLike = null;
-            if (parseNode.GetChildNode("count_string_without_like") is { } nullNodeCountStringWithoutLike && nullNodeCountStringWithoutLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountStringWithoutLike = null;
-            if (parseNode.GetChildNode("social_sentence") is { } nullNodeSocialSentence && nullNodeSocialSentence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentence = null;
-            if (parseNode.GetChildNode("social_sentence_with_like") is { } nullNodeSocialSentenceWithLike && nullNodeSocialSentenceWithLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentenceWithLike = null;
-            if (parseNode.GetChildNode("social_sentence_without_like") is { } nullNodeSocialSentenceWithoutLike && nullNodeSocialSentenceWithoutLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentenceWithoutLike = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("count_string") is null) { _explicitNullValueCountString = default!; _explicitNullProperties?.Remove("count_string"); }
+            else if (parseNode.GetChildNode("count_string") is { } nullNodeCountString && nullNodeCountString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountString = null;
+            if (parseNode.GetChildNode("count_string_with_like") is null) { _explicitNullValueCountStringWithLike = default!; _explicitNullProperties?.Remove("count_string_with_like"); }
+            else if (parseNode.GetChildNode("count_string_with_like") is { } nullNodeCountStringWithLike && nullNodeCountStringWithLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountStringWithLike = null;
+            if (parseNode.GetChildNode("count_string_without_like") is null) { _explicitNullValueCountStringWithoutLike = default!; _explicitNullProperties?.Remove("count_string_without_like"); }
+            else if (parseNode.GetChildNode("count_string_without_like") is { } nullNodeCountStringWithoutLike && nullNodeCountStringWithoutLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountStringWithoutLike = null;
+            if (parseNode.GetChildNode("social_sentence") is null) { _explicitNullValueSocialSentence = default!; _explicitNullProperties?.Remove("social_sentence"); }
+            else if (parseNode.GetChildNode("social_sentence") is { } nullNodeSocialSentence && nullNodeSocialSentence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentence = null;
+            if (parseNode.GetChildNode("social_sentence_with_like") is null) { _explicitNullValueSocialSentenceWithLike = default!; _explicitNullProperties?.Remove("social_sentence_with_like"); }
+            else if (parseNode.GetChildNode("social_sentence_with_like") is { } nullNodeSocialSentenceWithLike && nullNodeSocialSentenceWithLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentenceWithLike = null;
+            if (parseNode.GetChildNode("social_sentence_without_like") is null) { _explicitNullValueSocialSentenceWithoutLike = default!; _explicitNullProperties?.Remove("social_sentence_without_like"); }
+            else if (parseNode.GetChildNode("social_sentence_without_like") is { } nullNodeSocialSentenceWithoutLike && nullNodeSocialSentenceWithoutLike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialSentenceWithoutLike = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The count property</summary>
-        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private long? _explicitNullValueCount = default!;
         /// <summary>The count_string property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountString { get => _explicitNullValueCountString; set { _explicitNullValueCountString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string"); else _explicitNullProperties?.Remove("count_string"); } }
+        public string? CountString { get => _explicitNullValueCountString; set { _explicitNullValueCountString = value; AdditionalData?.Remove("count_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string"); else _explicitNullProperties?.Remove("count_string"); } }
         private string? _explicitNullValueCountString = default!;
 #nullable restore
 #else
-        public string CountString { get => _explicitNullValueCountString; set { _explicitNullValueCountString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string"); else _explicitNullProperties?.Remove("count_string"); } }
+        public string CountString { get => _explicitNullValueCountString; set { _explicitNullValueCountString = value; AdditionalData?.Remove("count_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string"); else _explicitNullProperties?.Remove("count_string"); } }
         private string _explicitNullValueCountString = default!;
 #endif
         /// <summary>The count_string_with_like property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountStringWithLike { get => _explicitNullValueCountStringWithLike; set { _explicitNullValueCountStringWithLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_with_like"); else _explicitNullProperties?.Remove("count_string_with_like"); } }
+        public string? CountStringWithLike { get => _explicitNullValueCountStringWithLike; set { _explicitNullValueCountStringWithLike = value; AdditionalData?.Remove("count_string_with_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_with_like"); else _explicitNullProperties?.Remove("count_string_with_like"); } }
         private string? _explicitNullValueCountStringWithLike = default!;
 #nullable restore
 #else
-        public string CountStringWithLike { get => _explicitNullValueCountStringWithLike; set { _explicitNullValueCountStringWithLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_with_like"); else _explicitNullProperties?.Remove("count_string_with_like"); } }
+        public string CountStringWithLike { get => _explicitNullValueCountStringWithLike; set { _explicitNullValueCountStringWithLike = value; AdditionalData?.Remove("count_string_with_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_with_like"); else _explicitNullProperties?.Remove("count_string_with_like"); } }
         private string _explicitNullValueCountStringWithLike = default!;
 #endif
         /// <summary>The count_string_without_like property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountStringWithoutLike { get => _explicitNullValueCountStringWithoutLike; set { _explicitNullValueCountStringWithoutLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_without_like"); else _explicitNullProperties?.Remove("count_string_without_like"); } }
+        public string? CountStringWithoutLike { get => _explicitNullValueCountStringWithoutLike; set { _explicitNullValueCountStringWithoutLike = value; AdditionalData?.Remove("count_string_without_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_without_like"); else _explicitNullProperties?.Remove("count_string_without_like"); } }
         private string? _explicitNullValueCountStringWithoutLike = default!;
 #nullable restore
 #else
-        public string CountStringWithoutLike { get => _explicitNullValueCountStringWithoutLike; set { _explicitNullValueCountStringWithoutLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_without_like"); else _explicitNullProperties?.Remove("count_string_without_like"); } }
+        public string CountStringWithoutLike { get => _explicitNullValueCountStringWithoutLike; set { _explicitNullValueCountStringWithoutLike = value; AdditionalData?.Remove("count_string_without_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count_string_without_like"); else _explicitNullProperties?.Remove("count_string_without_like"); } }
         private string _explicitNullValueCountStringWithoutLike = default!;
 #endif
         /// <summary>The social_sentence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SocialSentence { get => _explicitNullValueSocialSentence; set { _explicitNullValueSocialSentence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence"); else _explicitNullProperties?.Remove("social_sentence"); } }
+        public string? SocialSentence { get => _explicitNullValueSocialSentence; set { _explicitNullValueSocialSentence = value; AdditionalData?.Remove("social_sentence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence"); else _explicitNullProperties?.Remove("social_sentence"); } }
         private string? _explicitNullValueSocialSentence = default!;
 #nullable restore
 #else
-        public string SocialSentence { get => _explicitNullValueSocialSentence; set { _explicitNullValueSocialSentence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence"); else _explicitNullProperties?.Remove("social_sentence"); } }
+        public string SocialSentence { get => _explicitNullValueSocialSentence; set { _explicitNullValueSocialSentence = value; AdditionalData?.Remove("social_sentence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence"); else _explicitNullProperties?.Remove("social_sentence"); } }
         private string _explicitNullValueSocialSentence = default!;
 #endif
         /// <summary>The social_sentence_with_like property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SocialSentenceWithLike { get => _explicitNullValueSocialSentenceWithLike; set { _explicitNullValueSocialSentenceWithLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_with_like"); else _explicitNullProperties?.Remove("social_sentence_with_like"); } }
+        public string? SocialSentenceWithLike { get => _explicitNullValueSocialSentenceWithLike; set { _explicitNullValueSocialSentenceWithLike = value; AdditionalData?.Remove("social_sentence_with_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_with_like"); else _explicitNullProperties?.Remove("social_sentence_with_like"); } }
         private string? _explicitNullValueSocialSentenceWithLike = default!;
 #nullable restore
 #else
-        public string SocialSentenceWithLike { get => _explicitNullValueSocialSentenceWithLike; set { _explicitNullValueSocialSentenceWithLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_with_like"); else _explicitNullProperties?.Remove("social_sentence_with_like"); } }
+        public string SocialSentenceWithLike { get => _explicitNullValueSocialSentenceWithLike; set { _explicitNullValueSocialSentenceWithLike = value; AdditionalData?.Remove("social_sentence_with_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_with_like"); else _explicitNullProperties?.Remove("social_sentence_with_like"); } }
         private string _explicitNullValueSocialSentenceWithLike = default!;
 #endif
         /// <summary>The social_sentence_without_like property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SocialSentenceWithoutLike { get => _explicitNullValueSocialSentenceWithoutLike; set { _explicitNullValueSocialSentenceWithoutLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_without_like"); else _explicitNullProperties?.Remove("social_sentence_without_like"); } }
+        public string? SocialSentenceWithoutLike { get => _explicitNullValueSocialSentenceWithoutLike; set { _explicitNullValueSocialSentenceWithoutLike = value; AdditionalData?.Remove("social_sentence_without_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_without_like"); else _explicitNullProperties?.Remove("social_sentence_without_like"); } }
         private string? _explicitNullValueSocialSentenceWithoutLike = default!;
 #nullable restore
 #else
-        public string SocialSentenceWithoutLike { get => _explicitNullValueSocialSentenceWithoutLike; set { _explicitNullValueSocialSentenceWithoutLike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_without_like"); else _explicitNullProperties?.Remove("social_sentence_without_like"); } }
+        public string SocialSentenceWithoutLike { get => _explicitNullValueSocialSentenceWithoutLike; set { _explicitNullValueSocialSentenceWithoutLike = value; AdditionalData?.Remove("social_sentence_without_like"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("social_sentence_without_like"); else _explicitNullProperties?.Remove("social_sentence_without_like"); } }
         private string _explicitNullValueSocialSentenceWithoutLike = default!;
 #endif
         /// <summary>

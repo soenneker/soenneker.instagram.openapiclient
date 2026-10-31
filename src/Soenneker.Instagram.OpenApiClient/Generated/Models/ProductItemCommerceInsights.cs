@@ -17,21 +17,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("message_sends") is { } nullNodeMessageSends && nullNodeMessageSends.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageSends = null;
-            if (parseNode.GetChildNode("organic_impressions") is { } nullNodeOrganicImpressions && nullNodeOrganicImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganicImpressions = null;
-            if (parseNode.GetChildNode("paid_impressions") is { } nullNodePaidImpressions && nullNodePaidImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidImpressions = null;
+            if (parseNode.GetChildNode("message_sends") is null) { _explicitNullValueMessageSends = default!; _explicitNullProperties?.Remove("message_sends"); }
+            else if (parseNode.GetChildNode("message_sends") is { } nullNodeMessageSends && nullNodeMessageSends.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageSends = null;
+            if (parseNode.GetChildNode("organic_impressions") is null) { _explicitNullValueOrganicImpressions = default!; _explicitNullProperties?.Remove("organic_impressions"); }
+            else if (parseNode.GetChildNode("organic_impressions") is { } nullNodeOrganicImpressions && nullNodeOrganicImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganicImpressions = null;
+            if (parseNode.GetChildNode("paid_impressions") is null) { _explicitNullValuePaidImpressions = default!; _explicitNullProperties?.Remove("paid_impressions"); }
+            else if (parseNode.GetChildNode("paid_impressions") is { } nullNodePaidImpressions && nullNodePaidImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidImpressions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The message_sends property</summary>
-        public long? MessageSends { get => _explicitNullValueMessageSends; set { _explicitNullValueMessageSends = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_sends"); else _explicitNullProperties?.Remove("message_sends"); } }
+        public long? MessageSends { get => _explicitNullValueMessageSends; set { _explicitNullValueMessageSends = value; AdditionalData?.Remove("message_sends"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_sends"); else _explicitNullProperties?.Remove("message_sends"); } }
         private long? _explicitNullValueMessageSends = default!;
         /// <summary>The organic_impressions property</summary>
-        public long? OrganicImpressions { get => _explicitNullValueOrganicImpressions; set { _explicitNullValueOrganicImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organic_impressions"); else _explicitNullProperties?.Remove("organic_impressions"); } }
+        public long? OrganicImpressions { get => _explicitNullValueOrganicImpressions; set { _explicitNullValueOrganicImpressions = value; AdditionalData?.Remove("organic_impressions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organic_impressions"); else _explicitNullProperties?.Remove("organic_impressions"); } }
         private long? _explicitNullValueOrganicImpressions = default!;
         /// <summary>The paid_impressions property</summary>
-        public long? PaidImpressions { get => _explicitNullValuePaidImpressions; set { _explicitNullValuePaidImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_impressions"); else _explicitNullProperties?.Remove("paid_impressions"); } }
+        public long? PaidImpressions { get => _explicitNullValuePaidImpressions; set { _explicitNullValuePaidImpressions = value; AdditionalData?.Remove("paid_impressions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paid_impressions"); else _explicitNullProperties?.Remove("paid_impressions"); } }
         private long? _explicitNullValuePaidImpressions = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.ProductItemCommerceInsights"/> and sets the default values.

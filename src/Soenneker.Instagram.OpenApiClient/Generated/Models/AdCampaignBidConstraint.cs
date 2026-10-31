@@ -17,13 +17,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("roas_average_floor") is { } nullNodeRoasAverageFloor && nullNodeRoasAverageFloor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoasAverageFloor = null;
+            if (parseNode.GetChildNode("roas_average_floor") is null) { _explicitNullValueRoasAverageFloor = default!; _explicitNullProperties?.Remove("roas_average_floor"); }
+            else if (parseNode.GetChildNode("roas_average_floor") is { } nullNodeRoasAverageFloor && nullNodeRoasAverageFloor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoasAverageFloor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The roas_average_floor property</summary>
-        public long? RoasAverageFloor { get => _explicitNullValueRoasAverageFloor; set { _explicitNullValueRoasAverageFloor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roas_average_floor"); else _explicitNullProperties?.Remove("roas_average_floor"); } }
+        public long? RoasAverageFloor { get => _explicitNullValueRoasAverageFloor; set { _explicitNullValueRoasAverageFloor = value; AdditionalData?.Remove("roas_average_floor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roas_average_floor"); else _explicitNullProperties?.Remove("roas_average_floor"); } }
         private long? _explicitNullValueRoasAverageFloor = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignBidConstraint"/> and sets the default values.

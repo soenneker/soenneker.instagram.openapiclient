@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("max_balance") is { } nullNodeMaxBalance && nullNodeMaxBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBalance = null;
-            if (parseNode.GetChildNode("receiving_credit_allocation_config") is { } nullNodeReceivingCreditAllocationConfig && nullNodeReceivingCreditAllocationConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingCreditAllocationConfig = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("max_balance") is null) { _explicitNullValueMaxBalance = default!; _explicitNullProperties?.Remove("max_balance"); }
+            else if (parseNode.GetChildNode("max_balance") is { } nullNodeMaxBalance && nullNodeMaxBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBalance = null;
+            if (parseNode.GetChildNode("receiving_credit_allocation_config") is null) { _explicitNullValueReceivingCreditAllocationConfig = default!; _explicitNullProperties?.Remove("receiving_credit_allocation_config"); }
+            else if (parseNode.GetChildNode("receiving_credit_allocation_config") is { } nullNodeReceivingCreditAllocationConfig && nullNodeReceivingCreditAllocationConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReceivingCreditAllocationConfig = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The max_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount? MaxBalance { get => _explicitNullValueMaxBalance; set { _explicitNullValueMaxBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_balance"); else _explicitNullProperties?.Remove("max_balance"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount? MaxBalance { get => _explicitNullValueMaxBalance; set { _explicitNullValueMaxBalance = value; AdditionalData?.Remove("max_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_balance"); else _explicitNullProperties?.Remove("max_balance"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount? _explicitNullValueMaxBalance = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount MaxBalance { get => _explicitNullValueMaxBalance; set { _explicitNullValueMaxBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_balance"); else _explicitNullProperties?.Remove("max_balance"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount MaxBalance { get => _explicitNullValueMaxBalance; set { _explicitNullValueMaxBalance = value; AdditionalData?.Remove("max_balance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_balance"); else _explicitNullProperties?.Remove("max_balance"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.CurrencyAmount _explicitNullValueMaxBalance = default!;
 #endif
         /// <summary>The receiving_credit_allocation_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig? ReceivingCreditAllocationConfig { get => _explicitNullValueReceivingCreditAllocationConfig; set { _explicitNullValueReceivingCreditAllocationConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_credit_allocation_config"); else _explicitNullProperties?.Remove("receiving_credit_allocation_config"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig? ReceivingCreditAllocationConfig { get => _explicitNullValueReceivingCreditAllocationConfig; set { _explicitNullValueReceivingCreditAllocationConfig = value; AdditionalData?.Remove("receiving_credit_allocation_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_credit_allocation_config"); else _explicitNullProperties?.Remove("receiving_credit_allocation_config"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig? _explicitNullValueReceivingCreditAllocationConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig ReceivingCreditAllocationConfig { get => _explicitNullValueReceivingCreditAllocationConfig; set { _explicitNullValueReceivingCreditAllocationConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_credit_allocation_config"); else _explicitNullProperties?.Remove("receiving_credit_allocation_config"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig ReceivingCreditAllocationConfig { get => _explicitNullValueReceivingCreditAllocationConfig; set { _explicitNullValueReceivingCreditAllocationConfig = value; AdditionalData?.Remove("receiving_credit_allocation_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receiving_credit_allocation_config"); else _explicitNullProperties?.Remove("receiving_credit_allocation_config"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.ExtendedCreditAllocationConfig _explicitNullValueReceivingCreditAllocationConfig = default!;
 #endif
         /// <summary>

@@ -17,27 +17,30 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("is_all_trending") is { } nullNodeIsAllTrending && nullNodeIsAllTrending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAllTrending = null;
-            if (parseNode.GetChildNode("is_special_budget_alloc") is { } nullNodeIsSpecialBudgetAlloc && nullNodeIsSpecialBudgetAlloc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSpecialBudgetAlloc = null;
-            if (parseNode.GetChildNode("trending_topics") is { } nullNodeTrendingTopics && nullNodeTrendingTopics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingTopics = null;
+            if (parseNode.GetChildNode("is_all_trending") is null) { _explicitNullValueIsAllTrending = default!; _explicitNullProperties?.Remove("is_all_trending"); }
+            else if (parseNode.GetChildNode("is_all_trending") is { } nullNodeIsAllTrending && nullNodeIsAllTrending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAllTrending = null;
+            if (parseNode.GetChildNode("is_special_budget_alloc") is null) { _explicitNullValueIsSpecialBudgetAlloc = default!; _explicitNullProperties?.Remove("is_special_budget_alloc"); }
+            else if (parseNode.GetChildNode("is_special_budget_alloc") is { } nullNodeIsSpecialBudgetAlloc && nullNodeIsSpecialBudgetAlloc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSpecialBudgetAlloc = null;
+            if (parseNode.GetChildNode("trending_topics") is null) { _explicitNullValueTrendingTopics = default!; _explicitNullProperties?.Remove("trending_topics"); }
+            else if (parseNode.GetChildNode("trending_topics") is { } nullNodeTrendingTopics && nullNodeTrendingTopics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingTopics = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The is_all_trending property</summary>
-        public bool? IsAllTrending { get => _explicitNullValueIsAllTrending; set { _explicitNullValueIsAllTrending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_all_trending"); else _explicitNullProperties?.Remove("is_all_trending"); } }
+        public bool? IsAllTrending { get => _explicitNullValueIsAllTrending; set { _explicitNullValueIsAllTrending = value; AdditionalData?.Remove("is_all_trending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_all_trending"); else _explicitNullProperties?.Remove("is_all_trending"); } }
         private bool? _explicitNullValueIsAllTrending = default!;
         /// <summary>The is_special_budget_alloc property</summary>
-        public bool? IsSpecialBudgetAlloc { get => _explicitNullValueIsSpecialBudgetAlloc; set { _explicitNullValueIsSpecialBudgetAlloc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_special_budget_alloc"); else _explicitNullProperties?.Remove("is_special_budget_alloc"); } }
+        public bool? IsSpecialBudgetAlloc { get => _explicitNullValueIsSpecialBudgetAlloc; set { _explicitNullValueIsSpecialBudgetAlloc = value; AdditionalData?.Remove("is_special_budget_alloc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_special_budget_alloc"); else _explicitNullProperties?.Remove("is_special_budget_alloc"); } }
         private bool? _explicitNullValueIsSpecialBudgetAlloc = default!;
         /// <summary>The trending_topics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TrendingTopics { get => _explicitNullValueTrendingTopics; set { _explicitNullValueTrendingTopics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trending_topics"); else _explicitNullProperties?.Remove("trending_topics"); } }
+        public List<string>? TrendingTopics { get => _explicitNullValueTrendingTopics; set { _explicitNullValueTrendingTopics = value; AdditionalData?.Remove("trending_topics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trending_topics"); else _explicitNullProperties?.Remove("trending_topics"); } }
         private List<string>? _explicitNullValueTrendingTopics = default!;
 #nullable restore
 #else
-        public List<string> TrendingTopics { get => _explicitNullValueTrendingTopics; set { _explicitNullValueTrendingTopics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trending_topics"); else _explicitNullProperties?.Remove("trending_topics"); } }
+        public List<string> TrendingTopics { get => _explicitNullValueTrendingTopics; set { _explicitNullValueTrendingTopics = value; AdditionalData?.Remove("trending_topics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trending_topics"); else _explicitNullProperties?.Remove("trending_topics"); } }
         private List<string> _explicitNullValueTrendingTopics = default!;
 #endif
         /// <summary>

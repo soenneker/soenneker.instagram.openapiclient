@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("file_handle") is { } nullNodeFileHandle && nullNodeFileHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileHandle = null;
-            if (parseNode.GetChildNode("report_status") is { } nullNodeReportStatus && nullNodeReportStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportStatus = null;
+            if (parseNode.GetChildNode("file_handle") is null) { _explicitNullValueFileHandle = default!; _explicitNullProperties?.Remove("file_handle"); }
+            else if (parseNode.GetChildNode("file_handle") is { } nullNodeFileHandle && nullNodeFileHandle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileHandle = null;
+            if (parseNode.GetChildNode("report_status") is null) { _explicitNullValueReportStatus = default!; _explicitNullProperties?.Remove("report_status"); }
+            else if (parseNode.GetChildNode("report_status") is { } nullNodeReportStatus && nullNodeReportStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The file_handle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileHandle { get => _explicitNullValueFileHandle; set { _explicitNullValueFileHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_handle"); else _explicitNullProperties?.Remove("file_handle"); } }
+        public string? FileHandle { get => _explicitNullValueFileHandle; set { _explicitNullValueFileHandle = value; AdditionalData?.Remove("file_handle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_handle"); else _explicitNullProperties?.Remove("file_handle"); } }
         private string? _explicitNullValueFileHandle = default!;
 #nullable restore
 #else
-        public string FileHandle { get => _explicitNullValueFileHandle; set { _explicitNullValueFileHandle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_handle"); else _explicitNullProperties?.Remove("file_handle"); } }
+        public string FileHandle { get => _explicitNullValueFileHandle; set { _explicitNullValueFileHandle = value; AdditionalData?.Remove("file_handle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_handle"); else _explicitNullProperties?.Remove("file_handle"); } }
         private string _explicitNullValueFileHandle = default!;
 #endif
         /// <summary>The report_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportStatus { get => _explicitNullValueReportStatus; set { _explicitNullValueReportStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_status"); else _explicitNullProperties?.Remove("report_status"); } }
+        public string? ReportStatus { get => _explicitNullValueReportStatus; set { _explicitNullValueReportStatus = value; AdditionalData?.Remove("report_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_status"); else _explicitNullProperties?.Remove("report_status"); } }
         private string? _explicitNullValueReportStatus = default!;
 #nullable restore
 #else
-        public string ReportStatus { get => _explicitNullValueReportStatus; set { _explicitNullValueReportStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_status"); else _explicitNullProperties?.Remove("report_status"); } }
+        public string ReportStatus { get => _explicitNullValueReportStatus; set { _explicitNullValueReportStatus = value; AdditionalData?.Remove("report_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_status"); else _explicitNullProperties?.Remove("report_status"); } }
         private string _explicitNullValueReportStatus = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dataset_name") is { } nullNodeDatasetName && nullNodeDatasetName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasetName = null;
+            if (parseNode.GetChildNode("dataset_name") is null) { _explicitNullValueDatasetName = default!; _explicitNullProperties?.Remove("dataset_name"); }
+            else if (parseNode.GetChildNode("dataset_name") is { } nullNodeDatasetName && nullNodeDatasetName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasetName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The dataset_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatasetName { get => _explicitNullValueDatasetName; set { _explicitNullValueDatasetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataset_name"); else _explicitNullProperties?.Remove("dataset_name"); } }
+        public string? DatasetName { get => _explicitNullValueDatasetName; set { _explicitNullValueDatasetName = value; AdditionalData?.Remove("dataset_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataset_name"); else _explicitNullProperties?.Remove("dataset_name"); } }
         private string? _explicitNullValueDatasetName = default!;
 #nullable restore
 #else
-        public string DatasetName { get => _explicitNullValueDatasetName; set { _explicitNullValueDatasetName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataset_name"); else _explicitNullProperties?.Remove("dataset_name"); } }
+        public string DatasetName { get => _explicitNullValueDatasetName; set { _explicitNullValueDatasetName = value; AdditionalData?.Remove("dataset_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataset_name"); else _explicitNullProperties?.Remove("dataset_name"); } }
         private string _explicitNullValueDatasetName = default!;
 #endif
         /// <summary>

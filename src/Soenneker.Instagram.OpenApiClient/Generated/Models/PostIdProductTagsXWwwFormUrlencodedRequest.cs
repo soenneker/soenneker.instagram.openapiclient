@@ -17,23 +17,25 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("child_index") is { } nullNodeChildIndex && nullNodeChildIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildIndex = null;
-            if (parseNode.GetChildNode("updated_tags") is { } nullNodeUpdatedTags && nullNodeUpdatedTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTags = null;
+            if (parseNode.GetChildNode("child_index") is null) { _explicitNullValueChildIndex = default!; _explicitNullProperties?.Remove("child_index"); }
+            else if (parseNode.GetChildNode("child_index") is { } nullNodeChildIndex && nullNodeChildIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildIndex = null;
+            if (parseNode.GetChildNode("updated_tags") is null) { _explicitNullValueUpdatedTags = default!; _explicitNullProperties?.Remove("updated_tags"); }
+            else if (parseNode.GetChildNode("updated_tags") is { } nullNodeUpdatedTags && nullNodeUpdatedTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedTags = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The child_index property</summary>
-        public long? ChildIndex { get => _explicitNullValueChildIndex; set { _explicitNullValueChildIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("child_index"); else _explicitNullProperties?.Remove("child_index"); } }
+        public long? ChildIndex { get => _explicitNullValueChildIndex; set { _explicitNullValueChildIndex = value; AdditionalData?.Remove("child_index"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("child_index"); else _explicitNullProperties?.Remove("child_index"); } }
         private long? _explicitNullValueChildIndex = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedTags { get => _explicitNullValueUpdatedTags; set { _explicitNullValueUpdatedTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_tags"); else _explicitNullProperties?.Remove("updated_tags"); } }
+        public string? UpdatedTags { get => _explicitNullValueUpdatedTags; set { _explicitNullValueUpdatedTags = value; AdditionalData?.Remove("updated_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_tags"); else _explicitNullProperties?.Remove("updated_tags"); } }
         private string? _explicitNullValueUpdatedTags = default!;
 #nullable restore
 #else
-        public string UpdatedTags { get => _explicitNullValueUpdatedTags; set { _explicitNullValueUpdatedTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_tags"); else _explicitNullProperties?.Remove("updated_tags"); } }
+        public string UpdatedTags { get => _explicitNullValueUpdatedTags; set { _explicitNullValueUpdatedTags = value; AdditionalData?.Remove("updated_tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_tags"); else _explicitNullProperties?.Remove("updated_tags"); } }
         private string _explicitNullValueUpdatedTags = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("processing_phase") is { } nullNodeProcessingPhase && nullNodeProcessingPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingPhase = null;
-            if (parseNode.GetChildNode("uploading_phase") is { } nullNodeUploadingPhase && nullNodeUploadingPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadingPhase = null;
+            if (parseNode.GetChildNode("processing_phase") is null) { _explicitNullValueProcessingPhase = default!; _explicitNullProperties?.Remove("processing_phase"); }
+            else if (parseNode.GetChildNode("processing_phase") is { } nullNodeProcessingPhase && nullNodeProcessingPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessingPhase = null;
+            if (parseNode.GetChildNode("uploading_phase") is null) { _explicitNullValueUploadingPhase = default!; _explicitNullProperties?.Remove("uploading_phase"); }
+            else if (parseNode.GetChildNode("uploading_phase") is { } nullNodeUploadingPhase && nullNodeUploadingPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadingPhase = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The processing_phase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase? ProcessingPhase { get => _explicitNullValueProcessingPhase; set { _explicitNullValueProcessingPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_phase"); else _explicitNullProperties?.Remove("processing_phase"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase? ProcessingPhase { get => _explicitNullValueProcessingPhase; set { _explicitNullValueProcessingPhase = value; AdditionalData?.Remove("processing_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_phase"); else _explicitNullProperties?.Remove("processing_phase"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase? _explicitNullValueProcessingPhase = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase ProcessingPhase { get => _explicitNullValueProcessingPhase; set { _explicitNullValueProcessingPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_phase"); else _explicitNullProperties?.Remove("processing_phase"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase ProcessingPhase { get => _explicitNullValueProcessingPhase; set { _explicitNullValueProcessingPhase = value; AdditionalData?.Remove("processing_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processing_phase"); else _explicitNullProperties?.Remove("processing_phase"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase _explicitNullValueProcessingPhase = default!;
 #endif
         /// <summary>The uploading_phase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase? UploadingPhase { get => _explicitNullValueUploadingPhase; set { _explicitNullValueUploadingPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploading_phase"); else _explicitNullProperties?.Remove("uploading_phase"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase? UploadingPhase { get => _explicitNullValueUploadingPhase; set { _explicitNullValueUploadingPhase = value; AdditionalData?.Remove("uploading_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploading_phase"); else _explicitNullProperties?.Remove("uploading_phase"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase? _explicitNullValueUploadingPhase = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase UploadingPhase { get => _explicitNullValueUploadingPhase; set { _explicitNullValueUploadingPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploading_phase"); else _explicitNullProperties?.Remove("uploading_phase"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase UploadingPhase { get => _explicitNullValueUploadingPhase; set { _explicitNullValueUploadingPhase = value; AdditionalData?.Remove("uploading_phase"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploading_phase"); else _explicitNullProperties?.Remove("uploading_phase"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusUploadingPhase _explicitNullValueUploadingPhase = default!;
 #endif
         /// <summary>

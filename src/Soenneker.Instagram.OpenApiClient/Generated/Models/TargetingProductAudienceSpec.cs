@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("exclusions") is { } nullNodeExclusions && nullNodeExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exclusions = null;
-            if (parseNode.GetChildNode("inclusions") is { } nullNodeInclusions && nullNodeInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inclusions = null;
-            if (parseNode.GetChildNode("product_set_id") is { } nullNodeProductSetId && nullNodeProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSetId = null;
+            if (parseNode.GetChildNode("exclusions") is null) { _explicitNullValueExclusions = default!; _explicitNullProperties?.Remove("exclusions"); }
+            else if (parseNode.GetChildNode("exclusions") is { } nullNodeExclusions && nullNodeExclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exclusions = null;
+            if (parseNode.GetChildNode("inclusions") is null) { _explicitNullValueInclusions = default!; _explicitNullProperties?.Remove("inclusions"); }
+            else if (parseNode.GetChildNode("inclusions") is { } nullNodeInclusions && nullNodeInclusions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inclusions = null;
+            if (parseNode.GetChildNode("product_set_id") is null) { _explicitNullValueProductSetId = default!; _explicitNullProperties?.Remove("product_set_id"); }
+            else if (parseNode.GetChildNode("product_set_id") is { } nullNodeProductSetId && nullNodeProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSetId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The exclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? Exclusions { get => _explicitNullValueExclusions; set { _explicitNullValueExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusions"); else _explicitNullProperties?.Remove("exclusions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? Exclusions { get => _explicitNullValueExclusions; set { _explicitNullValueExclusions = value; AdditionalData?.Remove("exclusions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusions"); else _explicitNullProperties?.Remove("exclusions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? _explicitNullValueExclusions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> Exclusions { get => _explicitNullValueExclusions; set { _explicitNullValueExclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusions"); else _explicitNullProperties?.Remove("exclusions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> Exclusions { get => _explicitNullValueExclusions; set { _explicitNullValueExclusions = value; AdditionalData?.Remove("exclusions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusions"); else _explicitNullProperties?.Remove("exclusions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> _explicitNullValueExclusions = default!;
 #endif
         /// <summary>The inclusions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? Inclusions { get => _explicitNullValueInclusions; set { _explicitNullValueInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusions"); else _explicitNullProperties?.Remove("inclusions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? Inclusions { get => _explicitNullValueInclusions; set { _explicitNullValueInclusions = value; AdditionalData?.Remove("inclusions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusions"); else _explicitNullProperties?.Remove("inclusions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec>? _explicitNullValueInclusions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> Inclusions { get => _explicitNullValueInclusions; set { _explicitNullValueInclusions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusions"); else _explicitNullProperties?.Remove("inclusions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> Inclusions { get => _explicitNullValueInclusions; set { _explicitNullValueInclusions = value; AdditionalData?.Remove("inclusions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusions"); else _explicitNullProperties?.Remove("inclusions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingProductAudienceSubSpec> _explicitNullValueInclusions = default!;
 #endif
         /// <summary>The product_set_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductSetId { get => _explicitNullValueProductSetId; set { _explicitNullValueProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_id"); else _explicitNullProperties?.Remove("product_set_id"); } }
+        public string? ProductSetId { get => _explicitNullValueProductSetId; set { _explicitNullValueProductSetId = value; AdditionalData?.Remove("product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_id"); else _explicitNullProperties?.Remove("product_set_id"); } }
         private string? _explicitNullValueProductSetId = default!;
 #nullable restore
 #else
-        public string ProductSetId { get => _explicitNullValueProductSetId; set { _explicitNullValueProductSetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_id"); else _explicitNullProperties?.Remove("product_set_id"); } }
+        public string ProductSetId { get => _explicitNullValueProductSetId; set { _explicitNullValueProductSetId = value; AdditionalData?.Remove("product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_set_id"); else _explicitNullProperties?.Remove("product_set_id"); } }
         private string _explicitNullValueProductSetId = default!;
 #endif
         /// <summary>

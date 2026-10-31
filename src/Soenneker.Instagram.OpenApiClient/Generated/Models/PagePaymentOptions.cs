@@ -17,29 +17,34 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amex") is { } nullNodeAmex && nullNodeAmex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amex = null;
-            if (parseNode.GetChildNode("cash_only") is { } nullNodeCashOnly && nullNodeCashOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashOnly = null;
-            if (parseNode.GetChildNode("discover") is { } nullNodeDiscover && nullNodeDiscover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discover = null;
-            if (parseNode.GetChildNode("mastercard") is { } nullNodeMastercard && nullNodeMastercard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mastercard = null;
-            if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
+            if (parseNode.GetChildNode("amex") is null) { _explicitNullValueAmex = default!; _explicitNullProperties?.Remove("amex"); }
+            else if (parseNode.GetChildNode("amex") is { } nullNodeAmex && nullNodeAmex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amex = null;
+            if (parseNode.GetChildNode("cash_only") is null) { _explicitNullValueCashOnly = default!; _explicitNullProperties?.Remove("cash_only"); }
+            else if (parseNode.GetChildNode("cash_only") is { } nullNodeCashOnly && nullNodeCashOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CashOnly = null;
+            if (parseNode.GetChildNode("discover") is null) { _explicitNullValueDiscover = default!; _explicitNullProperties?.Remove("discover"); }
+            else if (parseNode.GetChildNode("discover") is { } nullNodeDiscover && nullNodeDiscover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discover = null;
+            if (parseNode.GetChildNode("mastercard") is null) { _explicitNullValueMastercard = default!; _explicitNullProperties?.Remove("mastercard"); }
+            else if (parseNode.GetChildNode("mastercard") is { } nullNodeMastercard && nullNodeMastercard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mastercard = null;
+            if (parseNode.GetChildNode("visa") is null) { _explicitNullValueVisa = default!; _explicitNullProperties?.Remove("visa"); }
+            else if (parseNode.GetChildNode("visa") is { } nullNodeVisa && nullNodeVisa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visa = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amex property</summary>
-        public long? Amex { get => _explicitNullValueAmex; set { _explicitNullValueAmex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex"); else _explicitNullProperties?.Remove("amex"); } }
+        public long? Amex { get => _explicitNullValueAmex; set { _explicitNullValueAmex = value; AdditionalData?.Remove("amex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amex"); else _explicitNullProperties?.Remove("amex"); } }
         private long? _explicitNullValueAmex = default!;
         /// <summary>The cash_only property</summary>
-        public long? CashOnly { get => _explicitNullValueCashOnly; set { _explicitNullValueCashOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_only"); else _explicitNullProperties?.Remove("cash_only"); } }
+        public long? CashOnly { get => _explicitNullValueCashOnly; set { _explicitNullValueCashOnly = value; AdditionalData?.Remove("cash_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cash_only"); else _explicitNullProperties?.Remove("cash_only"); } }
         private long? _explicitNullValueCashOnly = default!;
         /// <summary>The discover property</summary>
-        public long? Discover { get => _explicitNullValueDiscover; set { _explicitNullValueDiscover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discover"); else _explicitNullProperties?.Remove("discover"); } }
+        public long? Discover { get => _explicitNullValueDiscover; set { _explicitNullValueDiscover = value; AdditionalData?.Remove("discover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discover"); else _explicitNullProperties?.Remove("discover"); } }
         private long? _explicitNullValueDiscover = default!;
         /// <summary>The mastercard property</summary>
-        public long? Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
+        public long? Mastercard { get => _explicitNullValueMastercard; set { _explicitNullValueMastercard = value; AdditionalData?.Remove("mastercard"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mastercard"); else _explicitNullProperties?.Remove("mastercard"); } }
         private long? _explicitNullValueMastercard = default!;
         /// <summary>The visa property</summary>
-        public long? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
+        public long? Visa { get => _explicitNullValueVisa; set { _explicitNullValueVisa = value; AdditionalData?.Remove("visa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visa"); else _explicitNullProperties?.Remove("visa"); } }
         private long? _explicitNullValueVisa = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PagePaymentOptions"/> and sets the default values.

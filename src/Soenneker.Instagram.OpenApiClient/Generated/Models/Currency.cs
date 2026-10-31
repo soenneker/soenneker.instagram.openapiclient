@@ -17,31 +17,35 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currency_offset") is { } nullNodeCurrencyOffset && nullNodeCurrencyOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOffset = null;
-            if (parseNode.GetChildNode("usd_exchange") is { } nullNodeUsdExchange && nullNodeUsdExchange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchange = null;
-            if (parseNode.GetChildNode("usd_exchange_inverse") is { } nullNodeUsdExchangeInverse && nullNodeUsdExchangeInverse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchangeInverse = null;
-            if (parseNode.GetChildNode("user_currency") is { } nullNodeUserCurrency && nullNodeUserCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCurrency = null;
+            if (parseNode.GetChildNode("currency_offset") is null) { _explicitNullValueCurrencyOffset = default!; _explicitNullProperties?.Remove("currency_offset"); }
+            else if (parseNode.GetChildNode("currency_offset") is { } nullNodeCurrencyOffset && nullNodeCurrencyOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrencyOffset = null;
+            if (parseNode.GetChildNode("usd_exchange") is null) { _explicitNullValueUsdExchange = default!; _explicitNullProperties?.Remove("usd_exchange"); }
+            else if (parseNode.GetChildNode("usd_exchange") is { } nullNodeUsdExchange && nullNodeUsdExchange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchange = null;
+            if (parseNode.GetChildNode("usd_exchange_inverse") is null) { _explicitNullValueUsdExchangeInverse = default!; _explicitNullProperties?.Remove("usd_exchange_inverse"); }
+            else if (parseNode.GetChildNode("usd_exchange_inverse") is { } nullNodeUsdExchangeInverse && nullNodeUsdExchangeInverse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsdExchangeInverse = null;
+            if (parseNode.GetChildNode("user_currency") is null) { _explicitNullValueUserCurrency = default!; _explicitNullProperties?.Remove("user_currency"); }
+            else if (parseNode.GetChildNode("user_currency") is { } nullNodeUserCurrency && nullNodeUserCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCurrency = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currency_offset property</summary>
-        public long? CurrencyOffset { get => _explicitNullValueCurrencyOffset; set { _explicitNullValueCurrencyOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_offset"); else _explicitNullProperties?.Remove("currency_offset"); } }
+        public long? CurrencyOffset { get => _explicitNullValueCurrencyOffset; set { _explicitNullValueCurrencyOffset = value; AdditionalData?.Remove("currency_offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency_offset"); else _explicitNullProperties?.Remove("currency_offset"); } }
         private long? _explicitNullValueCurrencyOffset = default!;
         /// <summary>The usd_exchange property</summary>
-        public float? UsdExchange { get => _explicitNullValueUsdExchange; set { _explicitNullValueUsdExchange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange"); else _explicitNullProperties?.Remove("usd_exchange"); } }
+        public float? UsdExchange { get => _explicitNullValueUsdExchange; set { _explicitNullValueUsdExchange = value; AdditionalData?.Remove("usd_exchange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange"); else _explicitNullProperties?.Remove("usd_exchange"); } }
         private float? _explicitNullValueUsdExchange = default!;
         /// <summary>The usd_exchange_inverse property</summary>
-        public float? UsdExchangeInverse { get => _explicitNullValueUsdExchangeInverse; set { _explicitNullValueUsdExchangeInverse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange_inverse"); else _explicitNullProperties?.Remove("usd_exchange_inverse"); } }
+        public float? UsdExchangeInverse { get => _explicitNullValueUsdExchangeInverse; set { _explicitNullValueUsdExchangeInverse = value; AdditionalData?.Remove("usd_exchange_inverse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usd_exchange_inverse"); else _explicitNullProperties?.Remove("usd_exchange_inverse"); } }
         private float? _explicitNullValueUsdExchangeInverse = default!;
         /// <summary>The user_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
+        public string? UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; AdditionalData?.Remove("user_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
         private string? _explicitNullValueUserCurrency = default!;
 #nullable restore
 #else
-        public string UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
+        public string UserCurrency { get => _explicitNullValueUserCurrency; set { _explicitNullValueUserCurrency = value; AdditionalData?.Remove("user_currency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_currency"); else _explicitNullProperties?.Remove("user_currency"); } }
         private string _explicitNullValueUserCurrency = default!;
 #endif
         /// <summary>

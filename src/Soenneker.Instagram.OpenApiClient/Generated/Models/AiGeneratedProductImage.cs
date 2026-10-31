@@ -17,23 +17,25 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("flagged_for_manual_review") is { } nullNodeFlaggedForManualReview && nullNodeFlaggedForManualReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlaggedForManualReview = null;
-            if (parseNode.GetChildNode("transformed_image_url") is { } nullNodeTransformedImageUrl && nullNodeTransformedImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformedImageUrl = null;
+            if (parseNode.GetChildNode("flagged_for_manual_review") is null) { _explicitNullValueFlaggedForManualReview = default!; _explicitNullProperties?.Remove("flagged_for_manual_review"); }
+            else if (parseNode.GetChildNode("flagged_for_manual_review") is { } nullNodeFlaggedForManualReview && nullNodeFlaggedForManualReview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlaggedForManualReview = null;
+            if (parseNode.GetChildNode("transformed_image_url") is null) { _explicitNullValueTransformedImageUrl = default!; _explicitNullProperties?.Remove("transformed_image_url"); }
+            else if (parseNode.GetChildNode("transformed_image_url") is { } nullNodeTransformedImageUrl && nullNodeTransformedImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformedImageUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flagged_for_manual_review property</summary>
-        public bool? FlaggedForManualReview { get => _explicitNullValueFlaggedForManualReview; set { _explicitNullValueFlaggedForManualReview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagged_for_manual_review"); else _explicitNullProperties?.Remove("flagged_for_manual_review"); } }
+        public bool? FlaggedForManualReview { get => _explicitNullValueFlaggedForManualReview; set { _explicitNullValueFlaggedForManualReview = value; AdditionalData?.Remove("flagged_for_manual_review"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flagged_for_manual_review"); else _explicitNullProperties?.Remove("flagged_for_manual_review"); } }
         private bool? _explicitNullValueFlaggedForManualReview = default!;
         /// <summary>The transformed_image_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransformedImageUrl { get => _explicitNullValueTransformedImageUrl; set { _explicitNullValueTransformedImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformed_image_url"); else _explicitNullProperties?.Remove("transformed_image_url"); } }
+        public string? TransformedImageUrl { get => _explicitNullValueTransformedImageUrl; set { _explicitNullValueTransformedImageUrl = value; AdditionalData?.Remove("transformed_image_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformed_image_url"); else _explicitNullProperties?.Remove("transformed_image_url"); } }
         private string? _explicitNullValueTransformedImageUrl = default!;
 #nullable restore
 #else
-        public string TransformedImageUrl { get => _explicitNullValueTransformedImageUrl; set { _explicitNullValueTransformedImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformed_image_url"); else _explicitNullProperties?.Remove("transformed_image_url"); } }
+        public string TransformedImageUrl { get => _explicitNullValueTransformedImageUrl; set { _explicitNullValueTransformedImageUrl = value; AdditionalData?.Remove("transformed_image_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformed_image_url"); else _explicitNullProperties?.Remove("transformed_image_url"); } }
         private string _explicitNullValueTransformedImageUrl = default!;
 #endif
         /// <summary>

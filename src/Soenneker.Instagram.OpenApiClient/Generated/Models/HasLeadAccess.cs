@@ -17,72 +17,81 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app_has_leads_permission") is { } nullNodeAppHasLeadsPermission && nullNodeAppHasLeadsPermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHasLeadsPermission = null;
-            if (parseNode.GetChildNode("can_access_lead") is { } nullNodeCanAccessLead && nullNodeCanAccessLead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanAccessLead = null;
-            if (parseNode.GetChildNode("enabled_lead_access_manager") is { } nullNodeEnabledLeadAccessManager && nullNodeEnabledLeadAccessManager.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledLeadAccessManager = null;
-            if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
-            if (parseNode.GetChildNode("failure_resolution") is { } nullNodeFailureResolution && nullNodeFailureResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureResolution = null;
-            if (parseNode.GetChildNode("is_page_admin") is { } nullNodeIsPageAdmin && nullNodeIsPageAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPageAdmin = null;
-            if (parseNode.GetChildNode("page_id") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
-            if (parseNode.GetChildNode("user_has_leads_permission") is { } nullNodeUserHasLeadsPermission && nullNodeUserHasLeadsPermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHasLeadsPermission = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("app_has_leads_permission") is null) { _explicitNullValueAppHasLeadsPermission = default!; _explicitNullProperties?.Remove("app_has_leads_permission"); }
+            else if (parseNode.GetChildNode("app_has_leads_permission") is { } nullNodeAppHasLeadsPermission && nullNodeAppHasLeadsPermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppHasLeadsPermission = null;
+            if (parseNode.GetChildNode("can_access_lead") is null) { _explicitNullValueCanAccessLead = default!; _explicitNullProperties?.Remove("can_access_lead"); }
+            else if (parseNode.GetChildNode("can_access_lead") is { } nullNodeCanAccessLead && nullNodeCanAccessLead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanAccessLead = null;
+            if (parseNode.GetChildNode("enabled_lead_access_manager") is null) { _explicitNullValueEnabledLeadAccessManager = default!; _explicitNullProperties?.Remove("enabled_lead_access_manager"); }
+            else if (parseNode.GetChildNode("enabled_lead_access_manager") is { } nullNodeEnabledLeadAccessManager && nullNodeEnabledLeadAccessManager.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledLeadAccessManager = null;
+            if (parseNode.GetChildNode("failure_reason") is null) { _explicitNullValueFailureReason = default!; _explicitNullProperties?.Remove("failure_reason"); }
+            else if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
+            if (parseNode.GetChildNode("failure_resolution") is null) { _explicitNullValueFailureResolution = default!; _explicitNullProperties?.Remove("failure_resolution"); }
+            else if (parseNode.GetChildNode("failure_resolution") is { } nullNodeFailureResolution && nullNodeFailureResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureResolution = null;
+            if (parseNode.GetChildNode("is_page_admin") is null) { _explicitNullValueIsPageAdmin = default!; _explicitNullProperties?.Remove("is_page_admin"); }
+            else if (parseNode.GetChildNode("is_page_admin") is { } nullNodeIsPageAdmin && nullNodeIsPageAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPageAdmin = null;
+            if (parseNode.GetChildNode("page_id") is null) { _explicitNullValuePageId = default!; _explicitNullProperties?.Remove("page_id"); }
+            else if (parseNode.GetChildNode("page_id") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("user_has_leads_permission") is null) { _explicitNullValueUserHasLeadsPermission = default!; _explicitNullProperties?.Remove("user_has_leads_permission"); }
+            else if (parseNode.GetChildNode("user_has_leads_permission") is { } nullNodeUserHasLeadsPermission && nullNodeUserHasLeadsPermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserHasLeadsPermission = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The app_has_leads_permission property</summary>
-        public bool? AppHasLeadsPermission { get => _explicitNullValueAppHasLeadsPermission; set { _explicitNullValueAppHasLeadsPermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_has_leads_permission"); else _explicitNullProperties?.Remove("app_has_leads_permission"); } }
+        public bool? AppHasLeadsPermission { get => _explicitNullValueAppHasLeadsPermission; set { _explicitNullValueAppHasLeadsPermission = value; AdditionalData?.Remove("app_has_leads_permission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_has_leads_permission"); else _explicitNullProperties?.Remove("app_has_leads_permission"); } }
         private bool? _explicitNullValueAppHasLeadsPermission = default!;
         /// <summary>The can_access_lead property</summary>
-        public bool? CanAccessLead { get => _explicitNullValueCanAccessLead; set { _explicitNullValueCanAccessLead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_access_lead"); else _explicitNullProperties?.Remove("can_access_lead"); } }
+        public bool? CanAccessLead { get => _explicitNullValueCanAccessLead; set { _explicitNullValueCanAccessLead = value; AdditionalData?.Remove("can_access_lead"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_access_lead"); else _explicitNullProperties?.Remove("can_access_lead"); } }
         private bool? _explicitNullValueCanAccessLead = default!;
         /// <summary>The enabled_lead_access_manager property</summary>
-        public bool? EnabledLeadAccessManager { get => _explicitNullValueEnabledLeadAccessManager; set { _explicitNullValueEnabledLeadAccessManager = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_lead_access_manager"); else _explicitNullProperties?.Remove("enabled_lead_access_manager"); } }
+        public bool? EnabledLeadAccessManager { get => _explicitNullValueEnabledLeadAccessManager; set { _explicitNullValueEnabledLeadAccessManager = value; AdditionalData?.Remove("enabled_lead_access_manager"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_lead_access_manager"); else _explicitNullProperties?.Remove("enabled_lead_access_manager"); } }
         private bool? _explicitNullValueEnabledLeadAccessManager = default!;
         /// <summary>The failure_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; AdditionalData?.Remove("failure_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
         private string? _explicitNullValueFailureReason = default!;
 #nullable restore
 #else
-        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; AdditionalData?.Remove("failure_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
         private string _explicitNullValueFailureReason = default!;
 #endif
         /// <summary>The failure_resolution property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureResolution { get => _explicitNullValueFailureResolution; set { _explicitNullValueFailureResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_resolution"); else _explicitNullProperties?.Remove("failure_resolution"); } }
+        public string? FailureResolution { get => _explicitNullValueFailureResolution; set { _explicitNullValueFailureResolution = value; AdditionalData?.Remove("failure_resolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_resolution"); else _explicitNullProperties?.Remove("failure_resolution"); } }
         private string? _explicitNullValueFailureResolution = default!;
 #nullable restore
 #else
-        public string FailureResolution { get => _explicitNullValueFailureResolution; set { _explicitNullValueFailureResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_resolution"); else _explicitNullProperties?.Remove("failure_resolution"); } }
+        public string FailureResolution { get => _explicitNullValueFailureResolution; set { _explicitNullValueFailureResolution = value; AdditionalData?.Remove("failure_resolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_resolution"); else _explicitNullProperties?.Remove("failure_resolution"); } }
         private string _explicitNullValueFailureResolution = default!;
 #endif
         /// <summary>The is_page_admin property</summary>
-        public bool? IsPageAdmin { get => _explicitNullValueIsPageAdmin; set { _explicitNullValueIsPageAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_page_admin"); else _explicitNullProperties?.Remove("is_page_admin"); } }
+        public bool? IsPageAdmin { get => _explicitNullValueIsPageAdmin; set { _explicitNullValueIsPageAdmin = value; AdditionalData?.Remove("is_page_admin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_page_admin"); else _explicitNullProperties?.Remove("is_page_admin"); } }
         private bool? _explicitNullValueIsPageAdmin = default!;
         /// <summary>The page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_id"); else _explicitNullProperties?.Remove("page_id"); } }
+        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_id"); else _explicitNullProperties?.Remove("page_id"); } }
         private string? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_id"); else _explicitNullProperties?.Remove("page_id"); } }
+        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("page_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_id"); else _explicitNullProperties?.Remove("page_id"); } }
         private string _explicitNullValuePageId = default!;
 #endif
         /// <summary>The user_has_leads_permission property</summary>
-        public bool? UserHasLeadsPermission { get => _explicitNullValueUserHasLeadsPermission; set { _explicitNullValueUserHasLeadsPermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_has_leads_permission"); else _explicitNullProperties?.Remove("user_has_leads_permission"); } }
+        public bool? UserHasLeadsPermission { get => _explicitNullValueUserHasLeadsPermission; set { _explicitNullValueUserHasLeadsPermission = value; AdditionalData?.Remove("user_has_leads_permission"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_has_leads_permission"); else _explicitNullProperties?.Remove("user_has_leads_permission"); } }
         private bool? _explicitNullValueUserHasLeadsPermission = default!;
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>

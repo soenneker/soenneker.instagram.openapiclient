@@ -17,17 +17,19 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cpa_average_target") is { } nullNodeCpaAverageTarget && nullNodeCpaAverageTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpaAverageTarget = null;
-            if (parseNode.GetChildNode("roas_average_floor") is { } nullNodeRoasAverageFloor && nullNodeRoasAverageFloor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoasAverageFloor = null;
+            if (parseNode.GetChildNode("cpa_average_target") is null) { _explicitNullValueCpaAverageTarget = default!; _explicitNullProperties?.Remove("cpa_average_target"); }
+            else if (parseNode.GetChildNode("cpa_average_target") is { } nullNodeCpaAverageTarget && nullNodeCpaAverageTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpaAverageTarget = null;
+            if (parseNode.GetChildNode("roas_average_floor") is null) { _explicitNullValueRoasAverageFloor = default!; _explicitNullProperties?.Remove("roas_average_floor"); }
+            else if (parseNode.GetChildNode("roas_average_floor") is { } nullNodeRoasAverageFloor && nullNodeRoasAverageFloor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoasAverageFloor = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpa_average_target property</summary>
-        public long? CpaAverageTarget { get => _explicitNullValueCpaAverageTarget; set { _explicitNullValueCpaAverageTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpa_average_target"); else _explicitNullProperties?.Remove("cpa_average_target"); } }
+        public long? CpaAverageTarget { get => _explicitNullValueCpaAverageTarget; set { _explicitNullValueCpaAverageTarget = value; AdditionalData?.Remove("cpa_average_target"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpa_average_target"); else _explicitNullProperties?.Remove("cpa_average_target"); } }
         private long? _explicitNullValueCpaAverageTarget = default!;
         /// <summary>The roas_average_floor property</summary>
-        public long? RoasAverageFloor { get => _explicitNullValueRoasAverageFloor; set { _explicitNullValueRoasAverageFloor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roas_average_floor"); else _explicitNullProperties?.Remove("roas_average_floor"); } }
+        public long? RoasAverageFloor { get => _explicitNullValueRoasAverageFloor; set { _explicitNullValueRoasAverageFloor = value; AdditionalData?.Remove("roas_average_floor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roas_average_floor"); else _explicitNullProperties?.Remove("roas_average_floor"); } }
         private long? _explicitNullValueRoasAverageFloor = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGroupBidConstraints"/> and sets the default values.

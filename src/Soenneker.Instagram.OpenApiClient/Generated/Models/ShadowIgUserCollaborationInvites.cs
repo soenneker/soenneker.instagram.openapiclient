@@ -17,10 +17,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("caption") is { } nullNodeCaption && nullNodeCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Caption = null;
-            if (parseNode.GetChildNode("media_id") is { } nullNodeMediaId && nullNodeMediaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaId = null;
-            if (parseNode.GetChildNode("media_owner_username") is { } nullNodeMediaOwnerUsername && nullNodeMediaOwnerUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaOwnerUsername = null;
-            if (parseNode.GetChildNode("media_url") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
+            if (parseNode.GetChildNode("caption") is null) { _explicitNullValueCaption = default!; _explicitNullProperties?.Remove("caption"); }
+            else if (parseNode.GetChildNode("caption") is { } nullNodeCaption && nullNodeCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Caption = null;
+            if (parseNode.GetChildNode("media_id") is null) { _explicitNullValueMediaId = default!; _explicitNullProperties?.Remove("media_id"); }
+            else if (parseNode.GetChildNode("media_id") is { } nullNodeMediaId && nullNodeMediaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaId = null;
+            if (parseNode.GetChildNode("media_owner_username") is null) { _explicitNullValueMediaOwnerUsername = default!; _explicitNullProperties?.Remove("media_owner_username"); }
+            else if (parseNode.GetChildNode("media_owner_username") is { } nullNodeMediaOwnerUsername && nullNodeMediaOwnerUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaOwnerUsername = null;
+            if (parseNode.GetChildNode("media_url") is null) { _explicitNullValueMediaUrl = default!; _explicitNullProperties?.Remove("media_url"); }
+            else if (parseNode.GetChildNode("media_url") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The caption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
+        public string? Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; AdditionalData?.Remove("caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
         private string? _explicitNullValueCaption = default!;
 #nullable restore
 #else
-        public string Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
+        public string Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; AdditionalData?.Remove("caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
         private string _explicitNullValueCaption = default!;
 #endif
         /// <summary>The media_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaId { get => _explicitNullValueMediaId; set { _explicitNullValueMediaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_id"); else _explicitNullProperties?.Remove("media_id"); } }
+        public string? MediaId { get => _explicitNullValueMediaId; set { _explicitNullValueMediaId = value; AdditionalData?.Remove("media_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_id"); else _explicitNullProperties?.Remove("media_id"); } }
         private string? _explicitNullValueMediaId = default!;
 #nullable restore
 #else
-        public string MediaId { get => _explicitNullValueMediaId; set { _explicitNullValueMediaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_id"); else _explicitNullProperties?.Remove("media_id"); } }
+        public string MediaId { get => _explicitNullValueMediaId; set { _explicitNullValueMediaId = value; AdditionalData?.Remove("media_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_id"); else _explicitNullProperties?.Remove("media_id"); } }
         private string _explicitNullValueMediaId = default!;
 #endif
         /// <summary>The media_owner_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaOwnerUsername { get => _explicitNullValueMediaOwnerUsername; set { _explicitNullValueMediaOwnerUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_owner_username"); else _explicitNullProperties?.Remove("media_owner_username"); } }
+        public string? MediaOwnerUsername { get => _explicitNullValueMediaOwnerUsername; set { _explicitNullValueMediaOwnerUsername = value; AdditionalData?.Remove("media_owner_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_owner_username"); else _explicitNullProperties?.Remove("media_owner_username"); } }
         private string? _explicitNullValueMediaOwnerUsername = default!;
 #nullable restore
 #else
-        public string MediaOwnerUsername { get => _explicitNullValueMediaOwnerUsername; set { _explicitNullValueMediaOwnerUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_owner_username"); else _explicitNullProperties?.Remove("media_owner_username"); } }
+        public string MediaOwnerUsername { get => _explicitNullValueMediaOwnerUsername; set { _explicitNullValueMediaOwnerUsername = value; AdditionalData?.Remove("media_owner_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_owner_username"); else _explicitNullProperties?.Remove("media_owner_username"); } }
         private string _explicitNullValueMediaOwnerUsername = default!;
 #endif
         /// <summary>The media_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
+        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("media_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
         private string? _explicitNullValueMediaUrl = default!;
 #nullable restore
 #else
-        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
+        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("media_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
         private string _explicitNullValueMediaUrl = default!;
 #endif
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("comment_moderation_filter") is { } nullNodeCommentModerationFilter && nullNodeCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentModerationFilter = null;
-            if (parseNode.GetChildNode("fb_comment_moderation_filter") is { } nullNodeFbCommentModerationFilter && nullNodeFbCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbCommentModerationFilter = null;
-            if (parseNode.GetChildNode("ig_comment_moderation_filter") is { } nullNodeIgCommentModerationFilter && nullNodeIgCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgCommentModerationFilter = null;
-            if (parseNode.GetChildNode("threads_comment_moderation_filter") is { } nullNodeThreadsCommentModerationFilter && nullNodeThreadsCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsCommentModerationFilter = null;
+            if (parseNode.GetChildNode("comment_moderation_filter") is null) { _explicitNullValueCommentModerationFilter = default!; _explicitNullProperties?.Remove("comment_moderation_filter"); }
+            else if (parseNode.GetChildNode("comment_moderation_filter") is { } nullNodeCommentModerationFilter && nullNodeCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentModerationFilter = null;
+            if (parseNode.GetChildNode("fb_comment_moderation_filter") is null) { _explicitNullValueFbCommentModerationFilter = default!; _explicitNullProperties?.Remove("fb_comment_moderation_filter"); }
+            else if (parseNode.GetChildNode("fb_comment_moderation_filter") is { } nullNodeFbCommentModerationFilter && nullNodeFbCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FbCommentModerationFilter = null;
+            if (parseNode.GetChildNode("ig_comment_moderation_filter") is null) { _explicitNullValueIgCommentModerationFilter = default!; _explicitNullProperties?.Remove("ig_comment_moderation_filter"); }
+            else if (parseNode.GetChildNode("ig_comment_moderation_filter") is { } nullNodeIgCommentModerationFilter && nullNodeIgCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgCommentModerationFilter = null;
+            if (parseNode.GetChildNode("threads_comment_moderation_filter") is null) { _explicitNullValueThreadsCommentModerationFilter = default!; _explicitNullProperties?.Remove("threads_comment_moderation_filter"); }
+            else if (parseNode.GetChildNode("threads_comment_moderation_filter") is { } nullNodeThreadsCommentModerationFilter && nullNodeThreadsCommentModerationFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsCommentModerationFilter = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
+        public string? CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; AdditionalData?.Remove("comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
         private string? _explicitNullValueCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
+        public string CommentModerationFilter { get => _explicitNullValueCommentModerationFilter; set { _explicitNullValueCommentModerationFilter = value; AdditionalData?.Remove("comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_moderation_filter"); else _explicitNullProperties?.Remove("comment_moderation_filter"); } }
         private string _explicitNullValueCommentModerationFilter = default!;
 #endif
         /// <summary>The fb_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
+        public string? FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; AdditionalData?.Remove("fb_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
         private string? _explicitNullValueFbCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
+        public string FbCommentModerationFilter { get => _explicitNullValueFbCommentModerationFilter; set { _explicitNullValueFbCommentModerationFilter = value; AdditionalData?.Remove("fb_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fb_comment_moderation_filter"); else _explicitNullProperties?.Remove("fb_comment_moderation_filter"); } }
         private string _explicitNullValueFbCommentModerationFilter = default!;
 #endif
         /// <summary>The ig_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
+        public string? IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; AdditionalData?.Remove("ig_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
         private string? _explicitNullValueIgCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
+        public string IgCommentModerationFilter { get => _explicitNullValueIgCommentModerationFilter; set { _explicitNullValueIgCommentModerationFilter = value; AdditionalData?.Remove("ig_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_comment_moderation_filter"); else _explicitNullProperties?.Remove("ig_comment_moderation_filter"); } }
         private string _explicitNullValueIgCommentModerationFilter = default!;
 #endif
         /// <summary>The threads_comment_moderation_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
+        public string? ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; AdditionalData?.Remove("threads_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
         private string? _explicitNullValueThreadsCommentModerationFilter = default!;
 #nullable restore
 #else
-        public string ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
+        public string ThreadsCommentModerationFilter { get => _explicitNullValueThreadsCommentModerationFilter; set { _explicitNullValueThreadsCommentModerationFilter = value; AdditionalData?.Remove("threads_comment_moderation_filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_comment_moderation_filter"); else _explicitNullProperties?.Remove("threads_comment_moderation_filter"); } }
         private string _explicitNullValueThreadsCommentModerationFilter = default!;
 #endif
         /// <summary>

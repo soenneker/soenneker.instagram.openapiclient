@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("age_range") is { } nullNodeAgeRange && nullNodeAgeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeRange = null;
-            if (parseNode.GetChildNode("page_types") is { } nullNodePageTypes && nullNodePageTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageTypes = null;
-            if (parseNode.GetChildNode("user_groups") is { } nullNodeUserGroups && nullNodeUserGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroups = null;
+            if (parseNode.GetChildNode("age_range") is null) { _explicitNullValueAgeRange = default!; _explicitNullProperties?.Remove("age_range"); }
+            else if (parseNode.GetChildNode("age_range") is { } nullNodeAgeRange && nullNodeAgeRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeRange = null;
+            if (parseNode.GetChildNode("page_types") is null) { _explicitNullValuePageTypes = default!; _explicitNullProperties?.Remove("page_types"); }
+            else if (parseNode.GetChildNode("page_types") is { } nullNodePageTypes && nullNodePageTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageTypes = null;
+            if (parseNode.GetChildNode("user_groups") is null) { _explicitNullValueUserGroups = default!; _explicitNullProperties?.Remove("user_groups"); }
+            else if (parseNode.GetChildNode("user_groups") is { } nullNodeUserGroups && nullNodeUserGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserGroups = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The age_range property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty? AgeRange { get => _explicitNullValueAgeRange; set { _explicitNullValueAgeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_range"); else _explicitNullProperties?.Remove("age_range"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty? AgeRange { get => _explicitNullValueAgeRange; set { _explicitNullValueAgeRange = value; AdditionalData?.Remove("age_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_range"); else _explicitNullProperties?.Remove("age_range"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty? _explicitNullValueAgeRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty AgeRange { get => _explicitNullValueAgeRange; set { _explicitNullValueAgeRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_range"); else _explicitNullProperties?.Remove("age_range"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty AgeRange { get => _explicitNullValueAgeRange; set { _explicitNullValueAgeRange = value; AdditionalData?.Remove("age_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_range"); else _explicitNullProperties?.Remove("age_range"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsAgeRangeProperty _explicitNullValueAgeRange = default!;
 #endif
         /// <summary>The page_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty? PageTypes { get => _explicitNullValuePageTypes; set { _explicitNullValuePageTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_types"); else _explicitNullProperties?.Remove("page_types"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty? PageTypes { get => _explicitNullValuePageTypes; set { _explicitNullValuePageTypes = value; AdditionalData?.Remove("page_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_types"); else _explicitNullProperties?.Remove("page_types"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty? _explicitNullValuePageTypes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty PageTypes { get => _explicitNullValuePageTypes; set { _explicitNullValuePageTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_types"); else _explicitNullProperties?.Remove("page_types"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty PageTypes { get => _explicitNullValuePageTypes; set { _explicitNullValuePageTypes = value; AdditionalData?.Remove("page_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_types"); else _explicitNullProperties?.Remove("page_types"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AdBidAdjustmentsPageTypesProperty _explicitNullValuePageTypes = default!;
 #endif
         /// <summary>The user_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
+        public string? UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; AdditionalData?.Remove("user_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
         private string? _explicitNullValueUserGroups = default!;
 #nullable restore
 #else
-        public string UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
+        public string UserGroups { get => _explicitNullValueUserGroups; set { _explicitNullValueUserGroups = value; AdditionalData?.Remove("user_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_groups"); else _explicitNullProperties?.Remove("user_groups"); } }
         private string _explicitNullValueUserGroups = default!;
 #endif
         /// <summary>

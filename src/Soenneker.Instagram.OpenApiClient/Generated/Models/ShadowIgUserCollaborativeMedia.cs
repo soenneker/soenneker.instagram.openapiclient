@@ -17,23 +17,40 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("caption") is { } nullNodeCaption && nullNodeCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Caption = null;
-            if (parseNode.GetChildNode("comments_count") is { } nullNodeCommentsCount && nullNodeCommentsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentsCount = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("like_count") is { } nullNodeLikeCount && nullNodeLikeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LikeCount = null;
-            if (parseNode.GetChildNode("media_product_type") is { } nullNodeMediaProductType && nullNodeMediaProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaProductType = null;
-            if (parseNode.GetChildNode("media_type") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
-            if (parseNode.GetChildNode("media_url") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
-            if (parseNode.GetChildNode("permalink") is { } nullNodePermalink && nullNodePermalink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permalink = null;
-            if (parseNode.GetChildNode("reposts_count") is { } nullNodeRepostsCount && nullNodeRepostsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepostsCount = null;
-            if (parseNode.GetChildNode("saved_count") is { } nullNodeSavedCount && nullNodeSavedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SavedCount = null;
-            if (parseNode.GetChildNode("shares_count") is { } nullNodeSharesCount && nullNodeSharesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharesCount = null;
-            if (parseNode.GetChildNode("thumbnail_url") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
-            if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
-            if (parseNode.GetChildNode("total_comments_count") is { } nullNodeTotalCommentsCount && nullNodeTotalCommentsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCommentsCount = null;
-            if (parseNode.GetChildNode("total_like_count") is { } nullNodeTotalLikeCount && nullNodeTotalLikeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLikeCount = null;
-            if (parseNode.GetChildNode("total_views_count") is { } nullNodeTotalViewsCount && nullNodeTotalViewsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalViewsCount = null;
-            if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
+            if (parseNode.GetChildNode("caption") is null) { _explicitNullValueCaption = default!; _explicitNullProperties?.Remove("caption"); }
+            else if (parseNode.GetChildNode("caption") is { } nullNodeCaption && nullNodeCaption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Caption = null;
+            if (parseNode.GetChildNode("comments_count") is null) { _explicitNullValueCommentsCount = default!; _explicitNullProperties?.Remove("comments_count"); }
+            else if (parseNode.GetChildNode("comments_count") is { } nullNodeCommentsCount && nullNodeCommentsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentsCount = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("like_count") is null) { _explicitNullValueLikeCount = default!; _explicitNullProperties?.Remove("like_count"); }
+            else if (parseNode.GetChildNode("like_count") is { } nullNodeLikeCount && nullNodeLikeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LikeCount = null;
+            if (parseNode.GetChildNode("media_product_type") is null) { _explicitNullValueMediaProductType = default!; _explicitNullProperties?.Remove("media_product_type"); }
+            else if (parseNode.GetChildNode("media_product_type") is { } nullNodeMediaProductType && nullNodeMediaProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaProductType = null;
+            if (parseNode.GetChildNode("media_type") is null) { _explicitNullValueMediaType = default!; _explicitNullProperties?.Remove("media_type"); }
+            else if (parseNode.GetChildNode("media_type") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
+            if (parseNode.GetChildNode("media_url") is null) { _explicitNullValueMediaUrl = default!; _explicitNullProperties?.Remove("media_url"); }
+            else if (parseNode.GetChildNode("media_url") is { } nullNodeMediaUrl && nullNodeMediaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaUrl = null;
+            if (parseNode.GetChildNode("permalink") is null) { _explicitNullValuePermalink = default!; _explicitNullProperties?.Remove("permalink"); }
+            else if (parseNode.GetChildNode("permalink") is { } nullNodePermalink && nullNodePermalink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permalink = null;
+            if (parseNode.GetChildNode("reposts_count") is null) { _explicitNullValueRepostsCount = default!; _explicitNullProperties?.Remove("reposts_count"); }
+            else if (parseNode.GetChildNode("reposts_count") is { } nullNodeRepostsCount && nullNodeRepostsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepostsCount = null;
+            if (parseNode.GetChildNode("saved_count") is null) { _explicitNullValueSavedCount = default!; _explicitNullProperties?.Remove("saved_count"); }
+            else if (parseNode.GetChildNode("saved_count") is { } nullNodeSavedCount && nullNodeSavedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SavedCount = null;
+            if (parseNode.GetChildNode("shares_count") is null) { _explicitNullValueSharesCount = default!; _explicitNullProperties?.Remove("shares_count"); }
+            else if (parseNode.GetChildNode("shares_count") is { } nullNodeSharesCount && nullNodeSharesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharesCount = null;
+            if (parseNode.GetChildNode("thumbnail_url") is null) { _explicitNullValueThumbnailUrl = default!; _explicitNullProperties?.Remove("thumbnail_url"); }
+            else if (parseNode.GetChildNode("thumbnail_url") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("total_comments_count") is null) { _explicitNullValueTotalCommentsCount = default!; _explicitNullProperties?.Remove("total_comments_count"); }
+            else if (parseNode.GetChildNode("total_comments_count") is { } nullNodeTotalCommentsCount && nullNodeTotalCommentsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCommentsCount = null;
+            if (parseNode.GetChildNode("total_like_count") is null) { _explicitNullValueTotalLikeCount = default!; _explicitNullProperties?.Remove("total_like_count"); }
+            else if (parseNode.GetChildNode("total_like_count") is { } nullNodeTotalLikeCount && nullNodeTotalLikeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLikeCount = null;
+            if (parseNode.GetChildNode("total_views_count") is null) { _explicitNullValueTotalViewsCount = default!; _explicitNullProperties?.Remove("total_views_count"); }
+            else if (parseNode.GetChildNode("total_views_count") is { } nullNodeTotalViewsCount && nullNodeTotalViewsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalViewsCount = null;
+            if (parseNode.GetChildNode("username") is null) { _explicitNullValueUsername = default!; _explicitNullProperties?.Remove("username"); }
+            else if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -41,108 +58,108 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The caption property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
+        public string? Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; AdditionalData?.Remove("caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
         private string? _explicitNullValueCaption = default!;
 #nullable restore
 #else
-        public string Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
+        public string Caption { get => _explicitNullValueCaption; set { _explicitNullValueCaption = value; AdditionalData?.Remove("caption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("caption"); else _explicitNullProperties?.Remove("caption"); } }
         private string _explicitNullValueCaption = default!;
 #endif
         /// <summary>The comments_count property</summary>
-        public long? CommentsCount { get => _explicitNullValueCommentsCount; set { _explicitNullValueCommentsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments_count"); else _explicitNullProperties?.Remove("comments_count"); } }
+        public long? CommentsCount { get => _explicitNullValueCommentsCount; set { _explicitNullValueCommentsCount = value; AdditionalData?.Remove("comments_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments_count"); else _explicitNullProperties?.Remove("comments_count"); } }
         private long? _explicitNullValueCommentsCount = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The like_count property</summary>
-        public long? LikeCount { get => _explicitNullValueLikeCount; set { _explicitNullValueLikeCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("like_count"); else _explicitNullProperties?.Remove("like_count"); } }
+        public long? LikeCount { get => _explicitNullValueLikeCount; set { _explicitNullValueLikeCount = value; AdditionalData?.Remove("like_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("like_count"); else _explicitNullProperties?.Remove("like_count"); } }
         private long? _explicitNullValueLikeCount = default!;
         /// <summary>The media_product_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaProductType { get => _explicitNullValueMediaProductType; set { _explicitNullValueMediaProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_product_type"); else _explicitNullProperties?.Remove("media_product_type"); } }
+        public string? MediaProductType { get => _explicitNullValueMediaProductType; set { _explicitNullValueMediaProductType = value; AdditionalData?.Remove("media_product_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_product_type"); else _explicitNullProperties?.Remove("media_product_type"); } }
         private string? _explicitNullValueMediaProductType = default!;
 #nullable restore
 #else
-        public string MediaProductType { get => _explicitNullValueMediaProductType; set { _explicitNullValueMediaProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_product_type"); else _explicitNullProperties?.Remove("media_product_type"); } }
+        public string MediaProductType { get => _explicitNullValueMediaProductType; set { _explicitNullValueMediaProductType = value; AdditionalData?.Remove("media_product_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_product_type"); else _explicitNullProperties?.Remove("media_product_type"); } }
         private string _explicitNullValueMediaProductType = default!;
 #endif
         /// <summary>The media_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
+        public string? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; AdditionalData?.Remove("media_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
         private string? _explicitNullValueMediaType = default!;
 #nullable restore
 #else
-        public string MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
+        public string MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; AdditionalData?.Remove("media_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
         private string _explicitNullValueMediaType = default!;
 #endif
         /// <summary>The media_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
+        public string? MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("media_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
         private string? _explicitNullValueMediaUrl = default!;
 #nullable restore
 #else
-        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
+        public string MediaUrl { get => _explicitNullValueMediaUrl; set { _explicitNullValueMediaUrl = value; AdditionalData?.Remove("media_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_url"); else _explicitNullProperties?.Remove("media_url"); } }
         private string _explicitNullValueMediaUrl = default!;
 #endif
         /// <summary>The permalink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Permalink { get => _explicitNullValuePermalink; set { _explicitNullValuePermalink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permalink"); else _explicitNullProperties?.Remove("permalink"); } }
+        public string? Permalink { get => _explicitNullValuePermalink; set { _explicitNullValuePermalink = value; AdditionalData?.Remove("permalink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permalink"); else _explicitNullProperties?.Remove("permalink"); } }
         private string? _explicitNullValuePermalink = default!;
 #nullable restore
 #else
-        public string Permalink { get => _explicitNullValuePermalink; set { _explicitNullValuePermalink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permalink"); else _explicitNullProperties?.Remove("permalink"); } }
+        public string Permalink { get => _explicitNullValuePermalink; set { _explicitNullValuePermalink = value; AdditionalData?.Remove("permalink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permalink"); else _explicitNullProperties?.Remove("permalink"); } }
         private string _explicitNullValuePermalink = default!;
 #endif
         /// <summary>The reposts_count property</summary>
-        public long? RepostsCount { get => _explicitNullValueRepostsCount; set { _explicitNullValueRepostsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reposts_count"); else _explicitNullProperties?.Remove("reposts_count"); } }
+        public long? RepostsCount { get => _explicitNullValueRepostsCount; set { _explicitNullValueRepostsCount = value; AdditionalData?.Remove("reposts_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reposts_count"); else _explicitNullProperties?.Remove("reposts_count"); } }
         private long? _explicitNullValueRepostsCount = default!;
         /// <summary>The saved_count property</summary>
-        public long? SavedCount { get => _explicitNullValueSavedCount; set { _explicitNullValueSavedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saved_count"); else _explicitNullProperties?.Remove("saved_count"); } }
+        public long? SavedCount { get => _explicitNullValueSavedCount; set { _explicitNullValueSavedCount = value; AdditionalData?.Remove("saved_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saved_count"); else _explicitNullProperties?.Remove("saved_count"); } }
         private long? _explicitNullValueSavedCount = default!;
         /// <summary>The shares_count property</summary>
-        public long? SharesCount { get => _explicitNullValueSharesCount; set { _explicitNullValueSharesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shares_count"); else _explicitNullProperties?.Remove("shares_count"); } }
+        public long? SharesCount { get => _explicitNullValueSharesCount; set { _explicitNullValueSharesCount = value; AdditionalData?.Remove("shares_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shares_count"); else _explicitNullProperties?.Remove("shares_count"); } }
         private long? _explicitNullValueSharesCount = default!;
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; AdditionalData?.Remove("thumbnail_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
         private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; AdditionalData?.Remove("thumbnail_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
         private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>The timestamp property</summary>
-        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private DateTimeOffset? _explicitNullValueTimestamp = default!;
         /// <summary>The total_comments_count property</summary>
-        public long? TotalCommentsCount { get => _explicitNullValueTotalCommentsCount; set { _explicitNullValueTotalCommentsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_comments_count"); else _explicitNullProperties?.Remove("total_comments_count"); } }
+        public long? TotalCommentsCount { get => _explicitNullValueTotalCommentsCount; set { _explicitNullValueTotalCommentsCount = value; AdditionalData?.Remove("total_comments_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_comments_count"); else _explicitNullProperties?.Remove("total_comments_count"); } }
         private long? _explicitNullValueTotalCommentsCount = default!;
         /// <summary>The total_like_count property</summary>
-        public long? TotalLikeCount { get => _explicitNullValueTotalLikeCount; set { _explicitNullValueTotalLikeCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_like_count"); else _explicitNullProperties?.Remove("total_like_count"); } }
+        public long? TotalLikeCount { get => _explicitNullValueTotalLikeCount; set { _explicitNullValueTotalLikeCount = value; AdditionalData?.Remove("total_like_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_like_count"); else _explicitNullProperties?.Remove("total_like_count"); } }
         private long? _explicitNullValueTotalLikeCount = default!;
         /// <summary>The total_views_count property</summary>
-        public long? TotalViewsCount { get => _explicitNullValueTotalViewsCount; set { _explicitNullValueTotalViewsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_views_count"); else _explicitNullProperties?.Remove("total_views_count"); } }
+        public long? TotalViewsCount { get => _explicitNullValueTotalViewsCount; set { _explicitNullValueTotalViewsCount = value; AdditionalData?.Remove("total_views_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_views_count"); else _explicitNullProperties?.Remove("total_views_count"); } }
         private long? _explicitNullValueTotalViewsCount = default!;
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
         private string? _explicitNullValueUsername = default!;
 #nullable restore
 #else
-        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
         private string _explicitNullValueUsername = default!;
 #endif
         /// <summary>

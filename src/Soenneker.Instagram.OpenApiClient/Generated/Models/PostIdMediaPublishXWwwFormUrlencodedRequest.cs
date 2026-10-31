@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("creation_id") is { } nullNodeCreationId && nullNodeCreationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationId = null;
+            if (parseNode.GetChildNode("creation_id") is null) { _explicitNullValueCreationId = default!; _explicitNullProperties?.Remove("creation_id"); }
+            else if (parseNode.GetChildNode("creation_id") is { } nullNodeCreationId && nullNodeCreationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The creation_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreationId { get => _explicitNullValueCreationId; set { _explicitNullValueCreationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_id"); else _explicitNullProperties?.Remove("creation_id"); } }
+        public string? CreationId { get => _explicitNullValueCreationId; set { _explicitNullValueCreationId = value; AdditionalData?.Remove("creation_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_id"); else _explicitNullProperties?.Remove("creation_id"); } }
         private string? _explicitNullValueCreationId = default!;
 #nullable restore
 #else
-        public string CreationId { get => _explicitNullValueCreationId; set { _explicitNullValueCreationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_id"); else _explicitNullProperties?.Remove("creation_id"); } }
+        public string CreationId { get => _explicitNullValueCreationId; set { _explicitNullValueCreationId = value; AdditionalData?.Remove("creation_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creation_id"); else _explicitNullProperties?.Remove("creation_id"); } }
         private string _explicitNullValueCreationId = default!;
 #endif
         /// <summary>

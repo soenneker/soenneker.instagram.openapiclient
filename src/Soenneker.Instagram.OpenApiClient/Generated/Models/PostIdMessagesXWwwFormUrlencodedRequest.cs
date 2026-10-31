@@ -17,18 +17,30 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("messaging_type") is { } nullNodeMessagingType && nullNodeMessagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingType = null;
-            if (parseNode.GetChildNode("notification_type") is { } nullNodeNotificationType && nullNodeNotificationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationType = null;
-            if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
-            if (parseNode.GetChildNode("persona_id") is { } nullNodePersonaId && nullNodePersonaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonaId = null;
-            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
-            if (parseNode.GetChildNode("reply_to") is { } nullNodeReplyTo && nullNodeReplyTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplyTo = null;
-            if (parseNode.GetChildNode("sender_action") is { } nullNodeSenderAction && nullNodeSenderAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAction = null;
-            if (parseNode.GetChildNode("suggestion_action") is { } nullNodeSuggestionAction && nullNodeSuggestionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestionAction = null;
-            if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
-            if (parseNode.GetChildNode("thread_control") is { } nullNodeThreadControl && nullNodeThreadControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadControl = null;
+            if (parseNode.GetChildNode("folder") is null) { _explicitNullValueFolder = default!; _explicitNullProperties?.Remove("folder"); }
+            else if (parseNode.GetChildNode("folder") is { } nullNodeFolder && nullNodeFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Folder = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("messaging_type") is null) { _explicitNullValueMessagingType = default!; _explicitNullProperties?.Remove("messaging_type"); }
+            else if (parseNode.GetChildNode("messaging_type") is { } nullNodeMessagingType && nullNodeMessagingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessagingType = null;
+            if (parseNode.GetChildNode("notification_type") is null) { _explicitNullValueNotificationType = default!; _explicitNullProperties?.Remove("notification_type"); }
+            else if (parseNode.GetChildNode("notification_type") is { } nullNodeNotificationType && nullNodeNotificationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationType = null;
+            if (parseNode.GetChildNode("payload") is null) { _explicitNullValuePayload = default!; _explicitNullProperties?.Remove("payload"); }
+            else if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
+            if (parseNode.GetChildNode("persona_id") is null) { _explicitNullValuePersonaId = default!; _explicitNullProperties?.Remove("persona_id"); }
+            else if (parseNode.GetChildNode("persona_id") is { } nullNodePersonaId && nullNodePersonaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonaId = null;
+            if (parseNode.GetChildNode("recipient") is null) { _explicitNullValueRecipient = default!; _explicitNullProperties?.Remove("recipient"); }
+            else if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("reply_to") is null) { _explicitNullValueReplyTo = default!; _explicitNullProperties?.Remove("reply_to"); }
+            else if (parseNode.GetChildNode("reply_to") is { } nullNodeReplyTo && nullNodeReplyTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplyTo = null;
+            if (parseNode.GetChildNode("sender_action") is null) { _explicitNullValueSenderAction = default!; _explicitNullProperties?.Remove("sender_action"); }
+            else if (parseNode.GetChildNode("sender_action") is { } nullNodeSenderAction && nullNodeSenderAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SenderAction = null;
+            if (parseNode.GetChildNode("suggestion_action") is null) { _explicitNullValueSuggestionAction = default!; _explicitNullProperties?.Remove("suggestion_action"); }
+            else if (parseNode.GetChildNode("suggestion_action") is { } nullNodeSuggestionAction && nullNodeSuggestionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestionAction = null;
+            if (parseNode.GetChildNode("tag") is null) { _explicitNullValueTag = default!; _explicitNullProperties?.Remove("tag"); }
+            else if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
+            if (parseNode.GetChildNode("thread_control") is null) { _explicitNullValueThreadControl = default!; _explicitNullProperties?.Remove("thread_control"); }
+            else if (parseNode.GetChildNode("thread_control") is { } nullNodeThreadControl && nullNodeThreadControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadControl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,107 +48,107 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The folder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        public string? Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; AdditionalData?.Remove("folder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
         private string? _explicitNullValueFolder = default!;
 #nullable restore
 #else
-        public string Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
+        public string Folder { get => _explicitNullValueFolder; set { _explicitNullValueFolder = value; AdditionalData?.Remove("folder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder"); else _explicitNullProperties?.Remove("folder"); } }
         private string _explicitNullValueFolder = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The messaging_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessagingType { get => _explicitNullValueMessagingType; set { _explicitNullValueMessagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_type"); else _explicitNullProperties?.Remove("messaging_type"); } }
+        public string? MessagingType { get => _explicitNullValueMessagingType; set { _explicitNullValueMessagingType = value; AdditionalData?.Remove("messaging_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_type"); else _explicitNullProperties?.Remove("messaging_type"); } }
         private string? _explicitNullValueMessagingType = default!;
 #nullable restore
 #else
-        public string MessagingType { get => _explicitNullValueMessagingType; set { _explicitNullValueMessagingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_type"); else _explicitNullProperties?.Remove("messaging_type"); } }
+        public string MessagingType { get => _explicitNullValueMessagingType; set { _explicitNullValueMessagingType = value; AdditionalData?.Remove("messaging_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging_type"); else _explicitNullProperties?.Remove("messaging_type"); } }
         private string _explicitNullValueMessagingType = default!;
 #endif
         /// <summary>The notification_type property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesNotificationTypeEnumParam? NotificationType { get => _explicitNullValueNotificationType; set { _explicitNullValueNotificationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_type"); else _explicitNullProperties?.Remove("notification_type"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesNotificationTypeEnumParam? NotificationType { get => _explicitNullValueNotificationType; set { _explicitNullValueNotificationType = value; AdditionalData?.Remove("notification_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_type"); else _explicitNullProperties?.Remove("notification_type"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesNotificationTypeEnumParam? _explicitNullValueNotificationType = default!;
         /// <summary>The payload property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        public string? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
         private string? _explicitNullValuePayload = default!;
 #nullable restore
 #else
-        public string Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        public string Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
         private string _explicitNullValuePayload = default!;
 #endif
         /// <summary>The persona_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonaId { get => _explicitNullValuePersonaId; set { _explicitNullValuePersonaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persona_id"); else _explicitNullProperties?.Remove("persona_id"); } }
+        public string? PersonaId { get => _explicitNullValuePersonaId; set { _explicitNullValuePersonaId = value; AdditionalData?.Remove("persona_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persona_id"); else _explicitNullProperties?.Remove("persona_id"); } }
         private string? _explicitNullValuePersonaId = default!;
 #nullable restore
 #else
-        public string PersonaId { get => _explicitNullValuePersonaId; set { _explicitNullValuePersonaId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persona_id"); else _explicitNullProperties?.Remove("persona_id"); } }
+        public string PersonaId { get => _explicitNullValuePersonaId; set { _explicitNullValuePersonaId = value; AdditionalData?.Remove("persona_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persona_id"); else _explicitNullProperties?.Remove("persona_id"); } }
         private string _explicitNullValuePersonaId = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string _explicitNullValueRecipient = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
+        public string? ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; AdditionalData?.Remove("reply_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
         private string? _explicitNullValueReplyTo = default!;
 #nullable restore
 #else
-        public string ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
+        public string ReplyTo { get => _explicitNullValueReplyTo; set { _explicitNullValueReplyTo = value; AdditionalData?.Remove("reply_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reply_to"); else _explicitNullProperties?.Remove("reply_to"); } }
         private string _explicitNullValueReplyTo = default!;
 #endif
         /// <summary>The sender_action property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SenderAction { get => _explicitNullValueSenderAction; set { _explicitNullValueSenderAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_action"); else _explicitNullProperties?.Remove("sender_action"); } }
+        public string? SenderAction { get => _explicitNullValueSenderAction; set { _explicitNullValueSenderAction = value; AdditionalData?.Remove("sender_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_action"); else _explicitNullProperties?.Remove("sender_action"); } }
         private string? _explicitNullValueSenderAction = default!;
 #nullable restore
 #else
-        public string SenderAction { get => _explicitNullValueSenderAction; set { _explicitNullValueSenderAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_action"); else _explicitNullProperties?.Remove("sender_action"); } }
+        public string SenderAction { get => _explicitNullValueSenderAction; set { _explicitNullValueSenderAction = value; AdditionalData?.Remove("sender_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender_action"); else _explicitNullProperties?.Remove("sender_action"); } }
         private string _explicitNullValueSenderAction = default!;
 #endif
         /// <summary>The suggestion_action property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesSuggestionActionEnumParam? SuggestionAction { get => _explicitNullValueSuggestionAction; set { _explicitNullValueSuggestionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestion_action"); else _explicitNullProperties?.Remove("suggestion_action"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesSuggestionActionEnumParam? SuggestionAction { get => _explicitNullValueSuggestionAction; set { _explicitNullValueSuggestionAction = value; AdditionalData?.Remove("suggestion_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestion_action"); else _explicitNullProperties?.Remove("suggestion_action"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesSuggestionActionEnumParam? _explicitNullValueSuggestionAction = default!;
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string? _explicitNullValueTag = default!;
 #nullable restore
 #else
-        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string _explicitNullValueTag = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadControl { get => _explicitNullValueThreadControl; set { _explicitNullValueThreadControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_control"); else _explicitNullProperties?.Remove("thread_control"); } }
+        public string? ThreadControl { get => _explicitNullValueThreadControl; set { _explicitNullValueThreadControl = value; AdditionalData?.Remove("thread_control"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_control"); else _explicitNullProperties?.Remove("thread_control"); } }
         private string? _explicitNullValueThreadControl = default!;
 #nullable restore
 #else
-        public string ThreadControl { get => _explicitNullValueThreadControl; set { _explicitNullValueThreadControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_control"); else _explicitNullProperties?.Remove("thread_control"); } }
+        public string ThreadControl { get => _explicitNullValueThreadControl; set { _explicitNullValueThreadControl = value; AdditionalData?.Remove("thread_control"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_control"); else _explicitNullProperties?.Remove("thread_control"); } }
         private string _explicitNullValueThreadControl = default!;
 #endif
         /// <summary>
@@ -167,13 +179,13 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "folder", n => { Folder = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "messaging_type", n => { MessagingType = n.GetStringValue(); } },
-                { "notification_type", n => { NotificationType = n.GetEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesNotificationTypeEnumParam>(); } },
+                { "notification_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesNotificationTypeEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNotificationType = default; _explicitNullProperties?.Remove("notification_type"); AdditionalData["notification_type"] = unknown; } else { NotificationType = parsed; AdditionalData.Remove("notification_type"); } } },
                 { "payload", n => { Payload = n.GetStringValue(); } },
                 { "persona_id", n => { PersonaId = n.GetStringValue(); } },
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
                 { "reply_to", n => { ReplyTo = n.GetStringValue(); } },
                 { "sender_action", n => { SenderAction = n.GetStringValue(); } },
-                { "suggestion_action", n => { SuggestionAction = n.GetEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesSuggestionActionEnumParam>(); } },
+                { "suggestion_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.PagemessagesSuggestionActionEnumParam>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSuggestionAction = default; _explicitNullProperties?.Remove("suggestion_action"); AdditionalData["suggestion_action"] = unknown; } else { SuggestionAction = parsed; AdditionalData.Remove("suggestion_action"); } } },
                 { "tag", n => { Tag = n.GetStringValue(); } },
                 { "thread_control", n => { ThreadControl = n.GetStringValue(); } },
             };

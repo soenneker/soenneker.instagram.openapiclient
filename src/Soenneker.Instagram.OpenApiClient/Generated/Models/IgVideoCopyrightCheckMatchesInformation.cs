@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("copyright_matches") is { } nullNodeCopyrightMatches && nullNodeCopyrightMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyrightMatches = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("copyright_matches") is null) { _explicitNullValueCopyrightMatches = default!; _explicitNullProperties?.Remove("copyright_matches"); }
+            else if (parseNode.GetChildNode("copyright_matches") is { } nullNodeCopyrightMatches && nullNodeCopyrightMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyrightMatches = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The copyright_matches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty>? CopyrightMatches { get => _explicitNullValueCopyrightMatches; set { _explicitNullValueCopyrightMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_matches"); else _explicitNullProperties?.Remove("copyright_matches"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty>? CopyrightMatches { get => _explicitNullValueCopyrightMatches; set { _explicitNullValueCopyrightMatches = value; AdditionalData?.Remove("copyright_matches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_matches"); else _explicitNullProperties?.Remove("copyright_matches"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty>? _explicitNullValueCopyrightMatches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty> CopyrightMatches { get => _explicitNullValueCopyrightMatches; set { _explicitNullValueCopyrightMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_matches"); else _explicitNullProperties?.Remove("copyright_matches"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty> CopyrightMatches { get => _explicitNullValueCopyrightMatches; set { _explicitNullValueCopyrightMatches = value; AdditionalData?.Remove("copyright_matches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyright_matches"); else _explicitNullProperties?.Remove("copyright_matches"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckMatchesInformationCopyrightMatchesItemProperty> _explicitNullValueCopyrightMatches = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.IgVideoCopyrightCheckStatus _explicitNullValueStatus = default!;
 #endif
         /// <summary>

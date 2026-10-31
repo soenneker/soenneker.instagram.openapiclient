@@ -17,10 +17,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("days") is { } nullNodeDays && nullNodeDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Days = null;
-            if (parseNode.GetChildNode("end_minute") is { } nullNodeEndMinute && nullNodeEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndMinute = null;
-            if (parseNode.GetChildNode("start_minute") is { } nullNodeStartMinute && nullNodeStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartMinute = null;
-            if (parseNode.GetChildNode("timezone_type") is { } nullNodeTimezoneType && nullNodeTimezoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneType = null;
+            if (parseNode.GetChildNode("days") is null) { _explicitNullValueDays = default!; _explicitNullProperties?.Remove("days"); }
+            else if (parseNode.GetChildNode("days") is { } nullNodeDays && nullNodeDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Days = null;
+            if (parseNode.GetChildNode("end_minute") is null) { _explicitNullValueEndMinute = default!; _explicitNullProperties?.Remove("end_minute"); }
+            else if (parseNode.GetChildNode("end_minute") is { } nullNodeEndMinute && nullNodeEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndMinute = null;
+            if (parseNode.GetChildNode("start_minute") is null) { _explicitNullValueStartMinute = default!; _explicitNullProperties?.Remove("start_minute"); }
+            else if (parseNode.GetChildNode("start_minute") is { } nullNodeStartMinute && nullNodeStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartMinute = null;
+            if (parseNode.GetChildNode("timezone_type") is null) { _explicitNullValueTimezoneType = default!; _explicitNullProperties?.Remove("timezone_type"); }
+            else if (parseNode.GetChildNode("timezone_type") is { } nullNodeTimezoneType && nullNodeTimezoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,27 +32,27 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The days property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
+        public List<long?>? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; AdditionalData?.Remove("days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
         private List<long?>? _explicitNullValueDays = default!;
 #nullable restore
 #else
-        public List<long?> Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
+        public List<long?> Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; AdditionalData?.Remove("days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
         private List<long?> _explicitNullValueDays = default!;
 #endif
         /// <summary>The end_minute property</summary>
-        public long? EndMinute { get => _explicitNullValueEndMinute; set { _explicitNullValueEndMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_minute"); else _explicitNullProperties?.Remove("end_minute"); } }
+        public long? EndMinute { get => _explicitNullValueEndMinute; set { _explicitNullValueEndMinute = value; AdditionalData?.Remove("end_minute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_minute"); else _explicitNullProperties?.Remove("end_minute"); } }
         private long? _explicitNullValueEndMinute = default!;
         /// <summary>The start_minute property</summary>
-        public long? StartMinute { get => _explicitNullValueStartMinute; set { _explicitNullValueStartMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_minute"); else _explicitNullProperties?.Remove("start_minute"); } }
+        public long? StartMinute { get => _explicitNullValueStartMinute; set { _explicitNullValueStartMinute = value; AdditionalData?.Remove("start_minute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_minute"); else _explicitNullProperties?.Remove("start_minute"); } }
         private long? _explicitNullValueStartMinute = default!;
         /// <summary>The timezone_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneType { get => _explicitNullValueTimezoneType; set { _explicitNullValueTimezoneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_type"); else _explicitNullProperties?.Remove("timezone_type"); } }
+        public string? TimezoneType { get => _explicitNullValueTimezoneType; set { _explicitNullValueTimezoneType = value; AdditionalData?.Remove("timezone_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_type"); else _explicitNullProperties?.Remove("timezone_type"); } }
         private string? _explicitNullValueTimezoneType = default!;
 #nullable restore
 #else
-        public string TimezoneType { get => _explicitNullValueTimezoneType; set { _explicitNullValueTimezoneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_type"); else _explicitNullProperties?.Remove("timezone_type"); } }
+        public string TimezoneType { get => _explicitNullValueTimezoneType; set { _explicitNullValueTimezoneType = value; AdditionalData?.Remove("timezone_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone_type"); else _explicitNullProperties?.Remove("timezone_type"); } }
         private string _explicitNullValueTimezoneType = default!;
 #endif
         /// <summary>

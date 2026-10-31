@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("threads_user_id") is { } nullNodeThreadsUserId && nullNodeThreadsUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserId = null;
-            if (parseNode.GetChildNode("threads_user_profile_pic") is { } nullNodeThreadsUserProfilePic && nullNodeThreadsUserProfilePic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserProfilePic = null;
+            if (parseNode.GetChildNode("threads_user_id") is null) { _explicitNullValueThreadsUserId = default!; _explicitNullProperties?.Remove("threads_user_id"); }
+            else if (parseNode.GetChildNode("threads_user_id") is { } nullNodeThreadsUserId && nullNodeThreadsUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserId = null;
+            if (parseNode.GetChildNode("threads_user_profile_pic") is null) { _explicitNullValueThreadsUserProfilePic = default!; _explicitNullProperties?.Remove("threads_user_profile_pic"); }
+            else if (parseNode.GetChildNode("threads_user_profile_pic") is { } nullNodeThreadsUserProfilePic && nullNodeThreadsUserProfilePic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadsUserProfilePic = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The threads_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
+        public string? ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; AdditionalData?.Remove("threads_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
         private string? _explicitNullValueThreadsUserId = default!;
 #nullable restore
 #else
-        public string ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
+        public string ThreadsUserId { get => _explicitNullValueThreadsUserId; set { _explicitNullValueThreadsUserId = value; AdditionalData?.Remove("threads_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_id"); else _explicitNullProperties?.Remove("threads_user_id"); } }
         private string _explicitNullValueThreadsUserId = default!;
 #endif
         /// <summary>The threads_user_profile_pic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
+        public string? ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; AdditionalData?.Remove("threads_user_profile_pic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
         private string? _explicitNullValueThreadsUserProfilePic = default!;
 #nullable restore
 #else
-        public string ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
+        public string ThreadsUserProfilePic { get => _explicitNullValueThreadsUserProfilePic; set { _explicitNullValueThreadsUserProfilePic = value; AdditionalData?.Remove("threads_user_profile_pic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("threads_user_profile_pic"); else _explicitNullProperties?.Remove("threads_user_profile_pic"); } }
         private string _explicitNullValueThreadsUserProfilePic = default!;
 #endif
         /// <summary>

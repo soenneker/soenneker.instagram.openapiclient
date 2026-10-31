@@ -17,11 +17,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("coupon") is { } nullNodeCoupon && nullNodeCoupon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupon = null;
-            if (parseNode.GetChildNode("coupons") is { } nullNodeCoupons && nullNodeCoupons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupons = null;
-            if (parseNode.GetChildNode("display_string") is { } nullNodeDisplayString && nullNodeDisplayString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayString = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("coupon") is null) { _explicitNullValueCoupon = default!; _explicitNullProperties?.Remove("coupon"); }
+            else if (parseNode.GetChildNode("coupon") is { } nullNodeCoupon && nullNodeCoupon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupon = null;
+            if (parseNode.GetChildNode("coupons") is null) { _explicitNullValueCoupons = default!; _explicitNullProperties?.Remove("coupons"); }
+            else if (parseNode.GetChildNode("coupons") is { } nullNodeCoupons && nullNodeCoupons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coupons = null;
+            if (parseNode.GetChildNode("display_string") is null) { _explicitNullValueDisplayString = default!; _explicitNullProperties?.Remove("display_string"); }
+            else if (parseNode.GetChildNode("display_string") is { } nullNodeDisplayString && nullNodeDisplayString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayString = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,45 +34,45 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The coupon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon? Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon? Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; AdditionalData?.Remove("coupon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon? _explicitNullValueCoupon = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon Coupon { get => _explicitNullValueCoupon; set { _explicitNullValueCoupon = value; AdditionalData?.Remove("coupon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon"); else _explicitNullProperties?.Remove("coupon"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon _explicitNullValueCoupon = default!;
 #endif
         /// <summary>The coupons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon>? Coupons { get => _explicitNullValueCoupons; set { _explicitNullValueCoupons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupons"); else _explicitNullProperties?.Remove("coupons"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon>? Coupons { get => _explicitNullValueCoupons; set { _explicitNullValueCoupons = value; AdditionalData?.Remove("coupons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupons"); else _explicitNullProperties?.Remove("coupons"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon>? _explicitNullValueCoupons = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon> Coupons { get => _explicitNullValueCoupons; set { _explicitNullValueCoupons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupons"); else _explicitNullProperties?.Remove("coupons"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon> Coupons { get => _explicitNullValueCoupons; set { _explicitNullValueCoupons = value; AdditionalData?.Remove("coupons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupons"); else _explicitNullProperties?.Remove("coupons"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCoupon> _explicitNullValueCoupons = default!;
 #endif
         /// <summary>The display_string property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayString { get => _explicitNullValueDisplayString; set { _explicitNullValueDisplayString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_string"); else _explicitNullProperties?.Remove("display_string"); } }
+        public string? DisplayString { get => _explicitNullValueDisplayString; set { _explicitNullValueDisplayString = value; AdditionalData?.Remove("display_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_string"); else _explicitNullProperties?.Remove("display_string"); } }
         private string? _explicitNullValueDisplayString = default!;
 #nullable restore
 #else
-        public string DisplayString { get => _explicitNullValueDisplayString; set { _explicitNullValueDisplayString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_string"); else _explicitNullProperties?.Remove("display_string"); } }
+        public string DisplayString { get => _explicitNullValueDisplayString; set { _explicitNullValueDisplayString = value; AdditionalData?.Remove("display_string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_string"); else _explicitNullProperties?.Remove("display_string"); } }
         private string _explicitNullValueDisplayString = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The type property</summary>
-        public long? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public long? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private long? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetails"/> and sets the default values.

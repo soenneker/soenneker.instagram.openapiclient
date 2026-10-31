@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("boost_ineligible_reason") is { } nullNodeBoostIneligibleReason && nullNodeBoostIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoostIneligibleReason = null;
-            if (parseNode.GetChildNode("eligible_to_boost") is { } nullNodeEligibleToBoost && nullNodeEligibleToBoost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleToBoost = null;
+            if (parseNode.GetChildNode("boost_ineligible_reason") is null) { _explicitNullValueBoostIneligibleReason = default!; _explicitNullProperties?.Remove("boost_ineligible_reason"); }
+            else if (parseNode.GetChildNode("boost_ineligible_reason") is { } nullNodeBoostIneligibleReason && nullNodeBoostIneligibleReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoostIneligibleReason = null;
+            if (parseNode.GetChildNode("eligible_to_boost") is null) { _explicitNullValueEligibleToBoost = default!; _explicitNullProperties?.Remove("eligible_to_boost"); }
+            else if (parseNode.GetChildNode("eligible_to_boost") is { } nullNodeEligibleToBoost && nullNodeEligibleToBoost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligibleToBoost = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The boost_ineligible_reason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
+        public string? BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; AdditionalData?.Remove("boost_ineligible_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
         private string? _explicitNullValueBoostIneligibleReason = default!;
 #nullable restore
 #else
-        public string BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
+        public string BoostIneligibleReason { get => _explicitNullValueBoostIneligibleReason; set { _explicitNullValueBoostIneligibleReason = value; AdditionalData?.Remove("boost_ineligible_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boost_ineligible_reason"); else _explicitNullProperties?.Remove("boost_ineligible_reason"); } }
         private string _explicitNullValueBoostIneligibleReason = default!;
 #endif
         /// <summary>The eligible_to_boost property</summary>
-        public bool? EligibleToBoost { get => _explicitNullValueEligibleToBoost; set { _explicitNullValueEligibleToBoost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_to_boost"); else _explicitNullProperties?.Remove("eligible_to_boost"); } }
+        public bool? EligibleToBoost { get => _explicitNullValueEligibleToBoost; set { _explicitNullValueEligibleToBoost = value; AdditionalData?.Remove("eligible_to_boost"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_to_boost"); else _explicitNullProperties?.Remove("eligible_to_boost"); } }
         private bool? _explicitNullValueEligibleToBoost = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.IgMediaBoostEligibilityInfo"/> and sets the default values.

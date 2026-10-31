@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("subscribed_fields") is { } nullNodeSubscribedFields && nullNodeSubscribedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscribedFields = null;
+            if (parseNode.GetChildNode("subscribed_fields") is null) { _explicitNullValueSubscribedFields = default!; _explicitNullProperties?.Remove("subscribed_fields"); }
+            else if (parseNode.GetChildNode("subscribed_fields") is { } nullNodeSubscribedFields && nullNodeSubscribedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscribedFields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The subscribed_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
+        public string? SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; AdditionalData?.Remove("subscribed_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
         private string? _explicitNullValueSubscribedFields = default!;
 #nullable restore
 #else
-        public string SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
+        public string SubscribedFields { get => _explicitNullValueSubscribedFields; set { _explicitNullValueSubscribedFields = value; AdditionalData?.Remove("subscribed_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed_fields"); else _explicitNullProperties?.Remove("subscribed_fields"); } }
         private string _explicitNullValueSubscribedFields = default!;
 #endif
         /// <summary>

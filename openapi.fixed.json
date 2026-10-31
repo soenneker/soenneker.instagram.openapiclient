@@ -15822,6 +15822,10 @@
           "modelAsString": false,
           "values": [
             {
+              "value": "",
+              "name": "EnumValue"
+            },
+            {
               "value": "approved",
               "name": "Approved"
             },
@@ -19436,6 +19440,10 @@
           "modelAsString": false,
           "values": [
             {
+              "value": "",
+              "name": "EnumValue"
+            },
+            {
               "value": "MSA",
               "name": "Msa"
             }
@@ -19474,7 +19482,17 @@
           "Advertiser",
           "Agency"
         ],
-        "type": "string"
+        "type": "string",
+        "x-ms-enum": {
+          "name": "ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "",
+              "name": "EnumValue"
+            }
+          ]
+        }
       },
       "GroupPurpose": {
         "enum": [

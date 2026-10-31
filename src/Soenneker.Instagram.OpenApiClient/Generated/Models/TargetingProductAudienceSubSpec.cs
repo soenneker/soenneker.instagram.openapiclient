@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("min_retention_seconds") is { } nullNodeMinRetentionSeconds && nullNodeMinRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRetentionSeconds = null;
-            if (parseNode.GetChildNode("retention_seconds") is { } nullNodeRetentionSeconds && nullNodeRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionSeconds = null;
-            if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
+            if (parseNode.GetChildNode("min_retention_seconds") is null) { _explicitNullValueMinRetentionSeconds = default!; _explicitNullProperties?.Remove("min_retention_seconds"); }
+            else if (parseNode.GetChildNode("min_retention_seconds") is { } nullNodeMinRetentionSeconds && nullNodeMinRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRetentionSeconds = null;
+            if (parseNode.GetChildNode("retention_seconds") is null) { _explicitNullValueRetentionSeconds = default!; _explicitNullProperties?.Remove("retention_seconds"); }
+            else if (parseNode.GetChildNode("retention_seconds") is { } nullNodeRetentionSeconds && nullNodeRetentionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetentionSeconds = null;
+            if (parseNode.GetChildNode("rule") is null) { _explicitNullValueRule = default!; _explicitNullProperties?.Remove("rule"); }
+            else if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The min_retention_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
+        public string? MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; AdditionalData?.Remove("min_retention_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
         private string? _explicitNullValueMinRetentionSeconds = default!;
 #nullable restore
 #else
-        public string MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
+        public string MinRetentionSeconds { get => _explicitNullValueMinRetentionSeconds; set { _explicitNullValueMinRetentionSeconds = value; AdditionalData?.Remove("min_retention_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("min_retention_seconds"); else _explicitNullProperties?.Remove("min_retention_seconds"); } }
         private string _explicitNullValueMinRetentionSeconds = default!;
 #endif
         /// <summary>The retention_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
+        public string? RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; AdditionalData?.Remove("retention_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
         private string? _explicitNullValueRetentionSeconds = default!;
 #nullable restore
 #else
-        public string RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
+        public string RetentionSeconds { get => _explicitNullValueRetentionSeconds; set { _explicitNullValueRetentionSeconds = value; AdditionalData?.Remove("retention_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retention_seconds"); else _explicitNullProperties?.Remove("retention_seconds"); } }
         private string _explicitNullValueRetentionSeconds = default!;
 #endif
         /// <summary>The rule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        public string? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; AdditionalData?.Remove("rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
         private string? _explicitNullValueRule = default!;
 #nullable restore
 #else
-        public string Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        public string Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; AdditionalData?.Remove("rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
         private string _explicitNullValueRule = default!;
 #endif
         /// <summary>

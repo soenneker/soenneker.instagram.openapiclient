@@ -17,28 +17,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("duration_in_sec") is { } nullNodeDurationInSec && nullNodeDurationInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSec = null;
-            if (parseNode.GetChildNode("media_type") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
-            if (parseNode.GetChildNode("start_time_in_sec") is { } nullNodeStartTimeInSec && nullNodeStartTimeInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTimeInSec = null;
+            if (parseNode.GetChildNode("duration_in_sec") is null) { _explicitNullValueDurationInSec = default!; _explicitNullProperties?.Remove("duration_in_sec"); }
+            else if (parseNode.GetChildNode("duration_in_sec") is { } nullNodeDurationInSec && nullNodeDurationInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DurationInSec = null;
+            if (parseNode.GetChildNode("media_type") is null) { _explicitNullValueMediaType = default!; _explicitNullProperties?.Remove("media_type"); }
+            else if (parseNode.GetChildNode("media_type") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
+            if (parseNode.GetChildNode("start_time_in_sec") is null) { _explicitNullValueStartTimeInSec = default!; _explicitNullProperties?.Remove("start_time_in_sec"); }
+            else if (parseNode.GetChildNode("start_time_in_sec") is { } nullNodeStartTimeInSec && nullNodeStartTimeInSec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTimeInSec = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The duration_in_sec property</summary>
-        public float? DurationInSec { get => _explicitNullValueDurationInSec; set { _explicitNullValueDurationInSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_sec"); else _explicitNullProperties?.Remove("duration_in_sec"); } }
+        public float? DurationInSec { get => _explicitNullValueDurationInSec; set { _explicitNullValueDurationInSec = value; AdditionalData?.Remove("duration_in_sec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration_in_sec"); else _explicitNullProperties?.Remove("duration_in_sec"); } }
         private float? _explicitNullValueDurationInSec = default!;
         /// <summary>The media_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
+        public string? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; AdditionalData?.Remove("media_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
         private string? _explicitNullValueMediaType = default!;
 #nullable restore
 #else
-        public string MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
+        public string MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; AdditionalData?.Remove("media_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media_type"); else _explicitNullProperties?.Remove("media_type"); } }
         private string _explicitNullValueMediaType = default!;
 #endif
         /// <summary>The start_time_in_sec property</summary>
-        public float? StartTimeInSec { get => _explicitNullValueStartTimeInSec; set { _explicitNullValueStartTimeInSec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time_in_sec"); else _explicitNullProperties?.Remove("start_time_in_sec"); } }
+        public float? StartTimeInSec { get => _explicitNullValueStartTimeInSec; set { _explicitNullValueStartTimeInSec = value; AdditionalData?.Remove("start_time_in_sec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_time_in_sec"); else _explicitNullProperties?.Remove("start_time_in_sec"); } }
         private float? _explicitNullValueStartTimeInSec = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.VideoCopyrightSegment"/> and sets the default values.

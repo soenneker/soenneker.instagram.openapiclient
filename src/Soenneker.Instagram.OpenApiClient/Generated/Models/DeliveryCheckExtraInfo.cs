@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adgroup_ids") is { } nullNodeAdgroupIds && nullNodeAdgroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdgroupIds = null;
-            if (parseNode.GetChildNode("campaign_ids") is { } nullNodeCampaignIds && nullNodeCampaignIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignIds = null;
-            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("adgroup_ids") is null) { _explicitNullValueAdgroupIds = default!; _explicitNullProperties?.Remove("adgroup_ids"); }
+            else if (parseNode.GetChildNode("adgroup_ids") is { } nullNodeAdgroupIds && nullNodeAdgroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdgroupIds = null;
+            if (parseNode.GetChildNode("campaign_ids") is null) { _explicitNullValueCampaignIds = default!; _explicitNullProperties?.Remove("campaign_ids"); }
+            else if (parseNode.GetChildNode("campaign_ids") is { } nullNodeCampaignIds && nullNodeCampaignIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignIds = null;
+            if (parseNode.GetChildNode("countries") is null) { _explicitNullValueCountries = default!; _explicitNullProperties?.Remove("countries"); }
+            else if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The adgroup_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AdgroupIds { get => _explicitNullValueAdgroupIds; set { _explicitNullValueAdgroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adgroup_ids"); else _explicitNullProperties?.Remove("adgroup_ids"); } }
+        public List<string>? AdgroupIds { get => _explicitNullValueAdgroupIds; set { _explicitNullValueAdgroupIds = value; AdditionalData?.Remove("adgroup_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adgroup_ids"); else _explicitNullProperties?.Remove("adgroup_ids"); } }
         private List<string>? _explicitNullValueAdgroupIds = default!;
 #nullable restore
 #else
-        public List<string> AdgroupIds { get => _explicitNullValueAdgroupIds; set { _explicitNullValueAdgroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adgroup_ids"); else _explicitNullProperties?.Remove("adgroup_ids"); } }
+        public List<string> AdgroupIds { get => _explicitNullValueAdgroupIds; set { _explicitNullValueAdgroupIds = value; AdditionalData?.Remove("adgroup_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adgroup_ids"); else _explicitNullProperties?.Remove("adgroup_ids"); } }
         private List<string> _explicitNullValueAdgroupIds = default!;
 #endif
         /// <summary>The campaign_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CampaignIds { get => _explicitNullValueCampaignIds; set { _explicitNullValueCampaignIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_ids"); else _explicitNullProperties?.Remove("campaign_ids"); } }
+        public List<string>? CampaignIds { get => _explicitNullValueCampaignIds; set { _explicitNullValueCampaignIds = value; AdditionalData?.Remove("campaign_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_ids"); else _explicitNullProperties?.Remove("campaign_ids"); } }
         private List<string>? _explicitNullValueCampaignIds = default!;
 #nullable restore
 #else
-        public List<string> CampaignIds { get => _explicitNullValueCampaignIds; set { _explicitNullValueCampaignIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_ids"); else _explicitNullProperties?.Remove("campaign_ids"); } }
+        public List<string> CampaignIds { get => _explicitNullValueCampaignIds; set { _explicitNullValueCampaignIds = value; AdditionalData?.Remove("campaign_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaign_ids"); else _explicitNullProperties?.Remove("campaign_ids"); } }
         private List<string> _explicitNullValueCampaignIds = default!;
 #endif
         /// <summary>The countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<string>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<string>? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public List<string> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<string> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<string> _explicitNullValueCountries = default!;
 #endif
         /// <summary>

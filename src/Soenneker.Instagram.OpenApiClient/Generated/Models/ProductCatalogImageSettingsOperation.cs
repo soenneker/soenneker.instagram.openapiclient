@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("transformation_type") is { } nullNodeTransformationType && nullNodeTransformationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformationType = null;
+            if (parseNode.GetChildNode("transformation_type") is null) { _explicitNullValueTransformationType = default!; _explicitNullProperties?.Remove("transformation_type"); }
+            else if (parseNode.GetChildNode("transformation_type") is { } nullNodeTransformationType && nullNodeTransformationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformationType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The transformation_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransformationType { get => _explicitNullValueTransformationType; set { _explicitNullValueTransformationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformation_type"); else _explicitNullProperties?.Remove("transformation_type"); } }
+        public string? TransformationType { get => _explicitNullValueTransformationType; set { _explicitNullValueTransformationType = value; AdditionalData?.Remove("transformation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformation_type"); else _explicitNullProperties?.Remove("transformation_type"); } }
         private string? _explicitNullValueTransformationType = default!;
 #nullable restore
 #else
-        public string TransformationType { get => _explicitNullValueTransformationType; set { _explicitNullValueTransformationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformation_type"); else _explicitNullProperties?.Remove("transformation_type"); } }
+        public string TransformationType { get => _explicitNullValueTransformationType; set { _explicitNullValueTransformationType = value; AdditionalData?.Remove("transformation_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformation_type"); else _explicitNullProperties?.Remove("transformation_type"); } }
         private string _explicitNullValueTransformationType = default!;
 #endif
         /// <summary>

@@ -17,15 +17,24 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("compatible_platforms") is { } nullNodeCompatiblePlatforms && nullNodeCompatiblePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompatiblePlatforms = null;
-            if (parseNode.GetChildNode("eligible_platforms") is { } nullNodeEligiblePlatforms && nullNodeEligiblePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligiblePlatforms = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("is_ig_only_flow") is { } nullNodeIsIgOnlyFlow && nullNodeIsIgOnlyFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsIgOnlyFlow = null;
-            if (parseNode.GetChildNode("is_used_in_ad") is { } nullNodeIsUsedInAd && nullNodeIsUsedInAd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedInAd = null;
-            if (parseNode.GetChildNode("last_update_time") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("welcome_message_flow") is { } nullNodeWelcomeMessageFlow && nullNodeWelcomeMessageFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessageFlow = null;
-            if (parseNode.GetChildNode("welcome_message_sequence") is { } nullNodeWelcomeMessageSequence && nullNodeWelcomeMessageSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessageSequence = null;
+            if (parseNode.GetChildNode("compatible_platforms") is null) { _explicitNullValueCompatiblePlatforms = default!; _explicitNullProperties?.Remove("compatible_platforms"); }
+            else if (parseNode.GetChildNode("compatible_platforms") is { } nullNodeCompatiblePlatforms && nullNodeCompatiblePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompatiblePlatforms = null;
+            if (parseNode.GetChildNode("eligible_platforms") is null) { _explicitNullValueEligiblePlatforms = default!; _explicitNullProperties?.Remove("eligible_platforms"); }
+            else if (parseNode.GetChildNode("eligible_platforms") is { } nullNodeEligiblePlatforms && nullNodeEligiblePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EligiblePlatforms = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("is_ig_only_flow") is null) { _explicitNullValueIsIgOnlyFlow = default!; _explicitNullProperties?.Remove("is_ig_only_flow"); }
+            else if (parseNode.GetChildNode("is_ig_only_flow") is { } nullNodeIsIgOnlyFlow && nullNodeIsIgOnlyFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsIgOnlyFlow = null;
+            if (parseNode.GetChildNode("is_used_in_ad") is null) { _explicitNullValueIsUsedInAd = default!; _explicitNullProperties?.Remove("is_used_in_ad"); }
+            else if (parseNode.GetChildNode("is_used_in_ad") is { } nullNodeIsUsedInAd && nullNodeIsUsedInAd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUsedInAd = null;
+            if (parseNode.GetChildNode("last_update_time") is null) { _explicitNullValueLastUpdateTime = default!; _explicitNullProperties?.Remove("last_update_time"); }
+            else if (parseNode.GetChildNode("last_update_time") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("welcome_message_flow") is null) { _explicitNullValueWelcomeMessageFlow = default!; _explicitNullProperties?.Remove("welcome_message_flow"); }
+            else if (parseNode.GetChildNode("welcome_message_flow") is { } nullNodeWelcomeMessageFlow && nullNodeWelcomeMessageFlow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessageFlow = null;
+            if (parseNode.GetChildNode("welcome_message_sequence") is null) { _explicitNullValueWelcomeMessageSequence = default!; _explicitNullProperties?.Remove("welcome_message_sequence"); }
+            else if (parseNode.GetChildNode("welcome_message_sequence") is { } nullNodeWelcomeMessageSequence && nullNodeWelcomeMessageSequence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessageSequence = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,70 +42,70 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The compatible_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CompatiblePlatforms { get => _explicitNullValueCompatiblePlatforms; set { _explicitNullValueCompatiblePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatible_platforms"); else _explicitNullProperties?.Remove("compatible_platforms"); } }
+        public List<string>? CompatiblePlatforms { get => _explicitNullValueCompatiblePlatforms; set { _explicitNullValueCompatiblePlatforms = value; AdditionalData?.Remove("compatible_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatible_platforms"); else _explicitNullProperties?.Remove("compatible_platforms"); } }
         private List<string>? _explicitNullValueCompatiblePlatforms = default!;
 #nullable restore
 #else
-        public List<string> CompatiblePlatforms { get => _explicitNullValueCompatiblePlatforms; set { _explicitNullValueCompatiblePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatible_platforms"); else _explicitNullProperties?.Remove("compatible_platforms"); } }
+        public List<string> CompatiblePlatforms { get => _explicitNullValueCompatiblePlatforms; set { _explicitNullValueCompatiblePlatforms = value; AdditionalData?.Remove("compatible_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatible_platforms"); else _explicitNullProperties?.Remove("compatible_platforms"); } }
         private List<string> _explicitNullValueCompatiblePlatforms = default!;
 #endif
         /// <summary>The eligible_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EligiblePlatforms { get => _explicitNullValueEligiblePlatforms; set { _explicitNullValueEligiblePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_platforms"); else _explicitNullProperties?.Remove("eligible_platforms"); } }
+        public List<string>? EligiblePlatforms { get => _explicitNullValueEligiblePlatforms; set { _explicitNullValueEligiblePlatforms = value; AdditionalData?.Remove("eligible_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_platforms"); else _explicitNullProperties?.Remove("eligible_platforms"); } }
         private List<string>? _explicitNullValueEligiblePlatforms = default!;
 #nullable restore
 #else
-        public List<string> EligiblePlatforms { get => _explicitNullValueEligiblePlatforms; set { _explicitNullValueEligiblePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_platforms"); else _explicitNullProperties?.Remove("eligible_platforms"); } }
+        public List<string> EligiblePlatforms { get => _explicitNullValueEligiblePlatforms; set { _explicitNullValueEligiblePlatforms = value; AdditionalData?.Remove("eligible_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_platforms"); else _explicitNullProperties?.Remove("eligible_platforms"); } }
         private List<string> _explicitNullValueEligiblePlatforms = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The is_ig_only_flow property</summary>
-        public bool? IsIgOnlyFlow { get => _explicitNullValueIsIgOnlyFlow; set { _explicitNullValueIsIgOnlyFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ig_only_flow"); else _explicitNullProperties?.Remove("is_ig_only_flow"); } }
+        public bool? IsIgOnlyFlow { get => _explicitNullValueIsIgOnlyFlow; set { _explicitNullValueIsIgOnlyFlow = value; AdditionalData?.Remove("is_ig_only_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ig_only_flow"); else _explicitNullProperties?.Remove("is_ig_only_flow"); } }
         private bool? _explicitNullValueIsIgOnlyFlow = default!;
         /// <summary>The is_used_in_ad property</summary>
-        public bool? IsUsedInAd { get => _explicitNullValueIsUsedInAd; set { _explicitNullValueIsUsedInAd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_used_in_ad"); else _explicitNullProperties?.Remove("is_used_in_ad"); } }
+        public bool? IsUsedInAd { get => _explicitNullValueIsUsedInAd; set { _explicitNullValueIsUsedInAd = value; AdditionalData?.Remove("is_used_in_ad"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_used_in_ad"); else _explicitNullProperties?.Remove("is_used_in_ad"); } }
         private bool? _explicitNullValueIsUsedInAd = default!;
         /// <summary>The last_update_time property</summary>
-        public DateTimeOffset? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
+        public DateTimeOffset? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; AdditionalData?.Remove("last_update_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_time"); else _explicitNullProperties?.Remove("last_update_time"); } }
         private DateTimeOffset? _explicitNullValueLastUpdateTime = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The welcome_message_flow property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WelcomeMessageFlow { get => _explicitNullValueWelcomeMessageFlow; set { _explicitNullValueWelcomeMessageFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_flow"); else _explicitNullProperties?.Remove("welcome_message_flow"); } }
+        public string? WelcomeMessageFlow { get => _explicitNullValueWelcomeMessageFlow; set { _explicitNullValueWelcomeMessageFlow = value; AdditionalData?.Remove("welcome_message_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_flow"); else _explicitNullProperties?.Remove("welcome_message_flow"); } }
         private string? _explicitNullValueWelcomeMessageFlow = default!;
 #nullable restore
 #else
-        public string WelcomeMessageFlow { get => _explicitNullValueWelcomeMessageFlow; set { _explicitNullValueWelcomeMessageFlow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_flow"); else _explicitNullProperties?.Remove("welcome_message_flow"); } }
+        public string WelcomeMessageFlow { get => _explicitNullValueWelcomeMessageFlow; set { _explicitNullValueWelcomeMessageFlow = value; AdditionalData?.Remove("welcome_message_flow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_flow"); else _explicitNullProperties?.Remove("welcome_message_flow"); } }
         private string _explicitNullValueWelcomeMessageFlow = default!;
 #endif
         /// <summary>The welcome_message_sequence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WelcomeMessageSequence { get => _explicitNullValueWelcomeMessageSequence; set { _explicitNullValueWelcomeMessageSequence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_sequence"); else _explicitNullProperties?.Remove("welcome_message_sequence"); } }
+        public string? WelcomeMessageSequence { get => _explicitNullValueWelcomeMessageSequence; set { _explicitNullValueWelcomeMessageSequence = value; AdditionalData?.Remove("welcome_message_sequence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_sequence"); else _explicitNullProperties?.Remove("welcome_message_sequence"); } }
         private string? _explicitNullValueWelcomeMessageSequence = default!;
 #nullable restore
 #else
-        public string WelcomeMessageSequence { get => _explicitNullValueWelcomeMessageSequence; set { _explicitNullValueWelcomeMessageSequence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_sequence"); else _explicitNullProperties?.Remove("welcome_message_sequence"); } }
+        public string WelcomeMessageSequence { get => _explicitNullValueWelcomeMessageSequence; set { _explicitNullValueWelcomeMessageSequence = value; AdditionalData?.Remove("welcome_message_sequence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcome_message_sequence"); else _explicitNullProperties?.Remove("welcome_message_sequence"); } }
         private string _explicitNullValueWelcomeMessageSequence = default!;
 #endif
         /// <summary>

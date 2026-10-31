@@ -8,6 +8,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
     public enum ExtendedcreditowningCreditAllocationConfigsSendBillToEnumParam
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "")]
+        EmptyString,
+
         [EnumMember(Value = "Advertiser")]
         #pragma warning disable CS1591
         Advertiser,

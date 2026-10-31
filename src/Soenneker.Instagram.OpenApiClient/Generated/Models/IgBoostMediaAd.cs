@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ad_id") is { } nullNodeAdId && nullNodeAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdId = null;
-            if (parseNode.GetChildNode("ad_status") is { } nullNodeAdStatus && nullNodeAdStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdStatus = null;
+            if (parseNode.GetChildNode("ad_id") is null) { _explicitNullValueAdId = default!; _explicitNullProperties?.Remove("ad_id"); }
+            else if (parseNode.GetChildNode("ad_id") is { } nullNodeAdId && nullNodeAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdId = null;
+            if (parseNode.GetChildNode("ad_status") is null) { _explicitNullValueAdStatus = default!; _explicitNullProperties?.Remove("ad_status"); }
+            else if (parseNode.GetChildNode("ad_status") is { } nullNodeAdStatus && nullNodeAdStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The ad_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
+        public string? AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; AdditionalData?.Remove("ad_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
         private string? _explicitNullValueAdId = default!;
 #nullable restore
 #else
-        public string AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
+        public string AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; AdditionalData?.Remove("ad_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_id"); else _explicitNullProperties?.Remove("ad_id"); } }
         private string _explicitNullValueAdId = default!;
 #endif
         /// <summary>The ad_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdStatus { get => _explicitNullValueAdStatus; set { _explicitNullValueAdStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_status"); else _explicitNullProperties?.Remove("ad_status"); } }
+        public string? AdStatus { get => _explicitNullValueAdStatus; set { _explicitNullValueAdStatus = value; AdditionalData?.Remove("ad_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_status"); else _explicitNullProperties?.Remove("ad_status"); } }
         private string? _explicitNullValueAdStatus = default!;
 #nullable restore
 #else
-        public string AdStatus { get => _explicitNullValueAdStatus; set { _explicitNullValueAdStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_status"); else _explicitNullProperties?.Remove("ad_status"); } }
+        public string AdStatus { get => _explicitNullValueAdStatus; set { _explicitNullValueAdStatus = value; AdditionalData?.Remove("ad_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ad_status"); else _explicitNullProperties?.Remove("ad_status"); } }
         private string _explicitNullValueAdStatus = default!;
 #endif
         /// <summary>

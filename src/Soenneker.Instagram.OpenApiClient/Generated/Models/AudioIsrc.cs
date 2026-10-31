@@ -17,16 +17,26 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("all_kg_featured_artists") is { } nullNodeAllKgFeaturedArtists && nullNodeAllKgFeaturedArtists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllKgFeaturedArtists = null;
-            if (parseNode.GetChildNode("all_kg_main_artists") is { } nullNodeAllKgMainArtists && nullNodeAllKgMainArtists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllKgMainArtists = null;
-            if (parseNode.GetChildNode("artist_profile_picture_url") is { } nullNodeArtistProfilePictureUrl && nullNodeArtistProfilePictureUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtistProfilePictureUrl = null;
-            if (parseNode.GetChildNode("canonical_audio_asset") is { } nullNodeCanonicalAudioAsset && nullNodeCanonicalAudioAsset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanonicalAudioAsset = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("isrc") is { } nullNodeIsrc && nullNodeIsrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Isrc = null;
-            if (parseNode.GetChildNode("publishing_rights_data") is { } nullNodePublishingRightsData && nullNodePublishingRightsData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishingRightsData = null;
-            if (parseNode.GetChildNode("top_searchable_artist_id") is { } nullNodeTopSearchableArtistId && nullNodeTopSearchableArtistId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistId = null;
-            if (parseNode.GetChildNode("top_searchable_artist_name") is { } nullNodeTopSearchableArtistName && nullNodeTopSearchableArtistName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistName = null;
-            if (parseNode.GetChildNode("top_searchable_artist_profile_pic_url") is { } nullNodeTopSearchableArtistProfilePicUrl && nullNodeTopSearchableArtistProfilePicUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistProfilePicUrl = null;
+            if (parseNode.GetChildNode("all_kg_featured_artists") is null) { _explicitNullValueAllKgFeaturedArtists = default!; _explicitNullProperties?.Remove("all_kg_featured_artists"); }
+            else if (parseNode.GetChildNode("all_kg_featured_artists") is { } nullNodeAllKgFeaturedArtists && nullNodeAllKgFeaturedArtists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllKgFeaturedArtists = null;
+            if (parseNode.GetChildNode("all_kg_main_artists") is null) { _explicitNullValueAllKgMainArtists = default!; _explicitNullProperties?.Remove("all_kg_main_artists"); }
+            else if (parseNode.GetChildNode("all_kg_main_artists") is { } nullNodeAllKgMainArtists && nullNodeAllKgMainArtists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllKgMainArtists = null;
+            if (parseNode.GetChildNode("artist_profile_picture_url") is null) { _explicitNullValueArtistProfilePictureUrl = default!; _explicitNullProperties?.Remove("artist_profile_picture_url"); }
+            else if (parseNode.GetChildNode("artist_profile_picture_url") is { } nullNodeArtistProfilePictureUrl && nullNodeArtistProfilePictureUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtistProfilePictureUrl = null;
+            if (parseNode.GetChildNode("canonical_audio_asset") is null) { _explicitNullValueCanonicalAudioAsset = default!; _explicitNullProperties?.Remove("canonical_audio_asset"); }
+            else if (parseNode.GetChildNode("canonical_audio_asset") is { } nullNodeCanonicalAudioAsset && nullNodeCanonicalAudioAsset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanonicalAudioAsset = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isrc") is null) { _explicitNullValueIsrc = default!; _explicitNullProperties?.Remove("isrc"); }
+            else if (parseNode.GetChildNode("isrc") is { } nullNodeIsrc && nullNodeIsrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Isrc = null;
+            if (parseNode.GetChildNode("publishing_rights_data") is null) { _explicitNullValuePublishingRightsData = default!; _explicitNullProperties?.Remove("publishing_rights_data"); }
+            else if (parseNode.GetChildNode("publishing_rights_data") is { } nullNodePublishingRightsData && nullNodePublishingRightsData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishingRightsData = null;
+            if (parseNode.GetChildNode("top_searchable_artist_id") is null) { _explicitNullValueTopSearchableArtistId = default!; _explicitNullProperties?.Remove("top_searchable_artist_id"); }
+            else if (parseNode.GetChildNode("top_searchable_artist_id") is { } nullNodeTopSearchableArtistId && nullNodeTopSearchableArtistId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistId = null;
+            if (parseNode.GetChildNode("top_searchable_artist_name") is null) { _explicitNullValueTopSearchableArtistName = default!; _explicitNullProperties?.Remove("top_searchable_artist_name"); }
+            else if (parseNode.GetChildNode("top_searchable_artist_name") is { } nullNodeTopSearchableArtistName && nullNodeTopSearchableArtistName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistName = null;
+            if (parseNode.GetChildNode("top_searchable_artist_profile_pic_url") is null) { _explicitNullValueTopSearchableArtistProfilePicUrl = default!; _explicitNullProperties?.Remove("top_searchable_artist_profile_pic_url"); }
+            else if (parseNode.GetChildNode("top_searchable_artist_profile_pic_url") is { } nullNodeTopSearchableArtistProfilePicUrl && nullNodeTopSearchableArtistProfilePicUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopSearchableArtistProfilePicUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,101 +44,101 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The all_kg_featured_artists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllKgFeaturedArtists { get => _explicitNullValueAllKgFeaturedArtists; set { _explicitNullValueAllKgFeaturedArtists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_featured_artists"); else _explicitNullProperties?.Remove("all_kg_featured_artists"); } }
+        public string? AllKgFeaturedArtists { get => _explicitNullValueAllKgFeaturedArtists; set { _explicitNullValueAllKgFeaturedArtists = value; AdditionalData?.Remove("all_kg_featured_artists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_featured_artists"); else _explicitNullProperties?.Remove("all_kg_featured_artists"); } }
         private string? _explicitNullValueAllKgFeaturedArtists = default!;
 #nullable restore
 #else
-        public string AllKgFeaturedArtists { get => _explicitNullValueAllKgFeaturedArtists; set { _explicitNullValueAllKgFeaturedArtists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_featured_artists"); else _explicitNullProperties?.Remove("all_kg_featured_artists"); } }
+        public string AllKgFeaturedArtists { get => _explicitNullValueAllKgFeaturedArtists; set { _explicitNullValueAllKgFeaturedArtists = value; AdditionalData?.Remove("all_kg_featured_artists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_featured_artists"); else _explicitNullProperties?.Remove("all_kg_featured_artists"); } }
         private string _explicitNullValueAllKgFeaturedArtists = default!;
 #endif
         /// <summary>The all_kg_main_artists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllKgMainArtists { get => _explicitNullValueAllKgMainArtists; set { _explicitNullValueAllKgMainArtists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_main_artists"); else _explicitNullProperties?.Remove("all_kg_main_artists"); } }
+        public string? AllKgMainArtists { get => _explicitNullValueAllKgMainArtists; set { _explicitNullValueAllKgMainArtists = value; AdditionalData?.Remove("all_kg_main_artists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_main_artists"); else _explicitNullProperties?.Remove("all_kg_main_artists"); } }
         private string? _explicitNullValueAllKgMainArtists = default!;
 #nullable restore
 #else
-        public string AllKgMainArtists { get => _explicitNullValueAllKgMainArtists; set { _explicitNullValueAllKgMainArtists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_main_artists"); else _explicitNullProperties?.Remove("all_kg_main_artists"); } }
+        public string AllKgMainArtists { get => _explicitNullValueAllKgMainArtists; set { _explicitNullValueAllKgMainArtists = value; AdditionalData?.Remove("all_kg_main_artists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all_kg_main_artists"); else _explicitNullProperties?.Remove("all_kg_main_artists"); } }
         private string _explicitNullValueAllKgMainArtists = default!;
 #endif
         /// <summary>The artist_profile_picture_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtistProfilePictureUrl { get => _explicitNullValueArtistProfilePictureUrl; set { _explicitNullValueArtistProfilePictureUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artist_profile_picture_url"); else _explicitNullProperties?.Remove("artist_profile_picture_url"); } }
+        public string? ArtistProfilePictureUrl { get => _explicitNullValueArtistProfilePictureUrl; set { _explicitNullValueArtistProfilePictureUrl = value; AdditionalData?.Remove("artist_profile_picture_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artist_profile_picture_url"); else _explicitNullProperties?.Remove("artist_profile_picture_url"); } }
         private string? _explicitNullValueArtistProfilePictureUrl = default!;
 #nullable restore
 #else
-        public string ArtistProfilePictureUrl { get => _explicitNullValueArtistProfilePictureUrl; set { _explicitNullValueArtistProfilePictureUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artist_profile_picture_url"); else _explicitNullProperties?.Remove("artist_profile_picture_url"); } }
+        public string ArtistProfilePictureUrl { get => _explicitNullValueArtistProfilePictureUrl; set { _explicitNullValueArtistProfilePictureUrl = value; AdditionalData?.Remove("artist_profile_picture_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artist_profile_picture_url"); else _explicitNullProperties?.Remove("artist_profile_picture_url"); } }
         private string _explicitNullValueArtistProfilePictureUrl = default!;
 #endif
         /// <summary>The canonical_audio_asset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset? CanonicalAudioAsset { get => _explicitNullValueCanonicalAudioAsset; set { _explicitNullValueCanonicalAudioAsset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical_audio_asset"); else _explicitNullProperties?.Remove("canonical_audio_asset"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset? CanonicalAudioAsset { get => _explicitNullValueCanonicalAudioAsset; set { _explicitNullValueCanonicalAudioAsset = value; AdditionalData?.Remove("canonical_audio_asset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical_audio_asset"); else _explicitNullProperties?.Remove("canonical_audio_asset"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset? _explicitNullValueCanonicalAudioAsset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset CanonicalAudioAsset { get => _explicitNullValueCanonicalAudioAsset; set { _explicitNullValueCanonicalAudioAsset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical_audio_asset"); else _explicitNullProperties?.Remove("canonical_audio_asset"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset CanonicalAudioAsset { get => _explicitNullValueCanonicalAudioAsset; set { _explicitNullValueCanonicalAudioAsset = value; AdditionalData?.Remove("canonical_audio_asset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical_audio_asset"); else _explicitNullProperties?.Remove("canonical_audio_asset"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AudioAsset _explicitNullValueCanonicalAudioAsset = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isrc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Isrc { get => _explicitNullValueIsrc; set { _explicitNullValueIsrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isrc"); else _explicitNullProperties?.Remove("isrc"); } }
+        public string? Isrc { get => _explicitNullValueIsrc; set { _explicitNullValueIsrc = value; AdditionalData?.Remove("isrc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isrc"); else _explicitNullProperties?.Remove("isrc"); } }
         private string? _explicitNullValueIsrc = default!;
 #nullable restore
 #else
-        public string Isrc { get => _explicitNullValueIsrc; set { _explicitNullValueIsrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isrc"); else _explicitNullProperties?.Remove("isrc"); } }
+        public string Isrc { get => _explicitNullValueIsrc; set { _explicitNullValueIsrc = value; AdditionalData?.Remove("isrc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isrc"); else _explicitNullProperties?.Remove("isrc"); } }
         private string _explicitNullValueIsrc = default!;
 #endif
         /// <summary>The publishing_rights_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty? PublishingRightsData { get => _explicitNullValuePublishingRightsData; set { _explicitNullValuePublishingRightsData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishing_rights_data"); else _explicitNullProperties?.Remove("publishing_rights_data"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty? PublishingRightsData { get => _explicitNullValuePublishingRightsData; set { _explicitNullValuePublishingRightsData = value; AdditionalData?.Remove("publishing_rights_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishing_rights_data"); else _explicitNullProperties?.Remove("publishing_rights_data"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty? _explicitNullValuePublishingRightsData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty PublishingRightsData { get => _explicitNullValuePublishingRightsData; set { _explicitNullValuePublishingRightsData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishing_rights_data"); else _explicitNullProperties?.Remove("publishing_rights_data"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty PublishingRightsData { get => _explicitNullValuePublishingRightsData; set { _explicitNullValuePublishingRightsData = value; AdditionalData?.Remove("publishing_rights_data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishing_rights_data"); else _explicitNullProperties?.Remove("publishing_rights_data"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AudioIsrcPublishingRightsDataProperty _explicitNullValuePublishingRightsData = default!;
 #endif
         /// <summary>The top_searchable_artist_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TopSearchableArtistId { get => _explicitNullValueTopSearchableArtistId; set { _explicitNullValueTopSearchableArtistId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_id"); else _explicitNullProperties?.Remove("top_searchable_artist_id"); } }
+        public string? TopSearchableArtistId { get => _explicitNullValueTopSearchableArtistId; set { _explicitNullValueTopSearchableArtistId = value; AdditionalData?.Remove("top_searchable_artist_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_id"); else _explicitNullProperties?.Remove("top_searchable_artist_id"); } }
         private string? _explicitNullValueTopSearchableArtistId = default!;
 #nullable restore
 #else
-        public string TopSearchableArtistId { get => _explicitNullValueTopSearchableArtistId; set { _explicitNullValueTopSearchableArtistId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_id"); else _explicitNullProperties?.Remove("top_searchable_artist_id"); } }
+        public string TopSearchableArtistId { get => _explicitNullValueTopSearchableArtistId; set { _explicitNullValueTopSearchableArtistId = value; AdditionalData?.Remove("top_searchable_artist_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_id"); else _explicitNullProperties?.Remove("top_searchable_artist_id"); } }
         private string _explicitNullValueTopSearchableArtistId = default!;
 #endif
         /// <summary>The top_searchable_artist_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TopSearchableArtistName { get => _explicitNullValueTopSearchableArtistName; set { _explicitNullValueTopSearchableArtistName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_name"); else _explicitNullProperties?.Remove("top_searchable_artist_name"); } }
+        public string? TopSearchableArtistName { get => _explicitNullValueTopSearchableArtistName; set { _explicitNullValueTopSearchableArtistName = value; AdditionalData?.Remove("top_searchable_artist_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_name"); else _explicitNullProperties?.Remove("top_searchable_artist_name"); } }
         private string? _explicitNullValueTopSearchableArtistName = default!;
 #nullable restore
 #else
-        public string TopSearchableArtistName { get => _explicitNullValueTopSearchableArtistName; set { _explicitNullValueTopSearchableArtistName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_name"); else _explicitNullProperties?.Remove("top_searchable_artist_name"); } }
+        public string TopSearchableArtistName { get => _explicitNullValueTopSearchableArtistName; set { _explicitNullValueTopSearchableArtistName = value; AdditionalData?.Remove("top_searchable_artist_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_name"); else _explicitNullProperties?.Remove("top_searchable_artist_name"); } }
         private string _explicitNullValueTopSearchableArtistName = default!;
 #endif
         /// <summary>The top_searchable_artist_profile_pic_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TopSearchableArtistProfilePicUrl { get => _explicitNullValueTopSearchableArtistProfilePicUrl; set { _explicitNullValueTopSearchableArtistProfilePicUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_profile_pic_url"); else _explicitNullProperties?.Remove("top_searchable_artist_profile_pic_url"); } }
+        public string? TopSearchableArtistProfilePicUrl { get => _explicitNullValueTopSearchableArtistProfilePicUrl; set { _explicitNullValueTopSearchableArtistProfilePicUrl = value; AdditionalData?.Remove("top_searchable_artist_profile_pic_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_profile_pic_url"); else _explicitNullProperties?.Remove("top_searchable_artist_profile_pic_url"); } }
         private string? _explicitNullValueTopSearchableArtistProfilePicUrl = default!;
 #nullable restore
 #else
-        public string TopSearchableArtistProfilePicUrl { get => _explicitNullValueTopSearchableArtistProfilePicUrl; set { _explicitNullValueTopSearchableArtistProfilePicUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_profile_pic_url"); else _explicitNullProperties?.Remove("top_searchable_artist_profile_pic_url"); } }
+        public string TopSearchableArtistProfilePicUrl { get => _explicitNullValueTopSearchableArtistProfilePicUrl; set { _explicitNullValueTopSearchableArtistProfilePicUrl = value; AdditionalData?.Remove("top_searchable_artist_profile_pic_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_searchable_artist_profile_pic_url"); else _explicitNullProperties?.Remove("top_searchable_artist_profile_pic_url"); } }
         private string _explicitNullValueTopSearchableArtistProfilePicUrl = default!;
 #endif
         /// <summary>

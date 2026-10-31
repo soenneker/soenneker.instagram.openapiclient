@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("ig_user_id") is { } nullNodeIgUserId && nullNodeIgUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUserId = null;
-            if (parseNode.GetChildNode("ig_username") is { } nullNodeIgUsername && nullNodeIgUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUsername = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("ig_user_id") is null) { _explicitNullValueIgUserId = default!; _explicitNullProperties?.Remove("ig_user_id"); }
+            else if (parseNode.GetChildNode("ig_user_id") is { } nullNodeIgUserId && nullNodeIgUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUserId = null;
+            if (parseNode.GetChildNode("ig_username") is null) { _explicitNullValueIgUsername = default!; _explicitNullProperties?.Remove("ig_username"); }
+            else if (parseNode.GetChildNode("ig_username") is { } nullNodeIgUsername && nullNodeIgUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgUsername = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The ig_user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        public string? IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; AdditionalData?.Remove("ig_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
         private string? _explicitNullValueIgUserId = default!;
 #nullable restore
 #else
-        public string IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
+        public string IgUserId { get => _explicitNullValueIgUserId; set { _explicitNullValueIgUserId = value; AdditionalData?.Remove("ig_user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_user_id"); else _explicitNullProperties?.Remove("ig_user_id"); } }
         private string _explicitNullValueIgUserId = default!;
 #endif
         /// <summary>The ig_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IgUsername { get => _explicitNullValueIgUsername; set { _explicitNullValueIgUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_username"); else _explicitNullProperties?.Remove("ig_username"); } }
+        public string? IgUsername { get => _explicitNullValueIgUsername; set { _explicitNullValueIgUsername = value; AdditionalData?.Remove("ig_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_username"); else _explicitNullProperties?.Remove("ig_username"); } }
         private string? _explicitNullValueIgUsername = default!;
 #nullable restore
 #else
-        public string IgUsername { get => _explicitNullValueIgUsername; set { _explicitNullValueIgUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_username"); else _explicitNullProperties?.Remove("ig_username"); } }
+        public string IgUsername { get => _explicitNullValueIgUsername; set { _explicitNullValueIgUsername = value; AdditionalData?.Remove("ig_username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ig_username"); else _explicitNullProperties?.Remove("ig_username"); } }
         private string _explicitNullValueIgUsername = default!;
 #endif
         /// <summary>

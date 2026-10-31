@@ -17,8 +17,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("coupon_tiering_new") is { } nullNodeCouponTieringNew && nullNodeCouponTieringNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponTieringNew = null;
-            if (parseNode.GetChildNode("coupon_tiering_reactivation") is { } nullNodeCouponTieringReactivation && nullNodeCouponTieringReactivation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponTieringReactivation = null;
+            if (parseNode.GetChildNode("coupon_tiering_new") is null) { _explicitNullValueCouponTieringNew = default!; _explicitNullProperties?.Remove("coupon_tiering_new"); }
+            else if (parseNode.GetChildNode("coupon_tiering_new") is { } nullNodeCouponTieringNew && nullNodeCouponTieringNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponTieringNew = null;
+            if (parseNode.GetChildNode("coupon_tiering_reactivation") is null) { _explicitNullValueCouponTieringReactivation = default!; _explicitNullProperties?.Remove("coupon_tiering_reactivation"); }
+            else if (parseNode.GetChildNode("coupon_tiering_reactivation") is { } nullNodeCouponTieringReactivation && nullNodeCouponTieringReactivation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponTieringReactivation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The coupon_tiering_new property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty? CouponTieringNew { get => _explicitNullValueCouponTieringNew; set { _explicitNullValueCouponTieringNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_new"); else _explicitNullProperties?.Remove("coupon_tiering_new"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty? CouponTieringNew { get => _explicitNullValueCouponTieringNew; set { _explicitNullValueCouponTieringNew = value; AdditionalData?.Remove("coupon_tiering_new"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_new"); else _explicitNullProperties?.Remove("coupon_tiering_new"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty? _explicitNullValueCouponTieringNew = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty CouponTieringNew { get => _explicitNullValueCouponTieringNew; set { _explicitNullValueCouponTieringNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_new"); else _explicitNullProperties?.Remove("coupon_tiering_new"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty CouponTieringNew { get => _explicitNullValueCouponTieringNew; set { _explicitNullValueCouponTieringNew = value; AdditionalData?.Remove("coupon_tiering_new"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_new"); else _explicitNullProperties?.Remove("coupon_tiering_new"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringNewProperty _explicitNullValueCouponTieringNew = default!;
 #endif
         /// <summary>The coupon_tiering_reactivation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty? CouponTieringReactivation { get => _explicitNullValueCouponTieringReactivation; set { _explicitNullValueCouponTieringReactivation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_reactivation"); else _explicitNullProperties?.Remove("coupon_tiering_reactivation"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty? CouponTieringReactivation { get => _explicitNullValueCouponTieringReactivation; set { _explicitNullValueCouponTieringReactivation = value; AdditionalData?.Remove("coupon_tiering_reactivation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_reactivation"); else _explicitNullProperties?.Remove("coupon_tiering_reactivation"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty? _explicitNullValueCouponTieringReactivation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty CouponTieringReactivation { get => _explicitNullValueCouponTieringReactivation; set { _explicitNullValueCouponTieringReactivation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_reactivation"); else _explicitNullProperties?.Remove("coupon_tiering_reactivation"); } }
+        public global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty CouponTieringReactivation { get => _explicitNullValueCouponTieringReactivation; set { _explicitNullValueCouponTieringReactivation = value; AdditionalData?.Remove("coupon_tiering_reactivation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coupon_tiering_reactivation"); else _explicitNullProperties?.Remove("coupon_tiering_reactivation"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.FundingSourceDetailsCouponTieringCouponTieringReactivationProperty _explicitNullValueCouponTieringReactivation = default!;
 #endif
         /// <summary>

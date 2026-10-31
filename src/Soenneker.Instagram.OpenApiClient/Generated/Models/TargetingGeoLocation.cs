@@ -17,25 +17,44 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cities") is { } nullNodeCities && nullNodeCities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cities = null;
-            if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
-            if (parseNode.GetChildNode("country_groups") is { } nullNodeCountryGroups && nullNodeCountryGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryGroups = null;
-            if (parseNode.GetChildNode("custom_locations") is { } nullNodeCustomLocations && nullNodeCustomLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomLocations = null;
-            if (parseNode.GetChildNode("electoral_districts") is { } nullNodeElectoralDistricts && nullNodeElectoralDistricts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectoralDistricts = null;
-            if (parseNode.GetChildNode("geo_markets") is { } nullNodeGeoMarkets && nullNodeGeoMarkets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoMarkets = null;
-            if (parseNode.GetChildNode("large_geo_areas") is { } nullNodeLargeGeoAreas && nullNodeLargeGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LargeGeoAreas = null;
-            if (parseNode.GetChildNode("location_cluster_ids") is { } nullNodeLocationClusterIds && nullNodeLocationClusterIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationClusterIds = null;
-            if (parseNode.GetChildNode("location_types") is { } nullNodeLocationTypes && nullNodeLocationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationTypes = null;
-            if (parseNode.GetChildNode("medium_geo_areas") is { } nullNodeMediumGeoAreas && nullNodeMediumGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediumGeoAreas = null;
-            if (parseNode.GetChildNode("metro_areas") is { } nullNodeMetroAreas && nullNodeMetroAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetroAreas = null;
-            if (parseNode.GetChildNode("neighborhoods") is { } nullNodeNeighborhoods && nullNodeNeighborhoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Neighborhoods = null;
-            if (parseNode.GetChildNode("places") is { } nullNodePlaces && nullNodePlaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Places = null;
-            if (parseNode.GetChildNode("political_districts") is { } nullNodePoliticalDistricts && nullNodePoliticalDistricts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDistricts = null;
-            if (parseNode.GetChildNode("regions") is { } nullNodeRegions && nullNodeRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regions = null;
-            if (parseNode.GetChildNode("small_geo_areas") is { } nullNodeSmallGeoAreas && nullNodeSmallGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmallGeoAreas = null;
-            if (parseNode.GetChildNode("subcities") is { } nullNodeSubcities && nullNodeSubcities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subcities = null;
-            if (parseNode.GetChildNode("subneighborhoods") is { } nullNodeSubneighborhoods && nullNodeSubneighborhoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subneighborhoods = null;
-            if (parseNode.GetChildNode("zips") is { } nullNodeZips && nullNodeZips.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zips = null;
+            if (parseNode.GetChildNode("cities") is null) { _explicitNullValueCities = default!; _explicitNullProperties?.Remove("cities"); }
+            else if (parseNode.GetChildNode("cities") is { } nullNodeCities && nullNodeCities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cities = null;
+            if (parseNode.GetChildNode("countries") is null) { _explicitNullValueCountries = default!; _explicitNullProperties?.Remove("countries"); }
+            else if (parseNode.GetChildNode("countries") is { } nullNodeCountries && nullNodeCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Countries = null;
+            if (parseNode.GetChildNode("country_groups") is null) { _explicitNullValueCountryGroups = default!; _explicitNullProperties?.Remove("country_groups"); }
+            else if (parseNode.GetChildNode("country_groups") is { } nullNodeCountryGroups && nullNodeCountryGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryGroups = null;
+            if (parseNode.GetChildNode("custom_locations") is null) { _explicitNullValueCustomLocations = default!; _explicitNullProperties?.Remove("custom_locations"); }
+            else if (parseNode.GetChildNode("custom_locations") is { } nullNodeCustomLocations && nullNodeCustomLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomLocations = null;
+            if (parseNode.GetChildNode("electoral_districts") is null) { _explicitNullValueElectoralDistricts = default!; _explicitNullProperties?.Remove("electoral_districts"); }
+            else if (parseNode.GetChildNode("electoral_districts") is { } nullNodeElectoralDistricts && nullNodeElectoralDistricts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElectoralDistricts = null;
+            if (parseNode.GetChildNode("geo_markets") is null) { _explicitNullValueGeoMarkets = default!; _explicitNullProperties?.Remove("geo_markets"); }
+            else if (parseNode.GetChildNode("geo_markets") is { } nullNodeGeoMarkets && nullNodeGeoMarkets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoMarkets = null;
+            if (parseNode.GetChildNode("large_geo_areas") is null) { _explicitNullValueLargeGeoAreas = default!; _explicitNullProperties?.Remove("large_geo_areas"); }
+            else if (parseNode.GetChildNode("large_geo_areas") is { } nullNodeLargeGeoAreas && nullNodeLargeGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LargeGeoAreas = null;
+            if (parseNode.GetChildNode("location_cluster_ids") is null) { _explicitNullValueLocationClusterIds = default!; _explicitNullProperties?.Remove("location_cluster_ids"); }
+            else if (parseNode.GetChildNode("location_cluster_ids") is { } nullNodeLocationClusterIds && nullNodeLocationClusterIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationClusterIds = null;
+            if (parseNode.GetChildNode("location_types") is null) { _explicitNullValueLocationTypes = default!; _explicitNullProperties?.Remove("location_types"); }
+            else if (parseNode.GetChildNode("location_types") is { } nullNodeLocationTypes && nullNodeLocationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationTypes = null;
+            if (parseNode.GetChildNode("medium_geo_areas") is null) { _explicitNullValueMediumGeoAreas = default!; _explicitNullProperties?.Remove("medium_geo_areas"); }
+            else if (parseNode.GetChildNode("medium_geo_areas") is { } nullNodeMediumGeoAreas && nullNodeMediumGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediumGeoAreas = null;
+            if (parseNode.GetChildNode("metro_areas") is null) { _explicitNullValueMetroAreas = default!; _explicitNullProperties?.Remove("metro_areas"); }
+            else if (parseNode.GetChildNode("metro_areas") is { } nullNodeMetroAreas && nullNodeMetroAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetroAreas = null;
+            if (parseNode.GetChildNode("neighborhoods") is null) { _explicitNullValueNeighborhoods = default!; _explicitNullProperties?.Remove("neighborhoods"); }
+            else if (parseNode.GetChildNode("neighborhoods") is { } nullNodeNeighborhoods && nullNodeNeighborhoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Neighborhoods = null;
+            if (parseNode.GetChildNode("places") is null) { _explicitNullValuePlaces = default!; _explicitNullProperties?.Remove("places"); }
+            else if (parseNode.GetChildNode("places") is { } nullNodePlaces && nullNodePlaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Places = null;
+            if (parseNode.GetChildNode("political_districts") is null) { _explicitNullValuePoliticalDistricts = default!; _explicitNullProperties?.Remove("political_districts"); }
+            else if (parseNode.GetChildNode("political_districts") is { } nullNodePoliticalDistricts && nullNodePoliticalDistricts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PoliticalDistricts = null;
+            if (parseNode.GetChildNode("regions") is null) { _explicitNullValueRegions = default!; _explicitNullProperties?.Remove("regions"); }
+            else if (parseNode.GetChildNode("regions") is { } nullNodeRegions && nullNodeRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regions = null;
+            if (parseNode.GetChildNode("small_geo_areas") is null) { _explicitNullValueSmallGeoAreas = default!; _explicitNullProperties?.Remove("small_geo_areas"); }
+            else if (parseNode.GetChildNode("small_geo_areas") is { } nullNodeSmallGeoAreas && nullNodeSmallGeoAreas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmallGeoAreas = null;
+            if (parseNode.GetChildNode("subcities") is null) { _explicitNullValueSubcities = default!; _explicitNullProperties?.Remove("subcities"); }
+            else if (parseNode.GetChildNode("subcities") is { } nullNodeSubcities && nullNodeSubcities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subcities = null;
+            if (parseNode.GetChildNode("subneighborhoods") is null) { _explicitNullValueSubneighborhoods = default!; _explicitNullProperties?.Remove("subneighborhoods"); }
+            else if (parseNode.GetChildNode("subneighborhoods") is { } nullNodeSubneighborhoods && nullNodeSubneighborhoods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subneighborhoods = null;
+            if (parseNode.GetChildNode("zips") is null) { _explicitNullValueZips = default!; _explicitNullProperties?.Remove("zips"); }
+            else if (parseNode.GetChildNode("zips") is { } nullNodeZips && nullNodeZips.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Zips = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,191 +62,191 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The cities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity>? Cities { get => _explicitNullValueCities; set { _explicitNullValueCities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cities"); else _explicitNullProperties?.Remove("cities"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity>? Cities { get => _explicitNullValueCities; set { _explicitNullValueCities = value; AdditionalData?.Remove("cities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cities"); else _explicitNullProperties?.Remove("cities"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity>? _explicitNullValueCities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity> Cities { get => _explicitNullValueCities; set { _explicitNullValueCities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cities"); else _explicitNullProperties?.Remove("cities"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity> Cities { get => _explicitNullValueCities; set { _explicitNullValueCities = value; AdditionalData?.Remove("cities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cities"); else _explicitNullProperties?.Remove("cities"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCity> _explicitNullValueCities = default!;
 #endif
         /// <summary>The countries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<string>? Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<string>? _explicitNullValueCountries = default!;
 #nullable restore
 #else
-        public List<string> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
+        public List<string> Countries { get => _explicitNullValueCountries; set { _explicitNullValueCountries = value; AdditionalData?.Remove("countries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countries"); else _explicitNullProperties?.Remove("countries"); } }
         private List<string> _explicitNullValueCountries = default!;
 #endif
         /// <summary>The country_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CountryGroups { get => _explicitNullValueCountryGroups; set { _explicitNullValueCountryGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_groups"); else _explicitNullProperties?.Remove("country_groups"); } }
+        public List<string>? CountryGroups { get => _explicitNullValueCountryGroups; set { _explicitNullValueCountryGroups = value; AdditionalData?.Remove("country_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_groups"); else _explicitNullProperties?.Remove("country_groups"); } }
         private List<string>? _explicitNullValueCountryGroups = default!;
 #nullable restore
 #else
-        public List<string> CountryGroups { get => _explicitNullValueCountryGroups; set { _explicitNullValueCountryGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_groups"); else _explicitNullProperties?.Remove("country_groups"); } }
+        public List<string> CountryGroups { get => _explicitNullValueCountryGroups; set { _explicitNullValueCountryGroups = value; AdditionalData?.Remove("country_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_groups"); else _explicitNullProperties?.Remove("country_groups"); } }
         private List<string> _explicitNullValueCountryGroups = default!;
 #endif
         /// <summary>The custom_locations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation>? CustomLocations { get => _explicitNullValueCustomLocations; set { _explicitNullValueCustomLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_locations"); else _explicitNullProperties?.Remove("custom_locations"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation>? CustomLocations { get => _explicitNullValueCustomLocations; set { _explicitNullValueCustomLocations = value; AdditionalData?.Remove("custom_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_locations"); else _explicitNullProperties?.Remove("custom_locations"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation>? _explicitNullValueCustomLocations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation> CustomLocations { get => _explicitNullValueCustomLocations; set { _explicitNullValueCustomLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_locations"); else _explicitNullProperties?.Remove("custom_locations"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation> CustomLocations { get => _explicitNullValueCustomLocations; set { _explicitNullValueCustomLocations = value; AdditionalData?.Remove("custom_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_locations"); else _explicitNullProperties?.Remove("custom_locations"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationCustomLocation> _explicitNullValueCustomLocations = default!;
 #endif
         /// <summary>The electoral_districts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict>? ElectoralDistricts { get => _explicitNullValueElectoralDistricts; set { _explicitNullValueElectoralDistricts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electoral_districts"); else _explicitNullProperties?.Remove("electoral_districts"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict>? ElectoralDistricts { get => _explicitNullValueElectoralDistricts; set { _explicitNullValueElectoralDistricts = value; AdditionalData?.Remove("electoral_districts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electoral_districts"); else _explicitNullProperties?.Remove("electoral_districts"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict>? _explicitNullValueElectoralDistricts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict> ElectoralDistricts { get => _explicitNullValueElectoralDistricts; set { _explicitNullValueElectoralDistricts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electoral_districts"); else _explicitNullProperties?.Remove("electoral_districts"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict> ElectoralDistricts { get => _explicitNullValueElectoralDistricts; set { _explicitNullValueElectoralDistricts = value; AdditionalData?.Remove("electoral_districts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("electoral_districts"); else _explicitNullProperties?.Remove("electoral_districts"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationElectoralDistrict> _explicitNullValueElectoralDistricts = default!;
 #endif
         /// <summary>The geo_markets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket>? GeoMarkets { get => _explicitNullValueGeoMarkets; set { _explicitNullValueGeoMarkets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_markets"); else _explicitNullProperties?.Remove("geo_markets"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket>? GeoMarkets { get => _explicitNullValueGeoMarkets; set { _explicitNullValueGeoMarkets = value; AdditionalData?.Remove("geo_markets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_markets"); else _explicitNullProperties?.Remove("geo_markets"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket>? _explicitNullValueGeoMarkets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket> GeoMarkets { get => _explicitNullValueGeoMarkets; set { _explicitNullValueGeoMarkets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_markets"); else _explicitNullProperties?.Remove("geo_markets"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket> GeoMarkets { get => _explicitNullValueGeoMarkets; set { _explicitNullValueGeoMarkets = value; AdditionalData?.Remove("geo_markets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_markets"); else _explicitNullProperties?.Remove("geo_markets"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationMarket> _explicitNullValueGeoMarkets = default!;
 #endif
         /// <summary>The large_geo_areas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? LargeGeoAreas { get => _explicitNullValueLargeGeoAreas; set { _explicitNullValueLargeGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_geo_areas"); else _explicitNullProperties?.Remove("large_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? LargeGeoAreas { get => _explicitNullValueLargeGeoAreas; set { _explicitNullValueLargeGeoAreas = value; AdditionalData?.Remove("large_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_geo_areas"); else _explicitNullProperties?.Remove("large_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueLargeGeoAreas = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> LargeGeoAreas { get => _explicitNullValueLargeGeoAreas; set { _explicitNullValueLargeGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_geo_areas"); else _explicitNullProperties?.Remove("large_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> LargeGeoAreas { get => _explicitNullValueLargeGeoAreas; set { _explicitNullValueLargeGeoAreas = value; AdditionalData?.Remove("large_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("large_geo_areas"); else _explicitNullProperties?.Remove("large_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueLargeGeoAreas = default!;
 #endif
         /// <summary>The location_cluster_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster>? LocationClusterIds { get => _explicitNullValueLocationClusterIds; set { _explicitNullValueLocationClusterIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_cluster_ids"); else _explicitNullProperties?.Remove("location_cluster_ids"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster>? LocationClusterIds { get => _explicitNullValueLocationClusterIds; set { _explicitNullValueLocationClusterIds = value; AdditionalData?.Remove("location_cluster_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_cluster_ids"); else _explicitNullProperties?.Remove("location_cluster_ids"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster>? _explicitNullValueLocationClusterIds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster> LocationClusterIds { get => _explicitNullValueLocationClusterIds; set { _explicitNullValueLocationClusterIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_cluster_ids"); else _explicitNullProperties?.Remove("location_cluster_ids"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster> LocationClusterIds { get => _explicitNullValueLocationClusterIds; set { _explicitNullValueLocationClusterIds = value; AdditionalData?.Remove("location_cluster_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_cluster_ids"); else _explicitNullProperties?.Remove("location_cluster_ids"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationLocationCluster> _explicitNullValueLocationClusterIds = default!;
 #endif
         /// <summary>The location_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        public List<string>? LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; AdditionalData?.Remove("location_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
         private List<string>? _explicitNullValueLocationTypes = default!;
 #nullable restore
 #else
-        public List<string> LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
+        public List<string> LocationTypes { get => _explicitNullValueLocationTypes; set { _explicitNullValueLocationTypes = value; AdditionalData?.Remove("location_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_types"); else _explicitNullProperties?.Remove("location_types"); } }
         private List<string> _explicitNullValueLocationTypes = default!;
 #endif
         /// <summary>The medium_geo_areas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? MediumGeoAreas { get => _explicitNullValueMediumGeoAreas; set { _explicitNullValueMediumGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium_geo_areas"); else _explicitNullProperties?.Remove("medium_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? MediumGeoAreas { get => _explicitNullValueMediumGeoAreas; set { _explicitNullValueMediumGeoAreas = value; AdditionalData?.Remove("medium_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium_geo_areas"); else _explicitNullProperties?.Remove("medium_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueMediumGeoAreas = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> MediumGeoAreas { get => _explicitNullValueMediumGeoAreas; set { _explicitNullValueMediumGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium_geo_areas"); else _explicitNullProperties?.Remove("medium_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> MediumGeoAreas { get => _explicitNullValueMediumGeoAreas; set { _explicitNullValueMediumGeoAreas = value; AdditionalData?.Remove("medium_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium_geo_areas"); else _explicitNullProperties?.Remove("medium_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueMediumGeoAreas = default!;
 #endif
         /// <summary>The metro_areas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? MetroAreas { get => _explicitNullValueMetroAreas; set { _explicitNullValueMetroAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metro_areas"); else _explicitNullProperties?.Remove("metro_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? MetroAreas { get => _explicitNullValueMetroAreas; set { _explicitNullValueMetroAreas = value; AdditionalData?.Remove("metro_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metro_areas"); else _explicitNullProperties?.Remove("metro_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueMetroAreas = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> MetroAreas { get => _explicitNullValueMetroAreas; set { _explicitNullValueMetroAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metro_areas"); else _explicitNullProperties?.Remove("metro_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> MetroAreas { get => _explicitNullValueMetroAreas; set { _explicitNullValueMetroAreas = value; AdditionalData?.Remove("metro_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metro_areas"); else _explicitNullProperties?.Remove("metro_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueMetroAreas = default!;
 #endif
         /// <summary>The neighborhoods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; AdditionalData?.Remove("neighborhoods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueNeighborhoods = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Neighborhoods { get => _explicitNullValueNeighborhoods; set { _explicitNullValueNeighborhoods = value; AdditionalData?.Remove("neighborhoods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("neighborhoods"); else _explicitNullProperties?.Remove("neighborhoods"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueNeighborhoods = default!;
 #endif
         /// <summary>The places property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace>? Places { get => _explicitNullValuePlaces; set { _explicitNullValuePlaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("places"); else _explicitNullProperties?.Remove("places"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace>? Places { get => _explicitNullValuePlaces; set { _explicitNullValuePlaces = value; AdditionalData?.Remove("places"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("places"); else _explicitNullProperties?.Remove("places"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace>? _explicitNullValuePlaces = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace> Places { get => _explicitNullValuePlaces; set { _explicitNullValuePlaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("places"); else _explicitNullProperties?.Remove("places"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace> Places { get => _explicitNullValuePlaces; set { _explicitNullValuePlaces = value; AdditionalData?.Remove("places"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("places"); else _explicitNullProperties?.Remove("places"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPlace> _explicitNullValuePlaces = default!;
 #endif
         /// <summary>The political_districts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict>? PoliticalDistricts { get => _explicitNullValuePoliticalDistricts; set { _explicitNullValuePoliticalDistricts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("political_districts"); else _explicitNullProperties?.Remove("political_districts"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict>? PoliticalDistricts { get => _explicitNullValuePoliticalDistricts; set { _explicitNullValuePoliticalDistricts = value; AdditionalData?.Remove("political_districts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("political_districts"); else _explicitNullProperties?.Remove("political_districts"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict>? _explicitNullValuePoliticalDistricts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict> PoliticalDistricts { get => _explicitNullValuePoliticalDistricts; set { _explicitNullValuePoliticalDistricts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("political_districts"); else _explicitNullProperties?.Remove("political_districts"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict> PoliticalDistricts { get => _explicitNullValuePoliticalDistricts; set { _explicitNullValuePoliticalDistricts = value; AdditionalData?.Remove("political_districts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("political_districts"); else _explicitNullProperties?.Remove("political_districts"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationPoliticalDistrict> _explicitNullValuePoliticalDistricts = default!;
 #endif
         /// <summary>The regions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion>? Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion>? Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; AdditionalData?.Remove("regions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion>? _explicitNullValueRegions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion> Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion> Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; AdditionalData?.Remove("regions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationRegion> _explicitNullValueRegions = default!;
 #endif
         /// <summary>The small_geo_areas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? SmallGeoAreas { get => _explicitNullValueSmallGeoAreas; set { _explicitNullValueSmallGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small_geo_areas"); else _explicitNullProperties?.Remove("small_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? SmallGeoAreas { get => _explicitNullValueSmallGeoAreas; set { _explicitNullValueSmallGeoAreas = value; AdditionalData?.Remove("small_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small_geo_areas"); else _explicitNullProperties?.Remove("small_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueSmallGeoAreas = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> SmallGeoAreas { get => _explicitNullValueSmallGeoAreas; set { _explicitNullValueSmallGeoAreas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small_geo_areas"); else _explicitNullProperties?.Remove("small_geo_areas"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> SmallGeoAreas { get => _explicitNullValueSmallGeoAreas; set { _explicitNullValueSmallGeoAreas = value; AdditionalData?.Remove("small_geo_areas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("small_geo_areas"); else _explicitNullProperties?.Remove("small_geo_areas"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueSmallGeoAreas = default!;
 #endif
         /// <summary>The subcities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Subcities { get => _explicitNullValueSubcities; set { _explicitNullValueSubcities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subcities"); else _explicitNullProperties?.Remove("subcities"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Subcities { get => _explicitNullValueSubcities; set { _explicitNullValueSubcities = value; AdditionalData?.Remove("subcities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subcities"); else _explicitNullProperties?.Remove("subcities"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueSubcities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Subcities { get => _explicitNullValueSubcities; set { _explicitNullValueSubcities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subcities"); else _explicitNullProperties?.Remove("subcities"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Subcities { get => _explicitNullValueSubcities; set { _explicitNullValueSubcities = value; AdditionalData?.Remove("subcities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subcities"); else _explicitNullProperties?.Remove("subcities"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueSubcities = default!;
 #endif
         /// <summary>The subneighborhoods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Subneighborhoods { get => _explicitNullValueSubneighborhoods; set { _explicitNullValueSubneighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subneighborhoods"); else _explicitNullProperties?.Remove("subneighborhoods"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? Subneighborhoods { get => _explicitNullValueSubneighborhoods; set { _explicitNullValueSubneighborhoods = value; AdditionalData?.Remove("subneighborhoods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subneighborhoods"); else _explicitNullProperties?.Remove("subneighborhoods"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities>? _explicitNullValueSubneighborhoods = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Subneighborhoods { get => _explicitNullValueSubneighborhoods; set { _explicitNullValueSubneighborhoods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subneighborhoods"); else _explicitNullProperties?.Remove("subneighborhoods"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> Subneighborhoods { get => _explicitNullValueSubneighborhoods; set { _explicitNullValueSubneighborhoods = value; AdditionalData?.Remove("subneighborhoods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subneighborhoods"); else _explicitNullProperties?.Remove("subneighborhoods"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationGeoEntities> _explicitNullValueSubneighborhoods = default!;
 #endif
         /// <summary>The zips property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip>? Zips { get => _explicitNullValueZips; set { _explicitNullValueZips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zips"); else _explicitNullProperties?.Remove("zips"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip>? Zips { get => _explicitNullValueZips; set { _explicitNullValueZips = value; AdditionalData?.Remove("zips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zips"); else _explicitNullProperties?.Remove("zips"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip>? _explicitNullValueZips = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip> Zips { get => _explicitNullValueZips; set { _explicitNullValueZips = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zips"); else _explicitNullProperties?.Remove("zips"); } }
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip> Zips { get => _explicitNullValueZips; set { _explicitNullValueZips = value; AdditionalData?.Remove("zips"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zips"); else _explicitNullProperties?.Remove("zips"); } }
         private List<global::Soenneker.Instagram.OpenApiClient.Models.TargetingGeoLocationZip> _explicitNullValueZips = default!;
 #endif
         /// <summary>

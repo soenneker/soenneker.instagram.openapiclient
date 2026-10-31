@@ -17,10 +17,14 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("advantage_audience_state") is { } nullNodeAdvantageAudienceState && nullNodeAdvantageAudienceState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageAudienceState = null;
-            if (parseNode.GetChildNode("advantage_budget_state") is { } nullNodeAdvantageBudgetState && nullNodeAdvantageBudgetState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageBudgetState = null;
-            if (parseNode.GetChildNode("advantage_placement_state") is { } nullNodeAdvantagePlacementState && nullNodeAdvantagePlacementState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantagePlacementState = null;
-            if (parseNode.GetChildNode("advantage_state") is { } nullNodeAdvantageState && nullNodeAdvantageState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageState = null;
+            if (parseNode.GetChildNode("advantage_audience_state") is null) { _explicitNullValueAdvantageAudienceState = default!; _explicitNullProperties?.Remove("advantage_audience_state"); }
+            else if (parseNode.GetChildNode("advantage_audience_state") is { } nullNodeAdvantageAudienceState && nullNodeAdvantageAudienceState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageAudienceState = null;
+            if (parseNode.GetChildNode("advantage_budget_state") is null) { _explicitNullValueAdvantageBudgetState = default!; _explicitNullProperties?.Remove("advantage_budget_state"); }
+            else if (parseNode.GetChildNode("advantage_budget_state") is { } nullNodeAdvantageBudgetState && nullNodeAdvantageBudgetState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageBudgetState = null;
+            if (parseNode.GetChildNode("advantage_placement_state") is null) { _explicitNullValueAdvantagePlacementState = default!; _explicitNullProperties?.Remove("advantage_placement_state"); }
+            else if (parseNode.GetChildNode("advantage_placement_state") is { } nullNodeAdvantagePlacementState && nullNodeAdvantagePlacementState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantagePlacementState = null;
+            if (parseNode.GetChildNode("advantage_state") is null) { _explicitNullValueAdvantageState = default!; _explicitNullProperties?.Remove("advantage_state"); }
+            else if (parseNode.GetChildNode("advantage_state") is { } nullNodeAdvantageState && nullNodeAdvantageState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdvantageState = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The advantage_audience_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdvantageAudienceState { get => _explicitNullValueAdvantageAudienceState; set { _explicitNullValueAdvantageAudienceState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_audience_state"); else _explicitNullProperties?.Remove("advantage_audience_state"); } }
+        public string? AdvantageAudienceState { get => _explicitNullValueAdvantageAudienceState; set { _explicitNullValueAdvantageAudienceState = value; AdditionalData?.Remove("advantage_audience_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_audience_state"); else _explicitNullProperties?.Remove("advantage_audience_state"); } }
         private string? _explicitNullValueAdvantageAudienceState = default!;
 #nullable restore
 #else
-        public string AdvantageAudienceState { get => _explicitNullValueAdvantageAudienceState; set { _explicitNullValueAdvantageAudienceState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_audience_state"); else _explicitNullProperties?.Remove("advantage_audience_state"); } }
+        public string AdvantageAudienceState { get => _explicitNullValueAdvantageAudienceState; set { _explicitNullValueAdvantageAudienceState = value; AdditionalData?.Remove("advantage_audience_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_audience_state"); else _explicitNullProperties?.Remove("advantage_audience_state"); } }
         private string _explicitNullValueAdvantageAudienceState = default!;
 #endif
         /// <summary>The advantage_budget_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdvantageBudgetState { get => _explicitNullValueAdvantageBudgetState; set { _explicitNullValueAdvantageBudgetState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_budget_state"); else _explicitNullProperties?.Remove("advantage_budget_state"); } }
+        public string? AdvantageBudgetState { get => _explicitNullValueAdvantageBudgetState; set { _explicitNullValueAdvantageBudgetState = value; AdditionalData?.Remove("advantage_budget_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_budget_state"); else _explicitNullProperties?.Remove("advantage_budget_state"); } }
         private string? _explicitNullValueAdvantageBudgetState = default!;
 #nullable restore
 #else
-        public string AdvantageBudgetState { get => _explicitNullValueAdvantageBudgetState; set { _explicitNullValueAdvantageBudgetState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_budget_state"); else _explicitNullProperties?.Remove("advantage_budget_state"); } }
+        public string AdvantageBudgetState { get => _explicitNullValueAdvantageBudgetState; set { _explicitNullValueAdvantageBudgetState = value; AdditionalData?.Remove("advantage_budget_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_budget_state"); else _explicitNullProperties?.Remove("advantage_budget_state"); } }
         private string _explicitNullValueAdvantageBudgetState = default!;
 #endif
         /// <summary>The advantage_placement_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdvantagePlacementState { get => _explicitNullValueAdvantagePlacementState; set { _explicitNullValueAdvantagePlacementState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_placement_state"); else _explicitNullProperties?.Remove("advantage_placement_state"); } }
+        public string? AdvantagePlacementState { get => _explicitNullValueAdvantagePlacementState; set { _explicitNullValueAdvantagePlacementState = value; AdditionalData?.Remove("advantage_placement_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_placement_state"); else _explicitNullProperties?.Remove("advantage_placement_state"); } }
         private string? _explicitNullValueAdvantagePlacementState = default!;
 #nullable restore
 #else
-        public string AdvantagePlacementState { get => _explicitNullValueAdvantagePlacementState; set { _explicitNullValueAdvantagePlacementState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_placement_state"); else _explicitNullProperties?.Remove("advantage_placement_state"); } }
+        public string AdvantagePlacementState { get => _explicitNullValueAdvantagePlacementState; set { _explicitNullValueAdvantagePlacementState = value; AdditionalData?.Remove("advantage_placement_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_placement_state"); else _explicitNullProperties?.Remove("advantage_placement_state"); } }
         private string _explicitNullValueAdvantagePlacementState = default!;
 #endif
         /// <summary>The advantage_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdvantageState { get => _explicitNullValueAdvantageState; set { _explicitNullValueAdvantageState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_state"); else _explicitNullProperties?.Remove("advantage_state"); } }
+        public string? AdvantageState { get => _explicitNullValueAdvantageState; set { _explicitNullValueAdvantageState = value; AdditionalData?.Remove("advantage_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_state"); else _explicitNullProperties?.Remove("advantage_state"); } }
         private string? _explicitNullValueAdvantageState = default!;
 #nullable restore
 #else
-        public string AdvantageState { get => _explicitNullValueAdvantageState; set { _explicitNullValueAdvantageState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_state"); else _explicitNullProperties?.Remove("advantage_state"); } }
+        public string AdvantageState { get => _explicitNullValueAdvantageState; set { _explicitNullValueAdvantageState = value; AdditionalData?.Remove("advantage_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advantage_state"); else _explicitNullProperties?.Remove("advantage_state"); } }
         private string _explicitNullValueAdvantageState = default!;
 #endif
         /// <summary>

@@ -17,29 +17,34 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("breakfast") is { } nullNodeBreakfast && nullNodeBreakfast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakfast = null;
-            if (parseNode.GetChildNode("coffee") is { } nullNodeCoffee && nullNodeCoffee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coffee = null;
-            if (parseNode.GetChildNode("dinner") is { } nullNodeDinner && nullNodeDinner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dinner = null;
-            if (parseNode.GetChildNode("drinks") is { } nullNodeDrinks && nullNodeDrinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Drinks = null;
-            if (parseNode.GetChildNode("lunch") is { } nullNodeLunch && nullNodeLunch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lunch = null;
+            if (parseNode.GetChildNode("breakfast") is null) { _explicitNullValueBreakfast = default!; _explicitNullProperties?.Remove("breakfast"); }
+            else if (parseNode.GetChildNode("breakfast") is { } nullNodeBreakfast && nullNodeBreakfast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakfast = null;
+            if (parseNode.GetChildNode("coffee") is null) { _explicitNullValueCoffee = default!; _explicitNullProperties?.Remove("coffee"); }
+            else if (parseNode.GetChildNode("coffee") is { } nullNodeCoffee && nullNodeCoffee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coffee = null;
+            if (parseNode.GetChildNode("dinner") is null) { _explicitNullValueDinner = default!; _explicitNullProperties?.Remove("dinner"); }
+            else if (parseNode.GetChildNode("dinner") is { } nullNodeDinner && nullNodeDinner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dinner = null;
+            if (parseNode.GetChildNode("drinks") is null) { _explicitNullValueDrinks = default!; _explicitNullProperties?.Remove("drinks"); }
+            else if (parseNode.GetChildNode("drinks") is { } nullNodeDrinks && nullNodeDrinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Drinks = null;
+            if (parseNode.GetChildNode("lunch") is null) { _explicitNullValueLunch = default!; _explicitNullProperties?.Remove("lunch"); }
+            else if (parseNode.GetChildNode("lunch") is { } nullNodeLunch && nullNodeLunch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lunch = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The breakfast property</summary>
-        public long? Breakfast { get => _explicitNullValueBreakfast; set { _explicitNullValueBreakfast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakfast"); else _explicitNullProperties?.Remove("breakfast"); } }
+        public long? Breakfast { get => _explicitNullValueBreakfast; set { _explicitNullValueBreakfast = value; AdditionalData?.Remove("breakfast"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakfast"); else _explicitNullProperties?.Remove("breakfast"); } }
         private long? _explicitNullValueBreakfast = default!;
         /// <summary>The coffee property</summary>
-        public long? Coffee { get => _explicitNullValueCoffee; set { _explicitNullValueCoffee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coffee"); else _explicitNullProperties?.Remove("coffee"); } }
+        public long? Coffee { get => _explicitNullValueCoffee; set { _explicitNullValueCoffee = value; AdditionalData?.Remove("coffee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coffee"); else _explicitNullProperties?.Remove("coffee"); } }
         private long? _explicitNullValueCoffee = default!;
         /// <summary>The dinner property</summary>
-        public long? Dinner { get => _explicitNullValueDinner; set { _explicitNullValueDinner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dinner"); else _explicitNullProperties?.Remove("dinner"); } }
+        public long? Dinner { get => _explicitNullValueDinner; set { _explicitNullValueDinner = value; AdditionalData?.Remove("dinner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dinner"); else _explicitNullProperties?.Remove("dinner"); } }
         private long? _explicitNullValueDinner = default!;
         /// <summary>The drinks property</summary>
-        public long? Drinks { get => _explicitNullValueDrinks; set { _explicitNullValueDrinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drinks"); else _explicitNullProperties?.Remove("drinks"); } }
+        public long? Drinks { get => _explicitNullValueDrinks; set { _explicitNullValueDrinks = value; AdditionalData?.Remove("drinks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drinks"); else _explicitNullProperties?.Remove("drinks"); } }
         private long? _explicitNullValueDrinks = default!;
         /// <summary>The lunch property</summary>
-        public long? Lunch { get => _explicitNullValueLunch; set { _explicitNullValueLunch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lunch"); else _explicitNullProperties?.Remove("lunch"); } }
+        public long? Lunch { get => _explicitNullValueLunch; set { _explicitNullValueLunch = value; AdditionalData?.Remove("lunch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lunch"); else _explicitNullProperties?.Remove("lunch"); } }
         private long? _explicitNullValueLunch = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PageRestaurantSpecialties"/> and sets the default values.

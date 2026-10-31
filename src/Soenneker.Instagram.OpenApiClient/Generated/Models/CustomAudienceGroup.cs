@@ -17,9 +17,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("audience_type_param_name") is { } nullNodeAudienceTypeParamName && nullNodeAudienceTypeParamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamName = null;
-            if (parseNode.GetChildNode("existing_customer_tag") is { } nullNodeExistingCustomerTag && nullNodeExistingCustomerTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomerTag = null;
-            if (parseNode.GetChildNode("new_customer_tag") is { } nullNodeNewCustomerTag && nullNodeNewCustomerTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewCustomerTag = null;
+            if (parseNode.GetChildNode("audience_type_param_name") is null) { _explicitNullValueAudienceTypeParamName = default!; _explicitNullProperties?.Remove("audience_type_param_name"); }
+            else if (parseNode.GetChildNode("audience_type_param_name") is { } nullNodeAudienceTypeParamName && nullNodeAudienceTypeParamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceTypeParamName = null;
+            if (parseNode.GetChildNode("existing_customer_tag") is null) { _explicitNullValueExistingCustomerTag = default!; _explicitNullProperties?.Remove("existing_customer_tag"); }
+            else if (parseNode.GetChildNode("existing_customer_tag") is { } nullNodeExistingCustomerTag && nullNodeExistingCustomerTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingCustomerTag = null;
+            if (parseNode.GetChildNode("new_customer_tag") is null) { _explicitNullValueNewCustomerTag = default!; _explicitNullProperties?.Remove("new_customer_tag"); }
+            else if (parseNode.GetChildNode("new_customer_tag") is { } nullNodeNewCustomerTag && nullNodeNewCustomerTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewCustomerTag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The audience_type_param_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
+        public string? AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; AdditionalData?.Remove("audience_type_param_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
         private string? _explicitNullValueAudienceTypeParamName = default!;
 #nullable restore
 #else
-        public string AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
+        public string AudienceTypeParamName { get => _explicitNullValueAudienceTypeParamName; set { _explicitNullValueAudienceTypeParamName = value; AdditionalData?.Remove("audience_type_param_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_type_param_name"); else _explicitNullProperties?.Remove("audience_type_param_name"); } }
         private string _explicitNullValueAudienceTypeParamName = default!;
 #endif
         /// <summary>The existing_customer_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExistingCustomerTag { get => _explicitNullValueExistingCustomerTag; set { _explicitNullValueExistingCustomerTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customer_tag"); else _explicitNullProperties?.Remove("existing_customer_tag"); } }
+        public string? ExistingCustomerTag { get => _explicitNullValueExistingCustomerTag; set { _explicitNullValueExistingCustomerTag = value; AdditionalData?.Remove("existing_customer_tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customer_tag"); else _explicitNullProperties?.Remove("existing_customer_tag"); } }
         private string? _explicitNullValueExistingCustomerTag = default!;
 #nullable restore
 #else
-        public string ExistingCustomerTag { get => _explicitNullValueExistingCustomerTag; set { _explicitNullValueExistingCustomerTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customer_tag"); else _explicitNullProperties?.Remove("existing_customer_tag"); } }
+        public string ExistingCustomerTag { get => _explicitNullValueExistingCustomerTag; set { _explicitNullValueExistingCustomerTag = value; AdditionalData?.Remove("existing_customer_tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_customer_tag"); else _explicitNullProperties?.Remove("existing_customer_tag"); } }
         private string _explicitNullValueExistingCustomerTag = default!;
 #endif
         /// <summary>The new_customer_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewCustomerTag { get => _explicitNullValueNewCustomerTag; set { _explicitNullValueNewCustomerTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_customer_tag"); else _explicitNullProperties?.Remove("new_customer_tag"); } }
+        public string? NewCustomerTag { get => _explicitNullValueNewCustomerTag; set { _explicitNullValueNewCustomerTag = value; AdditionalData?.Remove("new_customer_tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_customer_tag"); else _explicitNullProperties?.Remove("new_customer_tag"); } }
         private string? _explicitNullValueNewCustomerTag = default!;
 #nullable restore
 #else
-        public string NewCustomerTag { get => _explicitNullValueNewCustomerTag; set { _explicitNullValueNewCustomerTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_customer_tag"); else _explicitNullProperties?.Remove("new_customer_tag"); } }
+        public string NewCustomerTag { get => _explicitNullValueNewCustomerTag; set { _explicitNullValueNewCustomerTag = value; AdditionalData?.Remove("new_customer_tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_customer_tag"); else _explicitNullProperties?.Remove("new_customer_tag"); } }
         private string _explicitNullValueNewCustomerTag = default!;
 #endif
         /// <summary>

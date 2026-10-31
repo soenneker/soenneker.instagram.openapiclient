@@ -17,7 +17,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("saturation_mode") is { } nullNodeSaturationMode && nullNodeSaturationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturationMode = null;
+            if (parseNode.GetChildNode("saturation_mode") is null) { _explicitNullValueSaturationMode = default!; _explicitNullProperties?.Remove("saturation_mode"); }
+            else if (parseNode.GetChildNode("saturation_mode") is { } nullNodeSaturationMode && nullNodeSaturationMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaturationMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The saturation_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
+        public string? SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; AdditionalData?.Remove("saturation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
         private string? _explicitNullValueSaturationMode = default!;
 #nullable restore
 #else
-        public string SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
+        public string SaturationMode { get => _explicitNullValueSaturationMode; set { _explicitNullValueSaturationMode = value; AdditionalData?.Remove("saturation_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation_mode"); else _explicitNullProperties?.Remove("saturation_mode"); } }
         private string _explicitNullValueSaturationMode = default!;
 #endif
         /// <summary>
