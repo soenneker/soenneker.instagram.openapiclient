@@ -95,6 +95,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("ignore_coordinate_warnings") is { } nullNodeIgnoreCoordinateWarnings && nullNodeIgnoreCoordinateWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreCoordinateWarnings = null;
             if (parseNode.GetChildNode("impressum") is null) { _explicitNullValueImpressum = default!; _explicitNullProperties?.Remove("impressum"); }
             else if (parseNode.GetChildNode("impressum") is { } nullNodeImpressum && nullNodeImpressum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impressum = null;
+            if (parseNode.GetChildNode("is_ai_generated") is null) { _explicitNullValueIsAiGenerated = default!; _explicitNullProperties?.Remove("is_ai_generated"); }
+            else if (parseNode.GetChildNode("is_ai_generated") is { } nullNodeIsAiGenerated && nullNodeIsAiGenerated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAiGenerated = null;
             if (parseNode.GetChildNode("is_always_open") is null) { _explicitNullValueIsAlwaysOpen = default!; _explicitNullProperties?.Remove("is_always_open"); }
             else if (parseNode.GetChildNode("is_always_open") is { } nullNodeIsAlwaysOpen && nullNodeIsAlwaysOpen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAlwaysOpen = null;
             if (parseNode.GetChildNode("is_hidden") is null) { _explicitNullValueIsHidden = default!; _explicitNullProperties?.Remove("is_hidden"); }
@@ -496,6 +498,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public string Impressum { get => _explicitNullValueImpressum; set { _explicitNullValueImpressum = value; AdditionalData?.Remove("impressum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressum"); else _explicitNullProperties?.Remove("impressum"); } }
         private string _explicitNullValueImpressum = default!;
 #endif
+        /// <summary>The is_ai_generated property</summary>
+        public bool? IsAiGenerated { get => _explicitNullValueIsAiGenerated; set { _explicitNullValueIsAiGenerated = value; AdditionalData?.Remove("is_ai_generated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_ai_generated"); else _explicitNullProperties?.Remove("is_ai_generated"); } }
+        private bool? _explicitNullValueIsAiGenerated = default!;
         /// <summary>The is_always_open property</summary>
         public bool? IsAlwaysOpen { get => _explicitNullValueIsAlwaysOpen; set { _explicitNullValueIsAlwaysOpen = value; AdditionalData?.Remove("is_always_open"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_always_open"); else _explicitNullProperties?.Remove("is_always_open"); } }
         private bool? _explicitNullValueIsAlwaysOpen = default!;
@@ -854,6 +859,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "hours", n => { Hours = n.GetStringValue(); } },
                 { "ignore_coordinate_warnings", n => { IgnoreCoordinateWarnings = n.GetBoolValue(); } },
                 { "impressum", n => { Impressum = n.GetStringValue(); } },
+                { "is_ai_generated", n => { IsAiGenerated = n.GetBoolValue(); } },
                 { "is_always_open", n => { IsAlwaysOpen = n.GetBoolValue(); } },
                 { "is_hidden", n => { IsHidden = n.GetBoolValue(); } },
                 { "is_permanently_closed", n => { IsPermanentlyClosed = n.GetBoolValue(); } },
@@ -944,6 +950,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("hours", Hours);
             writer.WriteBoolValue("ignore_coordinate_warnings", IgnoreCoordinateWarnings);
             writer.WriteStringValue("impressum", Impressum);
+            writer.WriteBoolValue("is_ai_generated", IsAiGenerated);
             writer.WriteBoolValue("is_always_open", IsAlwaysOpen);
             writer.WriteBoolValue("is_hidden", IsHidden);
             writer.WriteBoolValue("is_permanently_closed", IsPermanentlyClosed);

@@ -29,7 +29,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A JSON-encoded value.</summary>
+        /// <summary>The eligible_platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EligiblePlatforms { get => _explicitNullValueEligiblePlatforms; set { _explicitNullValueEligiblePlatforms = value; AdditionalData?.Remove("eligible_platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eligible_platforms"); else _explicitNullProperties?.Remove("eligible_platforms"); } }

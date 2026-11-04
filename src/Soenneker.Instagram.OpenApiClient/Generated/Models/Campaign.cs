@@ -67,6 +67,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_message_campaign") is { } nullNodeIsMessageCampaign && nullNodeIsMessageCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMessageCampaign = null;
             if (parseNode.GetChildNode("is_meta_moment_maker_enabled") is null) { _explicitNullValueIsMetaMomentMakerEnabled = default!; _explicitNullProperties?.Remove("is_meta_moment_maker_enabled"); }
             else if (parseNode.GetChildNode("is_meta_moment_maker_enabled") is { } nullNodeIsMetaMomentMakerEnabled && nullNodeIsMetaMomentMakerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMetaMomentMakerEnabled = null;
+            if (parseNode.GetChildNode("is_pca_unified") is null) { _explicitNullValueIsPcaUnified = default!; _explicitNullProperties?.Remove("is_pca_unified"); }
+            else if (parseNode.GetChildNode("is_pca_unified") is { } nullNodeIsPcaUnified && nullNodeIsPcaUnified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPcaUnified = null;
             if (parseNode.GetChildNode("is_reels_trending_ads_enabled") is null) { _explicitNullValueIsReelsTrendingAdsEnabled = default!; _explicitNullProperties?.Remove("is_reels_trending_ads_enabled"); }
             else if (parseNode.GetChildNode("is_reels_trending_ads_enabled") is { } nullNodeIsReelsTrendingAdsEnabled && nullNodeIsReelsTrendingAdsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsReelsTrendingAdsEnabled = null;
             if (parseNode.GetChildNode("is_skadnetwork_attribution") is null) { _explicitNullValueIsSkadnetworkAttribution = default!; _explicitNullProperties?.Remove("is_skadnetwork_attribution"); }
@@ -278,6 +280,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The is_meta_moment_maker_enabled property</summary>
         public bool? IsMetaMomentMakerEnabled { get => _explicitNullValueIsMetaMomentMakerEnabled; set { _explicitNullValueIsMetaMomentMakerEnabled = value; AdditionalData?.Remove("is_meta_moment_maker_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_meta_moment_maker_enabled"); else _explicitNullProperties?.Remove("is_meta_moment_maker_enabled"); } }
         private bool? _explicitNullValueIsMetaMomentMakerEnabled = default!;
+        /// <summary>The is_pca_unified property</summary>
+        public bool? IsPcaUnified { get => _explicitNullValueIsPcaUnified; set { _explicitNullValueIsPcaUnified = value; AdditionalData?.Remove("is_pca_unified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_pca_unified"); else _explicitNullProperties?.Remove("is_pca_unified"); } }
+        private bool? _explicitNullValueIsPcaUnified = default!;
         /// <summary>The is_reels_trending_ads_enabled property</summary>
         public bool? IsReelsTrendingAdsEnabled { get => _explicitNullValueIsReelsTrendingAdsEnabled; set { _explicitNullValueIsReelsTrendingAdsEnabled = value; AdditionalData?.Remove("is_reels_trending_ads_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_reels_trending_ads_enabled"); else _explicitNullProperties?.Remove("is_reels_trending_ads_enabled"); } }
         private bool? _explicitNullValueIsReelsTrendingAdsEnabled = default!;
@@ -498,6 +503,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "is_direct_send_campaign", n => { IsDirectSendCampaign = n.GetBoolValue(); } },
                 { "is_message_campaign", n => { IsMessageCampaign = n.GetBoolValue(); } },
                 { "is_meta_moment_maker_enabled", n => { IsMetaMomentMakerEnabled = n.GetBoolValue(); } },
+                { "is_pca_unified", n => { IsPcaUnified = n.GetBoolValue(); } },
                 { "is_reels_trending_ads_enabled", n => { IsReelsTrendingAdsEnabled = n.GetBoolValue(); } },
                 { "is_skadnetwork_attribution", n => { IsSkadnetworkAttribution = n.GetBoolValue(); } },
                 { "issues_info", n => { IssuesInfo = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignIssuesInfo>(global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignIssuesInfo.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -556,6 +562,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("is_direct_send_campaign", IsDirectSendCampaign);
             writer.WriteBoolValue("is_message_campaign", IsMessageCampaign);
             writer.WriteBoolValue("is_meta_moment_maker_enabled", IsMetaMomentMakerEnabled);
+            writer.WriteBoolValue("is_pca_unified", IsPcaUnified);
             writer.WriteBoolValue("is_reels_trending_ads_enabled", IsReelsTrendingAdsEnabled);
             writer.WriteBoolValue("is_skadnetwork_attribution", IsSkadnetworkAttribution);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignIssuesInfo>("issues_info", IssuesInfo);

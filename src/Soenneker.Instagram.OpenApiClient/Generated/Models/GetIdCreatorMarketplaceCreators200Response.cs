@@ -30,12 +30,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam>? _explicitNullValueData = default!;
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private List<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam> _explicitNullValueData = default!;
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam> _explicitNullValueData = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam>(global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam>(global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponsePaging>(global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponsePaging.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponseSummary>(global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponseSummary.CreateFromDiscriminatorValue); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.IgUserExportForCam>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.UserExportForCam>("data", Data);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponsePaging>("paging", Paging);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200ResponseSummary>("summary", Summary);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

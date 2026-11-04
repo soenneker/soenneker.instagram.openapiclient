@@ -7,13 +7,13 @@ using Soenneker.Instagram.OpenApiClient.Item.Accounts;
 using Soenneker.Instagram.OpenApiClient.Item.Adcreatives;
 using Soenneker.Instagram.OpenApiClient.Item.Advideos;
 using Soenneker.Instagram.OpenApiClient.Item.Agencies;
+using Soenneker.Instagram.OpenApiClient.Item.Assigned_instagram_accounts;
 using Soenneker.Instagram.OpenApiClient.Item.Assigned_users;
 using Soenneker.Instagram.OpenApiClient.Item.Authorized_adaccounts;
 using Soenneker.Instagram.OpenApiClient.Item.Available_catalogs;
 using Soenneker.Instagram.OpenApiClient.Item.Boost_ads_list;
 using Soenneker.Instagram.OpenApiClient.Item.Branded_content_ad_permissions;
 using Soenneker.Instagram.OpenApiClient.Item.Branded_content_advertisable_medias;
-using Soenneker.Instagram.OpenApiClient.Item.Branded_content_media;
 using Soenneker.Instagram.OpenApiClient.Item.Branded_content_partner_promote;
 using Soenneker.Instagram.OpenApiClient.Item.Branded_content_tag_approval;
 using Soenneker.Instagram.OpenApiClient.Item.Business_messaging_feature_status;
@@ -33,6 +33,7 @@ using Soenneker.Instagram.OpenApiClient.Item.Content_publishing_limit;
 using Soenneker.Instagram.OpenApiClient.Item.Conversations;
 using Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators;
 using Soenneker.Instagram.OpenApiClient.Item.Dataset;
+using Soenneker.Instagram.OpenApiClient.Item.Extend_thread_control;
 using Soenneker.Instagram.OpenApiClient.Item.Insights;
 using Soenneker.Instagram.OpenApiClient.Item.Instagram_accounts;
 using Soenneker.Instagram.OpenApiClient.Item.Instagram_backed_threads_user;
@@ -43,6 +44,7 @@ using Soenneker.Instagram.OpenApiClient.Item.Media;
 using Soenneker.Instagram.OpenApiClient.Item.Media_publish;
 using Soenneker.Instagram.OpenApiClient.Item.Mediapublish;
 using Soenneker.Instagram.OpenApiClient.Item.Mentions;
+using Soenneker.Instagram.OpenApiClient.Item.Message_attachments;
 using Soenneker.Instagram.OpenApiClient.Item.Messageattachments;
 using Soenneker.Instagram.OpenApiClient.Item.Messages;
 using Soenneker.Instagram.OpenApiClient.Item.Messenger_profile;
@@ -52,18 +54,22 @@ using Soenneker.Instagram.OpenApiClient.Item.Owned_instagram_accounts;
 using Soenneker.Instagram.OpenApiClient.Item.Owned_instagram_assets;
 using Soenneker.Instagram.OpenApiClient.Item.Page_backed_instagram_accounts;
 using Soenneker.Instagram.OpenApiClient.Item.Partnership_ad_code;
+using Soenneker.Instagram.OpenApiClient.Item.Pass_thread_control;
 using Soenneker.Instagram.OpenApiClient.Item.Passthreadcontrol;
-using Soenneker.Instagram.OpenApiClient.Item.Past_partnership_ads_media;
 using Soenneker.Instagram.OpenApiClient.Item.Product_appeal;
 using Soenneker.Instagram.OpenApiClient.Item.Product_tags;
 using Soenneker.Instagram.OpenApiClient.Item.Recent_media;
 using Soenneker.Instagram.OpenApiClient.Item.Recently_searched_hashtags;
+using Soenneker.Instagram.OpenApiClient.Item.Release_thread_control;
 using Soenneker.Instagram.OpenApiClient.Item.Releasethreadcontrol;
 using Soenneker.Instagram.OpenApiClient.Item.Replies;
+using Soenneker.Instagram.OpenApiClient.Item.Request_thread_control;
 using Soenneker.Instagram.OpenApiClient.Item.Scheduled_media;
 using Soenneker.Instagram.OpenApiClient.Item.Stories;
 using Soenneker.Instagram.OpenApiClient.Item.Subscribed_apps;
 using Soenneker.Instagram.OpenApiClient.Item.Tags;
+using Soenneker.Instagram.OpenApiClient.Item.Take_thread_control;
+using Soenneker.Instagram.OpenApiClient.Item.Thread_owner;
 using Soenneker.Instagram.OpenApiClient.Item.Threads;
 using Soenneker.Instagram.OpenApiClient.Item.Top_media;
 using Soenneker.Instagram.OpenApiClient.Item.Upcoming_events;
@@ -103,6 +109,11 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Agencies.AgenciesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The assigned_instagram_accounts property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Assigned_instagram_accounts.Assigned_instagram_accountsRequestBuilder Assigned_instagram_accounts
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Assigned_instagram_accounts.Assigned_instagram_accountsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The assigned_users property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Assigned_users.Assigned_usersRequestBuilder Assigned_users
         {
@@ -132,11 +143,6 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         public global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_advertisable_medias.Branded_content_advertisable_mediasRequestBuilder Branded_content_advertisable_medias
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_advertisable_medias.Branded_content_advertisable_mediasRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The branded_content_media property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_media.Branded_content_mediaRequestBuilder Branded_content_media
-        {
-            get => new global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_media.Branded_content_mediaRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The branded_content_partner_promote property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Branded_content_partner_promote.Branded_content_partner_promoteRequestBuilder Branded_content_partner_promote
@@ -233,6 +239,11 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Dataset.DatasetRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The extend_thread_control property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Extend_thread_control.Extend_thread_controlRequestBuilder Extend_thread_control
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Extend_thread_control.Extend_thread_controlRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The insights property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Insights.InsightsRequestBuilder Insights
         {
@@ -283,6 +294,11 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Mentions.MentionsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The message_attachments property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Message_attachments.Message_attachmentsRequestBuilder Message_attachments
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Message_attachments.Message_attachmentsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The messageattachments property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Messageattachments.MessageattachmentsRequestBuilder Messageattachments
         {
@@ -328,15 +344,15 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Partnership_ad_code.Partnership_ad_codeRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The pass_thread_control property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Pass_thread_control.Pass_thread_controlRequestBuilder Pass_thread_control
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Pass_thread_control.Pass_thread_controlRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The passthreadcontrol property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Passthreadcontrol.PassthreadcontrolRequestBuilder Passthreadcontrol
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Passthreadcontrol.PassthreadcontrolRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The past_partnership_ads_media property</summary>
-        public global::Soenneker.Instagram.OpenApiClient.Item.Past_partnership_ads_media.Past_partnership_ads_mediaRequestBuilder Past_partnership_ads_media
-        {
-            get => new global::Soenneker.Instagram.OpenApiClient.Item.Past_partnership_ads_media.Past_partnership_ads_mediaRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The product_appeal property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Product_appeal.Product_appealRequestBuilder Product_appeal
@@ -358,6 +374,11 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Recently_searched_hashtags.Recently_searched_hashtagsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The release_thread_control property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Release_thread_control.Release_thread_controlRequestBuilder Release_thread_control
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Release_thread_control.Release_thread_controlRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The releasethreadcontrol property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Releasethreadcontrol.ReleasethreadcontrolRequestBuilder Releasethreadcontrol
         {
@@ -367,6 +388,11 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         public global::Soenneker.Instagram.OpenApiClient.Item.Replies.RepliesRequestBuilder Replies
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Replies.RepliesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The request_thread_control property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Request_thread_control.Request_thread_controlRequestBuilder Request_thread_control
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Request_thread_control.Request_thread_controlRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The scheduled_media property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Scheduled_media.Scheduled_mediaRequestBuilder Scheduled_media
@@ -387,6 +413,16 @@ namespace Soenneker.Instagram.OpenApiClient.Item
         public global::Soenneker.Instagram.OpenApiClient.Item.Tags.TagsRequestBuilder Tags
         {
             get => new global::Soenneker.Instagram.OpenApiClient.Item.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The take_thread_control property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Take_thread_control.Take_thread_controlRequestBuilder Take_thread_control
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Take_thread_control.Take_thread_controlRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The thread_owner property</summary>
+        public global::Soenneker.Instagram.OpenApiClient.Item.Thread_owner.Thread_ownerRequestBuilder Thread_owner
+        {
+            get => new global::Soenneker.Instagram.OpenApiClient.Item.Thread_owner.Thread_ownerRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The threads property</summary>
         public global::Soenneker.Instagram.OpenApiClient.Item.Threads.ThreadsRequestBuilder Threads

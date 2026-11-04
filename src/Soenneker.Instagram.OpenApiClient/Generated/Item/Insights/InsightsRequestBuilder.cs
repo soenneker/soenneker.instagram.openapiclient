@@ -223,7 +223,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Insights
 #endif
             #pragma warning disable CS1591
             [QueryParameter("time_range")]
-            public global::Soenneker.Instagram.OpenApiClient.Models.IguserexportforcaminsightsTimeRangeEnumParam? TimeRange { get; set; }
+            public global::Soenneker.Instagram.OpenApiClient.Models.UserexportforcaminsightsTimeRangeEnumParam? TimeRange { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("until")]

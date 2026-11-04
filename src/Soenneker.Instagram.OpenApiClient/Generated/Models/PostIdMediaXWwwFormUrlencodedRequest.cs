@@ -33,6 +33,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("collaborators") is { } nullNodeCollaborators && nullNodeCollaborators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collaborators = null;
             if (parseNode.GetChildNode("cover_url") is null) { _explicitNullValueCoverUrl = default!; _explicitNullProperties?.Remove("cover_url"); }
             else if (parseNode.GetChildNode("cover_url") is { } nullNodeCoverUrl && nullNodeCoverUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverUrl = null;
+            if (parseNode.GetChildNode("cross_post_to_threads") is null) { _explicitNullValueCrossPostToThreads = default!; _explicitNullProperties?.Remove("cross_post_to_threads"); }
+            else if (parseNode.GetChildNode("cross_post_to_threads") is { } nullNodeCrossPostToThreads && nullNodeCrossPostToThreads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrossPostToThreads = null;
             if (parseNode.GetChildNode("image_url") is null) { _explicitNullValueImageUrl = default!; _explicitNullProperties?.Remove("image_url"); }
             else if (parseNode.GetChildNode("image_url") is { } nullNodeImageUrl && nullNodeImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUrl = null;
             if (parseNode.GetChildNode("is_ai_generated") is null) { _explicitNullValueIsAiGenerated = default!; _explicitNullProperties?.Remove("is_ai_generated"); }
@@ -55,8 +57,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("product_tags") is { } nullNodeProductTags && nullNodeProductTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductTags = null;
             if (parseNode.GetChildNode("share_to_feed") is null) { _explicitNullValueShareToFeed = default!; _explicitNullProperties?.Remove("share_to_feed"); }
             else if (parseNode.GetChildNode("share_to_feed") is { } nullNodeShareToFeed && nullNodeShareToFeed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareToFeed = null;
+            if (parseNode.GetChildNode("show_ig_link") is null) { _explicitNullValueShowIgLink = default!; _explicitNullProperties?.Remove("show_ig_link"); }
+            else if (parseNode.GetChildNode("show_ig_link") is { } nullNodeShowIgLink && nullNodeShowIgLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowIgLink = null;
             if (parseNode.GetChildNode("thumb_offset") is null) { _explicitNullValueThumbOffset = default!; _explicitNullProperties?.Remove("thumb_offset"); }
             else if (parseNode.GetChildNode("thumb_offset") is { } nullNodeThumbOffset && nullNodeThumbOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbOffset = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
             if (parseNode.GetChildNode("trial_params") is null) { _explicitNullValueTrialParams = default!; _explicitNullProperties?.Remove("trial_params"); }
             else if (parseNode.GetChildNode("trial_params") is { } nullNodeTrialParams && nullNodeTrialParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialParams = null;
             if (parseNode.GetChildNode("upload_type") is null) { _explicitNullValueUploadType = default!; _explicitNullProperties?.Remove("upload_type"); }
@@ -149,6 +155,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public string CoverUrl { get => _explicitNullValueCoverUrl; set { _explicitNullValueCoverUrl = value; AdditionalData?.Remove("cover_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_url"); else _explicitNullProperties?.Remove("cover_url"); } }
         private string _explicitNullValueCoverUrl = default!;
 #endif
+        /// <summary>The cross_post_to_threads property</summary>
+        public bool? CrossPostToThreads { get => _explicitNullValueCrossPostToThreads; set { _explicitNullValueCrossPostToThreads = value; AdditionalData?.Remove("cross_post_to_threads"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cross_post_to_threads"); else _explicitNullProperties?.Remove("cross_post_to_threads"); } }
+        private bool? _explicitNullValueCrossPostToThreads = default!;
         /// <summary>The image_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -217,6 +226,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The share_to_feed property</summary>
         public bool? ShareToFeed { get => _explicitNullValueShareToFeed; set { _explicitNullValueShareToFeed = value; AdditionalData?.Remove("share_to_feed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_to_feed"); else _explicitNullProperties?.Remove("share_to_feed"); } }
         private bool? _explicitNullValueShareToFeed = default!;
+        /// <summary>The show_ig_link property</summary>
+        public bool? ShowIgLink { get => _explicitNullValueShowIgLink; set { _explicitNullValueShowIgLink = value; AdditionalData?.Remove("show_ig_link"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_ig_link"); else _explicitNullProperties?.Remove("show_ig_link"); } }
+        private bool? _explicitNullValueShowIgLink = default!;
         /// <summary>The thumb_offset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -226,6 +238,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string ThumbOffset { get => _explicitNullValueThumbOffset; set { _explicitNullValueThumbOffset = value; AdditionalData?.Remove("thumb_offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumb_offset"); else _explicitNullProperties?.Remove("thumb_offset"); } }
         private string _explicitNullValueThumbOffset = default!;
+#endif
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
+#nullable restore
+#else
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>A JSON-encoded value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -300,6 +322,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "children", n => { Children = n.GetStringValue(); } },
                 { "collaborators", n => { Collaborators = n.GetStringValue(); } },
                 { "cover_url", n => { CoverUrl = n.GetStringValue(); } },
+                { "cross_post_to_threads", n => { CrossPostToThreads = n.GetBoolValue(); } },
                 { "image_url", n => { ImageUrl = n.GetStringValue(); } },
                 { "is_ai_generated", n => { IsAiGenerated = n.GetBoolValue(); } },
                 { "is_carousel_item", n => { IsCarouselItem = n.GetBoolValue(); } },
@@ -311,7 +334,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "poll_attachment", n => { PollAttachment = n.GetStringValue(); } },
                 { "product_tags", n => { ProductTags = n.GetStringValue(); } },
                 { "share_to_feed", n => { ShareToFeed = n.GetBoolValue(); } },
+                { "show_ig_link", n => { ShowIgLink = n.GetBoolValue(); } },
                 { "thumb_offset", n => { ThumbOffset = n.GetStringValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
                 { "trial_params", n => { TrialParams = n.GetStringValue(); } },
                 { "upload_type", n => { UploadType = n.GetStringValue(); } },
                 { "user_tags", n => { UserTags = n.GetStringValue(); } },
@@ -333,6 +358,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("children", Children);
             writer.WriteStringValue("collaborators", Collaborators);
             writer.WriteStringValue("cover_url", CoverUrl);
+            writer.WriteBoolValue("cross_post_to_threads", CrossPostToThreads);
             writer.WriteStringValue("image_url", ImageUrl);
             writer.WriteBoolValue("is_ai_generated", IsAiGenerated);
             writer.WriteBoolValue("is_carousel_item", IsCarouselItem);
@@ -344,7 +370,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("poll_attachment", PollAttachment);
             writer.WriteStringValue("product_tags", ProductTags);
             writer.WriteBoolValue("share_to_feed", ShareToFeed);
+            writer.WriteBoolValue("show_ig_link", ShowIgLink);
             writer.WriteStringValue("thumb_offset", ThumbOffset);
+            writer.WriteStringValue("title", Title);
             writer.WriteStringValue("trial_params", TrialParams);
             writer.WriteStringValue("upload_type", UploadType);
             writer.WriteStringValue("user_tags", UserTags);

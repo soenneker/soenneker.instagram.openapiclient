@@ -81,6 +81,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("offsite_conversion_event_id") is { } nullNodeOffsiteConversionEventId && nullNodeOffsiteConversionEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsiteConversionEventId = null;
             if (parseNode.GetChildNode("omnichannel_object") is null) { _explicitNullValueOmnichannelObject = default!; _explicitNullProperties?.Remove("omnichannel_object"); }
             else if (parseNode.GetChildNode("omnichannel_object") is { } nullNodeOmnichannelObject && nullNodeOmnichannelObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OmnichannelObject = null;
+            if (parseNode.GetChildNode("optimization_product_set_id") is null) { _explicitNullValueOptimizationProductSetId = default!; _explicitNullProperties?.Remove("optimization_product_set_id"); }
+            else if (parseNode.GetChildNode("optimization_product_set_id") is { } nullNodeOptimizationProductSetId && nullNodeOptimizationProductSetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizationProductSetId = null;
             if (parseNode.GetChildNode("page_id") is null) { _explicitNullValuePageId = default!; _explicitNullProperties?.Remove("page_id"); }
             else if (parseNode.GetChildNode("page_id") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
             if (parseNode.GetChildNode("passback_application_id") is null) { _explicitNullValuePassbackApplicationId = default!; _explicitNullProperties?.Remove("passback_application_id"); }
@@ -410,6 +412,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public global::Soenneker.Instagram.OpenApiClient.Models.AdPromotedObjectOmnichannelObjectProperty OmnichannelObject { get => _explicitNullValueOmnichannelObject; set { _explicitNullValueOmnichannelObject = value; AdditionalData?.Remove("omnichannel_object"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("omnichannel_object"); else _explicitNullProperties?.Remove("omnichannel_object"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.AdPromotedObjectOmnichannelObjectProperty _explicitNullValueOmnichannelObject = default!;
 #endif
+        /// <summary>The optimization_product_set_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OptimizationProductSetId { get => _explicitNullValueOptimizationProductSetId; set { _explicitNullValueOptimizationProductSetId = value; AdditionalData?.Remove("optimization_product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optimization_product_set_id"); else _explicitNullProperties?.Remove("optimization_product_set_id"); } }
+        private string? _explicitNullValueOptimizationProductSetId = default!;
+#nullable restore
+#else
+        public string OptimizationProductSetId { get => _explicitNullValueOptimizationProductSetId; set { _explicitNullValueOptimizationProductSetId = value; AdditionalData?.Remove("optimization_product_set_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optimization_product_set_id"); else _explicitNullProperties?.Remove("optimization_product_set_id"); } }
+        private string _explicitNullValueOptimizationProductSetId = default!;
+#endif
         /// <summary>The page_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -660,6 +672,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "offline_conversion_data_set_id", n => { OfflineConversionDataSetId = n.GetStringValue(); } },
                 { "offsite_conversion_event_id", n => { OffsiteConversionEventId = n.GetStringValue(); } },
                 { "omnichannel_object", n => { OmnichannelObject = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdPromotedObjectOmnichannelObjectProperty>(global::Soenneker.Instagram.OpenApiClient.Models.AdPromotedObjectOmnichannelObjectProperty.CreateFromDiscriminatorValue); } },
+                { "optimization_product_set_id", n => { OptimizationProductSetId = n.GetStringValue(); } },
                 { "page_id", n => { PageId = n.GetStringValue(); } },
                 { "passback_application_id", n => { PassbackApplicationId = n.GetStringValue(); } },
                 { "passback_pixel_id", n => { PassbackPixelId = n.GetStringValue(); } },
@@ -721,6 +734,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteStringValue("offline_conversion_data_set_id", OfflineConversionDataSetId);
             writer.WriteStringValue("offsite_conversion_event_id", OffsiteConversionEventId);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdPromotedObjectOmnichannelObjectProperty>("omnichannel_object", OmnichannelObject);
+            writer.WriteStringValue("optimization_product_set_id", OptimizationProductSetId);
             writer.WriteStringValue("page_id", PageId);
             writer.WriteStringValue("passback_application_id", PassbackApplicationId);
             writer.WriteStringValue("passback_pixel_id", PassbackPixelId);

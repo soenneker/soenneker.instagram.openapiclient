@@ -323,6 +323,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
             if (parseNode.GetChildNode("linked_group") is null) { _explicitNullValueLinkedGroup = default!; _explicitNullProperties?.Remove("linked_group"); }
             else if (parseNode.GetChildNode("linked_group") is { } nullNodeLinkedGroup && nullNodeLinkedGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedGroup = null;
+            if (parseNode.GetChildNode("live_reactions") is null) { _explicitNullValueLiveReactions = default!; _explicitNullProperties?.Remove("live_reactions"); }
+            else if (parseNode.GetChildNode("live_reactions") is { } nullNodeLiveReactions && nullNodeLiveReactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveReactions = null;
             if (parseNode.GetChildNode("live_status") is null) { _explicitNullValueLiveStatus = default!; _explicitNullProperties?.Remove("live_status"); }
             else if (parseNode.GetChildNode("live_status") is { } nullNodeLiveStatus && nullNodeLiveStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveStatus = null;
             if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
@@ -1729,6 +1731,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public global::Soenneker.Instagram.OpenApiClient.Models.Group LinkedGroup { get => _explicitNullValueLinkedGroup; set { _explicitNullValueLinkedGroup = value; AdditionalData?.Remove("linked_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_group"); else _explicitNullProperties?.Remove("linked_group"); } }
         private global::Soenneker.Instagram.OpenApiClient.Models.Group _explicitNullValueLinkedGroup = default!;
 #endif
+        /// <summary>The live_reactions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions? LiveReactions { get => _explicitNullValueLiveReactions; set { _explicitNullValueLiveReactions = value; AdditionalData?.Remove("live_reactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_reactions"); else _explicitNullProperties?.Remove("live_reactions"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions? _explicitNullValueLiveReactions = default!;
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions LiveReactions { get => _explicitNullValueLiveReactions; set { _explicitNullValueLiveReactions = value; AdditionalData?.Remove("live_reactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_reactions"); else _explicitNullProperties?.Remove("live_reactions"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions _explicitNullValueLiveReactions = default!;
+#endif
         /// <summary>The live_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3045,6 +3057,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "like_count", n => { LikeCount = n.GetLongValue(); } },
                 { "link", n => { Link = n.GetStringValue(); } },
                 { "linked_group", n => { LinkedGroup = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Group>(global::Soenneker.Instagram.OpenApiClient.Models.Group.CreateFromDiscriminatorValue); } },
+                { "live_reactions", n => { LiveReactions = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions>(global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions.CreateFromDiscriminatorValue); } },
                 { "live_status", n => { LiveStatus = n.GetStringValue(); } },
                 { "local_news_megaphone_dismiss_status", n => { LocalNewsMegaphoneDismissStatus = n.GetBoolValue(); } },
                 { "local_news_subscription_status", n => { LocalNewsSubscriptionStatus = n.GetBoolValue(); } },
@@ -3346,6 +3359,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteLongValue("like_count", LikeCount);
             writer.WriteStringValue("link", Link);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Group>("linked_group", LinkedGroup);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions>("live_reactions", LiveReactions);
             writer.WriteStringValue("live_status", LiveStatus);
             writer.WriteStringValue("locale", Locale);
             writer.WriteBoolValue("local_news_megaphone_dismiss_status", LocalNewsMegaphoneDismissStatus);

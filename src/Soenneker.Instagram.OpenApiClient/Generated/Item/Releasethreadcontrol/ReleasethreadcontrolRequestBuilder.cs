@@ -33,38 +33,38 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Releasethreadcontrol
         public ReleasethreadcontrolRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/releasethreadcontrol", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol200Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolDefaultResponse">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2DefaultResponse">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol200Response?> PostAsync(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2200Response?> PostAsync(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2XWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol200Response> PostAsync(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2200Response> PostAsync(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2XWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolDefaultResponse.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2DefaultResponse.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol200Response>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2200Response>(requestInfo, global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2XWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrolXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Instagram.OpenApiClient.Models.PostIdReleasethreadcontrol2XWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

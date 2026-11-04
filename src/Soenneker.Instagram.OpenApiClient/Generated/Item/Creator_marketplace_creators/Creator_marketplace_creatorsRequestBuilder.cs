@@ -22,7 +22,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Creator_marketplace_creatorsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/creator_marketplace_creators{?after*,before*,creator_age_bucket*,creator_countries*,creator_follower_growth*,creator_gender*,creator_interests*,creator_latest_post_activity*,creator_max_engaged_accounts*,creator_max_followers*,creator_min_engaged_accounts*,creator_min_followers*,creator_states*,custom_audience_id*,fields*,has_public_contact_email*,is_paid_partnership_messages_enabled*,limit*,major_audience_age_bucket*,major_audience_countries*,major_audience_device_type*,major_audience_gender*,major_audience_states*,page_name*,platform*,query*,recommendation_type*,reels_interaction_rate*,show_onboarded_creators_only*,similar_to_creators*,username*,usernames*}", pathParameters)
+        public Creator_marketplace_creatorsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/creator_marketplace_creators{?after*,before*,creator_age_bucket*,creator_countries*,creator_follower_growth*,creator_gender*,creator_interests*,creator_language*,creator_latest_post_activity*,creator_max_engaged_accounts*,creator_max_followers*,creator_min_engaged_accounts*,creator_min_followers*,creator_states*,custom_audience_id*,exclude_messaged_creators*,featured_in_paid_ads*,fields*,has_portfolio*,has_public_contact_email*,is_paid_partnership_messages_enabled*,limit*,major_audience_age_bucket*,major_audience_countries*,major_audience_device_type*,major_audience_gender*,major_audience_states*,page_name*,platform*,query*,recommendation_type*,reels_interaction_rate*,show_onboarded_creators_only*,similar_to_creators*,username*,usernames*,verified_account*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Creator_marketplace_creatorsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/creator_marketplace_creators{?after*,before*,creator_age_bucket*,creator_countries*,creator_follower_growth*,creator_gender*,creator_interests*,creator_latest_post_activity*,creator_max_engaged_accounts*,creator_max_followers*,creator_min_engaged_accounts*,creator_min_followers*,creator_states*,custom_audience_id*,fields*,has_public_contact_email*,is_paid_partnership_messages_enabled*,limit*,major_audience_age_bucket*,major_audience_countries*,major_audience_device_type*,major_audience_gender*,major_audience_states*,page_name*,platform*,query*,recommendation_type*,reels_interaction_rate*,show_onboarded_creators_only*,similar_to_creators*,username*,usernames*}", rawUrl)
+        public Creator_marketplace_creatorsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/creator_marketplace_creators{?after*,before*,creator_age_bucket*,creator_countries*,creator_follower_growth*,creator_gender*,creator_interests*,creator_language*,creator_latest_post_activity*,creator_max_engaged_accounts*,creator_max_followers*,creator_min_engaged_accounts*,creator_min_followers*,creator_states*,custom_audience_id*,exclude_messaged_creators*,featured_in_paid_ads*,fields*,has_portfolio*,has_public_contact_email*,is_paid_partnership_messages_enabled*,limit*,major_audience_age_bucket*,major_audience_countries*,major_audience_device_type*,major_audience_gender*,major_audience_states*,page_name*,platform*,query*,recommendation_type*,reels_interaction_rate*,show_onboarded_creators_only*,similar_to_creators*,username*,usernames*,verified_account*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdCreatorMarketplaceCreators200Response"/></returns>
@@ -177,6 +177,19 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
+            [QueryParameter("creator_language")]
+            public string? CreatorLanguage { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("creator_language")]
+            public string CreatorLanguage { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("creator_latest_post_activity")]
             public string? CreatorLatestPostActivity { get; set; }
             #pragma warning restore CS1591
@@ -229,6 +242,14 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
             public string CustomAudienceId { get; set; }
             #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
+            [QueryParameter("exclude_messaged_creators")]
+            public bool? ExcludeMessagedCreators { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("featured_in_paid_ads")]
+            public bool? FeaturedInPaidAds { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
@@ -242,6 +263,10 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
             public string Fields { get; set; }
             #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
+            [QueryParameter("has_portfolio")]
+            public bool? HasPortfolio { get; set; }
+            #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("has_public_contact_email")]
             public bool? HasPublicContactEmail { get; set; }
@@ -409,6 +434,10 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Creator_marketplace_creators
             public string Usernames { get; set; }
             #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
+            [QueryParameter("verified_account")]
+            public bool? VerifiedAccount { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

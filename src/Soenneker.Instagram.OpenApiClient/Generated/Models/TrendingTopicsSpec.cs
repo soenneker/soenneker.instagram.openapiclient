@@ -21,6 +21,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("is_all_trending") is { } nullNodeIsAllTrending && nullNodeIsAllTrending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAllTrending = null;
             if (parseNode.GetChildNode("is_special_budget_alloc") is null) { _explicitNullValueIsSpecialBudgetAlloc = default!; _explicitNullProperties?.Remove("is_special_budget_alloc"); }
             else if (parseNode.GetChildNode("is_special_budget_alloc") is { } nullNodeIsSpecialBudgetAlloc && nullNodeIsSpecialBudgetAlloc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSpecialBudgetAlloc = null;
+            if (parseNode.GetChildNode("program_id") is null) { _explicitNullValueProgramId = default!; _explicitNullProperties?.Remove("program_id"); }
+            else if (parseNode.GetChildNode("program_id") is { } nullNodeProgramId && nullNodeProgramId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgramId = null;
             if (parseNode.GetChildNode("trending_topics") is null) { _explicitNullValueTrendingTopics = default!; _explicitNullProperties?.Remove("trending_topics"); }
             else if (parseNode.GetChildNode("trending_topics") is { } nullNodeTrendingTopics && nullNodeTrendingTopics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingTopics = null;
         }
@@ -33,6 +35,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The is_special_budget_alloc property</summary>
         public bool? IsSpecialBudgetAlloc { get => _explicitNullValueIsSpecialBudgetAlloc; set { _explicitNullValueIsSpecialBudgetAlloc = value; AdditionalData?.Remove("is_special_budget_alloc"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_special_budget_alloc"); else _explicitNullProperties?.Remove("is_special_budget_alloc"); } }
         private bool? _explicitNullValueIsSpecialBudgetAlloc = default!;
+        /// <summary>The program_id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProgramId { get => _explicitNullValueProgramId; set { _explicitNullValueProgramId = value; AdditionalData?.Remove("program_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("program_id"); else _explicitNullProperties?.Remove("program_id"); } }
+        private string? _explicitNullValueProgramId = default!;
+#nullable restore
+#else
+        public string ProgramId { get => _explicitNullValueProgramId; set { _explicitNullValueProgramId = value; AdditionalData?.Remove("program_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("program_id"); else _explicitNullProperties?.Remove("program_id"); } }
+        private string _explicitNullValueProgramId = default!;
+#endif
         /// <summary>The trending_topics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,6 +82,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             {
                 { "is_all_trending", n => { IsAllTrending = n.GetBoolValue(); } },
                 { "is_special_budget_alloc", n => { IsSpecialBudgetAlloc = n.GetBoolValue(); } },
+                { "program_id", n => { ProgramId = n.GetStringValue(); } },
                 { "trending_topics", n => { TrendingTopics = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -82,6 +95,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("is_all_trending", IsAllTrending);
             writer.WriteBoolValue("is_special_budget_alloc", IsSpecialBudgetAlloc);
+            writer.WriteStringValue("program_id", ProgramId);
             writer.WriteCollectionOfPrimitiveValues<string>("trending_topics", TrendingTopics);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

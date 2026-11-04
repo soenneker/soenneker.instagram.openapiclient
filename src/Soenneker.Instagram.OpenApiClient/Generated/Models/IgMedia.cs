@@ -65,6 +65,8 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("legacy_instagram_media_id") is { } nullNodeLegacyInstagramMediaId && nullNodeLegacyInstagramMediaId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegacyInstagramMediaId = null;
             if (parseNode.GetChildNode("like_count") is null) { _explicitNullValueLikeCount = default!; _explicitNullProperties?.Remove("like_count"); }
             else if (parseNode.GetChildNode("like_count") is { } nullNodeLikeCount && nullNodeLikeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LikeCount = null;
+            if (parseNode.GetChildNode("live_reactions") is null) { _explicitNullValueLiveReactions = default!; _explicitNullProperties?.Remove("live_reactions"); }
+            else if (parseNode.GetChildNode("live_reactions") is { } nullNodeLiveReactions && nullNodeLiveReactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveReactions = null;
             if (parseNode.GetChildNode("live_status") is null) { _explicitNullValueLiveStatus = default!; _explicitNullProperties?.Remove("live_status"); }
             else if (parseNode.GetChildNode("live_status") is { } nullNodeLiveStatus && nullNodeLiveStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveStatus = null;
             if (parseNode.GetChildNode("media_audio_type") is null) { _explicitNullValueMediaAudioType = default!; _explicitNullProperties?.Remove("media_audio_type"); }
@@ -256,6 +258,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The like_count property</summary>
         public long? LikeCount { get => _explicitNullValueLikeCount; set { _explicitNullValueLikeCount = value; AdditionalData?.Remove("like_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("like_count"); else _explicitNullProperties?.Remove("like_count"); } }
         private long? _explicitNullValueLikeCount = default!;
+        /// <summary>The live_reactions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions? LiveReactions { get => _explicitNullValueLiveReactions; set { _explicitNullValueLiveReactions = value; AdditionalData?.Remove("live_reactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_reactions"); else _explicitNullProperties?.Remove("live_reactions"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions? _explicitNullValueLiveReactions = default!;
+#nullable restore
+#else
+        public global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions LiveReactions { get => _explicitNullValueLiveReactions; set { _explicitNullValueLiveReactions = value; AdditionalData?.Remove("live_reactions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_reactions"); else _explicitNullProperties?.Remove("live_reactions"); } }
+        private global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions _explicitNullValueLiveReactions = default!;
+#endif
         /// <summary>The live_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -439,6 +451,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "is_shared_to_feed", n => { IsSharedToFeed = n.GetBoolValue(); } },
                 { "legacy_instagram_media_id", n => { LegacyInstagramMediaId = n.GetStringValue(); } },
                 { "like_count", n => { LikeCount = n.GetLongValue(); } },
+                { "live_reactions", n => { LiveReactions = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions>(global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions.CreateFromDiscriminatorValue); } },
                 { "live_status", n => { LiveStatus = n.GetStringValue(); } },
                 { "media_audio_type", n => { MediaAudioType = n.GetStringValue(); } },
                 { "media_product_type", n => { MediaProductType = n.GetStringValue(); } },
@@ -491,6 +504,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteBoolValue("is_shared_to_feed", IsSharedToFeed);
             writer.WriteStringValue("legacy_instagram_media_id", LegacyInstagramMediaId);
             writer.WriteLongValue("like_count", LikeCount);
+            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.IgLiveMediaReactions>("live_reactions", LiveReactions);
             writer.WriteStringValue("live_status", LiveStatus);
             writer.WriteStringValue("media_audio_type", MediaAudioType);
             writer.WriteStringValue("media_product_type", MediaProductType);

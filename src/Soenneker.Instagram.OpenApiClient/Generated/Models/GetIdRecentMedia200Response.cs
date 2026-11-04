@@ -30,12 +30,12 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private UntypedNode? _explicitNullValueData = default!;
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public UntypedNode Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private UntypedNode _explicitNullValueData = default!;
+        public List<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia> _explicitNullValueData = default!;
 #endif
         /// <summary>The paging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>(global::Soenneker.Instagram.OpenApiClient.Models.IgMedia.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "paging", n => { Paging = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponsePaging>(global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponsePaging.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponseSummary>(global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponseSummary.CreateFromDiscriminatorValue); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.IgMedia>("data", Data);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponsePaging>("paging", Paging);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.GetIdRecentMedia200ResponseSummary>("summary", Summary);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

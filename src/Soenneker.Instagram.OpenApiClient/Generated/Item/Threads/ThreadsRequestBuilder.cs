@@ -22,7 +22,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Threads
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/threads{?after*,before*,fields*,folder*,limit*,platform*,tags*,user_id*}", pathParameters)
+        public ThreadsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/threads{?after*,before*,fields*,folder*,limit*,platform*,tags*,updated_after_ms*,updated_before_ms*,user_id*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Threads
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ThreadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/threads{?after*,before*,fields*,folder*,limit*,platform*,tags*,user_id*}", rawUrl)
+        public ThreadsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/{nodeId}/threads{?after*,before*,fields*,folder*,limit*,platform*,tags*,updated_after_ms*,updated_before_ms*,user_id*}", rawUrl)
         {
         }
         /// <returns>A <see cref="global::Soenneker.Instagram.OpenApiClient.Models.GetIdThreads200Response"/></returns>
@@ -156,6 +156,14 @@ namespace Soenneker.Instagram.OpenApiClient.Item.Threads
             public string Tags { get; set; }
             #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
+            [QueryParameter("updated_after_ms")]
+            public long? UpdatedAfterMs { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
+            [QueryParameter("updated_before_ms")]
+            public long? UpdatedBeforeMs { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591

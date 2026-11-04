@@ -336,6 +336,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         #pragma warning disable CS1591
         LookNowDeprecated,
         #pragma warning restore CS1591
+        [EnumMember(Value = "MAGIC_CLIP_DEVICE_UPLOAD")]
+        #pragma warning disable CS1591
+        MagicClipDeviceUpload,
+        #pragma warning restore CS1591
         [EnumMember(Value = "MARKETPLACE_LISTING_VIDEO")]
         #pragma warning disable CS1591
         MarketplaceListingVideo,
@@ -523,6 +527,10 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         [EnumMember(Value = "SLIDESHOW_VARIATION_VIDEO")]
         #pragma warning disable CS1591
         SlideshowVariationVideo,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "SOIL_VIDEO")]
+        #pragma warning disable CS1591
+        SoilVideo,
         #pragma warning restore CS1591
         [EnumMember(Value = "SOUND_PLATFORM_STREAM")]
         #pragma warning disable CS1591
