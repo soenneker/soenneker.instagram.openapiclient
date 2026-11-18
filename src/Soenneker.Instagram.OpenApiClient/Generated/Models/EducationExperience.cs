@@ -140,7 +140,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "classes", n => { Classes = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.Experience>(global::Soenneker.Instagram.OpenApiClient.Models.Experience.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "concentration", n => { Concentration = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.Page>(global::Soenneker.Instagram.OpenApiClient.Models.Page.CreateFromDiscriminatorValue)?.AsList(); } },

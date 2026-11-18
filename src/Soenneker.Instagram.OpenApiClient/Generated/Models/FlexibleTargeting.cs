@@ -380,7 +380,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(28)
             {
                 { "behaviors", n => { Behaviors = n.GetCollectionOfObjectValues<global::Soenneker.Instagram.OpenApiClient.Models.IdName>(global::Soenneker.Instagram.OpenApiClient.Models.IdName.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "college_years", n => { CollegeYears = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },

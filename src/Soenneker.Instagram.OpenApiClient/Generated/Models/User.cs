@@ -562,7 +562,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(49)
             {
                 { "about", n => { About = n.GetStringValue(); } },
                 { "age_range", n => { AgeRange = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AgeRange>(global::Soenneker.Instagram.OpenApiClient.Models.AgeRange.CreateFromDiscriminatorValue); } },

@@ -235,7 +235,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(20)
             {
                 { "ad_account_to_collaborative_ads_share_settings", n => { AdAccountToCollaborativeAdsShareSettings = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings>(global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings.CreateFromDiscriminatorValue); } },
                 { "agency_collaborative_ads_share_settings", n => { AgencyCollaborativeAdsShareSettings = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings>(global::Soenneker.Instagram.OpenApiClient.Models.CollaborativeAdsShareSettings.CreateFromDiscriminatorValue); } },

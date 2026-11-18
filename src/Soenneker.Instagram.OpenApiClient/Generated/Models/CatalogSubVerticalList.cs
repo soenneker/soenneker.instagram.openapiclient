@@ -656,7 +656,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(51)
             {
                 { "appliances", n => { Appliances = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty>(global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListAppliancesProperty.CreateFromDiscriminatorValue); } },
                 { "baby_feeding", n => { BabyFeeding = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty>(global::Soenneker.Instagram.OpenApiClient.Models.CatalogSubVerticalListBabyFeedingProperty.CreateFromDiscriminatorValue); } },

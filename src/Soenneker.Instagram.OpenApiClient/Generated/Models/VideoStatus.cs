@@ -109,7 +109,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "copyright_check_status", n => { CopyrightCheckStatus = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.VideoCopyrightCheckStatus>(global::Soenneker.Instagram.OpenApiClient.Models.VideoCopyrightCheckStatus.CreateFromDiscriminatorValue); } },
                 { "processing_phase", n => { ProcessingPhase = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase>(global::Soenneker.Instagram.OpenApiClient.Models.VideoStatusProcessingPhase.CreateFromDiscriminatorValue); } },

@@ -116,7 +116,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "commerce_merchant_settings", n => { CommerceMerchantSettings = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings>(global::Soenneker.Instagram.OpenApiClient.Models.CommerceMerchantSettings.CreateFromDiscriminatorValue); } },
                 { "fb_sales_channel", n => { FbSalesChannel = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ShopFbSalesChannelProperty>(global::Soenneker.Instagram.OpenApiClient.Models.ShopFbSalesChannelProperty.CreateFromDiscriminatorValue); } },

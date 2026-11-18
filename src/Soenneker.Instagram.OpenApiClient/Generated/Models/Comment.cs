@@ -236,7 +236,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(23)
             {
                 { "admin_creator", n => { AdminCreator = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.User>(global::Soenneker.Instagram.OpenApiClient.Models.User.CreateFromDiscriminatorValue); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.Application>(global::Soenneker.Instagram.OpenApiClient.Models.Application.CreateFromDiscriminatorValue); } },

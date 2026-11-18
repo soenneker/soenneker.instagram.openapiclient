@@ -230,7 +230,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "archived", n => { Archived = n.GetBoolValue(); } },
                 { "cover", n => { Cover = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.CoverPhoto>(global::Soenneker.Instagram.OpenApiClient.Models.CoverPhoto.CreateFromDiscriminatorValue); } },

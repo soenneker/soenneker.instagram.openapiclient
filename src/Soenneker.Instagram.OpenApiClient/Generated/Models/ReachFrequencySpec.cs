@@ -133,7 +133,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "countries", n => { Countries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "default_creation_data", n => { DefaultCreationData = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty>(global::Soenneker.Instagram.OpenApiClient.Models.ReachFrequencySpecDefaultCreationDataProperty.CreateFromDiscriminatorValue); } },
