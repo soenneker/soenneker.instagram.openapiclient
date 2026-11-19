@@ -64,10 +64,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         #pragma warning disable CS1591
         InstreamVideoMobile,
         #pragma warning restore CS1591
-        [EnumMember(Value = "MESSENGER_MOBILE_INBOX_MEDIA")]
-        #pragma warning disable CS1591
-        MessengerMobileInboxMedia,
-        #pragma warning restore CS1591
         [EnumMember(Value = "MESSENGER_MOBILE_STORY_MEDIA")]
         #pragma warning disable CS1591
         MessengerMobileStoryMedia,

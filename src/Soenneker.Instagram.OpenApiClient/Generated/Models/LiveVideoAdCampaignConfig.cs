@@ -17,14 +17,21 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("declared_live_seconds") is null) { _explicitNullValueDeclaredLiveSeconds = default!; _explicitNullProperties?.Remove("declared_live_seconds"); }
+            else if (parseNode.GetChildNode("declared_live_seconds") is { } nullNodeDeclaredLiveSeconds && nullNodeDeclaredLiveSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclaredLiveSeconds = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("live_cadence") is null) { _explicitNullValueLiveCadence = default!; _explicitNullProperties?.Remove("live_cadence"); }
+            else if (parseNode.GetChildNode("live_cadence") is { } nullNodeLiveCadence && nullNodeLiveCadence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveCadence = null;
             if (parseNode.GetChildNode("live_video_ad_type") is null) { _explicitNullValueLiveVideoAdType = default!; _explicitNullProperties?.Remove("live_video_ad_type"); }
             else if (parseNode.GetChildNode("live_video_ad_type") is { } nullNodeLiveVideoAdType && nullNodeLiveVideoAdType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveVideoAdType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The declared_live_seconds property</summary>
+        public long? DeclaredLiveSeconds { get => _explicitNullValueDeclaredLiveSeconds; set { _explicitNullValueDeclaredLiveSeconds = value; AdditionalData?.Remove("declared_live_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("declared_live_seconds"); else _explicitNullProperties?.Remove("declared_live_seconds"); } }
+        private long? _explicitNullValueDeclaredLiveSeconds = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,6 +41,16 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
+#endif
+        /// <summary>The live_cadence property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LiveCadence { get => _explicitNullValueLiveCadence; set { _explicitNullValueLiveCadence = value; AdditionalData?.Remove("live_cadence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_cadence"); else _explicitNullProperties?.Remove("live_cadence"); } }
+        private string? _explicitNullValueLiveCadence = default!;
+#nullable restore
+#else
+        public string LiveCadence { get => _explicitNullValueLiveCadence; set { _explicitNullValueLiveCadence = value; AdditionalData?.Remove("live_cadence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live_cadence"); else _explicitNullProperties?.Remove("live_cadence"); } }
+        private string _explicitNullValueLiveCadence = default!;
 #endif
         /// <summary>The live_video_ad_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,9 +85,11 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
+                { "declared_live_seconds", n => { DeclaredLiveSeconds = n.GetLongValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "live_cadence", n => { LiveCadence = n.GetStringValue(); } },
                 { "live_video_ad_type", n => { LiveVideoAdType = n.GetStringValue(); } },
             };
         }
@@ -81,7 +100,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteLongValue("declared_live_seconds", DeclaredLiveSeconds);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("live_cadence", LiveCadence);
             writer.WriteStringValue("live_video_ad_type", LiveVideoAdType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -129,8 +129,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             else if (parseNode.GetChildNode("low_creative_reach") is { } nullNodeLowCreativeReach && nullNodeLowCreativeReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LowCreativeReach = null;
             if (parseNode.GetChildNode("max_budget_spend_percentage") is null) { _explicitNullValueMaxBudgetSpendPercentage = default!; _explicitNullProperties?.Remove("max_budget_spend_percentage"); }
             else if (parseNode.GetChildNode("max_budget_spend_percentage") is { } nullNodeMaxBudgetSpendPercentage && nullNodeMaxBudgetSpendPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxBudgetSpendPercentage = null;
-            if (parseNode.GetChildNode("meta_moment_maker_spec") is null) { _explicitNullValueMetaMomentMakerSpec = default!; _explicitNullProperties?.Remove("meta_moment_maker_spec"); }
-            else if (parseNode.GetChildNode("meta_moment_maker_spec") is { } nullNodeMetaMomentMakerSpec && nullNodeMetaMomentMakerSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaMomentMakerSpec = null;
             if (parseNode.GetChildNode("min_budget_spend_percentage") is null) { _explicitNullValueMinBudgetSpendPercentage = default!; _explicitNullProperties?.Remove("min_budget_spend_percentage"); }
             else if (parseNode.GetChildNode("min_budget_spend_percentage") is { } nullNodeMinBudgetSpendPercentage && nullNodeMinBudgetSpendPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinBudgetSpendPercentage = null;
             if (parseNode.GetChildNode("multi_event_conversion_attribution_window_seconds") is null) { _explicitNullValueMultiEventConversionAttributionWindowSeconds = default!; _explicitNullProperties?.Remove("multi_event_conversion_attribution_window_seconds"); }
@@ -608,16 +606,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         public string MaxBudgetSpendPercentage { get => _explicitNullValueMaxBudgetSpendPercentage; set { _explicitNullValueMaxBudgetSpendPercentage = value; AdditionalData?.Remove("max_budget_spend_percentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_budget_spend_percentage"); else _explicitNullProperties?.Remove("max_budget_spend_percentage"); } }
         private string _explicitNullValueMaxBudgetSpendPercentage = default!;
 #endif
-        /// <summary>The meta_moment_maker_spec property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig? MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig? _explicitNullValueMetaMomentMakerSpec = default!;
-#nullable restore
-#else
-        public global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig MetaMomentMakerSpec { get => _explicitNullValueMetaMomentMakerSpec; set { _explicitNullValueMetaMomentMakerSpec = value; AdditionalData?.Remove("meta_moment_maker_spec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta_moment_maker_spec"); else _explicitNullProperties?.Remove("meta_moment_maker_spec"); } }
-        private global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig _explicitNullValueMetaMomentMakerSpec = default!;
-#endif
         /// <summary>The min_budget_spend_percentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -871,7 +859,7 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(87)
+            return new Dictionary<string, Action<IParseNode>>(86)
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "ad_set_goal", n => { AdSetGoal = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal>(global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignGoal.CreateFromDiscriminatorValue); } },
@@ -929,7 +917,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
                 { "live_video_ad_campaign_config", n => { LiveVideoAdCampaignConfig = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.LiveVideoAdCampaignConfig>(global::Soenneker.Instagram.OpenApiClient.Models.LiveVideoAdCampaignConfig.CreateFromDiscriminatorValue); } },
                 { "low_creative_reach", n => { LowCreativeReach = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "max_budget_spend_percentage", n => { MaxBudgetSpendPercentage = n.GetStringValue(); } },
-                { "meta_moment_maker_spec", n => { MetaMomentMakerSpec = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig>(global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig.CreateFromDiscriminatorValue); } },
                 { "min_budget_spend_percentage", n => { MinBudgetSpendPercentage = n.GetStringValue(); } },
                 { "multi_event_conversion_attribution_window_seconds", n => { MultiEventConversionAttributionWindowSeconds = n.GetLongValue(); } },
                 { "multi_optimization_goal_weight", n => { var parsed = n.GetEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.AdcampaignMultiOptimizationGoalWeight>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMultiOptimizationGoalWeight = default; _explicitNullProperties?.Remove("multi_optimization_goal_weight"); AdditionalData["multi_optimization_goal_weight"] = unknown; } else { MultiOptimizationGoalWeight = parsed; AdditionalData.Remove("multi_optimization_goal_weight"); } } },
@@ -1025,7 +1012,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.LiveVideoAdCampaignConfig>("live_video_ad_campaign_config", LiveVideoAdCampaignConfig);
             writer.WriteCollectionOfPrimitiveValues<string>("low_creative_reach", LowCreativeReach);
             writer.WriteStringValue("max_budget_spend_percentage", MaxBudgetSpendPercentage);
-            writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.MetaMomentMakerConfig>("meta_moment_maker_spec", MetaMomentMakerSpec);
             writer.WriteStringValue("min_budget_spend_percentage", MinBudgetSpendPercentage);
             writer.WriteLongValue("multi_event_conversion_attribution_window_seconds", MultiEventConversionAttributionWindowSeconds);
             writer.WriteEnumValue<global::Soenneker.Instagram.OpenApiClient.Models.AdcampaignMultiOptimizationGoalWeight>("multi_optimization_goal_weight", MultiOptimizationGoalWeight);

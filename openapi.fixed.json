@@ -353,6 +353,11 @@
                 "type": "string"
               },
               {
+                "name": "source_threads_media_id",
+                "required": false,
+                "type": "string"
+              },
+              {
                 "name": "template_url",
                 "required": false,
                 "type": "string"
@@ -5447,7 +5452,9 @@
                           "total_comments",
                           "total_interactions",
                           "total_likes",
+                          "total_viewers",
                           "total_views",
+                          "viewers",
                           "views"
                         ],
                         "type": "string",
@@ -5540,8 +5547,16 @@
                               "name": "TotalLikes"
                             },
                             {
+                              "value": "total_viewers",
+                              "name": "TotalViewers"
+                            },
+                            {
                               "value": "total_views",
                               "name": "TotalViews"
+                            },
+                            {
+                              "value": "viewers",
+                              "name": "Viewers"
                             },
                             {
                               "value": "views",
@@ -5582,7 +5597,9 @@
                           "total_comments",
                           "total_interactions",
                           "total_likes",
+                          "total_viewers",
                           "total_views",
+                          "viewers",
                           "views"
                         ],
                         "type": "string",
@@ -5699,8 +5716,16 @@
                               "name": "TotalLikes"
                             },
                             {
+                              "value": "total_viewers",
+                              "name": "TotalViewers"
+                            },
+                            {
                               "value": "total_views",
                               "name": "TotalViews"
+                            },
+                            {
+                              "value": "viewers",
+                              "name": "Viewers"
                             },
                             {
                               "value": "views",
@@ -20140,7 +20165,6 @@
           "INSTREAM_VIDEO_DESKTOP",
           "INSTREAM_VIDEO_IMAGE",
           "INSTREAM_VIDEO_MOBILE",
-          "MESSENGER_MOBILE_INBOX_MEDIA",
           "MESSENGER_MOBILE_STORY_MEDIA",
           "MOBILE_FEED_STANDARD",
           "MOBILE_FULLWIDTH",
@@ -20210,10 +20234,6 @@
             {
               "value": "INSTREAM_VIDEO_MOBILE",
               "name": "InstreamVideoMobile"
-            },
-            {
-              "value": "MESSENGER_MOBILE_INBOX_MEDIA",
-              "name": "MessengerMobileInboxMedia"
             },
             {
               "value": "MESSENGER_MOBILE_STORY_MEDIA",
@@ -26569,9 +26589,6 @@
               "type": "string"
             }
           },
-          "cas_segment": {
-            "type": "string"
-          },
           "conversions": {
             "minimum": 0,
             "type": "integer",
@@ -27730,9 +27747,6 @@
           },
           "max_budget_spend_percentage": {
             "type": "string"
-          },
-          "meta_moment_maker_spec": {
-            "$ref": "#/components/schemas/MetaMomentMakerConfig"
           },
           "min_budget_spend_percentage": {
             "type": "string"
@@ -31208,7 +31222,15 @@
       "LiveVideoAdCampaignConfig": {
         "type": "object",
         "properties": {
+          "declared_live_seconds": {
+            "minimum": 0,
+            "type": "integer",
+            "format": "int64"
+          },
           "id": {
+            "type": "string"
+          },
+          "live_cadence": {
             "type": "string"
           },
           "live_video_ad_type": {
@@ -31399,14 +31421,6 @@
             "items": {
               "type": "string"
             }
-          }
-        }
-      },
-      "MetaMomentMakerConfig": {
-        "type": "object",
-        "properties": {
-          "saturation_mode": {
-            "type": "string"
           }
         }
       },
@@ -35701,6 +35715,9 @@
             "type": "string"
           },
           "source_instagram_media_id": {
+            "type": "string"
+          },
+          "source_threads_media_id": {
             "type": "string"
           },
           "template_url": {
@@ -46403,9 +46420,9 @@
   ],
   "x-meta-source": {
     "repository": "https://github.com/facebook/facebook-business-sdk-codegen",
-    "revision": "c7448c585357d46db25c1711120109c767e55161",
+    "revision": "5c1fa8a1653722b402133f033fcc321d67981bbd",
     "profile": "Instagram",
-    "sourceOperationCount": 1545,
+    "sourceOperationCount": 1552,
     "includedOperationCount": 175,
     "supplementalOperationCount": 1,
     "operations": [
@@ -49692,7 +49709,9 @@
         "total_comments",
         "total_interactions",
         "total_likes",
+        "total_viewers",
         "total_views",
+        "viewers",
         "views"
       ],
       "type": "string",
@@ -49809,8 +49828,16 @@
             "name": "TotalLikes"
           },
           {
+            "value": "total_viewers",
+            "name": "TotalViewers"
+          },
+          {
             "value": "total_views",
             "name": "TotalViews"
+          },
+          {
+            "value": "viewers",
+            "name": "Viewers"
           },
           {
             "value": "views",
@@ -51606,7 +51633,9 @@
         "total_comments",
         "total_interactions",
         "total_likes",
+        "total_viewers",
         "total_views",
+        "viewers",
         "views"
       ],
       "type": "string",
@@ -51699,8 +51728,16 @@
             "name": "TotalLikes"
           },
           {
+            "value": "total_viewers",
+            "name": "TotalViewers"
+          },
+          {
             "value": "total_views",
             "name": "TotalViews"
+          },
+          {
+            "value": "viewers",
+            "name": "Viewers"
           },
           {
             "value": "views",

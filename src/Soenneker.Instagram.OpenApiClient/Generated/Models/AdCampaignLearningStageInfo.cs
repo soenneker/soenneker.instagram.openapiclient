@@ -19,8 +19,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("attribution_windows") is null) { _explicitNullValueAttributionWindows = default!; _explicitNullProperties?.Remove("attribution_windows"); }
             else if (parseNode.GetChildNode("attribution_windows") is { } nullNodeAttributionWindows && nullNodeAttributionWindows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionWindows = null;
-            if (parseNode.GetChildNode("cas_segment") is null) { _explicitNullValueCasSegment = default!; _explicitNullProperties?.Remove("cas_segment"); }
-            else if (parseNode.GetChildNode("cas_segment") is { } nullNodeCasSegment && nullNodeCasSegment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CasSegment = null;
             if (parseNode.GetChildNode("conversions") is null) { _explicitNullValueConversions = default!; _explicitNullProperties?.Remove("conversions"); }
             else if (parseNode.GetChildNode("conversions") is { } nullNodeConversions && nullNodeConversions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conversions = null;
             if (parseNode.GetChildNode("current_budget_prediction") is null) { _explicitNullValueCurrentBudgetPrediction = default!; _explicitNullProperties?.Remove("current_budget_prediction"); }
@@ -54,16 +52,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
 #else
         public List<string> AttributionWindows { get => _explicitNullValueAttributionWindows; set { _explicitNullValueAttributionWindows = value; AdditionalData?.Remove("attribution_windows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribution_windows"); else _explicitNullProperties?.Remove("attribution_windows"); } }
         private List<string> _explicitNullValueAttributionWindows = default!;
-#endif
-        /// <summary>The cas_segment property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CasSegment { get => _explicitNullValueCasSegment; set { _explicitNullValueCasSegment = value; AdditionalData?.Remove("cas_segment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cas_segment"); else _explicitNullProperties?.Remove("cas_segment"); } }
-        private string? _explicitNullValueCasSegment = default!;
-#nullable restore
-#else
-        public string CasSegment { get => _explicitNullValueCasSegment; set { _explicitNullValueCasSegment = value; AdditionalData?.Remove("cas_segment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cas_segment"); else _explicitNullProperties?.Remove("cas_segment"); } }
-        private string _explicitNullValueCasSegment = default!;
 #endif
         /// <summary>The conversions property</summary>
         public long? Conversions { get => _explicitNullValueConversions; set { _explicitNullValueConversions = value; AdditionalData?.Remove("conversions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversions"); else _explicitNullProperties?.Remove("conversions"); } }
@@ -146,10 +134,9 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(12)
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "attribution_windows", n => { AttributionWindows = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "cas_segment", n => { CasSegment = n.GetStringValue(); } },
                 { "conversions", n => { Conversions = n.GetLongValue(); } },
                 { "current_budget_prediction", n => { CurrentBudgetPrediction = n.GetObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty>(global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty.CreateFromDiscriminatorValue); } },
                 { "dynamic_lp_conversions_threshold", n => { DynamicLpConversionsThreshold = n.GetLongValue(); } },
@@ -170,7 +157,6 @@ namespace Soenneker.Instagram.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("attribution_windows", AttributionWindows);
-            writer.WriteStringValue("cas_segment", CasSegment);
             writer.WriteLongValue("conversions", Conversions);
             writer.WriteObjectValue<global::Soenneker.Instagram.OpenApiClient.Models.AdCampaignLearningStageInfoCurrentBudgetPredictionProperty>("current_budget_prediction", CurrentBudgetPrediction);
             writer.WriteLongValue("dynamic_lp_conversions_threshold", DynamicLpConversionsThreshold);
